@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scenes/props/coin.tscn" type="PackedScene" id=1]
+
+[node name="reward" instance=ExtResource( 1 )]
+
+linear_damp = 0.1
+
+[node name="visibility" type="VisibilityNotifier2D" parent="."]
+
+rect = Rect2( -15, -15, 30, 30 )
+
+[connection signal="body_enter" from="." to="." method="destroy"]
+
+[connection signal="area_enter" from="." to="." method="destroy"]
+
+[connection signal="exit_screen" from="visibility" to="." method="queue_free"]
+
+

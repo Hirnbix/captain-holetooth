@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://scenes/scene_teleporter.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5.90205, 29.7816 )
+
+[node name="scene_teleporter" type="Area2D"]
+
+transform/pos = Vector2( 256.188, 243.057 )
+transform/scale = Vector2( 5, 5 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.35935, 0, 0, 0.760363, -2.38941, -21.6639 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+scene_path = "no scene"
+
+[node name="teleporter_debug_label" type="Label" parent="."]
+
+rect/scale = Vector2( 0.25, 0.25 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -15.0
+margin/top = -8.0
+margin/right = 83.0
+margin/bottom = 6.0
+text = "Teleport Debug"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="teleport_spawnpoint" type="Position2D" parent="."]
+
+transform/pos = Vector2( 73.6447, 32.6379 )
+transform/scale = Vector2( 0.20915, 0.17037 )
+
+[node name="teleport_collision_shape" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -2.38941, -21.6639 )
+transform/scale = Vector2( 1.35935, 0.760363 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="." to="." method="_on_scene_teleporter_body_enter"]
+
+

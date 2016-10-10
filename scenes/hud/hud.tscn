@@ -1,0 +1,158 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scenes/hud/hud.gd" type="Script" id=1]
+[ext_resource path="res://scenes/hud/hud_bg.png" type="Texture" id=2]
+[ext_resource path="res://fonts/tiny_8.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://fonts/counter_interface_8.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=5]
+
+[node name="hud" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+script/script = ExtResource( 1 )
+collected_text = NodePath("hudframe/items_label/score_display")
+score_text = NodePath("hudframe/finalscore_label/final_scoredisplay")
+highscore_text = NodePath("hudframe/highscore_label/highscore_display")
+
+[node name="hudframe" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 180.0
+margin/top = 0.0
+margin/right = 510.0
+margin/bottom = 17.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+
+[node name="items_label" type="Label" parent="hudframe"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 6.0
+margin/top = 6.0
+margin/right = 91.0
+margin/bottom = 26.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
+text = "Items collected"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="score_display" type="Label" parent="hudframe/items_label"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 82.0
+margin/top = -8.0
+margin/right = 124.0
+margin/bottom = 14.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.214844, 0.161461, 0.0990295, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="finalscore_label" type="Label" parent="hudframe"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 137.0
+margin/top = 6.0
+margin/right = 177.0
+margin/bottom = 19.0
+custom_fonts/font = ExtResource( 3 )
+text = "SCORE"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="final_scoredisplay" type="Label" parent="hudframe/finalscore_label"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 31.0
+margin/top = -7.0
+margin/right = 73.0
+margin/bottom = 13.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="highscore_label" type="Label" parent="hudframe"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 229.0
+margin/top = 6.0
+margin/right = 280.0
+margin/bottom = 12.0
+custom_fonts/font = ExtResource( 3 )
+text = "Highscore"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="highscore_display" type="Label" parent="hudframe/highscore_label"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 53.0
+margin/top = -3.0
+margin/right = 64.0
+margin/bottom = 10.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.546875, 0.194397, 0.268748, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="go_to_menu" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 90.0
+margin/bottom = 30.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Main Menu"
+flat = false
+
+[connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]
+
+

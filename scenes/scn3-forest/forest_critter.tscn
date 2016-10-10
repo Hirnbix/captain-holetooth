@@ -1,0 +1,340 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://scenes/scn3-forest/forest_critter.gd" type="Script" id=1]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton2.png" type="Texture" id=2]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton1.png" type="Texture" id=3]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton3.png" type="Texture" id=4]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton4.png" type="Texture" id=5]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton5.png" type="Texture" id=6]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton6.png" type="Texture" id=7]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton7.png" type="Texture" id=8]
+[ext_resource path="res://scenes/scn4-mountain/snow.png" type="Texture" id=9]
+[ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton.png" type="Texture" id=10]
+[ext_resource path="res://audio/sfx/land.smp" type="Sample" id=11]
+
+[sub_resource type="CapsuleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 30.3684
+height = 82.522
+
+[sub_resource type="ColorRamp" id=2]
+
+offsets = FloatArray( 0, 0.452255, 0.998674 )
+colors = ColorArray( 0.230469, 0.204586, 0.0864258, 1, 0.0720215, 0.921875, 0.0853004, 0.917889, 0.0144348, 0.335938, 0.0571344, 0 )
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "walk"
+length = 1.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("base/body:transform/pos")
+tracks/0/interp = 1
+tracks/0/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 1, 1, 1 ), "values":[ Vector2( -16.3271, -4.25175 ), Vector2( -16.7564, -7.57864 ), Vector2( -17.1857, -10.9055 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("base/body:transform/rot")
+tracks/1/interp = 1
+tracks/1/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 1, 2.37841 ), "values":[ 2.31723, 1.87158, 0.0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("base/body/upper_leg_1:transform/pos")
+tracks/2/interp = 1
+tracks/2/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 1, 2.37841 ), "values":[ Vector2( 22.7145, -1.98369 ), Vector2( 23.5664, -5.97565 ), Vector2( 23.5731, -1.98369 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("base/body/upper_leg_1:transform/rot")
+tracks/3/interp = 1
+tracks/3/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 1, 2.37841 ), "values":[ -70.7372, -56.3976, -38.7011 ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("base/body/upper_tail:transform/pos")
+tracks/4/interp = 1
+tracks/4/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ Vector2( 45.5978, -10.6258 ), Vector2( 45.5978, -10.6258 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("base/body/upper_tail:transform/rot")
+tracks/5/interp = 1
+tracks/5/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ 22.5418, 44.2393 ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("base/body/upper_leg_1/lower_leg/foot:transform/pos")
+tracks/6/interp = 1
+tracks/6/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ Vector2( -0.630483, 11.7829 ), Vector2( -0.63048, 11.7829 ), Vector2( -0.630479, 11.7829 ) ] }
+tracks/7/type = "value"
+tracks/7/path = NodePath("base/body/upper_leg_1/lower_leg:transform/pos")
+tracks/7/interp = 1
+tracks/7/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ Vector2( 12.9161, 18.9389 ), Vector2( 12.9161, 18.9389 ), Vector2( 12.9161, 18.9389 ) ] }
+tracks/8/type = "value"
+tracks/8/path = NodePath("base/body/upper_leg_1/lower_leg:transform/rot")
+tracks/8/interp = 1
+tracks/8/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ 28.7135, 64.4127, 112.29 ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("base/body/head:transform/pos")
+tracks/9/interp = 1
+tracks/9/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ Vector2( -0.875664, 4.39776 ), Vector2( -1.0903, -1.39748 ) ] }
+tracks/10/type = "value"
+tracks/10/path = NodePath("base/body/head:transform/rot")
+tracks/10/interp = 1
+tracks/10/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ 0.0, 0.0 ] }
+tracks/11/type = "value"
+tracks/11/path = NodePath("base/body/upper_tail/lower_tail:transform/pos")
+tracks/11/interp = 1
+tracks/11/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ Vector2( 18.6736, 14.3809 ), Vector2( 18.6736, 14.3809 ) ] }
+tracks/12/type = "value"
+tracks/12/path = NodePath("base/body/upper_tail/lower_tail:transform/rot")
+tracks/12/interp = 1
+tracks/12/keys = { "cont":true, "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841 ), "values":[ -86.1475, -97.8987 ] }
+tracks/13/type = "value"
+tracks/13/path = NodePath("base/body/upper_leg_2/lower_leg/foot/dust:transform/pos")
+tracks/13/interp = 1
+tracks/13/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 2.37841 ), "values":[ Vector2( 4, 37 ) ] }
+tracks/14/type = "value"
+tracks/14/path = NodePath("base/body/upper_leg_2/lower_leg/foot/dust:transform/rot")
+tracks/14/interp = 1
+tracks/14/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 2.37841 ), "values":[ 0.0 ] }
+tracks/15/type = "value"
+tracks/15/path = NodePath("base/body/upper_leg_2/lower_leg/foot/dust:config/emitting")
+tracks/15/interp = 1
+tracks/15/keys = { "cont":false, "times":FloatArray( 0, 0.2, 0.5 ), "transitions":FloatArray( 2.37841, 1.1487, 2.37841 ), "values":[ false, true, false ] }
+tracks/16/type = "value"
+tracks/16/path = NodePath("base/body/upper_leg_2/lower_leg/foot:transform/pos")
+tracks/16/interp = 1
+tracks/16/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ Vector2( -0.630474, 11.7829 ), Vector2( -0.630477, 11.7829 ), Vector2( -0.630481, 11.7829 ) ] }
+tracks/17/type = "value"
+tracks/17/path = NodePath("base/body/upper_leg_2/lower_leg/foot:transform/rot")
+tracks/17/interp = 1
+tracks/17/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ 96.3628, 6.3116, 3.27808 ] }
+tracks/18/type = "value"
+tracks/18/path = NodePath("base/body/upper_leg_2/lower_leg:transform/pos")
+tracks/18/interp = 1
+tracks/18/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ Vector2( 12.9161, 18.9389 ), Vector2( 12.9161, 18.9389 ), Vector2( 12.9161, 18.9389 ) ] }
+tracks/19/type = "value"
+tracks/19/path = NodePath("base/body/upper_leg_2/lower_leg:transform/rot")
+tracks/19/interp = 1
+tracks/19/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ 28.9249, 62.2203, 60.5642 ] }
+tracks/20/type = "value"
+tracks/20/path = NodePath("base/body/upper_leg_2:transform/pos")
+tracks/20/interp = 1
+tracks/20/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ Vector2( 3.04797, -2.48425 ), Vector2( 3.04797, -2.48425 ), Vector2( 3.04797, -2.48425 ) ] }
+tracks/21/type = "value"
+tracks/21/path = NodePath("base/body/upper_leg_2:transform/rot")
+tracks/21/interp = 1
+tracks/21/keys = { "cont":true, "times":FloatArray( 0, 0.25, 0.5 ), "transitions":FloatArray( 2.37841, 2.37841, 2.37841 ), "values":[ 4.97757, -44.2512, -58.5283 ] }
+tracks/22/type = "value"
+tracks/22/path = NodePath("base/body/upper_leg_1/lower_leg/foot:transform/rot")
+tracks/22/interp = 1
+tracks/22/keys = { "cont":true, "times":FloatArray( 0.25 ), "transitions":FloatArray( 2.37841 ), "values":[ 61.4276 ] }
+tracks/23/type = "value"
+tracks/23/path = NodePath("SamplePlayer2D:play/play")
+tracks/23/interp = 1
+tracks/23/keys = { "cont":false, "times":FloatArray( 0, 0.2, 0.5 ), "transitions":FloatArray( 1, 1, 1 ), "values":[ "", "critter_walk", "" ] }
+tracks/24/type = "value"
+tracks/24/path = NodePath("SamplePlayer2D:config/pitch_random")
+tracks/24/interp = 1
+tracks/24/keys = { "cont":true, "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.0, 2.0 ] }
+
+[sub_resource type="SampleLibrary" id=3]
+
+samples/critter_walk = { "db":-0.71, "pitch":1.0, "sample":ExtResource( 11 ) }
+
+[node name="critter_sprite_forest" type="RigidBody2D"]
+
+transform/pos = Vector2( 1, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 0.200019, 0.979792, -0.979792, 0.200019, 13.2278, -7.10087 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 2
+mass = 35.0
+friction = 0.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 1 )
+motion = Vector2( 0, 0 )
+cycle = 1.0
+
+[node name="base" type="Node2D" parent="."]
+
+z/relative = false
+
+[node name="body" type="Sprite" parent="base"]
+
+transform/pos = Vector2( -16.4989, -5.58251 )
+transform/rot = 2.26682
+texture = ExtResource( 2 )
+offset = Vector2( 14.2099, -1.75056 )
+__meta__ = { "_edit_ik_":true }
+
+[node name="head" type="Sprite" parent="base/body"]
+
+transform/pos = Vector2( -0.880333, 4.27168 )
+texture = ExtResource( 3 )
+offset = Vector2( -13.9114, 7.01594 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="upper_leg_1" type="Sprite" parent="base/body"]
+
+transform/pos = Vector2( 22.8109, -2.43526 )
+transform/rot = -69.1151
+texture = ExtResource( 4 )
+offset = Vector2( 9.18611, 10.2668 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true, "_editor_collapsed":true }
+
+[node name="lower_leg" type="Sprite" parent="base/body/upper_leg_1"]
+
+transform/pos = Vector2( 12.9161, 18.9389 )
+transform/rot = 32.7517
+z/z = -1
+texture = ExtResource( 5 )
+offset = Vector2( 0.56414, 7.13979 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="foot" type="Sprite" parent="base/body/upper_leg_1/lower_leg"]
+
+transform/pos = Vector2( -0.630482, 11.7829 )
+transform/rot = 61.4276
+z/z = -1
+texture = ExtResource( 6 )
+offset = Vector2( -2.79029, 7.72699 )
+__meta__ = { "_edit_bone_":true, "_edit_group_":true }
+
+[node name="bone_display" type="Node2D" parent="base/body/upper_leg_1/lower_leg/foot"]
+
+transform/pos = Vector2( -6.62886, 5.73693 )
+transform/scale = Vector2( 0.169956, 0.176672 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="upper_tail" type="Sprite" parent="base/body"]
+
+transform/pos = Vector2( 45.5978, -10.6258 )
+transform/rot = 23.0139
+z/z = -1
+texture = ExtResource( 7 )
+offset = Vector2( 9.22785, 2.04027 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="lower_tail" type="Sprite" parent="base/body/upper_tail"]
+
+transform/pos = Vector2( 18.6736, 14.3809 )
+transform/rot = -86.4032
+z/z = -1
+texture = ExtResource( 8 )
+offset = Vector2( 2.7887, -14.2723 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="bone_display" type="Node2D" parent="base/body/upper_tail/lower_tail"]
+
+transform/pos = Vector2( 6.17143, -18.9956 )
+transform/scale = Vector2( 0.680798, 0.636783 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="upper_leg_2" type="Sprite" parent="base/body"]
+
+transform/pos = Vector2( 3.04797, -2.48425 )
+transform/rot = -0.591124
+z/z = -1
+texture = ExtResource( 4 )
+offset = Vector2( 9.18611, 10.2668 )
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
+
+[node name="lower_leg" type="Sprite" parent="base/body/upper_leg_2"]
+
+transform/pos = Vector2( 12.9161, 18.9389 )
+transform/rot = 32.6912
+z/z = -1
+texture = ExtResource( 5 )
+offset = Vector2( 0.56414, 7.13979 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="foot" type="Sprite" parent="base/body/upper_leg_2/lower_leg"]
+
+transform/pos = Vector2( -0.630474, 11.7829 )
+transform/rot = 86.1764
+z/z = -1
+texture = ExtResource( 6 )
+offset = Vector2( -2.79029, 7.72699 )
+__meta__ = { "_edit_bone_":true, "_edit_group_":true }
+
+[node name="bone_display" type="Node2D" parent="base/body/upper_leg_2/lower_leg/foot"]
+
+transform/pos = Vector2( -6.62886, 5.73693 )
+transform/scale = Vector2( 0.169956, 0.176672 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="dust" type="Particles2D" parent="base/body/upper_leg_2/lower_leg/foot"]
+
+transform/pos = Vector2( -13.2153, -10.1708 )
+transform/rot = -120.543
+config/amount = 13
+config/lifetime = 0.4
+config/emitting = false
+config/half_extents = Vector2( 5, 5 )
+config/explosiveness = 0.336757
+config/texture = ExtResource( 9 )
+params/direction = 120.0
+params/spread = 47.3062
+params/linear_velocity = 96.2268
+params/spin_velocity = -9.57007
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/linear_velocity = 1.0
+color/color = Color( 0.0916443, 0.710938, 0.202924, 1 )
+color/color_ramp = SubResource( 2 )
+
+[node name="complete" type="Sprite" parent="."]
+
+visibility/visible = false
+visibility/opacity = 0.4
+texture = ExtResource( 10 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/walk = SubResource( 1 )
+playback/active = true
+playback/speed = -2.49445
+blend_times = [  ]
+autoplay = "walk"
+
+[node name="SamplePlayer2D" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 2
+config/samples = SubResource( 3 )
+config/pitch_random = -0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 13.2278, -7.10087 )
+transform/rot = -78.4619
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+

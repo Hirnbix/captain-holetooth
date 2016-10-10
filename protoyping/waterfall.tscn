@@ -1,0 +1,130 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://protoyping/waterfall_test-sheet.png" type="Texture" id=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.415686, 0.811765, 0.815686, 1 )
+colors = ColorArray( 0.522156, 0.884401, 0.921875, 1, 0.243561, 0.190918, 0.359375, 1, 0.598973, 0.597076, 0.839844, 1, 0.492254, 0.490138, 0.760995, 0.873763, 0.0226895, 0.0196078, 0.414062, 0.318318 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Particles2D1" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 192.096, 13.3104 )
+transform/scale = Vector2( 1.24424, 0.5 )
+config/amount = 107
+config/lifetime = 5.1102
+config/time_scale = 1.37594
+config/preprocess = 15.8748
+config/half_extents = Vector2( 25, 0 )
+config/texture = ExtResource( 1 )
+config/h_frames = 2
+params/direction = 0.0
+params/spread = 0.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 56.8947
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 20.0
+params/initial_angle = 0.0
+params/initial_size = 4.0
+params/final_size = 4.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 14.0791
+params/anim_initial_pos = 0.0
+randomness/gravity_strength = 0.654308
+randomness/tangential_accel = 0.5
+randomness/anim_speed_scale = 0.884359
+color/color_ramp = SubResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 192.695, 2.32558 )
+transform/scale = Vector2( 1.82427, 4.91288 )
+config/amount = 59
+config/lifetime = 0.916386
+config/time_scale = 0.986094
+config/half_extents = Vector2( 25, 0 )
+params/direction = 0.0
+params/spread = 62.8161
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 76.5607
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 0.5
+params/final_size = 0.3
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+
+visibility/opacity = 0.668378
+transform/pos = Vector2( 191.507, -46.9049 )
+transform/scale = Vector2( 1.57937, 2.91901 )
+config/amount = 59
+config/lifetime = 0.341913
+config/time_scale = 0.986094
+config/half_extents = Vector2( 25, 0 )
+params/direction = 0.0
+params/spread = 62.8161
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 76.5607
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 2.0
+params/final_size = 0.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 137.013, 14.5079 )
+transform/scale = Vector2( 1.22553, 0.5 )
+polygon = Vector2Array( -140.946, 6.28413, -99.4198, -33.2323, -55.4503, -22.4551, 12.458, -0.90065, 10.9924, -39.2196, 79.3893, -32.0348, 81.3435, 5.08669, 172.214, -46.4044, 171.725, -167.349, -142.412, -162.559 )
+uv = Vector2Array(  )
+color = Color( 0.203125, 0.167543, 0.092041, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="Polygon2D1" type="Polygon2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 148.988, 273.76 )
+transform/scale = Vector2( 1.22553, 0.5 )
+z/z = -1
+polygon = Vector2Array( 2.79247, 36.9647, 56.5126, 35.014, 66.8586, -548.242, 7.56758, -554.094 )
+uv = Vector2Array(  )
+color = Color( 0.106567, 0.154332, 0.28125, 0.768627 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+

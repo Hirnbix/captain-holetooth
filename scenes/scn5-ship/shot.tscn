@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://scenes/scn5-ship/flying_thing.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/scn5-ship/shot.gd" type="Script" id=2]
+[ext_resource path="res://scenes/scn5-ship/bullet.png" type="Texture" id=3]
+[ext_resource path="res://scenes/scn5-ship/small_star.png" type="Texture" id=4]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0.00574413, 0.197911, 0.444909, 0.916971, 1 )
+colors = ColorArray( 1, 1, 1, 1, 0.667526, 0.709795, 0.168752, 1, 0.65625, 0.0153809, 0.165585, 1, 0.863281, 0.504222, 0.266403, 0.483551, 1, 1, 1, 0 )
+
+[node name="shot" instance=ExtResource( 1 )]
+
+monitoring = true
+monitorable = true
+collision/layers = 2
+collision/mask = 4
+script/script = ExtResource( 2 )
+SPEED = 800
+destroy_sound = "none"
+
+[node name="sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="collision" parent="."]
+
+transform/pos = Vector2( -1.56041, -0.0807104 )
+polygon = Vector2Array( -5.4129, -6.93776, -5.4133, 6.04879, 7.58424, 6.06531, 7.50085, -6.87051 )
+
+[node name="visibility" parent="."]
+
+transform/pos = Vector2( 0, 0 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="particles" parent="."]
+
+transform/rot = 0.0
+transform/scale = Vector2( 1, 1 )
+config/amount = 13
+config/lifetime = 0.8
+config/time_scale = 1.0
+config/explosiveness = 0.148421
+config/texture = ExtResource( 4 )
+config/h_frames = 1
+config/v_frames = 1
+params/direction = 88.7446
+params/spread = 180.0
+params/linear_velocity = 50.0
+params/spin_velocity = -410.126
+params/orbit_velocity = 1.0
+params/gravity_direction = 260.0
+params/gravity_strength = 160.0
+params/radial_accel = 20.0
+params/tangential_accel = 50.0
+params/damping = 30.0
+params/initial_size = 2.0
+params/final_size = 0.1
+params/hue_variation = 0.0
+randomness/linear_velocity = 0.0
+randomness/spin_velocity = 0.0
+randomness/initial_angle = 0.0
+randomness/initial_size = 0.0
+randomness/final_size = 0.0
+randomness/anim_speed_scale = 0.0
+color/color_ramp = SubResource( 1 )
+
+[connection signal="area_enter" from="." to="." method="destroy"]
+
+[connection signal="enter_screen" from="visibility" to="." method="_on_visibility_enter_screen"]
+
+[connection signal="exit_screen" from="visibility" to="." method="_on_visibility_exit_screen"]
+
+
