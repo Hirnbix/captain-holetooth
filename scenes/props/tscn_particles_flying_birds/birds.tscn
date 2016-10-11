@@ -2,7 +2,6 @@
 
 [ext_resource path="res://scenes/scn3-forest/bird_anim-sheet.png" type="Texture" id=1]
 
-
 [sub_resource type="ColorRamp" id=1]
 
 offsets = FloatArray( 0, 0.946771, 1 )

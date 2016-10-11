@@ -8,9 +8,10 @@
 [ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton5.png" type="Texture" id=6]
 [ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton6.png" type="Texture" id=7]
 [ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton7.png" type="Texture" id=8]
-[ext_resource path="res://scenes/scn4-mountain/snow.png" type="Texture" id=9]
+[ext_resource path="res://scenes/props/tscn_particles_snow/snow.png" type="Texture" id=9]
 [ext_resource path="res://scenes/scn3-forest/forest-critter-skeleton.png" type="Texture" id=10]
 [ext_resource path="res://audio/sfx/land.smp" type="Sample" id=11]
+
 
 [sub_resource type="CapsuleShape2D" id=4]
 

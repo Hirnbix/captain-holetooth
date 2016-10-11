@@ -1,31 +1,31 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scenes/scn1-menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://scenes/scn1-menu/splashscreen.gd" type="Script" id=3]
-[ext_resource path="res://scenes/scn1-menu/optionbutton.gd" type="Script" id=4]
-[ext_resource path="res://scenes/scn1-menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=5]
-[ext_resource path="res://scenes/scn1-menu/splash_screen_wolken_single_scn1.png" type="Texture" id=6]
-[ext_resource path="res://scenes/scn1-menu/splashscreen_ship_scn1.png" type="Texture" id=7]
-[ext_resource path="res://scenes/player/ship_thruster.tscn" type="PackedScene" id=8]
-[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://scenes/scn1-menu/scn1_menu_bg.png" type="Texture" id=2]
+[ext_resource path="res://scenes/scn1-menu/scn1_menu_gametitle_EN.png" type="Texture" id=3]
+[ext_resource path="res://scenes/scn1-menu/splashscreen_ship_scn1.png" type="Texture" id=4]
+[ext_resource path="res://scenes/player/ship_thruster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/scn1-menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=6]
+[ext_resource path="res://scenes/scn1-menu/gb.png" type="Texture" id=7]
+[ext_resource path="res://scenes/scn1-menu/de.png" type="Texture" id=8]
+[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=10]
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "ship_bounce"
 length = 6.0
 loop = true
-step = 0.5
+step = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("splashscreen_schiff:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 2, 4, 6 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 598, 78 ), Vector2( 318, 88 ), Vector2( 98, 98 ), Vector2( -22, 48 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 6 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 595.2, 158.4 ), Vector2( -68.8, 86.4 ) ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("splashscreen_schiff:transform/scale")
+tracks/1/path = NodePath("splashscreen_schiff:z/z")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 6 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ] }
+tracks/1/keys = { "times":FloatArray( 0, 3 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 3, 0 ] }
 
 [sub_resource type="Theme" id=2]
 
@@ -35,7 +35,7 @@ Tabs/constants/hseparation = 4
 Tabs/constants/label_valign_bg = 2
 Tabs/constants/label_valign_fg = 0
 Tabs/constants/top_margin = 24
-Tabs/fonts/font = ExtResource( 2 )
+Tabs/fonts/font = ExtResource( 9 )
 Tabs/icons/close = null
 Tabs/icons/decrement = null
 Tabs/icons/decrement_hilite = null
@@ -47,59 +47,44 @@ Tabs/styles/panel = null
 Tabs/styles/tab_bg = null
 Tabs/styles/tab_fg = null
 
-[node name="scn1-splashscreen" type="Node2D"]
+[node name="main_menu" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
-[node name="startbutton" type="Button" parent="."]
+[node name="art" type="Node2D" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 310.0
-margin/top = 164.0
-margin/right = 476.0
-margin/bottom = 203.0
-custom_fonts/font = ExtResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Start Game"
-flat = false
-script/script = ExtResource( 3 )
+[node name="bg" type="Node2D" parent="art"]
 
-[node name="optionsbutton" type="Button" parent="."]
+editor/display_folded = true
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 310.0
-margin/top = 218.0
-margin/right = 476.0
-margin/bottom = 256.0
-custom_fonts/font = ExtResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Options / Info"
-flat = false
-script/script = ExtResource( 4 )
-
-[node name="keyvisual_lochzahn" type="Sprite" parent="."]
-
-transform/pos = Vector2( 239, 146 )
-texture = ExtResource( 5 )
-__meta__ = { "_edit_group_":true }
-
-[node name="wolken" type="Sprite" parent="."]
+[node name="splashscreen_bg" type="Sprite" parent="art/bg"]
 
 transform/pos = Vector2( 256, 144 )
 z/z = -1
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
-[node name="anim" type="AnimationPlayer" parent="."]
+[node name="gametitle" type="Sprite" parent="art/bg"]
+
+transform/pos = Vector2( 371, 87 )
+texture = ExtResource( 3 )
+
+[node name="splashscreen_schiff" type="Sprite" parent="art"]
+
+transform/pos = Vector2( 595.2, 158.4 )
+transform/scale = Vector2( 0.8, 0.8 )
+z/z = 3
+texture = ExtResource( 4 )
+
+[node name="thruster" parent="art/splashscreen_schiff" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 64.9626, 14.1248 )
+transform/rot = 82.6363
+transform/scale = Vector2( 1.10571, 1.71501 )
+config/local_space = true
+config/flip_h = true
+
+[node name="anim" type="AnimationPlayer" parent="art"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
@@ -110,65 +95,107 @@ playback/speed = 0.5
 blend_times = [  ]
 autoplay = "ship_bounce"
 
-[node name="splashscreen_schiff" type="Sprite" parent="."]
+[node name="keyvisual_lochzahn" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 388, 85.5 )
-transform/scale = Vector2( 0.8, 0.8 )
-z/z = -1
-texture = ExtResource( 7 )
+transform/pos = Vector2( 239, 146 )
+texture = ExtResource( 6 )
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
-[node name="thruster" parent="splashscreen_schiff" instance=ExtResource( 8 )]
+[node name="menu_buttons" type="Node2D" parent="."]
 
-transform/pos = Vector2( 72.049, 3.09742 )
-transform/rot = 82.6363
-transform/scale = Vector2( 1.10571, 1.71501 )
-config/local_space = true
-config/flip_h = true
+z/z = 2
 
-[node name="options_info_screen" type="Area2D" parent="."]
+[node name="en_button" type="TextureButton" parent="menu_buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 448.0
+margin/top = 128.0
+margin/right = 480.0
+margin/bottom = 150.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 7 )
+params/scale = Vector2( 2, 2 )
+
+[node name="de_button" type="TextureButton" parent="menu_buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 408.0
+margin/top = 128.0
+margin/right = 440.0
+margin/bottom = 150.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 8 )
+params/scale = Vector2( 2, 2 )
+
+[node name="startbutton" type="Button" parent="menu_buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 312.0
+margin/top = 168.0
+margin/right = 478.0
+margin/bottom = 207.0
+custom_fonts/font = ExtResource( 9 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Start Game"
+flat = false
+
+[node name="optionsbutton" type="Button" parent="menu_buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 312.0
+margin/top = 224.0
+margin/right = 478.0
+margin/bottom = 264.0
+custom_fonts/font = ExtResource( 9 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Options / Info"
+flat = false
+
+[node name="exitbutton" type="TextureButton" parent="menu_buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = 256.0
+margin/right = 60.0
+margin/bottom = 296.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+
+[node name="options_screen" type="Area2D" parent="."]
 
 visibility/visible = false
+z/z = 2
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
-[node name="black_bg" type="Polygon2D" parent="options_info_screen"]
-
-transform/pos = Vector2( 265.5, 148.5 )
-transform/scale = Vector2( 14.275, 8.425 )
-polygon = Vector2Array( -18.5989, -17.6261, -18.5989, 16.7953, 17.8284, 16.7953, 17.8284, -17.6261 )
-uv = Vector2Array(  )
-color = Color( 0, 0, 0, 0.80045 )
-vertex_colors = ColorArray(  )
-offset = Vector2( 0, 0 )
-texture/texture = null
-texture/offset = Vector2( 0, 0 )
-texture/scale = Vector2( 1, 1 )
-texture/rotation = 0.0
-invert/enable = false
-invert/border = 100.0
-
-[node name="close_button" type="Button" parent="options_info_screen"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 10.0
-margin/top = 252.0
-margin/right = 500.0
-margin/bottom = 282.0
-custom_fonts/font = ExtResource( 2 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Close options & info"
-flat = false
-script/script = ExtResource( 4 )
-
-[node name="settings" type="TabContainer" parent="options_info_screen"]
+[node name="settings" type="TabContainer" parent="options_screen"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -176,13 +203,13 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = SubResource( 2 )
 margin/left = 10.0
-margin/top = 10.0
-margin/right = 500.0
-margin/bottom = 240.0
+margin/top = 48.0
+margin/right = 312.0
+margin/bottom = 264.0
 tab_align = 1
 tabs_visible = true
 
-[node name="General" type="Tabs" parent="options_info_screen/settings"]
+[node name="General" type="Tabs" parent="options_screen/settings"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -194,9 +221,9 @@ margin/left = 4.0
 margin/top = 32.0
 margin/right = 4.0
 margin/bottom = 4.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 9 )
 
-[node name="instruction_text" type="RichTextLabel" parent="options_info_screen/settings/General"]
+[node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/General"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -208,13 +235,13 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 2.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 10 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
 visible_characters = -1
 
-[node name="Debug" type="Tabs" parent="options_info_screen/settings"]
+[node name="Debug" type="Tabs" parent="options_screen/settings"]
 
 visibility/visible = false
 anchor/right = 1
@@ -227,139 +254,77 @@ margin/left = 4.0
 margin/top = 32.0
 margin/right = 4.0
 margin/bottom = 4.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 9 )
 
-[node name="jump_scn3" type="Button" parent="options_info_screen/settings/Debug"]
+[node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 13.0
-margin/top = 13.0
-margin/right = 380.0
-margin/bottom = 45.0
-custom_fonts/font = ExtResource( 2 )
+margin/left = 2.0
+margin/top = 7.0
+margin/right = 290.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Jump to SCENE 3 (Forest)"
 flat = false
 
-[node name="jump_scn2_label" type="Label" parent="options_info_screen/settings/Debug/jump_scn3"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 6.0
-margin/top = 6.0
-margin/right = 274.0
-margin/bottom = 36.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Jump to SCENE 3 (Forest)"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="jump_scn4" type="Button" parent="options_info_screen/settings/Debug"]
+[node name="jump_scn4" type="Button" parent="options_screen/settings/Debug"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 12.0
-margin/top = 57.0
-margin/right = 381.0
-margin/bottom = 87.0
+margin/left = 2.0
+margin/top = 48.0
+margin/right = 290.0
+margin/bottom = 80.0
+custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "Jump to SCENE 4 (Snow)"
 flat = false
 
-[node name="jump_scn4_label" type="Label" parent="options_info_screen/settings/Debug/jump_scn4"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 6.0
-margin/top = 3.0
-margin/right = 358.0
-margin/bottom = 27.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Jump to SCENE 4 (Snow Mountain)"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="jump_scn5" type="Button" parent="options_info_screen/settings/Debug"]
+[node name="jump_scn5" type="Button" parent="options_screen/settings/Debug"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 11.0
-margin/top = 105.0
-margin/right = 380.0
-margin/bottom = 135.0
+margin/left = 2.0
+margin/top = 88.0
+margin/right = 290.0
+margin/bottom = 120.0
+custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "Jump to SCENE 5 (Airship)"
 flat = false
 
-[node name="jump_scn5_label" type="Label" parent="options_info_screen/settings/Debug/jump_scn5"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 6.0
-margin/top = 4.0
-margin/right = 298.0
-margin/bottom = 28.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Jump to SCENE 5 (Air battle)"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="jump_minigame" type="Button" parent="options_info_screen/settings/Debug"]
+[node name="jump_minigame" type="Button" parent="options_screen/settings/Debug"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 17.0
-margin/top = 151.0
-margin/right = 375.0
-margin/bottom = 191.0
+margin/left = 2.0
+margin/top = 128.0
+margin/right = 290.0
+margin/bottom = 168.0
+custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "Play \"Yan Kandy\" Minigame"
 flat = false
 
-[node name="jump_scn5_label" type="Label" parent="options_info_screen/settings/Debug/jump_minigame"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 7.0
-margin/top = 9.0
-margin/right = 311.0
-margin/bottom = 33.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Play the \"Yan Kandy\" Minigame"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Credits" type="Tabs" parent="options_info_screen/settings"]
+[node name="Credits" type="Tabs" parent="options_screen/settings"]
 
 visibility/visible = false
 anchor/right = 1
@@ -372,9 +337,9 @@ margin/left = 4.0
 margin/top = 32.0
 margin/right = 4.0
 margin/bottom = 4.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 9 )
 
-[node name="credits_text" type="RichTextLabel" parent="options_info_screen/settings/Credits"]
+[node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -386,24 +351,48 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 9 )
+custom_fonts/normal_font = ExtResource( 10 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
-[connection signal="pressed" from="startbutton" to="startbutton" method="_on_startbutton_pressed"]
+[node name="btn_close_options" type="Button" parent="options_screen"]
 
-[connection signal="pressed" from="optionsbutton" to="optionsbutton" method="_on_optionsbutton_pressed"]
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 227.0
+margin/top = 11.0
+margin/right = -219.0
+margin/bottom = 25.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "X"
+flat = false
 
-[connection signal="pressed" from="options_info_screen/close_button" to="options_info_screen/close_button" method="_on_close_button_pressed"]
+[connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 
-[connection signal="pressed" from="options_info_screen/settings/Debug/jump_scn3" to="." method="_on_jump_scn3_pressed"]
+[connection signal="pressed" from="menu_buttons/de_button" to="." method="_on_de_button_pressed"]
 
-[connection signal="pressed" from="options_info_screen/settings/Debug/jump_scn4" to="." method="_on_jump_scn4_pressed"]
+[connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 
-[connection signal="pressed" from="options_info_screen/settings/Debug/jump_scn5" to="." method="_on_jump_scn5_pressed"]
+[connection signal="pressed" from="menu_buttons/optionsbutton" to="." method="_on_optionsbutton_pressed"]
 
-[connection signal="pressed" from="options_info_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
+[connection signal="pressed" from="menu_buttons/exitbutton" to="." method="_on_exitbutton_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Debug/jump_scn3" to="." method="_on_jump_scn3_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Debug/jump_scn4" to="." method="_on_jump_scn4_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Debug/jump_scn5" to="." method="_on_jump_scn5_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
+
+[connection signal="pressed" from="options_screen/btn_close_options" to="." method="_on_btn_close_options_pressed"]
 
 

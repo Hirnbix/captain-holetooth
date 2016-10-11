@@ -5,3 +5,7 @@ KEY_INTRO1,,
 KEY_INTRO2,,
 KEY_INTRO3,,
 KEY_CREDITS,Credits,Mitwirkende
+KEY_OPTIONS,Options,Optionen
+KEY_START,Start,Starten
+KEY_GENERAL_INFO,General,Allgemein
+KEY_DEBUG,Debugging,Test-Optionen

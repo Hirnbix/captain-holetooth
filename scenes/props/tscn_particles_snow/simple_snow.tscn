@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://scenes/scn4-mountain/snow.png" type="Texture" id=1]
+[ext_resource path="res://scenes/props/tscn_particles_snow/snow.png" type="Texture" id=1]
 
 [node name="simple_snow" type="Particles2D"]
 

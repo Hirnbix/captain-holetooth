@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://scenes/scn3-forest/cave_underground.png" type="Texture" id=1]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave_underground.png" type="Texture" id=1]
 
 [node name="cave" type="Node2D"]
 

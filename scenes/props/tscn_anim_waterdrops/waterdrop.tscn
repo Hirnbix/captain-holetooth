@@ -36,7 +36,7 @@ animations = [ { "frames":[ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 )
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 6
+frame = 20
 playing = true
 modulate = Color( 1, 1, 1, 0.8892 )
 

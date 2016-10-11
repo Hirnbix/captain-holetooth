@@ -4,17 +4,17 @@
 [ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/props/coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/scn4-mountain/tileset_scn4.tres" type="TileSet" id=4]
-[ext_resource path="res://scenes/props/simple_snow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/props/tscn_particles_snow/simple_snow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/scn4-mountain/steinschlag.scn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/scn4-mountain/parallax_scn4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/scn4-mountain/scn4-to-scn5.gd" type="Script" id=9]
-[ext_resource path="res://scenes/props/torch/torch.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/props/tscn_prop_torch/torch.tscn" type="PackedScene" id=10]
 [ext_resource path="res://audio/music/windloop.ogg" type="AudioStream" id=11]
 [ext_resource path="res://audio/music/scn4_bg_music.ogg" type="AudioStream" id=12]
-[ext_resource path="res://scenes/props/cave_texture_polygon.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/props/waterdrop.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/props/fireflies.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave_texture_polygon.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/props/tscn_anim_waterdrops/waterdrop.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/props/tscn_anim_fireflies/fireflies.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/scene_teleporter.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -346,7 +346,7 @@ transform/scale = Vector2( 1, 1.3125 )
 [node name="AnimatedSprite" parent="cave/waterdrop"]
 
 animation = "faster"
-frame = 12
+frame = 7
 
 [node name="waterdrop1" parent="cave" instance=ExtResource( 14 )]
 
@@ -372,12 +372,12 @@ transform/scale = Vector2( 1, 1 )
 
 [node name="AnimatedSprite" parent="fireflies"]
 
-frame = 9
+frame = 6
 modulate = Color( 0.745982, 0.925781, 0.303772, 0.418376 )
 
 [node name="AnimatedSprite1" parent="fireflies"]
 
-frame = 4
+frame = 1
 
 [node name="fireflies3" parent="." instance=ExtResource( 15 )]
 

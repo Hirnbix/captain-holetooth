@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=1]
+[gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://scenes/scn3-forest/scn3.gd" type="Script" id=1]
 [ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=2]
@@ -6,21 +6,20 @@
 [ext_resource path="res://scenes/scn3-forest/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/scn3-forest/signpost.png" type="Texture" id=6]
-[ext_resource path="res://scenes/scn3-forest/cave_underground.png" type="Texture" id=7]
-[ext_resource path="res://protoyping/waterfall.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/props/tscn_prop_torch/torch.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/props/tscn_random_plants_flowers/random_flowers.scn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/props/coin.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/scn3-forest/enemy.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/scn3-forest/forest_critter.tscn" type="PackedScene" id=13]
-[ext_resource path="res://audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=14]
-[ext_resource path="res://scenes/props/tscn_platforms/moving_platform.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/props/tscn_platforms/one_way_platform.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/props/tscn_platforms/small_one_way_platform.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/props/tscn_particles_flying_birds/birds.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/scene_teleporter.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/props/tscn_physical_rock/rock.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/props/tscn_anim_waterdrops/waterdrop.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave_underground.png" type="Texture" id=7]
+[ext_resource path="res://scenes/props/tscn_prop_torch/torch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/props/tscn_random_plants_flowers/random_flowers.scn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/props/coin.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/scn3-forest/enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/scn3-forest/forest_critter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=13]
+[ext_resource path="res://scenes/props/tscn_platforms/moving_platform.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/props/tscn_platforms/one_way_platform.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/props/tscn_platforms/small_one_way_platform.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/props/tscn_particles_flying_birds/birds.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/scene_teleporter.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/props/tscn_physical_rock/rock.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/props/tscn_anim_waterdrops/waterdrop.tscn" type="PackedScene" id=20]
 
 [node name="scn3" type="Node"]
 
@@ -32,7 +31,6 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 z/z = -1
 mode = 0
@@ -65,7 +63,6 @@ centered = false
 
 [node name="cave" type="Node2D" parent="tile_map"]
 
-editor/display_folded = true
 transform/pos = Vector2( 105, -30 )
 
 [node name="tex_cave" type="Polygon2D" parent="tile_map/cave"]
@@ -85,51 +82,47 @@ texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
 
-[node name="Node2D" parent="tile_map/cave" instance=ExtResource( 8 )]
-
-transform/pos = Vector2( 383.978, 600.331 )
-
-[node name="torch" parent="tile_map" instance=ExtResource( 9 )]
+[node name="torch" parent="tile_map" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2507.57, 1241.5 )
 
-[node name="random_cave_critters" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 2234.49, 1330.51 )
 
-[node name="random_cave_critters1" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters1" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 2204.17, 1322.32 )
 
-[node name="random_cave_critters2" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters2" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 2017.14, 1210.83 )
 
-[node name="random_cave_critters3" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters3" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 381.557, 1070.35 )
 
-[node name="random_cave_critters4" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters4" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 233.102, 1068.81 )
 
-[node name="random_cave_critters5" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters5" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 3019, 1256 )
 
-[node name="random_cave_critters6" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters6" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 3223, 1388 )
 
-[node name="random_cave_critters7" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters7" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 1963, 1388.79 )
 
-[node name="random_cave_critters8" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters8" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 2251.55, 933.682 )
 
-[node name="random_cave_critters9" parent="tile_map" instance=ExtResource( 10 )]
+[node name="random_cave_critters9" parent="tile_map" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 1686.55, 1380.68 )
 
@@ -137,324 +130,322 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 
 editor/display_folded = true
 
-[node name="random_coin1" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin1" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3428, 560 )
 
-[node name="random_coin2" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin2" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3672, 582 )
 
-[node name="random_coin3" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin3" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3356, 560 )
 
-[node name="random_coin4" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin4" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3882, 672 )
 
-[node name="random_coin5" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin5" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 4082, 772 )
 
-[node name="random_coin6" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin6" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 4582, 1122 )
 
-[node name="random_coin7" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin7" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 4612, 1122 )
 
-[node name="random_coin8" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin8" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 4602, 1092 )
 
-[node name="random_coin9" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin9" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3392, 560 )
 
-[node name="random_coin10" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin10" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3440, 524 )
 
-[node name="random_coin11" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin11" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3404, 524 )
 
-[node name="random_coin12" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin12" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3464, 560 )
 
-[node name="random_coin13" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin13" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3500, 560 )
 
-[node name="random_coin14" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin14" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3476, 524 )
 
-[node name="random_coin15" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin15" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3368, 524 )
 
-[node name="random_coin16" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin16" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3380, 488 )
 
-[node name="random_coin17" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin17" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3392, 452 )
 
-[node name="random_coin18" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin18" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3428, 452 )
 
-[node name="random_coin19" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin19" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3464, 452 )
 
-[node name="random_coin20" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin20" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3476, 488 )
 
-[node name="random_coin21" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin21" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3440, 488 )
 
-[node name="random_coin22" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin22" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3416, 488 )
 
-[node name="random_coin23" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin23" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3440, 416 )
 
-[node name="random_coin24" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin24" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3428, 380 )
 
-[node name="random_coin25" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin25" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3512, 524 )
 
-[node name="random_coin26" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin26" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3404, 416 )
 
-[node name="random_coin27" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin27" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2996, 812 )
 
-[node name="random_coin28" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin28" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3068, 728 )
 
-[node name="random_coin29" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin29" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3164, 644 )
 
-[node name="random_coin30" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin30" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3164, 644 )
 
-[node name="random_coin31" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin31" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2094.67, 752.663 )
 
-[node name="random_coin32" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin32" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2132, 752 )
 
-[node name="random_coin33" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin33" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2114, 721 )
 
-[node name="random_coin34" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin34" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 800 )
 
-[node name="random_coin35" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin35" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 908 )
 
-[node name="random_coin36" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin36" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 1016 )
 
-[node name="random_coin37" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin37" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 1112 )
 
-[node name="random_coin38" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin38" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 1208 )
 
-[node name="random_coin39" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin39" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1976, 1208 )
 
-[node name="random_coin40" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin40" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1688, 764 )
 
-[node name="random_coin41" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin41" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1532, 668 )
 
-[node name="random_coin42" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin42" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1364, 548 )
 
-[node name="random_coin43" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin43" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1400, 548 )
 
-[node name="random_coin44" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin44" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1328, 548 )
 
-[node name="random_coin45" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin45" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1040, 368 )
 
-[node name="random_coin46" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin46" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1004, 368 )
 
-[node name="random_coin47" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin47" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 968, 368 )
 
-[node name="random_coin48" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin48" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 932, 368 )
 
-[node name="random_coin49" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin49" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 92, 512 )
 
-[node name="random_coin50" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin50" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 92, 476 )
 
-[node name="random_coin51" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin51" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 92, 440 )
 
-[node name="random_coin52" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin52" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 92, 404 )
 
-[node name="random_coin53" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin53" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 428, 1064 )
 
-[node name="random_coin54" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin54" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 464, 1028 )
 
-[node name="random_coin61" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin61" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 922, 692 )
 
-[node name="random_coin62" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin62" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 922, 652 )
 
-[node name="random_coin63" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin63" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 922, 612 )
 
-[node name="random_coin64" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin64" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 922, 572 )
 
-[node name="random_coin65" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin65" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 952, 542 )
 
-[node name="random_coin66" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin66" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 982, 512 )
 
-[node name="random_coin55" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin55" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 500, 992 )
 
-[node name="random_coin56" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin56" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 548, 956 )
 
-[node name="random_coin57" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin57" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 410.987, 1021.35 )
 
-[node name="random_coin58" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin58" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 632, 932 )
 
-[node name="random_coin59" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin59" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 862, 1012 )
 
-[node name="random_coin60" parent="items" instance=ExtResource( 11 )]
+[node name="random_coin60" parent="items" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 862, 972 )
 
 [node name="enemies" type="Node" parent="." groups=[ "enemies" ]]
 
-editor/display_folded = true
-
-[node name="enemy 5" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 5" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 834.664, 1309.6 )
 
-[node name="enemy 6" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 6" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 707.665, 1225.05 )
 
-[node name="enemy 7" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 7" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1125.21, 1053.06 )
 
-[node name="enemy 8" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 8" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1292.11, 1059.24 )
 
-[node name="enemy 9" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 9" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1607.38, 923.239 )
 
-[node name="enemy 10" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 10" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2586.9, 939.059 )
 
-[node name="enemy 11" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 11" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 703.5, 491.482 )
 transform/scale = Vector2( 0.734366, 0.671311 )
 
-[node name="enemy 12" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 12" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1193.63, 460.381 )
 
-[node name="enemy 14" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 14" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3546.2, 1356.19 )
 
-[node name="enemy 15" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy 15" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2406.63, 815.115 )
 
-[node name="enemy15" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy15" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3710.72, 1394.25 )
 
-[node name="enemy16" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 12 )]
+[node name="enemy16" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3781.93, 1393.02 )
 
-[node name="critter_sprite_forest" parent="enemies" instance=ExtResource( 13 )]
+[node name="critter_sprite_forest" parent="enemies" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3524.42, 1856.12 )
 motion = Vector2( 100, 0 )
@@ -462,7 +453,7 @@ cycle = 6.0
 
 [node name="music" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 14 )
+stream/stream = ExtResource( 13 )
 stream/play = true
 stream/loop = true
 stream/volume_db = 3.0
@@ -485,119 +476,117 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 editor/display_folded = true
 
-[node name="moving_platform" parent="props" instance=ExtResource( 15 )]
+[node name="moving_platform" parent="props" instance=ExtResource( 14 )]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 922, 762 )
 z/z = -1
-motion = Vector2( 0, 120 )
-cycle = 5.0
 
-[node name="one_way_platform" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 982, 422 )
 
-[node name="one_way_platform1" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform1" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 692, 532 )
 
-[node name="one_way_platform2" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform2" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 392, 432 )
 
-[node name="one_way_platform6" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform6" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1372.69, 951.347 )
 
-[node name="one_way_platform7" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform7" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1482, 722 )
 
-[node name="one_way_platform8" parent="props" instance=ExtResource( 16 )]
+[node name="one_way_platform8" parent="props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1382, 592 )
 
-[node name="small_one_way_platform" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1702, 812 )
 z/z = -1
 
-[node name="small_one_way_platform1" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform1" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 2023.52, 1269.15 )
 z/z = -1
 
-[node name="small_one_way_platform2" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform2" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1937.78, 1169.15 )
 z/z = -1
 
-[node name="small_one_way_platform3" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform3" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1992.83, 1073.73 )
 z/z = -1
 
-[node name="small_one_way_platform4" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform4" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1923.34, 991.71 )
 z/z = -1
 
-[node name="small_one_way_platform5" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform5" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1989.22, 881.782 )
 z/z = -1
 
-[node name="small_one_way_platform6" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform6" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3002, 862 )
 z/z = -1
 
-[node name="small_one_way_platform7" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform7" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3172, 692 )
 z/z = -1
 
-[node name="small_one_way_platform8" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform8" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3082, 782 )
 z/z = -1
 
-[node name="small_one_way_platform9" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform9" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3262, 622 )
 z/z = -1
 
-[node name="small_one_way_platform10" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform10" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 4082, 832 )
 z/z = -1
 
-[node name="small_one_way_platform10 2" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform10 2" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3672, 632 )
 z/z = -1
 
-[node name="small_one_way_platform10 3" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform10 3" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3882, 732 )
 z/z = -1
 
-[node name="small_one_way_platform11" parent="props" instance=ExtResource( 17 )]
+[node name="small_one_way_platform11" parent="props" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 4016, 932 )
 z/z = -1
 
-[node name="birds" parent="." instance=ExtResource( 18 )]
+[node name="birds" parent="." instance=ExtResource( 17 )]
 
-[node name="scene_teleporter" parent="." instance=ExtResource( 19 )]
+[node name="scene_teleporter" parent="." instance=ExtResource( 18 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 4844.27, 1159.68 )
 scene_path = "res://scenes/scn4-mountain/scn4.tscn"
 
-[node name="rock" parent="." instance=ExtResource( 20 )]
+[node name="rock" parent="." instance=ExtResource( 19 )]
 
-[node name="waterdrop" parent="." instance=ExtResource( 21 )]
+[node name="waterdrop" parent="." instance=ExtResource( 20 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 2427.07, 1253.14 )
@@ -606,7 +595,7 @@ transform/scale = Vector2( 1, 1.29413 )
 [node name="AnimatedSprite" parent="waterdrop"]
 
 transform/pos = Vector2( -1, -0.77272 )
-frame = 0
+frame = 17
 
 [connection signal="body_enter" from="scene_teleporter" to="scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 

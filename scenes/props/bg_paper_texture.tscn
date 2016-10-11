@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/scn1-menu/splash_screen_wolken_single_scn1.png" type="Texture" id=1]
 
-[node name="wolken" type="Sprite"]
+[node name="bg_holetooth" type="Sprite"]
 
 transform/pos = Vector2( 255.54, 144 )
 z/z = -1
