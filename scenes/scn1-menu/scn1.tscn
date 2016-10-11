@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/scn1-menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/scn1-menu/scn1_menu_bg.png" type="Texture" id=2]
-[ext_resource path="res://scenes/scn1-menu/scn1_menu_gametitle_EN.png" type="Texture" id=3]
+[ext_resource path="res://scenes/scn1-menu/scn1_menu_gametitle_EN.tex" type="Texture" id=3]
 [ext_resource path="res://scenes/scn1-menu/splashscreen_ship_scn1.png" type="Texture" id=4]
 [ext_resource path="res://scenes/player/ship_thruster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/scn1-menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=6]
@@ -47,15 +47,22 @@ Tabs/styles/panel = null
 Tabs/styles/tab_bg = null
 Tabs/styles/tab_fg = null
 
-[node name="main_menu" type="Node2D"]
+[node name="main_menu" type="Control"]
 
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
 script/script = ExtResource( 1 )
 
 [node name="art" type="Node2D" parent="."]
 
 [node name="bg" type="Node2D" parent="art"]
 
-editor/display_folded = true
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="splashscreen_bg" type="Sprite" parent="art/bg"]
@@ -66,8 +73,9 @@ texture = ExtResource( 2 )
 
 [node name="gametitle" type="Sprite" parent="art/bg"]
 
-transform/pos = Vector2( 371, 87 )
+transform/pos = Vector2( 355, 95 )
 texture = ExtResource( 3 )
+region_rect = Rect2( 8, 1, 264, 152 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
@@ -111,10 +119,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 448.0
-margin/top = 128.0
-margin/right = 480.0
-margin/bottom = 150.0
+margin/left = 424.0
+margin/top = 240.0
+margin/right = 456.0
+margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -127,10 +135,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 408.0
-margin/top = 128.0
-margin/right = 440.0
-margin/bottom = 150.0
+margin/left = 464.0
+margin/top = 240.0
+margin/right = 496.0
+margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -143,10 +151,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 312.0
-margin/top = 168.0
-margin/right = 478.0
-margin/bottom = 207.0
+margin/left = 256.0
+margin/top = 176.0
+margin/right = 408.0
+margin/bottom = 215.0
 custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -160,9 +168,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 312.0
+margin/left = 256.0
 margin/top = 224.0
-margin/right = 478.0
+margin/right = 408.0
 margin/bottom = 264.0
 custom_fonts/font = ExtResource( 9 )
 toggle_mode = false
@@ -184,6 +192,23 @@ margin/bottom = 296.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+
+[node name="change_locale_label" type="Label" parent="menu_buttons"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 435.0
+margin/top = 221.0
+margin/right = 494.0
+margin/bottom = 235.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Language"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="options_screen" type="Area2D" parent="."]
 
