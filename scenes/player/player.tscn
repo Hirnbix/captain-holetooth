@@ -78,7 +78,7 @@ tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "updat
 
 [sub_resource type="Animation" id=9]
 
-length = 0.4
+length = 0.5
 loop = true
 step = 0.25
 tracks/0/type = "value"
@@ -163,7 +163,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 35
-frame = 22
+frame = 24
 
 [node name="smoke" type="Particles2D" parent="sprite"]
 
@@ -214,7 +214,7 @@ anims/run = SubResource( 11 )
 anims/run_weapon = SubResource( 12 )
 anims/standing_weapon_ready = SubResource( 13 )
 playback/active = true
-playback/speed = 3.53123
+playback/speed = 3.5
 blend_times = [  ]
 autoplay = ""
 
