@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
-[ext_resource path="res://scenes/props/tscn_particles_snow/snow.png" type="Texture" id=1]
+[ext_resource path="res://scenes/scn5-ship/meteorite.png" type="Texture" id=1]
 [ext_resource path="res://scenes/props/tscn_prop_torch/flicker_torch.gd" type="Script" id=2]
 [ext_resource path="res://scenes/props/tscn_prop_torch/46273__phreaksaccount__fire-small-loop.smp" type="Sample" id=3]
 [ext_resource path="res://scenes/scn5-ship/feuer.png" type="Texture" id=4]
 [ext_resource path="res://scenes/props/tscn_prop_torch/torch.png" type="Texture" id=5]
+[ext_resource path="res://scenes/props/tscn_particles_snow/snow.png" type="Texture" id=6]
 
 [sub_resource type="SampleLibrary" id=1]
 
@@ -27,12 +28,13 @@ transform/pos = Vector2( 32, 32 )
 
 [node name="torchlight" type="Light2D" parent="."]
 
+visibility/opacity = 0.766815
 transform/pos = Vector2( 28, 39 )
 transform/scale = Vector2( 15, 15 )
 enabled = true
 texture = ExtResource( 1 )
 offset = Vector2( -0.0274089, 0.470093 )
-scale = 1.0
+scale = 0.25
 color = Color( 1, 1, 1, 1 )
 energy = 1.0
 mode = 0
@@ -122,7 +124,7 @@ config/amount = 32
 config/lifetime = 3.79836
 config/time_scale = 0.533389
 config/explosiveness = 0.569839
-config/texture = ExtResource( 1 )
+config/texture = ExtResource( 6 )
 params/direction = 0.0
 params/spread = 28.9353
 params/linear_velocity = 20.0
