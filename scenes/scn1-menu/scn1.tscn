@@ -1,51 +1,120 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://scenes/scn1-menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://scenes/scn1-menu/scn1_menu_bg.png" type="Texture" id=2]
-[ext_resource path="res://scenes/scn1-menu/scn1_menu_gametitle_EN.tex" type="Texture" id=3]
+[ext_resource path="res://scenes/scn1-menu/scn1_menu_gametitle_EN.tex" type="Texture" id=2]
+[ext_resource path="res://scenes/scn1-menu/scn1_menu_bg.png" type="Texture" id=3]
 [ext_resource path="res://scenes/scn1-menu/splashscreen_ship_scn1.png" type="Texture" id=4]
 [ext_resource path="res://scenes/player/ship_thruster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/scn1-menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=6]
-[ext_resource path="res://scenes/scn1-menu/gb.png" type="Texture" id=7]
-[ext_resource path="res://scenes/scn1-menu/de.png" type="Texture" id=8]
-[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=9]
-[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://scenes/protoypes/skull_eye.png" type="Texture" id=7]
+[ext_resource path="res://scenes/protoypes/skull_eye.gd" type="Script" id=8]
+[ext_resource path="res://scenes/scn1-menu/gb.png" type="Texture" id=9]
+[ext_resource path="res://scenes/scn1-menu/de.png" type="Texture" id=10]
+[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://fonts/berry12.fnt" type="BitmapFont" id=13]
+[ext_resource path="res://scenes/scn1-menu/splashscreen_bg.png" type="Texture" id=14]
+[ext_resource path="res://scenes/scn1-menu/close_button.png" type="Texture" id=15]
+[ext_resource path="res://scenes/protoypes/musicstream_player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://audio/music/scn1_menu_music.ogg" type="AudioStream" id=17]
 
 [sub_resource type="Animation" id=1]
 
-length = 6.0
-loop = true
-step = 0.3
+resource/name = "gametitle_animations"
+length = 4.0
+loop = false
+step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("splashscreen_schiff:transform/pos")
-tracks/0/interp = 1
+tracks/0/path = NodePath("../gametitle:transform/pos")
+tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 6 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 595.2, 158.4 ), Vector2( -68.8, 86.4 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4, 0.7 ), "transitions":FloatArray( 1, 1, 0.25, 0.25 ), "update":0, "values":[ Vector2( 355, -89 ), Vector2( 355, 95 ), Vector2( 355, 87 ), Vector2( 355, 95 ) ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("splashscreen_schiff:z/z")
+tracks/1/path = NodePath("keyvisual_lochzahn:transform/scale")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 3 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 3, 0 ] }
+tracks/1/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 8, 8 ), Vector2( 1, 1 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("splashscreen_schiff:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( -4, -4 ), "update":0, "values":[ Vector2( 595.2, 190.4 ), Vector2( -108.8, 54.4 ) ] }
 
-[sub_resource type="Theme" id=2]
+[sub_resource type="StyleBoxTexture" id=2]
 
-Tabs/colors/font_color_bg = Color( 0.690196, 0.690196, 0.690196, 1 )
-Tabs/colors/font_color_fg = Color( 0.941176, 0.941176, 0.941176, 1 )
-Tabs/constants/hseparation = 4
-Tabs/constants/label_valign_bg = 2
-Tabs/constants/label_valign_fg = 0
-Tabs/constants/top_margin = 24
-Tabs/fonts/font = ExtResource( 9 )
-Tabs/icons/close = null
-Tabs/icons/decrement = null
-Tabs/icons/decrement_hilite = null
-Tabs/icons/increment = null
-Tabs/icons/increment_hilite = null
-Tabs/styles/button = null
-Tabs/styles/button_pressed = null
-Tabs/styles/panel = null
-Tabs/styles/tab_bg = null
-Tabs/styles/tab_fg = null
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 14 )
+region_rect = Rect2( 12, 10, 487, 266 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="Theme" id=3]
+
+default_font = ExtResource( 12 )
+Button/colors/font_color = Color( 0.478431, 0.352941, 0.321569, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = ExtResource( 13 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = null
+TabContainer/colors/font_color_bg = Color( 0.667969, 0.459924, 0.187866, 1 )
+TabContainer/colors/font_color_fg = Color( 0.941176, 0.941176, 0.941176, 1 )
+TabContainer/constants/hseparation = 10
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 19
+TabContainer/fonts/font = ExtResource( 12 )
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_hilite = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_hilite = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_hilite = null
+TabContainer/styles/panel = null
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_fg = null
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin/left = 8.0
+content_margin/right = 8.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.6, 0.6, 0.6, 1 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.27451, 0.156863, 0.211765, 0.949172 )
+light_color = Color( 0.8, 0.8, 0.8, 1 )
+dark_color = Color( 0.8, 0.8, 0.8, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
 
 [node name="main_menu" type="Control"]
 
@@ -59,6 +128,12 @@ margin/right = 0.0
 margin/bottom = 0.0
 script/script = ExtResource( 1 )
 
+[node name="gametitle" type="Sprite" parent="."]
+
+transform/pos = Vector2( 355, 95 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 8, 1, 264, 152 )
+
 [node name="art" type="Node2D" parent="."]
 
 [node name="bg" type="Node2D" parent="art"]
@@ -69,17 +144,11 @@ __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 transform/pos = Vector2( 256, 144 )
 z/z = -1
-texture = ExtResource( 2 )
-
-[node name="gametitle" type="Sprite" parent="art/bg"]
-
-transform/pos = Vector2( 355, 95 )
 texture = ExtResource( 3 )
-region_rect = Rect2( 8, 1, 264, 152 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 595.2, 158.4 )
+transform/pos = Vector2( 595.2, 190.4 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
@@ -92,22 +161,45 @@ transform/scale = Vector2( 1.10571, 1.71501 )
 config/local_space = true
 config/flip_h = true
 
+[node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
+
+transform/pos = Vector2( 30, 20 )
+transform/scale = Vector2( 0.7, 0.7 )
+z/z = 2
+z/relative = false
+texture = ExtResource( 4 )
+modulate = Color( 0, 0, 0, 0.326798 )
+
 [node name="anim" type="AnimationPlayer" parent="art"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/ship_bounce = SubResource( 1 )
+anims/gametitle_animations = SubResource( 1 )
 playback/active = true
 playback/speed = 0.5
 blend_times = [  ]
-autoplay = "ship_bounce"
+autoplay = "gametitle_animations"
 
 [node name="keyvisual_lochzahn" type="Sprite" parent="art"]
 
 transform/pos = Vector2( 239, 146 )
 texture = ExtResource( 6 )
-__meta__ = { "_edit_group_":true, "_edit_lock_":true }
+__meta__ = { "_edit_group_":true }
+
+[node name="skull_eye" type="Sprite" parent="art/keyvisual_lochzahn"]
+
+transform/pos = Vector2( -107, 83 )
+z/z = 2
+texture = ExtResource( 7 )
+script/script = ExtResource( 8 )
+
+[node name="skull_eye1" type="Sprite" parent="art/keyvisual_lochzahn"]
+
+transform/pos = Vector2( -123, 81 )
+z/z = 2
+texture = ExtResource( 7 )
+script/script = ExtResource( 8 )
 
 [node name="menu_buttons" type="Node2D" parent="."]
 
@@ -126,7 +218,7 @@ margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 7 )
+textures/normal = ExtResource( 9 )
 params/scale = Vector2( 2, 2 )
 
 [node name="de_button" type="TextureButton" parent="menu_buttons"]
@@ -142,7 +234,7 @@ margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 8 )
+textures/normal = ExtResource( 10 )
 params/scale = Vector2( 2, 2 )
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
@@ -153,9 +245,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 256.0
 margin/top = 176.0
-margin/right = 408.0
-margin/bottom = 215.0
-custom_fonts/font = ExtResource( 9 )
+margin/right = 416.0
+margin/bottom = 216.0
+custom_fonts/font = ExtResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -172,7 +264,7 @@ margin/left = 256.0
 margin/top = 224.0
 margin/right = 408.0
 margin/bottom = 264.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -203,7 +295,7 @@ margin/left = 435.0
 margin/top = 221.0
 margin/right = 494.0
 margin/bottom = 235.0
-custom_fonts/font = ExtResource( 10 )
+custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Language"
 percent_visible = 1.0
@@ -226,11 +318,13 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = SubResource( 2 )
-margin/left = 10.0
-margin/top = 48.0
-margin/right = 312.0
-margin/bottom = 264.0
+theme/theme = SubResource( 3 )
+margin/left = 8.0
+margin/top = 16.0
+margin/right = 508.0
+margin/bottom = 266.0
+custom_styles/tab_fg = SubResource( 4 )
+custom_styles/panel = SubResource( 5 )
 tab_align = 1
 tabs_visible = true
 
@@ -242,11 +336,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-custom_fonts/font = ExtResource( 9 )
+margin/left = -8.0
+margin/top = 22.0
+margin/right = -4.0
+margin/bottom = -22.0
 
 [node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/General"]
 
@@ -256,11 +349,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 6.0
-margin/top = 5.0
-margin/right = 5.0
-margin/bottom = 2.0
-custom_fonts/normal_font = ExtResource( 10 )
+margin/left = 16.0
+margin/top = 14.0
+margin/right = 206.0
+margin/bottom = 55.0
+custom_fonts/normal_font = ExtResource( 12 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
@@ -275,11 +368,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-custom_fonts/font = ExtResource( 9 )
+margin/left = 0.0
+margin/top = 22.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_fonts/font = ExtResource( 11 )
 
 [node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
 
@@ -288,10 +381,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 2.0
-margin/top = 7.0
-margin/right = 290.0
+margin/top = 8.0
+margin/right = 244.0
 margin/bottom = 40.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -306,9 +399,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 2.0
 margin/top = 48.0
-margin/right = 290.0
+margin/right = 244.0
 margin/bottom = 80.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -323,9 +416,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 2.0
 margin/top = 88.0
-margin/right = 290.0
+margin/right = 244.0
 margin/bottom = 120.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -340,9 +433,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 2.0
 margin/top = 128.0
-margin/right = 290.0
+margin/right = 244.0
 margin/bottom = 168.0
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -358,11 +451,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-custom_fonts/font = ExtResource( 9 )
+margin/left = 0.0
+margin/top = 22.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_fonts/font = ExtResource( 11 )
 
 [node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
@@ -376,29 +469,33 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 10 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 12 )
+custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
-[node name="btn_close_options" type="Button" parent="options_screen"]
+[node name="btn_close_options" type="TextureButton" parent="options_screen"]
 
-anchor/right = 1
-anchor/bottom = 1
+anchor/right = 3
+anchor/bottom = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 227.0
-margin/top = 11.0
-margin/right = -219.0
-margin/bottom = 25.0
+margin/left = 480.0
+margin/top = 16.0
+margin/right = -488.0
+margin/bottom = -24.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "X"
-flat = false
+textures/normal = ExtResource( 15 )
+
+[node name="musicstream_player" parent="." instance=ExtResource( 16 )]
+
+stream/stream = ExtResource( 17 )
+stream/volume_db = 0.0
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 
