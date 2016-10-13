@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scenes/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://scenes/hud/hud_bg.png" type="Texture" id=2]
 [ext_resource path="res://fonts/tiny_8.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://fonts/counter_interface_8.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://fonts/berry6.fnt" type="BitmapFont" id=6]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -142,10 +143,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 10.0
-margin/top = 10.0
-margin/right = 90.0
-margin/bottom = 30.0
+margin/left = 4.0
+margin/top = 4.0
+margin/right = 84.0
+margin/bottom = 24.0
 custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -153,6 +154,25 @@ shortcut = null
 text = "Main Menu"
 flat = false
 
+[node name="sound_off" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 88.0
+margin/top = 4.0
+margin/right = 144.0
+margin/bottom = 24.0
+custom_fonts/font = ExtResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Music Off"
+flat = false
+
 [connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]
+
+[connection signal="pressed" from="sound_off" to="." method="_on_sound_off_pressed"]
 
 

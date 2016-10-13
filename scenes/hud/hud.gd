@@ -18,3 +18,8 @@ func update_scores():
 
 func _on_go_to_menu_pressed():
 	transition.fade_to("res://scenes/scn1-menu/scn1.tscn")
+
+
+func _on_sound_off_pressed():
+	AudioServer.set_stream_global_volume_scale(0)
+	pass # replace with function body

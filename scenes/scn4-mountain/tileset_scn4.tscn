@@ -2,8 +2,6 @@
 
 [ext_resource path="res://scenes/scn4-mountain/tiles_scn4.png" type="Texture" id=1]
 
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -19,12 +17,12 @@ points = Vector2Array( -32, 32, -32, -24, 24, -24, 24, 32 )
 custom_solver_bias = 0.0
 points = Vector2Array( -32, 32, -32, -32, 24, -32, 24, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -5.70321, -19.2441, 19.3312, -19.2441, 11.1621, 3.94566, -4.91264, 9.21606 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -4.91264, 9.21606, -8, 32, -64, 32, -64, -32, -8, -32, -5.70321, -19.2441 )
@@ -161,11 +159,11 @@ region_rect = Rect2( 320, 128, 128, 64 )
 [node name="collision" type="StaticBody2D" parent="wall_deco"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 15 )
-shapes/1/transform = Matrix32( 1, -0, 0, 1, 0, 0 )
+shapes/1/shape = SubResource( 5 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -427,13 +425,14 @@ trigger = false
 
 [node name="help" type="Label" parent="."]
 
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
 margin/left = 1.0
 margin/top = 331.0
 margin/right = 727.0
 margin/bottom = 422.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
 text = "This scene serves as a tool for editing the tileset.\nNodes (sprites) and their respective collisionsare edited here.\n\nTo create a tileset from this, a \"TileSet\" resoucre must be created. Use the helper in: Scene -> Convert To -> TileSet.\nThis will save a tileset. Saving over it will merge your changes.\n\nFinally, the saved tileset resource (tileset.tres in this case), can be opened to be used into a TileMap node for editing a tile map."
 percent_visible = 1.0
 lines_skipped = 0

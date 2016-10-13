@@ -8,15 +8,17 @@
 [ext_resource path="res://scenes/scn1-menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=6]
 [ext_resource path="res://scenes/protoypes/skull_eye.png" type="Texture" id=7]
 [ext_resource path="res://scenes/protoypes/skull_eye.gd" type="Script" id=8]
-[ext_resource path="res://scenes/scn1-menu/gb.png" type="Texture" id=9]
-[ext_resource path="res://scenes/scn1-menu/de.png" type="Texture" id=10]
-[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=11]
-[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://fonts/berry12.fnt" type="BitmapFont" id=13]
-[ext_resource path="res://scenes/scn1-menu/splashscreen_bg.png" type="Texture" id=14]
-[ext_resource path="res://scenes/scn1-menu/close_button.png" type="Texture" id=15]
-[ext_resource path="res://scenes/protoypes/musicstream_player.tscn" type="PackedScene" id=16]
-[ext_resource path="res://audio/music/scn1_menu_music.ogg" type="AudioStream" id=17]
+[ext_resource path="res://scenes/props/tscn_anim_waterdrops/waterdrop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/scn1-menu/gb.png" type="Texture" id=10]
+[ext_resource path="res://scenes/scn1-menu/de.png" type="Texture" id=11]
+[ext_resource path="res://fonts/berry16.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://fonts/berry8.fnt" type="BitmapFont" id=13]
+[ext_resource path="res://fonts/berry12.fnt" type="BitmapFont" id=14]
+[ext_resource path="res://scenes/scn1-menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
+[ext_resource path="res://scenes/scn1-menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
+[ext_resource path="res://scenes/scn1-menu/close_button.png" type="Texture" id=17]
+[ext_resource path="res://scenes/protoypes/musicstream_player.tscn" type="PackedScene" id=18]
+[ext_resource path="res://audio/music/scn1_menu_music.ogg" type="AudioStream" id=19]
 
 [sub_resource type="Animation" id=1]
 
@@ -40,46 +42,41 @@ tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( -4, -4 ), "update":0, "values":[ Vector2( 595.2, 190.4 ), Vector2( -108.8, 54.4 ) ] }
 
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 14 )
-region_rect = Rect2( 12, 10, 487, 266 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
+bg_color = Color( 0.768627, 0.615686, 0.415686, 1 )
+light_color = Color( 0.768627, 0.615686, 0.415686, 1 )
+dark_color = Color( 0.574219, 0.458553, 0.307297, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
 
 [sub_resource type="Theme" id=3]
 
-default_font = ExtResource( 12 )
+default_font = ExtResource( 13 )
 Button/colors/font_color = Color( 0.478431, 0.352941, 0.321569, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-Button/constants/hseparation = 2
-Button/fonts/font = ExtResource( 13 )
+Button/constants/hseparation = 3
+Button/fonts/font = ExtResource( 14 )
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
 Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = null
-TabContainer/colors/font_color_bg = Color( 0.667969, 0.459924, 0.187866, 1 )
+TabContainer/colors/font_color_bg = Color( 0.632812, 0.517127, 0.365845, 1 )
 TabContainer/colors/font_color_fg = Color( 0.941176, 0.941176, 0.941176, 1 )
 TabContainer/constants/hseparation = 10
 TabContainer/constants/label_valign_bg = 2
 TabContainer/constants/label_valign_fg = 0
 TabContainer/constants/side_margin = 8
 TabContainer/constants/top_margin = 19
-TabContainer/fonts/font = ExtResource( 12 )
+TabContainer/fonts/font = ExtResource( 13 )
 TabContainer/icons/decrement = null
 TabContainer/icons/decrement_hilite = null
 TabContainer/icons/increment = null
@@ -89,32 +86,6 @@ TabContainer/icons/menu_hilite = null
 TabContainer/styles/panel = null
 TabContainer/styles/tab_bg = null
 TabContainer/styles/tab_fg = null
-
-[sub_resource type="StyleBoxFlat" id=4]
-
-content_margin/left = 8.0
-content_margin/right = 8.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.6, 0.6, 0.6, 1 )
-light_color = Color( 0.8, 0.8, 0.8, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=5]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.27451, 0.156863, 0.211765, 0.949172 )
-light_color = Color( 0.8, 0.8, 0.8, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
 
 [node name="main_menu" type="Control"]
 
@@ -201,8 +172,14 @@ z/z = 2
 texture = ExtResource( 7 )
 script/script = ExtResource( 8 )
 
+[node name="waterdrop" parent="art/keyvisual_lochzahn" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( -180.023, -41.2257 )
+transform/scale = Vector2( 1, 1.3446 )
+
 [node name="menu_buttons" type="Node2D" parent="."]
 
+transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
 [node name="en_button" type="TextureButton" parent="menu_buttons"]
@@ -211,14 +188,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 424.0
+margin/left = 430.0
 margin/top = 240.0
-margin/right = 456.0
+margin/right = 462.0
 margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 9 )
+textures/normal = ExtResource( 10 )
 params/scale = Vector2( 2, 2 )
 
 [node name="de_button" type="TextureButton" parent="menu_buttons"]
@@ -227,14 +204,14 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 464.0
+margin/left = 470.0
 margin/top = 240.0
-margin/right = 496.0
+margin/right = 502.0
 margin/bottom = 262.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 10 )
+textures/normal = ExtResource( 11 )
 params/scale = Vector2( 2, 2 )
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
@@ -247,7 +224,7 @@ margin/left = 256.0
 margin/top = 176.0
 margin/right = 416.0
 margin/bottom = 216.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -262,28 +239,14 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 256.0
 margin/top = 224.0
-margin/right = 408.0
+margin/right = 420.0
 margin/bottom = 264.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Options / Info"
 flat = false
-
-[node name="exitbutton" type="TextureButton" parent="menu_buttons"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -10.0
-margin/top = 256.0
-margin/right = 60.0
-margin/bottom = 296.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
 
 [node name="change_locale_label" type="Label" parent="menu_buttons"]
 
@@ -291,11 +254,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 435.0
-margin/top = 221.0
-margin/right = 494.0
-margin/bottom = 235.0
-custom_fonts/font = ExtResource( 12 )
+margin/left = 440.0
+margin/top = 220.0
+margin/right = 499.0
+margin/bottom = 234.0
+custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Language"
 percent_visible = 1.0
@@ -321,10 +284,10 @@ size_flags/vertical = 2
 theme/theme = SubResource( 3 )
 margin/left = 8.0
 margin/top = 16.0
-margin/right = 508.0
-margin/bottom = 266.0
-custom_styles/tab_fg = SubResource( 4 )
-custom_styles/panel = SubResource( 5 )
+margin/right = 504.0
+margin/bottom = 280.0
+custom_styles/tab_fg = ExtResource( 15 )
+custom_styles/panel = ExtResource( 16 )
 tab_align = 1
 tabs_visible = true
 
@@ -336,10 +299,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -8.0
-margin/top = 22.0
-margin/right = -4.0
-margin/bottom = -22.0
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
 
 [node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/General"]
 
@@ -351,9 +314,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 16.0
 margin/top = 14.0
-margin/right = 206.0
-margin/bottom = 55.0
-custom_fonts/normal_font = ExtResource( 12 )
+margin/right = 16.0
+margin/bottom = 32.0
+custom_fonts/normal_font = ExtResource( 13 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
@@ -361,6 +324,7 @@ visible_characters = -1
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
+editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -368,11 +332,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 22.0
-margin/right = 0.0
-margin/bottom = 0.0
-custom_fonts/font = ExtResource( 11 )
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
+custom_styles/tab_fg = ExtResource( 15 )
+custom_fonts/font = ExtResource( 12 )
 
 [node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
 
@@ -384,7 +349,7 @@ margin/left = 2.0
 margin/top = 8.0
 margin/right = 244.0
 margin/bottom = 40.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -401,7 +366,7 @@ margin/left = 2.0
 margin/top = 48.0
 margin/right = 244.0
 margin/bottom = 80.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -418,7 +383,7 @@ margin/left = 2.0
 margin/top = 88.0
 margin/right = 244.0
 margin/bottom = 120.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -435,7 +400,7 @@ margin/left = 2.0
 margin/top = 128.0
 margin/right = 244.0
 margin/bottom = 168.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -444,6 +409,7 @@ flat = false
 
 [node name="Credits" type="Tabs" parent="options_screen/settings"]
 
+editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -451,11 +417,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 22.0
-margin/right = 0.0
-margin/bottom = 0.0
-custom_fonts/font = ExtResource( 11 )
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
 
 [node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
@@ -469,32 +435,49 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
 custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
-[node name="btn_close_options" type="TextureButton" parent="options_screen"]
+[node name="Polygon2D" type="Polygon2D" parent="options_screen"]
 
+z/z = -1
+polygon = Vector2Array( -10, -10, -10, 300, 520, 300, 520, -10 )
+uv = Vector2Array(  )
+color = Color( 0.27451, 0.156863, 0.211765, 0.876349 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="exitbutton" type="TextureButton" parent="options_screen"]
+
+anchor/left = 3
+anchor/top = 3
 anchor/right = 3
 anchor/bottom = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 480.0
-margin/top = 16.0
+margin/left = -448.0
+margin/top = 22.0
 margin/right = -488.0
-margin/bottom = -24.0
+margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 15 )
+textures/normal = ExtResource( 17 )
 
-[node name="musicstream_player" parent="." instance=ExtResource( 16 )]
+[node name="musicstream_player" parent="." instance=ExtResource( 18 )]
 
-stream/stream = ExtResource( 17 )
+stream/stream = ExtResource( 19 )
 stream/volume_db = 0.0
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
@@ -505,8 +488,6 @@ stream/volume_db = 0.0
 
 [connection signal="pressed" from="menu_buttons/optionsbutton" to="." method="_on_optionsbutton_pressed"]
 
-[connection signal="pressed" from="menu_buttons/exitbutton" to="." method="_on_exitbutton_pressed"]
-
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn3" to="." method="_on_jump_scn3_pressed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn4" to="." method="_on_jump_scn4_pressed"]
@@ -515,6 +496,6 @@ stream/volume_db = 0.0
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
 
-[connection signal="pressed" from="options_screen/btn_close_options" to="." method="_on_btn_close_options_pressed"]
+[connection signal="pressed" from="options_screen/exitbutton" to="." method="_on_exitbutton_pressed"]
 
 

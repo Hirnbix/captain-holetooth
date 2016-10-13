@@ -5,10 +5,10 @@ extends Node2D
 # var b="textvar"
 
 func reset_globals():
-	globals.score_pins = 0
-	globals.score_pocket = 0
-	globals.score_multiplier = 1
-	globals.score_total = 0
+	global.score_pins = 0
+	global.score_pocket = 0
+	global.score_multiplier = 1
+	global.score_total = 0
 
 func _input(event):
 	if Input.is_action_pressed("ui_select"):

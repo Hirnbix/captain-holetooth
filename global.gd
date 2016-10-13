@@ -5,6 +5,10 @@ extends Node
 # GLOBALS #
 ###########
 
+# Statistics
+
+var times_jumped = 0
+
 # HUD and scoring
 
 const MAX_ITEMS = 120
@@ -12,6 +16,12 @@ var score = 0
 var final_score = 0
 var high_score = 0
 var items_collected = 0
+
+# Scoring Minigame
+var score_pins = 0
+var score_pocket = 0
+var score_multiplier = 1
+var score_total = 0
 
 # Scene related
 

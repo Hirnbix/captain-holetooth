@@ -142,11 +142,9 @@ func _integrate_forces(s):
 		if (move_left and not move_right):
 			if (lv.x > -WALK_MAX_VELOCITY):
 				lv.x -= WALK_ACCEL*step
-				print("moving left")
 		elif (move_right and not move_left):
 			if (lv.x < WALK_MAX_VELOCITY):
 				lv.x += WALK_ACCEL*step
-				print("moving right")
 		else:
 			var xv = abs(lv.x)
 			xv -= WALK_DEACCEL*step
@@ -161,6 +159,8 @@ func _integrate_forces(s):
 			jumping = true
 			stopping_jump = false
 			get_node("sfx").play("jump")
+			global.times_jumped = global.times_jumped +1
+			print(globals.times_jumped)
 		
 		# Check siding
 		if (lv.x < 0 and move_left):

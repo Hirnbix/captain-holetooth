@@ -24,6 +24,7 @@ scene_path = "no scene"
 
 [node name="teleporter_debug_label" type="Label" parent="."]
 
+visibility/visible = false
 rect/scale = Vector2( 0.25, 0.25 )
 focus/ignore_mouse = true
 focus/stop_mouse = true

@@ -23,10 +23,12 @@ func _process(delta):
 func _timeout():
 	time = 0
 	timeout = rand_range(1,2)
-	var rndscalex = rand_range(10,12)
+	var rndscalex = rand_range(10,18)
+	var rndenergy = rand_range(1,4.5)
 
 	#print(rndscalex + " " + rndscaley)
 	self.set_scale(Vector2(rndscalex, rndscalex))
+	self.set_energy(rndenergy)
 	
 
 

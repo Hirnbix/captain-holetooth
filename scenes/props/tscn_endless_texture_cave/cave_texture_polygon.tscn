@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave_underground.png" type="Texture" id=1]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave material.tres" type="Shader" id=1]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/NormalMap.png" type="Texture" id=2]
+[ext_resource path="res://scenes/props/tscn_endless_texture_cave/cave_underground.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+shader/shader = ExtResource( 1 )
+shader/shading_mode = 0
+shader_param/normal = ExtResource( 2 )
 
 [node name="cave" type="Node2D"]
 
@@ -8,15 +16,16 @@ transform/pos = Vector2( 105, -30 )
 
 [node name="tex_cave" type="Polygon2D" parent="."]
 
+material/material = SubResource( 1 )
 transform/pos = Vector2( -242.229, -56.5702 )
 transform/scale = Vector2( 3.24454, 2.3563 )
 z/z = -1
 polygon = Vector2Array( 192.536, 76.4254, 20.8518, -63.6256, -130.795, -68.3344, -129.785, -51.1215, -127.804, -49.2805, -125.705, -47.0989, -127.844, -44.0992, -127.685, -39.0815, -125.625, -38.2089, -125.546, -34.3366, -128.675, -32.2095, -128.042, -23.974, -130.795, -20.7521, -61.2829, 58.8953, 33.4001, 135.078, 103.557, 168.85, 181.129, 260.207, 275.812, 261.778, 275.812, 151.037 )
 uv = Vector2Array( 102.416, -4.72131, 20.8518, -63.6256, -120.032, -67.5526, -119.462, -0.00897217, -61.2829, 58.8953, 0, 0 )
-color = Color( 0.359375, 0.359375, 0.359375, 1 )
+color = Color( 0.292522, 0.291595, 0.410156, 1 )
 vertex_colors = ColorArray(  )
 offset = Vector2( 2, 2 )
-texture/texture = ExtResource( 1 )
+texture/texture = ExtResource( 3 )
 texture/offset = Vector2( 0, 0 )
 texture/scale = Vector2( 2, 2 )
 texture/rotation = 0.0
