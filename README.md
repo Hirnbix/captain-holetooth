@@ -23,7 +23,9 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=774722048
 
 ###October 2016
 
-![Early Screenshots](https://www.dropbox.com/s/y27a5icn4mby0je/Screenshot%202016-10-13%2012.58.32.png?raw=1)
+![Meeting Yan](https://www.dropbox.com/s/y27a5icn4mby0je/Screenshot%202016-10-13%2012.58.32.png?raw=1)
+![Work in progress downed ship](https://www.dropbox.com/s/fi1t9qqggxgdvw9/Screenshot%202016-10-13%2021.21.51.png?raw=1)
+![Work in progress level design](https://www.dropbox.com/s/yq77ut7cfyr7zbr/Screenshot%202016-10-13%2003.40.50.png?raw=1)
 
 ###July 2016
 ![Early Screenshots](https://www.dropbox.com/s/8o6t2qh9mqkzyjm/Screenshot%202016-05-25%2023.53.27.png?raw=1)
