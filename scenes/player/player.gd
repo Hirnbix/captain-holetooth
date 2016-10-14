@@ -37,7 +37,7 @@ var WALK_DEACCEL = 800.0
 var WALK_MAX_VELOCITY = 200.0
 var AIR_ACCEL = 200.0
 var AIR_DEACCEL = 200.0
-var JUMP_VELOCITY = 460
+var JUMP_VELOCITY = 480
 var STOP_JUMP_FORCE = 900.0
 
 var MAX_FLOOR_AIRBORNE_TIME = 0.15
@@ -160,7 +160,7 @@ func _integrate_forces(s):
 			stopping_jump = false
 			get_node("sfx").play("jump")
 			global.times_jumped = global.times_jumped +1
-			print(globals.times_jumped)
+			print(global.times_jumped)
 		
 		# Check siding
 		if (lv.x < 0 and move_left):
