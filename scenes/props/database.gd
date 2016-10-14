@@ -8,7 +8,7 @@ func _ready():
 	
 func _input(e):
 	if e.is_action("reload"):
-		globals.score = 0
+		global.score = 0
 		db = {}
 		get_tree().reload_current_scene()
 		
