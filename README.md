@@ -12,7 +12,8 @@ This game is based on my books, so some work has already been done in terms of s
 
 ##Want to become part of the team?
 
-Feel free to contact me here. I need programmers all of the time :9
+Feel free to contact me here. I need programmers all of the time.
+
 [Talents needed (Reddit page with lots of detail)](https://redd.it/57lr3o)
 
 ##Not a programmer?
