@@ -5,8 +5,8 @@ extends CanvasLayer
 # var a=2
 # var b="textvar"
 func _process(delta):
-	get_node("score_text").set_text(str(globals.score_total))
-	get_node("multiplier_text").set_text(str(globals.score_multiplier))
+	get_node("score_text").set_text(str(global.score_total))
+	get_node("multiplier_text").set_text(str(global.score_multiplier))
 
 func _ready():
 	set_process(true)

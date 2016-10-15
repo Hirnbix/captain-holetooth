@@ -13,7 +13,7 @@ func _on_box_body_enter( body ):
 	
 	if touched_wood < 9:
 		get_node("sfx").play("wood_knock")
-		print(globals.score_total)
+		print(global.score_total)
 	
 	else:
 		get_node("/root/yan-kandy-minigame/ball").set_sleeping(true)

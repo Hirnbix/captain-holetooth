@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://scenes/scn4-mountain/scn4.gd" type="Script" id=1]
 [ext_resource path="res://scenes/hud/hud.tscn" type="PackedScene" id=2]
@@ -16,8 +16,7 @@
 [ext_resource path="res://scenes/props/tscn_anim_waterdrops/waterdrop.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/props/tscn_anim_fireflies/fireflies.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/scene_teleporter.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/scn4-mountain/broken_ship_scn4.png" type="Texture" id=17]
-[ext_resource path="res://scenes/props/tscn_physical_rock/rock.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/props/tscn_physical_rock/rock.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -203,7 +202,7 @@ __meta__ = { "_edit_lock_":true }
 transform/pos = Vector2( 2543.17, -7.83893 )
 transform/scale = Vector2( 6.23102, 8.04376 )
 z/z = -1
-config/amount = 1024
+config/amount = 400
 config/lifetime = 5.0
 config/time_scale = 1.1
 config/preprocess = 8.0
@@ -220,9 +219,9 @@ params/radial_accel = 1.0
 transform/pos = Vector2( 2543.17, -7.83893 )
 transform/scale = Vector2( 6.23102, 8.04376 )
 z/z = -3
-config/amount = 1024
+config/amount = 400
 config/lifetime = 5.0
-config/time_scale = 1.1
+config/time_scale = 0.5
 config/preprocess = 8.0
 config/half_extents = Vector2( 512, 50 )
 params/direction = 0.0
@@ -260,7 +259,7 @@ transform/pos = Vector2( 644, 245.186 )
 
 [node name="player" parent="TileMap" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 1052.5, 32.8084 )
+transform/pos = Vector2( 4491.63, 880.247 )
 
 [node name="scn4_parallax_bg" parent="." instance=ExtResource( 8 )]
 
@@ -347,7 +346,7 @@ transform/scale = Vector2( 1, 1.3125 )
 [node name="AnimatedSprite" parent="cave/waterdrop"]
 
 animation = "faster"
-frame = 13
+frame = 12
 
 [node name="waterdrop1" parent="cave" instance=ExtResource( 14 )]
 
@@ -395,12 +394,12 @@ transform/scale = Vector2( 1, 1 )
 
 [node name="AnimatedSprite" parent="fireflies"]
 
-frame = 2
+frame = 7
 modulate = Color( 0.745982, 0.925781, 0.303772, 0.418376 )
 
 [node name="AnimatedSprite1" parent="fireflies"]
 
-frame = 7
+frame = 2
 
 [node name="fireflies3" parent="." instance=ExtResource( 15 )]
 
@@ -442,8 +441,8 @@ transform/pos = Vector2( 55.6447, 4.6379 )
 
 [node name="scene_teleporter 2" parent="." instance=ExtResource( 16 )]
 
-transform/pos = Vector2( 5353.07, 1163.03 )
-scene_path = "res://scenes/scn5-ship/scn5.tscn"
+transform/pos = Vector2( 5486.88, 1171.23 )
+scene_path = "res://scenes/scn4-mountain/broken_ship.tscn"
 
 [node name="snowballs" parent="." instance=ExtResource( 6 )]
 
@@ -464,17 +463,11 @@ transform/scale = Vector2( 1, 0.720355 )
 transform/pos = Vector2( 1826.24, 618.732 )
 transform/scale = Vector2( 1, 1.28052 )
 
-[node name="broken_ship" type="Sprite" parent="."]
-
-transform/pos = Vector2( 5223.15, 950.431 )
-z/z = -1
-texture = ExtResource( 17 )
-
-[node name="rock" parent="." instance=ExtResource( 18 )]
+[node name="rock" parent="." instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 1681.29, 378.77 )
 
-[node name="rock1" parent="." instance=ExtResource( 18 )]
+[node name="rock1" parent="." instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2255.4, 635.317 )
 
