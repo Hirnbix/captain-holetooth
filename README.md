@@ -8,7 +8,12 @@ This game is based on my books, so some work has already been done in terms of s
 * Explorative nature is appealing to many audiences 
 * Characters are revealed during gameplay and can be used to own advantage 
 * Episodic content or chapters are planned (at least 5 short chapters are already written)
-* Godot Engine powered and an Alpha Version is already available for Mac, Android, Linux, PC. 
+* Godot Engine powered and an Alpha Version is already available for **Mac, Android, Linux, PC.**
+
+##Downloads
+
+* [The binary builds for MAc, PC, Linux are here](https://github.com/Hirnbix/binary-builds)
+* [The Android version on Google Play](https://play.google.com/apps/testing/org.godotengine.captainholetooth)
 
 ##Want to become part of the team?
 
