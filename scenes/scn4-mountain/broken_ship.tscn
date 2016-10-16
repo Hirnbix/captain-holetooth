@@ -37,7 +37,7 @@ tracks/1/type = "value"
 tracks/1/path = NodePath("bg_broken_ship/Path2D/PathFollow2D/player_sprite:flip_h")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 2.4, 5, 6.5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ false, true, false, true ] }
+tracks/1/keys = { "times":FloatArray( 0, 2.6, 5, 6.5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ false, true, false, true ] }
 tracks/2/type = "value"
 tracks/2/path = NodePath("bg_broken_ship/Path2D/PathFollow2D/player_sprite:modulate")
 tracks/2/interp = 1
@@ -96,12 +96,12 @@ rotating = false
 current = true
 zoom = Vector2( 1, 1 )
 limit/left = 0
-limit/top = -200
+limit/top = -288
 limit/right = 0
-limit/bottom = 1024
+limit/bottom = 288
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
-smoothing/enable = false
+smoothing/enable = true
 smoothing/speed = 5.0
 drag_margin/left = 0.2
 drag_margin/top = 0.2
@@ -113,6 +113,7 @@ drag_margin/bottom = 0.2
 transform/pos = Vector2( 1.0134, 4.34583 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 3
 playing = true
 offset = Vector2( 1.04063, -27.4518 )
 script/script = ExtResource( 11 )
@@ -129,5 +130,7 @@ blend_times = [  ]
 autoplay = "go_up_ship"
 
 [node name="scn4_parallax_bg" parent="." instance=ExtResource( 12 )]
+
+scroll/offset = Vector2( -50, 0 )
 
 

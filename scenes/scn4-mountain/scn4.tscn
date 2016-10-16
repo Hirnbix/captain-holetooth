@@ -346,7 +346,7 @@ transform/scale = Vector2( 1, 1.3125 )
 [node name="AnimatedSprite" parent="cave/waterdrop"]
 
 animation = "faster"
-frame = 12
+frame = 10
 
 [node name="waterdrop1" parent="cave" instance=ExtResource( 14 )]
 
@@ -394,12 +394,12 @@ transform/scale = Vector2( 1, 1 )
 
 [node name="AnimatedSprite" parent="fireflies"]
 
-frame = 7
+frame = 6
 modulate = Color( 0.745982, 0.925781, 0.303772, 0.418376 )
 
 [node name="AnimatedSprite1" parent="fireflies"]
 
-frame = 2
+frame = 1
 
 [node name="fireflies3" parent="." instance=ExtResource( 15 )]
 
