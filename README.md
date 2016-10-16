@@ -1,7 +1,7 @@
 ##Captain Holetooth - the Videogame!
 
 The "Captain Holetooth" explorative platformer lives in a unique, story packed world. 
-A cast of amazing characters help Captain Holetooth to defend the "magic candy" (working title). 
+A cast of amazing characters helps Captain Holetooth to defend the "magic candy" (working title). 
 This game is based on my books, so some work has already been done in terms of story.
 
 * Deep backstory, rich world 
