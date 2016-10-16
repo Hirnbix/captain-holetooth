@@ -6,7 +6,7 @@ This game is based on my books, so some work has already been done in terms of s
 
 * Deep backstory, rich world 
 * Explorative nature is appealing to many audiences 
-* Characters are revealed during gameplay and can be used to own advantage 
+* Characters are revealed during gameplay
 * Episodic content or chapters are planned (at least 5 short chapters are already written)
 * Godot Engine powered and an Alpha Version is already available for **Mac, Android, Linux, PC.**
 
