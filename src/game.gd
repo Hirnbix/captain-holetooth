@@ -17,23 +17,21 @@ var items_collected = 0
 var currentScene = null
 var opened_scenes = []
 
-
-
 var db = {}
+
 func _enter_tree():
 	set_process_input(true)
 	load_game()
 	
 func _input(e):
-	if e.is_action("reload"):
+	if e.is_action_pressed("reload"):
 		score = 0
-		
 		db = {"high_score":db["high_score"]} # save only high_score on reload		
 		save_game()
 		load_game()
 		emit_signal("scores_changed")
 		get_tree().reload_current_scene()
-		
+
 func _exit_tree():
 	save_game()
 
