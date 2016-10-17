@@ -1,0 +1,313 @@
+[gd_scene load_steps=18 format=1]
+
+[ext_resource path="res://src/levels/yan-kandy-minigame/minigame.gd" type="Script" id=1]
+[ext_resource path="res://src/levels/yan-kandy-minigame/hud.gd" type="Script" id=2]
+[ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://src/levels/yan-kandy-minigame/ball_script.gd" type="Script" id=5]
+[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball.png" type="Texture" id=6]
+[ext_resource path="res://src/levels/yan-kandy-minigame/candyball_light.png" type="Texture" id=7]
+[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shadow.png" type="Texture" id=8]
+[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shine.png" type="Texture" id=9]
+[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shading.png" type="Texture" id=10]
+[ext_resource path="res://src/levels/yan-kandy-minigame/board_1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/levels/yan-kandy-minigame/soundtrack.ogg" type="AudioStream" id=12]
+[ext_resource path="res://src/levels/yan-kandy-minigame/soundtrack.gd" type="Script" id=13]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=16]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 24.9706
+
+[node name="yan-kandy-minigame" type="Node2D"]
+
+transform/pos = Vector2( 0, 165 )
+script/script = ExtResource( 1 )
+
+[node name="scoring" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+script/script = ExtResource( 2 )
+
+[node name="scoring" type="Node2D" parent="scoring"]
+
+transform/pos = Vector2( 0, -140 )
+
+[node name="score_text" type="Label" parent="scoring/scoring"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 436.0
+margin/top = 143.0
+margin/right = 507.0
+margin/bottom = 162.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="score_description" type="Label" parent="scoring/scoring/score_text"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -68.0
+margin/top = 3.0
+margin/right = 23.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Score"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="multiplier_text" type="Label" parent="scoring/scoring"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 477.0
+margin/top = 160.0
+margin/right = 499.0
+margin/bottom = 179.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="multiplier" type="Label" parent="scoring/scoring/multiplier_text"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -108.0
+margin/top = 2.0
+margin/right = -17.0
+margin/bottom = 16.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Multiplier (Pins hit)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Polygon2D" type="Polygon2D" parent="scoring/scoring"]
+
+transform/pos = Vector2( 487.178, 151.5 )
+transform/scale = Vector2( 1.65232, 1.20312 )
+z/z = -1
+polygon = Vector2Array( -76.9693, -9.55838, 15.0225, -9.55838, 15.0225, 23.6885, -76.9693, 23.6885 )
+uv = Vector2Array(  )
+color = Color( 0.184314, 0.239216, 0.254902, 0.756863 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="ball" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 247, -68 )
+transform/scale = Vector2( 0.5, 0.5 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.5, 0, 0, 0.5, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+mode = 0
+mass = 0.01
+friction = 0.25
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+script/script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ball_sprite" type="Sprite" parent="ball"]
+
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
+texture = ExtResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="ball"]
+
+visibility/visible = false
+z/z = 1
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = 0
+limit/right = 0
+limit/bottom = 1800
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+__meta__ = { "_edit_lock_":true }
+
+[node name="Light2D" type="Light2D" parent="ball"]
+
+visibility/light_mask = 2
+transform/pos = Vector2( 0, -1.52588e-05 )
+transform/scale = Vector2( 0.125, 0.125 )
+enabled = true
+texture = ExtResource( 7 )
+offset = Vector2( 0, 0 )
+scale = 1.8
+color = Color( 1, 1, 1, 1 )
+energy = 0.5
+mode = 0
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = true
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[node name="ball_effects" type="RigidBody2D" parent="."]
+
+transform/pos = Vector2( 243, -116 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+mode = 1
+mass = 0.00102041
+friction = 0.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+velocity/linear = Vector2( 0, 0 )
+velocity/angular = 0.0
+damp_override/linear = -1.0
+damp_override/angular = -1.0
+
+[node name="shadow_sprite" type="Sprite" parent="ball_effects"]
+
+visibility/self_opacity = 0.290481
+transform/pos = Vector2( 0.648827, 1.72646 )
+z/z = -1
+texture = ExtResource( 8 )
+
+[node name="highlight_sprite" type="Sprite" parent="ball_effects"]
+
+visibility/blend_mode = 1
+transform/pos = Vector2( 0, 3.24816 )
+texture = ExtResource( 9 )
+
+[node name="shading_sprite" type="Sprite" parent="ball_effects"]
+
+transform/pos = Vector2( 0.225647, 2.26826 )
+texture = ExtResource( 10 )
+modulate = Color( 0.457031, 0.176743, 0.176743, 1 )
+
+[node name="board_1" parent="." instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 15, -52 )
+mass = 204.082
+
+[node name="instructions" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 301.0
+margin/top = -106.0
+margin/right = 472.0
+margin/bottom = -38.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ARROW keys left/right - Move ball\nARROW down - release ball\nSPACE - reset ball"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="soundtrack" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 12 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = false
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
+script/script = ExtResource( 13 )
+
+[node name="hud" parent="." instance=ExtResource( 14 )]
+
+[node name="hudframe" parent="hud"]
+
+visibility/visible = false
+
+[node name="mobile_ui" parent="." instance=ExtResource( 15 )]
+
+editor/display_folded = true
+
+[node name="ship" parent="mobile_ui"]
+
+visibility/visible = false
+
+[node name="yankandy" parent="mobile_ui"]
+
+visibility/visible = true
+
+[node name="sfx" parent="." instance=ExtResource( 16 )]
+
+
+[editable path="hud"]
+[editable path="mobile_ui"]

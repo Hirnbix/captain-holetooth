@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://src/objects/thruster/thruster.png" type="Texture" id=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.000522193, 1 )
+colors = ColorArray( 1, 1, 1, 0, 0.835938, 0.835938, 0.835938, 1, 0.998305, 0.998305, 0.998305, 0.0103306 )
+
+[node name="thruster" type="Particles2D"]
+
+visibility/opacity = 0.7
+visibility/blend_mode = 1
+transform/pos = Vector2( -42.986, -6.11831 )
+transform/rot = -91.1436
+transform/scale = Vector2( 1, 1.68949 )
+config/amount = 4
+config/lifetime = 1.0
+config/preprocess = 0.1
+config/half_extents = Vector2( 20, 10 )
+config/local_space = false
+config/texture = ExtResource( 1 )
+config/h_frames = 9
+params/direction = 0.0
+params/spread = 30.0
+params/linear_velocity = 30.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.05
+params/gravity_direction = 0.0
+params/gravity_strength = 1.0
+params/radial_accel = 0.0
+params/tangential_accel = 5.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 2.0
+params/final_size = 0.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 1.0
+randomness/anim_initial_pos = 1.0
+color/color_ramp = SubResource( 1 )
+
+

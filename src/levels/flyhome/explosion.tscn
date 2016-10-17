@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://src/levels/flyhome/fire_puff_anim_spritesheet-sheet.png" type="Texture" id=1]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.406788, 0.724804, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 0, 0, 1, 0.184473, 0.181601, 0.181345, 1, 1, 1, 1, 0 )
+
+[node name="explosion" type="Particles2D"]
+
+transform/pos = Vector2( 0.918983, -2.11041 )
+transform/rot = -91.1436
+config/amount = 12
+config/lifetime = 2.0
+config/time_scale = 2.0
+config/emitting = false
+config/half_extents = Vector2( 10, 10 )
+config/explosiveness = 0.267639
+config/texture = ExtResource( 1 )
+config/h_frames = 36
+params/direction = 0.0
+params/spread = 80.0
+params/linear_velocity = 200.0
+params/spin_velocity = 2.0
+params/orbit_velocity = 1.0
+params/gravity_direction = 260.0
+params/gravity_strength = 120.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 5.0
+params/final_size = 1.0
+params/hue_variation = 0.953019
+params/anim_speed_scale = 0.0
+params/anim_initial_pos = 0.0
+randomness/linear_velocity = 1.0
+randomness/spin_velocity = 1.0
+randomness/initial_angle = 1.0
+randomness/initial_size = 1.0
+randomness/final_size = 1.0
+randomness/anim_speed_scale = 1.0
+color/color_ramp = SubResource( 1 )
+
+
