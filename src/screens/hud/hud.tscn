@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://src/screens/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud_bg.png" type="Texture" id=2]
 [ext_resource path="res://src/fonts/tiny_8.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://src/fonts/counter_interface_8.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://src/fonts/berry6.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://src/screens/hud/sound_off.png" type="Texture" id=6]
+[ext_resource path="res://src/screens/hud/sound_on.png" type="Texture" id=7]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -17,6 +18,7 @@ script/script = ExtResource( 1 )
 collected_text = NodePath("hudframe/items_label/score_display")
 score_text = NodePath("hudframe/finalscore_label/final_scoredisplay")
 highscore_text = NodePath("hudframe/highscore_label/highscore_display")
+sound_off_button = NodePath("sound_off")
 
 [node name="hudframe" type="TextureFrame" parent="."]
 
@@ -34,6 +36,7 @@ stretch_mode = 0
 
 [node name="items_label" type="Label" parent="hudframe"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -71,6 +74,7 @@ max_lines_visible = -1
 
 [node name="finalscore_label" type="Label" parent="hudframe"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -106,6 +110,7 @@ max_lines_visible = -1
 
 [node name="highscore_label" type="Label" parent="hudframe"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -154,22 +159,21 @@ shortcut = null
 text = "Main Menu"
 flat = false
 
-[node name="sound_off" type="Button" parent="."]
+[node name="sound_off" type="TextureButton" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 88.0
-margin/top = 4.0
-margin/right = 144.0
-margin/bottom = 24.0
-custom_fonts/font = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
+margin/left = 90.0
+margin/top = 6.0
+margin/right = 111.0
+margin/bottom = 22.0
+toggle_mode = true
+enabled_focus_mode = 0
 shortcut = null
-text = "Music Off"
-flat = false
+textures/normal = ExtResource( 6 )
+textures/pressed = ExtResource( 7 )
 
 [connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]
 
