@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://src/levels/flyhome/flying_thing.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/levels/flyhome/enemy2.gd" type="Script" id=2]
+[ext_resource path="res://src/levels/flyhome/enemy2.png" type="Texture" id=3]
+
+[node name="enemy2" instance=ExtResource( 1 )]
+
+script/script = ExtResource( 2 )
+SPEED = -220
+Y_RANDOM = 100
+shoot_interval = 0.5
+
+[node name="sprite" parent="."]
+
+texture = ExtResource( 3 )
+
+[node name="collision" parent="."]
+
+polygon = Vector2Array( 3.66644, -15.3642, -11.9536, -14.5753, -33.4115, -10.7887, -28.9937, 18.0848, -9.58696, 18.8737, 7.29534, 18.0848, 28.2799, 16.6648, 33.8021, 8.6181, 35.0644, -1.6375, 20.0754, -15.9953 )
+
+[node name="shoot_from" type="Node2D" parent="."]
+
+transform/pos = Vector2( -31.0824, 0.946671 )
+
+[connection signal="enter_screen" from="visibility" to="." method="_on_visibility_enter_screen"]
+
+[connection signal="exit_screen" from="visibility" to="." method="_on_visibility_exit_screen"]
+
+

@@ -1,0 +1,24 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "firefly_anim"
+length = 3.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D1:transform/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 1, 2.8 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1.3, 1.3 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D1:energy")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0.6, 1.8 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 25.6569, 68.6669 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D1:transform/pos")
+tracks/2/interp = 2
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.5, 1, 1.3, 2.2, 2.7 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0, 0 ), Vector2( 179, 69 ), Vector2( 119, -41 ), Vector2( -91, -51 ), Vector2( -41, 39 ), Vector2( -1, 49 ) ] }
+
