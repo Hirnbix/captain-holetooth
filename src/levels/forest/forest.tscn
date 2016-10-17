@@ -358,7 +358,7 @@ transform/scale = Vector2( 1, 1.29413 )
 [node name="AnimatedSprite" parent="waterdrop"]
 
 transform/pos = Vector2( -1, -0.77272 )
-frame = 8
+frame = 12
 
 [node name="musicstream_player" parent="." instance=ExtResource( 19 )]
 
