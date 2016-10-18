@@ -17,7 +17,7 @@
 [ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
 [ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=17]
-[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=19]
 
 [sub_resource type="Animation" id=1]
@@ -27,7 +27,7 @@ length = 4.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("../gametitle:transform/pos")
+tracks/0/path = NodePath("gametitle:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4, 0.7 ), "transitions":FloatArray( 1, 1, 0.25, 0.25 ), "update":0, "values":[ Vector2( 355, -89 ), Vector2( 355, 95 ), Vector2( 355, 87 ), Vector2( 355, 95 ) ] }
@@ -98,21 +98,25 @@ margin/top = 0.0
 margin/right = 0.0
 margin/bottom = 0.0
 script/script = ExtResource( 1 )
-music_player = NodePath("musicstream_player")
-music_player_slider = NodePath("options_screen/settings/Audio/vbox/hbox/volume_slide")
-
-[node name="gametitle" type="Sprite" parent="."]
-
-transform/pos = Vector2( 355, 95 )
-texture = ExtResource( 2 )
-region_rect = Rect2( 8, 1, 264, 152 )
+game_title_path = NodePath("art/gametitle")
+menu_buttons_path = NodePath("menu_buttons")
+options_screen_path = NodePath("options_screen")
+music_player_path = NodePath("music_player")
+music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/volume_slide")
 
 [node name="art" type="Node2D" parent="."]
 
 editor/display_folded = true
 
+[node name="gametitle" type="Sprite" parent="art"]
+
+transform/pos = Vector2( 355, 95 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 8, 1, 264, 152 )
+
 [node name="bg" type="Node2D" parent="art"]
 
+editor/display_folded = true
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="splashscreen_bg" type="Sprite" parent="art/bg"]
@@ -123,6 +127,7 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
+editor/display_folded = true
 transform/pos = Vector2( 595.2, 190.4 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
@@ -155,6 +160,7 @@ autoplay = "gametitle_animations"
 
 [node name="keyvisual_lochzahn" type="Sprite" parent="art"]
 
+editor/display_folded = true
 transform/pos = Vector2( 239, 146 )
 texture = ExtResource( 6 )
 __meta__ = { "_edit_group_":true }
@@ -180,6 +186,7 @@ transform/scale = Vector2( 1, 1.3446 )
 
 [node name="menu_buttons" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
@@ -268,6 +275,7 @@ max_lines_visible = -1
 
 [node name="options_screen" type="Area2D" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 z/z = 2
 input/pickable = true
@@ -555,10 +563,9 @@ enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 17 )
 
-[node name="musicstream_player" parent="." instance=ExtResource( 18 )]
+[node name="music_player" parent="." instance=ExtResource( 18 )]
 
 stream/stream = ExtResource( 19 )
-stream/volume_db = 0.0
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 

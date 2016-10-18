@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=1]
 
-[ext_resource path="res://src/levels/mountain/scn_4_scroll_bg_sky.png" type="Texture" id=1]
-[ext_resource path="res://src/levels/mountain/parallax_mountain_back.png" type="Texture" id=2]
-[ext_resource path="res://src/levels/mountain/scn4_scroll_bg_cloud_2.png" type="Texture" id=3]
-[ext_resource path="res://src/levels/mountain/scn4_scroll_bg_cloud_1.png" type="Texture" id=4]
-[ext_resource path="res://src/levels/mountain/scn4_scroll_bg_cloud_3.png" type="Texture" id=5]
-[ext_resource path="res://src/levels/mountain/scn4_scroll_bg_fg_1.png" type="Texture" id=6]
+[ext_resource path="res://src/levels/mountain/art/scn_4_scroll_bg_sky.png" type="Texture" id=1]
+[ext_resource path="res://src/levels/mountain/art/parallax_mountain_back.png" type="Texture" id=2]
+[ext_resource path="res://src/levels/mountain/art/scn4_scroll_bg_cloud_2.png" type="Texture" id=3]
+[ext_resource path="res://src/levels/mountain/art/scn4_scroll_bg_cloud_1.png" type="Texture" id=4]
+[ext_resource path="res://src/levels/mountain/art/scn4_scroll_bg_cloud_3.png" type="Texture" id=5]
+[ext_resource path="res://src/levels/mountain/art/scn4_scroll_bg_fg_1.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 

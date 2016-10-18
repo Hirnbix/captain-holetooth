@@ -2,11 +2,10 @@
 
 [ext_resource path="res://src/scene_teleporter.gd" type="Script" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 5.90205, 29.7816 )
+extents = Vector2( 7.19586, 81.9955 )
 
 [node name="scene_teleporter" type="Area2D"]
 
@@ -14,7 +13,7 @@ transform/pos = Vector2( 256.188, 243.057 )
 transform/scale = Vector2( 5, 5 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.35935, 0, 0, 0.760363, -2.38941, -21.6639 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.407145, -72.9045 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -47,8 +46,7 @@ transform/scale = Vector2( 0.20915, 0.17037 )
 
 [node name="teleport_collision_shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -2.38941, -21.6639 )
-transform/scale = Vector2( 1.35935, 0.760363 )
+transform/pos = Vector2( 0.407145, -72.9045 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

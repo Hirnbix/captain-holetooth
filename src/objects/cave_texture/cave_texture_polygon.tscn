@@ -4,15 +4,13 @@
 [ext_resource path="res://src/objects/cave_texture/NormalMap.png" type="Texture" id=2]
 [ext_resource path="res://src/objects/cave_texture/cave_underground.png" type="Texture" id=3]
 
-
-
 [sub_resource type="CanvasItemMaterial" id=1]
 
 shader/shader = ExtResource( 1 )
 shader/shading_mode = 0
 shader_param/normal = ExtResource( 2 )
 
-[node name="cave" type="Node2D"]
+[node name="cave_background" type="Node2D"]
 
 transform/pos = Vector2( 105, -30 )
 
