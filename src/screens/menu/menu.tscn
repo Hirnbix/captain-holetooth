@@ -180,7 +180,6 @@ transform/scale = Vector2( 1, 1.3446 )
 
 [node name="menu_buttons" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
