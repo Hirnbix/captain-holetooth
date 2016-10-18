@@ -491,7 +491,6 @@ flat = false
 
 [node name="Credits" type="Tabs" parent="options_screen/settings"]
 
-editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -520,7 +519,7 @@ margin/bottom = 5.0
 custom_fonts/normal_font = ExtResource( 13 )
 custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
+bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\tIvan Skodje\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
