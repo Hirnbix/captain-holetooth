@@ -1,19 +1,28 @@
 
 extends Control
 
-# member variables here, example:
-# var a=2
+# Music Player
+export (NodePath) var music_player
+
+# Music Player Slider
+export (NodePath) var music_player_slider
 
 var current_locale = TranslationServer.get_locale()
 
 func _ready():
-
+	
+	# Set LOCALE vars
 	get_node("menu_buttons/startbutton").set_text(tr("KEY_START"))
 	get_node("menu_buttons/optionsbutton").set_text(tr("KEY_OPTIONS"))
 	get_node("options_screen/settings").set_tab_title(0, tr("KEY_GENERAL_INFO"))
-	get_node("options_screen/settings").set_tab_title(1, tr("KEY_DEBUG"))
-	get_node("options_screen/settings").set_tab_title(2, tr("KEY_CREDITS"))
+	get_node("options_screen/settings").set_tab_title(1, tr("KEY_AUDIO"))
+	get_node("options_screen/settings").set_tab_title(2, tr("KEY_DEBUG"))
+	get_node("options_screen/settings").set_tab_title(3, tr("KEY_CREDITS"))
 	
+	# Update music player volume
+	get_node(music_player_slider).set_value(global.music.volume * 100)
+	
+	# Setup Language buttons
 	if current_locale == "de_DE":
 		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_DE.tex")
 		get_node("gametitle").set_texture(tex_de)
@@ -22,7 +31,7 @@ func _ready():
 		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.tex")
 		get_node("gametitle").set_texture(tex_en)
 
-	
+
 func _on_jump_scn3_pressed():
 	transition.fade_to("res://src/levels/forest/forest.tscn")
 
@@ -55,3 +64,11 @@ func _on_en_button_pressed():
 
 func _on_btn_close_options_pressed():
 	get_node("options_screen").hide()
+
+
+func _on_music_volume_value_changed( value ):
+	# Set global music volume
+	global.music.volume = value/100
+	
+	# Update music player volume
+	get_node(music_player).set_volume(global.music.volume)
