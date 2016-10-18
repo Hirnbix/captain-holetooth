@@ -12,7 +12,7 @@ This game is based on my books, so some work has already been done in terms of s
 
 ##Downloads
 
-* [The binary builds for MacOS, PC, Linux are here](https://github.com/Hirnbix/binary-builds)
+* [The binary builds for MacOS, PC, Linux are here](https://github.com/Hirnbix/captain-holetooth-binary-builds)
 * [The ALPHA Android version on Google Play](https://play.google.com/apps/testing/org.godotengine.captainholetooth)
 
 ##Want to become part of the team?
