@@ -29,7 +29,6 @@ script/script = ExtResource( 1 )
 
 transform/pos = Vector2( 0.559145, -3.34028 )
 transform/rot = 0.0
-frame = 1
 
 [node name="shape" type="CollisionShape2D" parent="."]
 
