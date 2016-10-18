@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -19,7 +19,8 @@
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=19]
-[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=21]
 
 [node name="scn3" type="Node"]
 
@@ -104,6 +105,7 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 
 [node name="cave" parent="tile_map" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
 
 [node name="tex_cave" parent="tile_map/cave"]
@@ -362,13 +364,15 @@ transform/scale = Vector2( 1, 1.29413 )
 [node name="AnimatedSprite" parent="waterdrop"]
 
 transform/pos = Vector2( -1, -0.77272 )
-frame = 24
+frame = 3
 
 [node name="Yan" parent="." instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 3887.4, 2270.81 )
 
-[node name="musicstream_player" parent="." instance=ExtResource( 20 )]
+[node name="music_player" parent="." instance=ExtResource( 20 )]
+
+stream/stream = ExtResource( 21 )
 
 [connection signal="body_enter" from="scene_teleporter" to="scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 

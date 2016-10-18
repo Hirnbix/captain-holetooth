@@ -15,7 +15,7 @@
 [ext_resource path="res://src/objects/fireflies/fireflies.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/audio/music/scn4_bg_music.ogg" type="AudioStream" id=17]
 
 [node name="scn4" type="Node2D"]
@@ -165,7 +165,7 @@ transform/scale = Vector2( 1, 1.3125 )
 [node name="AnimatedSprite" parent="cave/waterdrop"]
 
 animation = "faster"
-frame = 17
+frame = 10
 
 [node name="waterdrop1" parent="cave" instance=ExtResource( 12 )]
 
@@ -290,10 +290,9 @@ transform/pos = Vector2( 1681.29, 378.77 )
 
 transform/pos = Vector2( 2255.4, 635.317 )
 
-[node name="musicstream_player" parent="." instance=ExtResource( 16 )]
+[node name="music_player" parent="." instance=ExtResource( 16 )]
 
 stream/stream = ExtResource( 17 )
-stream/volume_db = 0.0
 
 
 [editable path="torch1"]

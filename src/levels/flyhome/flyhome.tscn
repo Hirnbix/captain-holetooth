@@ -10,7 +10,7 @@
 [ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=8]
 [ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=9]
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=12]
 
 [node name="Node2D" type="Node2D"]
@@ -297,6 +297,7 @@ transform/pos = Vector2( 2441.86, 239.314 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -336,7 +337,7 @@ stream/buffering_ms = 500
 
 scene_path = "res://scenes/scn6-castle/scn6.tscn"
 
-[node name="musicstream_player" parent="." instance=ExtResource( 11 )]
+[node name="music_player" parent="." instance=ExtResource( 11 )]
 
 stream/stream = ExtResource( 12 )
 stream/volume_db = 2.0
