@@ -159,6 +159,11 @@ func _integrate_forces(s):
 			jumping = true
 			stopping_jump = false
 			get_node("sfx").play("jump")
+			
+			# THIS IS FOR FUTURE USE - Its a statistics thing for players to see like "Hey you only jumped 20 times during the whole game..."
+			# Whatever use it is, i think its a fun element to talk about :D
+			# I don't care often about the "use" of things... just having it for fun is good enough ;)
+			
 			global.times_jumped = global.times_jumped +1
 			print(global.times_jumped)
 		
