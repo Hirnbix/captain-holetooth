@@ -98,6 +98,8 @@ margin/top = 0.0
 margin/right = 0.0
 margin/bottom = 0.0
 script/script = ExtResource( 1 )
+music_player = NodePath("musicstream_player")
+music_player_slider = NodePath("options_screen/settings/Audio/vbox/hbox/volume_slide")
 
 [node name="gametitle" type="Sprite" parent="."]
 
@@ -106,6 +108,8 @@ texture = ExtResource( 2 )
 region_rect = Rect2( 8, 1, 264, 152 )
 
 [node name="art" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="bg" type="Node2D" parent="art"]
 
@@ -176,6 +180,7 @@ transform/scale = Vector2( 1, 1.3446 )
 
 [node name="menu_buttons" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
@@ -290,6 +295,7 @@ tabs_visible = true
 
 [node name="General" type="Tabs" parent="options_screen/settings"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -318,6 +324,85 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
 visible_characters = -1
+
+[node name="Audio" type="Tabs" parent="options_screen/settings"]
+
+editor/display_folded = true
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
+
+[node name="vbox" type="VBoxContainer" parent="options_screen/settings/Audio"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 30.0
+margin/right = 0.0
+margin/bottom = 0.0
+alignment = 0
+
+[node name="hbox" type="HBoxContainer" parent="options_screen/settings/Audio/vbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 472.0
+margin/bottom = 16.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="music_volume_label" type="Label" parent="options_screen/settings/Audio/vbox/hbox"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 2.0
+margin/right = 68.0
+margin/bottom = 14.0
+text = "Music Volume:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="volume_slide" type="HSlider" parent="options_screen/settings/Audio/vbox/hbox"]
+
+rect/min_size = Vector2( 100, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 88.0
+margin/top = 0.0
+margin/right = 188.0
+margin/bottom = 16.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
@@ -484,6 +569,8 @@ stream/volume_db = 0.0
 [connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 
 [connection signal="pressed" from="menu_buttons/optionsbutton" to="." method="_on_optionsbutton_pressed"]
+
+[connection signal="value_changed" from="options_screen/settings/Audio/vbox/hbox/volume_slide" to="." method="_on_music_volume_value_changed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn3" to="." method="_on_jump_scn3_pressed"]
 

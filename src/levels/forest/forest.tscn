@@ -18,8 +18,8 @@
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=18]
-[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=20]
+[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=19]
+[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=20]
 
 [node name="scn3" type="Node"]
 
@@ -133,6 +133,8 @@ visibility/visible = false
 
 [node name="rewards" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="reward" parent="rewards" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 3860.96, 1840.83 )
@@ -142,6 +144,8 @@ transform/pos = Vector2( 3860.96, 1840.83 )
 transform/pos = Vector2( 3915.1, 1840.39 )
 
 [node name="enemies" type="Node" parent="." groups=[ "enemies" ]]
+
+editor/display_folded = true
 
 [node name="enemy 5" parent="enemies" groups=[ "enemies" ] instance=ExtResource( 11 )]
 
@@ -358,13 +362,13 @@ transform/scale = Vector2( 1, 1.29413 )
 [node name="AnimatedSprite" parent="waterdrop"]
 
 transform/pos = Vector2( -1, -0.77272 )
-frame = 12
+frame = 24
 
-[node name="musicstream_player" parent="." instance=ExtResource( 19 )]
-
-[node name="Yan" parent="." instance=ExtResource( 20 )]
+[node name="Yan" parent="." instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 3887.4, 2270.81 )
+
+[node name="musicstream_player" parent="." instance=ExtResource( 20 )]
 
 [connection signal="body_enter" from="scene_teleporter" to="scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 

@@ -5,13 +5,13 @@
 [ext_resource path="res://src/levels/flyhome/ship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/flyhome/asteroid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/levels/flyhome/enemy1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/levels/flyhome/flying_thing.gd" type="Script" id=6]
-[ext_resource path="res://src/levels/flyhome/enemy2.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/levels/flyhome/parallax.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=9]
-[ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=10]
-[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=11]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/levels/flyhome/enemy2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/levels/flyhome/parallax.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=8]
+[ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=12]
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,1164 +32,268 @@ transform/pos = Vector2( -484.788, -79.2587 )
 [node name="asteroid1" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1142.84, 159.281 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid2" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1166.76, 111.656 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid3" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2741.79, 106.234 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid4" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1106.77, 115.785 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid5" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1335.98, 308.494 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid6" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4031.84, 216.508 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid7" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1743.95, 141.491 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid8" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2370.24, 280.213 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid9" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4600.8, 108.254 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid10" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3034.73, 272.418 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid11" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4232.61, 50.5924 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid12" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3984.31, 297.048 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid13" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5824.32, 105.736 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid14" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5482.55, 183.69 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid15" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1969.94, 308.564 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid16" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4301.52, 168.653 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid17" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6723.08, 80.5608 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid18" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4487.29, 147.052 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid19" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3452.8, 207.753 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid20" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6120.76, 55.6274 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid21" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3881.73, 78.2642 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid22" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4105.78, 319.947 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid23" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 2912.31, 155.597 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid24" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 7918.91, 95.666 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid25" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 3954.29, 224.966 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid26" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4471.32, 258.113 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid27" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5689.95, 105.715 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid28" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 8455.14, 95.6658 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid29" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 5855.9, 208.899 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid30" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 4067.74, 128.305 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="asteroid31" parent="enemies" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 6981.45, 98.1618 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-SPEED = 200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy2" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1648.97, 228.357 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy3" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1739.37, 229.854 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy4" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2827.34, 108.181 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy5" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 4163.37, 148.776 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy6" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3183.62, 205.327 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy7" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3522.85, 250.961 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy8" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 5157.9, 267.422 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy9" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 5166.61, 158.846 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy10" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3973.63, 126.448 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy11" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3517.98, 163.44 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy12" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 3823.93, 200.256 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy13" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 4039.06, 85.8162 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy14" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 4303.4, 264.561 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy15" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2975.64, 209.909 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy16" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 4805.67, 136.167 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy17" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 5198.44, 211.93 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy18" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 6792.8, 183.949 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy19" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 2522.4, 206.874 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy20" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 5114.46, 212.411 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy21" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 6157.58, 332.535 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
 [node name="enemy22" parent="enemies" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 7505.2, 190.355 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/mask = 3
-script/script = ExtResource( 6 )
-SPEED = -200
-Y_RANDOM = 10
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy2 2" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy2 2" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2671.42, 135.424 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy23" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy23" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 5481.9, 241.406 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy24" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy24" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 6596.77, 100.438 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy25" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy25" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 6316.28, 164.13 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy26" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy26" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 4231.94, 62.8522 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy27" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy27" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 3111.46, 235.305 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy28" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy28" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 6001.01, 74.1768 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy29" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy29" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 5002.52, 110.799 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy30" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy30" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 4999.1, 206.693 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy31" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy31" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 4756.68, 249.159 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy32" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy32" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 5415.51, 207.763 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy33" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy33" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 7011.32, 98.1508 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy34" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy34" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2605.03, 176.98 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="enemy35" parent="enemies" instance=ExtResource( 7 )]
+[node name="enemy35" parent="enemies" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 2441.86, 239.314 )
-input/pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-monitoring = false
-monitorable = false
-collision/layers = 4
-collision/mask = 3
-motion = "linear"
-destroy_sound = "explode"
-reset_bonus = true
 
-[node name="parallax" parent="." instance=ExtResource( 8 )]
+[node name="parallax" parent="." instance=ExtResource( 7 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1214,12 +318,12 @@ motion/mirroring = Vector2( 800, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 
 transform/pos = Vector2( 370.543, 354.862 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 modulate = Color( 0.0976562, 0.0904083, 0.0965238, 1 )
 
 [node name="sfx_wind_loop" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 10 )
+stream/stream = ExtResource( 9 )
 stream/play = true
 stream/loop = true
 stream/volume_db = 1.0
@@ -1228,20 +332,14 @@ stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
-[node name="bg_music" type="StreamPlayer" parent="."]
-
-stream/stream = ExtResource( 11 )
-stream/play = true
-stream/loop = true
-stream/volume_db = 2.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
-
-[node name="scene_teleporter" parent="." instance=ExtResource( 12 )]
+[node name="scene_teleporter" parent="." instance=ExtResource( 10 )]
 
 scene_path = "res://scenes/scn6-castle/scn6.tscn"
+
+[node name="musicstream_player" parent="." instance=ExtResource( 11 )]
+
+stream/stream = ExtResource( 12 )
+stream/volume_db = 2.0
 
 [connection signal="area_enter" from="enemies/asteroid1" to="enemies/asteroid1" method="destroy"]
 

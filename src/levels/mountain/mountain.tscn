@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://src/levels/mountain/mountain.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -10,12 +10,13 @@
 [ext_resource path="res://src/levels/mountain/parallax_mountain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/torch/torch.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=10]
-[ext_resource path="res://src/audio/music/scn4_bg_music.ogg" type="AudioStream" id=11]
-[ext_resource path="res://src/objects/cave_texture/cave_texture_polygon.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/objects/fireflies/fireflies.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/cave_texture/cave_texture_polygon.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/fireflies/fireflies.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/audio/music/scn4_bg_music.ogg" type="AudioStream" id=17]
 
 [node name="scn4" type="Node2D"]
 
@@ -128,6 +129,7 @@ transform/rot = -6.18679
 
 [node name="torch1" parent="." instance=ExtResource( 9 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2852, 1002 )
 
 [node name="torch_sprite" parent="torch1"]
@@ -145,19 +147,9 @@ stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
-[node name="bg_music" type="StreamPlayer" parent="."]
+[node name="cave" parent="." instance=ExtResource( 11 )]
 
-stream/stream = ExtResource( 11 )
-stream/play = true
-stream/loop = true
-stream/volume_db = 0.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
-
-[node name="cave" parent="." instance=ExtResource( 12 )]
-
+editor/display_folded = true
 transform/pos = Vector2( 1372, 862 )
 
 [node name="tex_cave" parent="cave"]
@@ -165,7 +157,7 @@ transform/pos = Vector2( 1372, 862 )
 polygon = Vector2Array( 592.916, -38.2559, 466.55, -55.2317, 469.632, -114.647, 244.639, -144.354, 216.9, -144.354, 22.7274, -42.4998, 35.0558, 178.185, 103.557, 168.85, 716.2, 173.941, 713.118, 89.0623 )
 color = Color( 0.257812, 0.263184, 0.34375, 1 )
 
-[node name="waterdrop" parent="cave" instance=ExtResource( 13 )]
+[node name="waterdrop" parent="cave" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 128, 270 )
 transform/scale = Vector2( 1, 1.3125 )
@@ -175,17 +167,17 @@ transform/scale = Vector2( 1, 1.3125 )
 animation = "faster"
 frame = 17
 
-[node name="waterdrop1" parent="cave" instance=ExtResource( 13 )]
+[node name="waterdrop1" parent="cave" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 216, 47.9999 )
 transform/scale = Vector2( 1, 2.28125 )
 
-[node name="waterdrop2" parent="cave" instance=ExtResource( 13 )]
+[node name="waterdrop2" parent="cave" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( -73, 253 )
 transform/scale = Vector2( 1, 1.78125 )
 
-[node name="waterdrop3" parent="cave" instance=ExtResource( 13 )]
+[node name="waterdrop3" parent="cave" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( -18, -370.5 )
 transform/scale = Vector2( 1, 1.23437 )
@@ -212,8 +204,9 @@ transform/pos = Vector2( 1332, 11 )
 
 energy = 4.65629
 
-[node name="fireflies" parent="." instance=ExtResource( 14 )]
+[node name="fireflies" parent="." instance=ExtResource( 13 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2415.69, 1044.69 )
 transform/rot = 119.9
 transform/scale = Vector2( 1, 1 )
@@ -227,35 +220,35 @@ modulate = Color( 0.745982, 0.925781, 0.303772, 0.418376 )
 
 frame = 4
 
-[node name="fireflies3" parent="." instance=ExtResource( 14 )]
+[node name="fireflies3" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2413.2, 1043.2 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="fireflies5" parent="." instance=ExtResource( 14 )]
+[node name="fireflies5" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 1783.2, 1043.2 )
 transform/scale = Vector2( 1, 1 )
 
-[node name="fireflies1" parent="." instance=ExtResource( 14 )]
+[node name="fireflies1" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2522, 587 )
 transform/scale = Vector2( 1, 1 )
 z/z = -1
 
-[node name="fireflies2" parent="." instance=ExtResource( 14 )]
+[node name="fireflies2" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2721.18, 945.181 )
 transform/rot = -143.183
 transform/scale = Vector2( 1, 1 )
 
-[node name="fireflies4" parent="." instance=ExtResource( 14 )]
+[node name="fireflies4" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2751.18, 935.181 )
 transform/rot = -229.406
 transform/scale = Vector2( 1, 1 )
 
-[node name="scene_teleporter" parent="." instance=ExtResource( 15 )]
+[node name="scene_teleporter" parent="." instance=ExtResource( 14 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 16.188, 403.057 )
@@ -265,7 +258,7 @@ scene_path = "res://src/levels/forest/forest.tscn"
 
 transform/pos = Vector2( 55.6447, 4.6379 )
 
-[node name="scene_teleporter 2" parent="." instance=ExtResource( 15 )]
+[node name="scene_teleporter 2" parent="." instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 5486.88, 1171.23 )
 scene_path = "res://src/screens/broken_ship/broken_ship.tscn"
@@ -274,28 +267,33 @@ scene_path = "res://src/screens/broken_ship/broken_ship.tscn"
 
 transform/pos = Vector2( 1525.87, 174.591 )
 
-[node name="waterdrop" parent="." instance=ExtResource( 13 )]
+[node name="waterdrop" parent="." instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1934.12, 573.523 )
 transform/scale = Vector2( 1, 2.7839 )
 
-[node name="waterdrop2" parent="." instance=ExtResource( 13 )]
+[node name="waterdrop2" parent="." instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2004.77, 445.566 )
 transform/scale = Vector2( 1, 0.720355 )
 
-[node name="waterdrop1" parent="." instance=ExtResource( 13 )]
+[node name="waterdrop1" parent="." instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1826.24, 618.732 )
 transform/scale = Vector2( 1, 1.28052 )
 
-[node name="rock" parent="." instance=ExtResource( 16 )]
+[node name="rock" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1681.29, 378.77 )
 
-[node name="rock1" parent="." instance=ExtResource( 16 )]
+[node name="rock1" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 2255.4, 635.317 )
+
+[node name="musicstream_player" parent="." instance=ExtResource( 16 )]
+
+stream/stream = ExtResource( 17 )
+stream/volume_db = 0.0
 
 
 [editable path="torch1"]

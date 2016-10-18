@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://src/screens/intro/intro.gd" type="Script" id=1]
 [ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://src/screens/intro/comic_intro_scn2-sheet.png" type="Texture" id=3]
-[ext_resource path="res://src/audio/music/scn2_comic_music.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/musicstream_player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/audio/music/scn2_comic_music.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -28,9 +29,11 @@ margin/top = 220.0
 margin/right = 509.0
 margin/bottom = 288.0
 stretch_mode = 0
+script/script = ExtResource( 1 )
 
 [node name="skipbutton" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -42,9 +45,8 @@ margin/bottom = 70.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-script/script = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="skipbutton"]
+[node name="click_to_skip_label" type="Label" parent="skipbutton"]
 
 hint/tooltip = "Start the game here"
 focus/ignore_mouse = true
@@ -56,6 +58,8 @@ margin/top = 264.0
 margin/right = 532.0
 margin/bottom = 298.0
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 1
 text = "Click to skip"
 align = 1
 valign = 1
@@ -70,17 +74,6 @@ transform/pos = Vector2( -124, -76 )
 texture = ExtResource( 3 )
 hframes = 4
 
-[node name="StreamPlayer" type="StreamPlayer" parent="."]
-
-stream/stream = ExtResource( 4 )
-stream/play = true
-stream/loop = false
-stream/volume_db = 0.0
-stream/autoplay = true
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
@@ -92,6 +85,12 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "intro"
 
-[connection signal="pressed" from="skipbutton" to="skipbutton" method="_on_skipbutton_pressed"]
+[node name="musicstream_player" parent="." instance=ExtResource( 4 )]
+
+stream/stream = ExtResource( 5 )
+stream/loop = false
+stream/volume_db = 0.0
+
+[connection signal="pressed" from="skipbutton" to="." method="_on_skipbutton_pressed"]
 
 

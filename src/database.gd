@@ -7,10 +7,9 @@ func _ready():
 	set_process_input(true)
 	
 func _input(e):
-	if e.is_action("reload"):
+	if e.is_action_pressed("reload"):
 		global.score = 0
 		db = {}
-		get_tree().reload_current_scene()
 		
 func _enter_tree():
 	load_game()
