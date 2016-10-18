@@ -11,23 +11,21 @@
 [ext_resource path="res://src/objects/platforms/one_way_platform.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/objects/platforms/small_one_way_platform.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/objects/birds/birds.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=14]
-[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/actors/enemies/enemy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/actors/enemies/enemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=17]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=20]
 
-[node name="scn3" type="Node"]
+[node name="scn3" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
 [node name="world" type="Node2D" parent="."]
-
-editor/display_folded = true
 
 [node name="parallax_bg" parent="world" instance=ExtResource( 2 )]
 
@@ -113,6 +111,234 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
 
+[node name="props" type="Node" parent="world/tile_map"]
+
+editor/display_folded = true
+
+[node name="moving_platform" parent="world/tile_map/props" instance=ExtResource( 8 )]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 922, 762 )
+z/z = -1
+
+[node name="moving_platform1" parent="world/tile_map/props" instance=ExtResource( 8 )]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 4257.04, 2147.64 )
+z/z = -1
+motion = Vector2( 0, 200 )
+cycle = 4.0
+
+[node name="one_way_platform" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 982, 422 )
+
+[node name="one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 3712.9, 1770.57 )
+z/z = -1
+
+[node name="one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 3983.57, 1708.87 )
+z/z = -1
+
+[node name="one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 692, 532 )
+
+[node name="one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 392, 432 )
+
+[node name="one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1372.69, 951.347 )
+
+[node name="one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1482, 722 )
+
+[node name="one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 1382, 592 )
+
+[node name="small_one_way_platform" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1702, 812 )
+z/z = -1
+
+[node name="small_one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 2023.52, 1269.15 )
+z/z = -1
+
+[node name="small_one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1937.78, 1169.15 )
+z/z = -1
+
+[node name="small_one_way_platform3" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1992.83, 1073.73 )
+z/z = -1
+
+[node name="small_one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1923.34, 991.71 )
+z/z = -1
+
+[node name="small_one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1989.22, 881.782 )
+z/z = -1
+
+[node name="small_one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3002, 862 )
+z/z = -1
+
+[node name="small_one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3172, 692 )
+z/z = -1
+
+[node name="small_one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3082, 782 )
+z/z = -1
+
+[node name="small_one_way_platform9" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3262, 622 )
+z/z = -1
+
+[node name="small_one_way_platform10" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 4082, 832 )
+z/z = -1
+
+[node name="small_one_way_platform10 2" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3672, 632 )
+z/z = -1
+
+[node name="small_one_way_platform10 3" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 3882, 732 )
+z/z = -1
+
+[node name="small_one_way_platform11" parent="world/tile_map/props" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 4016, 932 )
+z/z = -1
+
+[node name="birds" parent="world/tile_map" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 24.7671, 249.674 )
+
+[node name="waterdrop" parent="world/tile_map" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 2426.07, 1253.14 )
+transform/scale = Vector2( 1, 1.29413 )
+
+[node name="interactables" type="Node2D" parent="world"]
+
+editor/display_folded = true
+
+[node name="rock" parent="world/interactables" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2381.47, 1263.25 )
+
+[node name="rock2" parent="world/interactables" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2902.92, 1519.33 )
+
+[node name="rock1" parent="world/interactables" instance=ExtResource( 13 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 2815.6, 1528.28 )
+
+[node name="rewards" type="Node" parent="world/interactables"]
+
+editor/display_folded = true
+
+[node name="reward" parent="world/interactables/rewards" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 3860.96, 1840.83 )
+
+[node name="reward1" parent="world/interactables/rewards" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 3915.1, 1840.39 )
+
+[node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
+
+editor/display_folded = true
+
+[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 834.664, 1309.6 )
+
+[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 707.665, 1225.05 )
+
+[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1125.21, 1053.06 )
+
+[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1292.11, 1059.24 )
+
+[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1607.38, 923.239 )
+
+[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2586.9, 939.059 )
+
+[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 703.5, 491.482 )
+transform/scale = Vector2( 0.734366, 0.671311 )
+
+[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1193.63, 460.381 )
+
+[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 3546.2, 1356.19 )
+
+[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2406.63, 815.115 )
+
+[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 3710.72, 1394.25 )
+
+[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 3781.93, 1393.02 )
+
+[node name="scene_teleporter" parent="world" instance=ExtResource( 16 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 5000.11, 1150.48 )
+scene_path = "res://src/levels/mountain/mountain.tscn"
+
+[node name="NPCs" type="Node2D" parent="world"]
+
+editor/display_folded = true
+
+[node name="Yan" parent="world/NPCs" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 3887.4, 2270.81 )
+
 [node name="teleporter_spawn_scn3" type="Position2D" parent="world"]
 
 transform/pos = Vector2( 4690.01, 1115.94 )
@@ -122,228 +348,6 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 transform/pos = Vector2( 3993.86, 1878.25 )
 transform/scale = Vector2( 4.99998, 3.59373 )
-
-[node name="props" type="Node" parent="world"]
-
-editor/display_folded = true
-
-[node name="moving_platform" parent="world/props" instance=ExtResource( 8 )]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 922, 762 )
-z/z = -1
-
-[node name="moving_platform1" parent="world/props" instance=ExtResource( 8 )]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 4257.04, 2147.64 )
-z/z = -1
-motion = Vector2( 0, 200 )
-cycle = 4.0
-
-[node name="one_way_platform" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 982, 422 )
-
-[node name="one_way_platform4" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 3712.9, 1770.57 )
-z/z = -1
-
-[node name="one_way_platform5" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 3983.57, 1708.87 )
-z/z = -1
-
-[node name="one_way_platform1" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 692, 532 )
-
-[node name="one_way_platform2" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 392, 432 )
-
-[node name="one_way_platform6" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 1372.69, 951.347 )
-
-[node name="one_way_platform7" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 1482, 722 )
-
-[node name="one_way_platform8" parent="world/props" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 1382, 592 )
-
-[node name="small_one_way_platform" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 1702, 812 )
-z/z = -1
-
-[node name="small_one_way_platform1" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 2023.52, 1269.15 )
-z/z = -1
-
-[node name="small_one_way_platform2" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 1937.78, 1169.15 )
-z/z = -1
-
-[node name="small_one_way_platform3" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 1992.83, 1073.73 )
-z/z = -1
-
-[node name="small_one_way_platform4" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 1923.34, 991.71 )
-z/z = -1
-
-[node name="small_one_way_platform5" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 1989.22, 881.782 )
-z/z = -1
-
-[node name="small_one_way_platform6" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3002, 862 )
-z/z = -1
-
-[node name="small_one_way_platform7" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3172, 692 )
-z/z = -1
-
-[node name="small_one_way_platform8" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3082, 782 )
-z/z = -1
-
-[node name="small_one_way_platform9" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3262, 622 )
-z/z = -1
-
-[node name="small_one_way_platform10" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 4082, 832 )
-z/z = -1
-
-[node name="small_one_way_platform10 2" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3672, 632 )
-z/z = -1
-
-[node name="small_one_way_platform10 3" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 3882, 732 )
-z/z = -1
-
-[node name="small_one_way_platform11" parent="world/props" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 4016, 932 )
-z/z = -1
-
-[node name="birds" parent="world" instance=ExtResource( 11 )]
-
-[node name="scene_teleporter" parent="world" instance=ExtResource( 12 )]
-
-editor/display_folded = true
-transform/pos = Vector2( 5000.11, 1151.48 )
-scene_path = "res://src/levels/mountain/mountain.tscn"
-
-[node name="waterdrop" parent="world" instance=ExtResource( 13 )]
-
-editor/display_folded = true
-transform/pos = Vector2( 2427.07, 1253.14 )
-transform/scale = Vector2( 1, 1.29413 )
-
-[node name="Yan" parent="world" instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 3887.4, 2270.81 )
-
-[node name="interactables" type="Node2D" parent="world"]
-
-editor/display_folded = true
-
-[node name="rock" parent="world/interactables" instance=ExtResource( 15 )]
-
-transform/pos = Vector2( 2381.47, 1263.25 )
-
-[node name="rock2" parent="world/interactables" instance=ExtResource( 15 )]
-
-transform/pos = Vector2( 2902.92, 1519.33 )
-
-[node name="rock1" parent="world/interactables" instance=ExtResource( 15 )]
-
-editor/display_folded = true
-transform/pos = Vector2( 2815.6, 1528.28 )
-
-[node name="rewards" type="Node" parent="world/interactables"]
-
-editor/display_folded = true
-
-[node name="reward" parent="world/interactables/rewards" instance=ExtResource( 16 )]
-
-transform/pos = Vector2( 3860.96, 1840.83 )
-
-[node name="reward1" parent="world/interactables/rewards" instance=ExtResource( 16 )]
-
-transform/pos = Vector2( 3915.1, 1840.39 )
-
-[node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
-
-editor/display_folded = true
-
-[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 834.664, 1309.6 )
-
-[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 707.665, 1225.05 )
-
-[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 1125.21, 1053.06 )
-
-[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 1292.11, 1059.24 )
-
-[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 1607.38, 923.239 )
-
-[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 2586.9, 939.059 )
-
-[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 703.5, 491.482 )
-transform/scale = Vector2( 0.734366, 0.671311 )
-
-[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 1193.63, 460.381 )
-
-[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 3546.2, 1356.19 )
-
-[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 2406.63, 815.115 )
-
-[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 3710.72, 1394.25 )
-
-[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 17 )]
-
-transform/pos = Vector2( 3781.93, 1393.02 )
 
 [node name="hud" parent="." instance=ExtResource( 18 )]
 

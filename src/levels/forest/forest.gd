@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 
 # -- START --
@@ -7,9 +7,11 @@ func _ready():
 	# Get initial player spawn position
 	var initial_pos_player = get_node("/root/scn3/world/initial_spawn_player").get_global_pos()
 	
+	# Set player position
+	get_node("/root/scn3/world/tile_map/player").set_global_pos(initial_pos_player)
+	
 	# Get enemy group
 	game.open_scene("scn3")
-	get_node("/root/scn3/world/tile_map/player").set_pos(initial_pos_player)
 	
 	# Debug - Uncomment if you are debugging
 	# run_debug()

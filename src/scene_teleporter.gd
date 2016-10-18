@@ -1,9 +1,5 @@
 extends Area2D
 
-# member variables here, example:
-# var a=2
-# var b="textvar"
-
 var node_path = self.get_path()
 export(String, FILE, "*.tscn") var scene_path
 
