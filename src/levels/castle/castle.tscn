@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://src/actors/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/areas/area_castle/tileset_castle.tres" type="TileSet" id=2]
 [ext_resource path="res://src/levels/castle/castle_outside.png" type="Texture" id=3]
 [ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/levels/forest/forest_parallax_bg.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/audio/music/japsand.ogg" type="AudioStream" id=8]
 
 [node name="castle" type="Node2D"]
 
@@ -29,7 +33,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -131077, 2, -65541, 2, -5, 2, 65531, 2, 131067, 2, 196603, 2, 262139, 2, 327675, 4, 327676, 0, 327677, 0, 327678, 0, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
+tile_data = IntArray( -131077, 2, -65541, 2, -5, 2, 65531, 2, 131067, 2, 196603, 2, 262139, 2, 262142, 9, 327675, 4, 327676, 0, 327677, 0, 327678, 6, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
 
 [node name="sprite" type="Sprite" parent="castle_tilemap"]
 
@@ -100,5 +104,13 @@ transform/pos = Vector2( 582, 172 )
 [node name="reward8" parent="rewards" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 582, 172 )
+
+[node name="parallax_bg" parent="." instance=ExtResource( 5 )]
+
+[node name="hud" parent="." instance=ExtResource( 6 )]
+
+[node name="music_player" parent="." instance=ExtResource( 7 )]
+
+stream/stream = ExtResource( 8 )
 
 
