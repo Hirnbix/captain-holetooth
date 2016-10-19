@@ -241,7 +241,7 @@ drag_margin/bottom = 0.2
 
 [node name="bullet_shoot" type="Position2D" parent="."]
 
-transform/pos = Vector2( 9.63763, 14.6845 )
+transform/pos = Vector2( 14.6376, 2.6845 )
 transform/scale = Vector2( 0.75036, 0.741892 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
