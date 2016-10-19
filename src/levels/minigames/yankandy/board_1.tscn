@@ -1,12 +1,12 @@
 [gd_scene load_steps=41 format=1]
 
-[ext_resource path="res://src/levels/yan-kandy-minigame/box.gd" type="Script" id=1]
+[ext_resource path="res://src/levels/minigames/yankandy/box.gd" type="Script" id=1]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/levels/yan-kandy-minigame/pin.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/levels/yan-kandy-minigame/wooden-box-bg.png" type="Texture" id=4]
-[ext_resource path="res://src/levels/yan-kandy-minigame/wooden-box-cup-front.png" type="Texture" id=5]
+[ext_resource path="res://src/levels/minigames/yankandy/pin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/levels/minigames/yankandy/wooden-box-bg.png" type="Texture" id=4]
+[ext_resource path="res://src/levels/minigames/yankandy/wooden-box-cup-front.png" type="Texture" id=5]
 [ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=6]
-[ext_resource path="res://src/levels/yan-kandy-minigame/pockets.gd" type="Script" id=7]
+[ext_resource path="res://src/levels/minigames/yankandy/pockets.gd" type="Script" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -1154,7 +1154,7 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 3
+frame = 1
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 

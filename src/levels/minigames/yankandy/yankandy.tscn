@@ -1,28 +1,26 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=16 format=1]
 
-[ext_resource path="res://src/levels/yan-kandy-minigame/minigame.gd" type="Script" id=1]
-[ext_resource path="res://src/levels/yan-kandy-minigame/hud.gd" type="Script" id=2]
+[ext_resource path="res://src/levels/minigames/yankandy/yankandy.gd" type="Script" id=1]
+[ext_resource path="res://src/screens/hud/hud.gd" type="Script" id=2]
 [ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://src/levels/yan-kandy-minigame/ball_script.gd" type="Script" id=5]
-[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball.png" type="Texture" id=6]
-[ext_resource path="res://src/levels/yan-kandy-minigame/candyball_light.png" type="Texture" id=7]
-[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shadow.png" type="Texture" id=8]
-[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shine.png" type="Texture" id=9]
-[ext_resource path="res://src/levels/yan-kandy-minigame/sprite_candyball_shading.png" type="Texture" id=10]
-[ext_resource path="res://src/levels/yan-kandy-minigame/board_1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/levels/yan-kandy-minigame/soundtrack.ogg" type="AudioStream" id=12]
-[ext_resource path="res://src/levels/yan-kandy-minigame/soundtrack.gd" type="Script" id=13]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/levels/minigames/yankandy/ball_script.gd" type="Script" id=5]
+[ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball.png" type="Texture" id=6]
+[ext_resource path="res://src/levels/minigames/yankandy/candyball_light.png" type="Texture" id=7]
+[ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shadow.png" type="Texture" id=8]
+[ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shine.png" type="Texture" id=9]
+[ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shading.png" type="Texture" id=10]
+[ext_resource path="res://src/levels/minigames/yankandy/board_1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 24.9706
 
-[node name="yan-kandy-minigame" type="Node2D"]
+[node name="yankandy" type="Node2D"]
 
 transform/pos = Vector2( 0, 165 )
 script/script = ExtResource( 1 )
@@ -34,6 +32,10 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 script/script = ExtResource( 2 )
+collected_text = null
+score_text = null
+highscore_text = null
+sound_off_button = null
 
 [node name="scoring" type="Node2D" parent="scoring"]
 
@@ -276,25 +278,13 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="soundtrack" type="StreamPlayer" parent="."]
-
-stream/stream = ExtResource( 12 )
-stream/play = false
-stream/loop = true
-stream/volume_db = 0.0
-stream/autoplay = false
-stream/paused = false
-stream/loop_restart_time = 0.0
-stream/buffering_ms = 500
-script/script = ExtResource( 13 )
-
-[node name="hud" parent="." instance=ExtResource( 14 )]
+[node name="hud" parent="." instance=ExtResource( 12 )]
 
 [node name="hudframe" parent="hud"]
 
 visibility/visible = false
 
-[node name="mobile_ui" parent="." instance=ExtResource( 15 )]
+[node name="mobile_ui" parent="." instance=ExtResource( 13 )]
 
 editor/display_folded = true
 
@@ -306,7 +296,11 @@ visibility/visible = false
 
 visibility/visible = true
 
-[node name="sfx" parent="." instance=ExtResource( 16 )]
+[node name="sfx" parent="." instance=ExtResource( 14 )]
+
+[connection signal="pressed" from="hud/go_to_menu" to="hud" method="_on_go_to_menu_pressed"]
+
+[connection signal="pressed" from="hud/sound_off" to="hud" method="_on_sound_off_pressed"]
 
 
 [editable path="hud"]
