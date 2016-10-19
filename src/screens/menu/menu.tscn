@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.tex" type="Texture" id=2]
@@ -16,9 +16,10 @@
 [ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=14]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=17]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=18]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=17]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=18]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=20]
 
 [sub_resource type="Animation" id=1]
 
@@ -186,7 +187,6 @@ transform/scale = Vector2( 1, 1.3446 )
 
 [node name="menu_buttons" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
@@ -275,7 +275,6 @@ max_lines_visible = -1
 
 [node name="options_screen" type="Area2D" parent="."]
 
-editor/display_folded = true
 visibility/visible = false
 z/z = 2
 input/pickable = true
@@ -302,7 +301,6 @@ tabs_visible = true
 
 [node name="General" type="Tabs" parent="options_screen/settings"]
 
-editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -434,15 +432,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 8.0
-margin/right = 244.0
-margin/bottom = 40.0
+theme/theme = ExtResource( 17 )
+margin/left = 4.0
+margin/top = 10.0
+margin/right = 246.0
+margin/bottom = 42.0
 custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Jump to SCENE 3 (Forest)"
+text = "Forest Level"
 flat = false
 
 [node name="jump_scn4" type="Button" parent="options_screen/settings/Debug"]
@@ -451,15 +450,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 48.0
-margin/right = 244.0
-margin/bottom = 80.0
+theme/theme = ExtResource( 17 )
+margin/left = 4.0
+margin/top = 50.0
+margin/right = 246.0
+margin/bottom = 82.0
 custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Jump to SCENE 4 (Snow)"
+text = "Mountain Level"
 flat = false
 
 [node name="jump_scn5" type="Button" parent="options_screen/settings/Debug"]
@@ -468,15 +468,34 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 88.0
-margin/right = 244.0
-margin/bottom = 120.0
+theme/theme = ExtResource( 17 )
+margin/left = 4.0
+margin/top = 91.0
+margin/right = 246.0
+margin/bottom = 123.0
 custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Jump to SCENE 5 (Airship)"
+text = "Fly home Level"
+flat = false
+
+[node name="jump_castle" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 17 )
+margin/left = 4.0
+margin/top = 130.0
+margin/right = 246.0
+margin/bottom = 162.0
+custom_fonts/font = ExtResource( 13 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Castle Level"
 flat = false
 
 [node name="jump_minigame" type="Button" parent="options_screen/settings/Debug"]
@@ -485,10 +504,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 128.0
-margin/right = 244.0
-margin/bottom = 168.0
+theme/theme = ExtResource( 17 )
+margin/left = 4.0
+margin/top = 178.0
+margin/right = 246.0
+margin/bottom = 218.0
 custom_fonts/font = ExtResource( 13 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -543,6 +563,7 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
+__meta__ = { "_edit_group_":true }
 
 [node name="exitbutton" type="TextureButton" parent="options_screen"]
 
@@ -561,11 +582,11 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 17 )
+textures/normal = ExtResource( 18 )
 
-[node name="music_player" parent="." instance=ExtResource( 18 )]
+[node name="music_player" parent="." instance=ExtResource( 19 )]
 
-stream/stream = ExtResource( 19 )
+stream/stream = ExtResource( 20 )
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 
@@ -582,6 +603,8 @@ stream/stream = ExtResource( 19 )
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn4" to="." method="_on_jump_scn4_pressed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn5" to="." method="_on_jump_scn5_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Debug/jump_castle" to="." method="_on_jump_castle_pressed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
 

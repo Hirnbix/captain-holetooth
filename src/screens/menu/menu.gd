@@ -115,3 +115,7 @@ func _on_jump_scn5_pressed():
 func _on_jump_minigame_pressed():
 	print("Debug: Jumping to minigame")
 	transition.fade_to("res://src/levels/yan-kandy-minigame/prototype.tscn")
+
+func _on_jump_castle_pressed():
+	print("Debug: Jumping to minigame")
+	transition.fade_to("res://src/levels/castle/castle.tscn")
