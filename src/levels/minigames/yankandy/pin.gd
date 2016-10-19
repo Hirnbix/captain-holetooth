@@ -13,15 +13,15 @@ func _ready():
 	pass
 	
 func anim_popup_score():
-	get_node("pin_score_flag/pin_score_text").set_text(str(global.score_pins))
+	get_node("pin_score_flag/pin_score_text").set_text(str(global.yankandy_score_pins))
 
 func _on_pin_body_enter( body ):
 	var touchbody = body.get_name()
 	#if body.get_name() == "ball":
 	print(touchbody + " touched pin")
-	global.score_pins += 1
-	global.score_multiplier += 1
-	global.score_total += global.score_pins * global.score_multiplier
+	global.yankandy_score_pins += 1
+	global.yankandy_score_multiplier += 1
+	global.yankandy_score_total += global.yankandy_score_pins * global.yankandy_score_multiplier
 	get_node("score_animation").play("pin_score_anim")
 	
 	if box_area == "box_area1":
@@ -50,7 +50,7 @@ func _on_pin_body_enter( body ):
 	
 	if box_area == "box_secret_pin" and secret_pin_hit == false:
 		secret_pin_hit = true
-		global.score_total += 5000
+		global.yankandy_score_total += 5000
 		get_node("sfx").play("yan_secret_pin")
 		get_node("sfx").play("bronze_bell")
 		get_node("score_animation").play("secret_pin_animation")
