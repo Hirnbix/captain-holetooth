@@ -166,6 +166,9 @@ func _integrate_forces(s):
 			
 			global.times_jumped = global.times_jumped +1
 			print(global.times_jumped)
+			if (global.times_jumped > 100):
+				JUMP_VELOCITY = 550
+				print("Yay! You can now jump higher")
 		
 		# Check siding
 		if (lv.x < 0 and move_left):
