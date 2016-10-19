@@ -1,6 +1,6 @@
-[gd_resource type="TileSet" load_steps=14 format=1]
+[gd_resource type="TileSet" load_steps=15 format=1]
 
-[ext_resource path="res://src/areas/area_castle/tileset_castle_outside.png" type="Texture" id=1]
+[ext_resource path="res://src/areas/area_castle/tiles_castle_outside.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -45,19 +45,24 @@ points = Vector2Array( -32, 32, -32, -32, 24, -32, 24, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -64, 32, -64, -32, -8, -32, -8, 32 )
+points = Vector2Array( -5.70321, -19.2441, 19.3312, -19.2441, 11.1621, 3.94566, -4.91264, 9.21606 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, 32, -32, -32, 24, -32, 32, -24, 32, 32 )
+points = Vector2Array( -4.91264, 9.21606, -8, 32, -64, 32, -64, -32, -8, -32, -5.70321, -19.2441 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
+points = Vector2Array( -32, 32, -32, -32, 24, -32, 32, -24, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
@@ -95,7 +100,7 @@ points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
 3/occluder_offset = Vector2( 64, 32 )
 3/navigation_offset = Vector2( 64, 32 )
 3/shape_offset = Vector2( 64, 32 )
-3/shapes = [ SubResource( 9 ) ]
+3/shapes = [ SubResource( 9 ), SubResource( 10 ) ]
 4/name = "corner"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
@@ -103,7 +108,7 @@ points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shape_offset = Vector2( 32, 32 )
-4/shapes = [ SubResource( 10 ) ]
+4/shapes = [ SubResource( 11 ) ]
 5/name = "flowers"
 5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
@@ -111,7 +116,7 @@ points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
 5/occluder_offset = Vector2( 32, 32 )
 5/navigation_offset = Vector2( 32, 32 )
 5/shape_offset = Vector2( 32, 32 )
-5/shapes = [ SubResource( 11 ) ]
+5/shapes = [ SubResource( 12 ) ]
 6/name = "tree_base"
 6/texture = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
@@ -119,7 +124,7 @@ points = Vector2Array( -32, 32, -32, -24, 32, -24, 32, 32 )
 6/occluder_offset = Vector2( 32, 32 )
 6/navigation_offset = Vector2( 32, 32 )
 6/shape_offset = Vector2( 32, 32 )
-6/shapes = [ SubResource( 12 ) ]
+6/shapes = [ SubResource( 13 ) ]
 7/name = "tree_mid"
 7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
