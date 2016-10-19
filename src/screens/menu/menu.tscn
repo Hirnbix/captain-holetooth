@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.tex" type="Texture" id=2]
@@ -17,9 +17,10 @@
 [ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
 [ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=17]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=18]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=18]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=19]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=21]
 
 [sub_resource type="Animation" id=1]
 
@@ -549,6 +550,22 @@ bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\tIvan Skodje\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
+[node name="donate_button" type="TextureButton" parent="options_screen/settings/Credits"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 267.0
+margin/top = 139.0
+margin/right = 603.0
+margin/bottom = 287.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 18 )
+params/scale = Vector2( 0.6, 0.6 )
+
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
 
 z/z = -1
@@ -582,11 +599,11 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 18 )
+textures/normal = ExtResource( 19 )
 
-[node name="music_player" parent="." instance=ExtResource( 19 )]
+[node name="music_player" parent="." instance=ExtResource( 20 )]
 
-stream/stream = ExtResource( 20 )
+stream/stream = ExtResource( 21 )
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 
@@ -607,6 +624,8 @@ stream/stream = ExtResource( 20 )
 [connection signal="pressed" from="options_screen/settings/Debug/jump_castle" to="." method="_on_jump_castle_pressed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Credits/donate_button" to="." method="_on_donate_button_pressed"]
 
 [connection signal="pressed" from="options_screen/exitbutton" to="." method="_on_exitbutton_pressed"]
 

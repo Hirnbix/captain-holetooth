@@ -29,7 +29,7 @@ var current_locale = TranslationServer.get_locale()
 func _ready():
 	# Update music player volume the initial music volume stored in global
 	music_volume_slider.set_value(global.music.volume * 100)
-	
+
 	# Updates locale on scene
 	update_locale()
 
@@ -72,13 +72,13 @@ func update_locale():
 	options_screen.get_node("settings").set_tab_title(1, tr("KEY_AUDIO"))
 	options_screen.get_node("settings").set_tab_title(2, tr("KEY_DEBUG"))
 	options_screen.get_node("settings").set_tab_title(3, tr("KEY_CREDITS"))
-	
+
 	# Setup Language buttons
 	# - German
 	if current_locale == "de_DE":
 		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_DE.tex")
 		game_title.set_texture(tex_de)
-	
+
 	# - English
 	if current_locale == "en_GB":
 		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.tex")
@@ -90,7 +90,7 @@ func update_locale():
 func _on_music_volume_value_changed( value ):
 	# Set global music volume
 	global.music.volume = value/100
-	
+
 	# Update music player volume
 	music_player.set_volume(global.music.volume)
 
@@ -118,4 +118,8 @@ func _on_jump_minigame_pressed():
 
 func _on_jump_castle_pressed():
 	print("Debug: Jumping to minigame")
-	transition.fade_to("res://src/levels/castle/castle.tscn")
+	transition.fade_to("res://src/levels/castle/castle_outside.tscn")
+	
+func _on_donate_button_pressed():
+	OS.shell_open("https://www.patreon.com/hirnbix")
+	pass # replace with function body
