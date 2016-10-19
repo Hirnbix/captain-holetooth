@@ -278,12 +278,6 @@ visibility/visible = false
 
 [node name="mobile_ui" parent="." instance=ExtResource( 12 )]
 
-editor/display_folded = true
-
-[node name="ship" parent="mobile_ui"]
-
-visibility/visible = false
-
 [node name="yankandy" parent="mobile_ui"]
 
 visibility/visible = true
