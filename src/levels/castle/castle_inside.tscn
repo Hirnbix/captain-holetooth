@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://src/actors/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/areas/area_castle/tileset_castle_inside.tres" type="TileSet" id=2]
+[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/audio/music/japsand.ogg" type="AudioStream" id=6]
+
+[node name="castle" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 100, 170 )
+
+[node name="castle_tilemap" type="TileMap" parent="."]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 320, 22 )
+z/z = -1
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -196610, -536870905, -196609, -536870905, -262144, 7, -262141, 1610612743, -262140, 7, -131077, 2, -131075, -536870905, -131074, 7, -131073, 7, -196608, 7, -196607, 7, -196606, 7, -196605, 7, -196604, 7, -196603, 7, -65541, 2, -65538, 7, -65537, 7, -131072, 7, -131071, 7, -131070, 1610612743, -131069, 1610612743, -131068, 7, -131067, 7, -5, 2, 65531, 2, 131067, -2147483639, 131068, 10, 131069, 10, 131070, 10, 131071, 10, 65536, 10, 65537, 10, 65538, 10, 65539, 10, 65540, 10, 65541, 10, 65542, 10, 65543, 10, 65544, 10, 196603, 2, 196604, 10, 196605, 10, 196606, 10, 196607, 10, 131072, 10, 131073, 10, 131074, 10, 131075, 10, 131076, 10, 131077, 10, 131078, 10, 131079, 10, 131080, 10, 262139, 2, 262140, 10, 262141, 10, 262142, 10, 262143, 10, 196608, 10, 196609, 10, 196610, 10, 196611, 10, 196612, 10, 196613, 10, 196614, 10, 196615, 10, 196616, 10, 327675, 4, 327676, 0, 327677, 0, 327678, 6, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
+
+[node name="rewards" type="Node2D" parent="."]
+
+transform/pos = Vector2( 282, -66 )
+
+[node name="reward" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -65.665, 234.867 )
+
+[node name="reward1" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -68, 192 )
+
+[node name="reward2" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -38, 212 )
+
+[node name="reward3" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -98, 212 )
+
+[node name="reward4" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 242, 222 )
+
+[node name="reward5" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 242, 182 )
+
+[node name="reward6" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 582, 212 )
+
+[node name="reward7" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 582, 172 )
+
+[node name="reward8" parent="rewards" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 582, 172 )
+
+[node name="hud" parent="." instance=ExtResource( 4 )]
+
+[node name="music_player" parent="." instance=ExtResource( 5 )]
+
+stream/stream = ExtResource( 6 )
+
+
