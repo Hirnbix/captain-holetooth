@@ -265,11 +265,13 @@ trigger = false
 
 [node name="mobile_ui" parent="." instance=ExtResource( 5 )]
 
-editor/display_folded = true
-
 [node name="player" parent="mobile_ui"]
 
 visibility/visible = true
+
+[node name="ship" parent="mobile_ui"]
+
+visibility/visible = false
 
 
 [editable path="mobile_ui"]
