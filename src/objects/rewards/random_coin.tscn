@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://src/objects/rewards/random_coin.gd" type="Script" id=1]
 [ext_resource path="res://src/objects/rewards/6.tex" type="Texture" id=2]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/objects/rewards/small_star.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -63,18 +64,21 @@ tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = { "times":FloatArray( 0, 0.0790673, 0.846486 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ false, true, false ] }
 
+[sub_resource type="ColorRamp" id=3]
+
+offsets = FloatArray( 0.0674157, 0.11236, 0.153558, 0.183521, 0.303371, 0.378277, 0.468165, 0.561798, 0.666667, 0.775281, 0.857678, 0.94382, 1 )
+colors = ColorArray( 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0.994946, 0.353125, 1, 1, 0.484652, 0.339158, 1, 1, 0.512329, 0.265625, 1, 1, 0.360106, 0.670055, 1, 1, 0.480354, 1, 0.792954, 1, 0.623888, 1, 0.592014, 1, 0.930314, 1, 0.712262, 1, 1, 0.948331, 0.849689, 1, 1, 0.955209, 0.935581, 0.666271, 1, 1, 1, 0 )
+
 [node name="random_coin" type="Node2D"]
 
 script/script = ExtResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.559145, -11.5505 )
-transform/rot = -3.49565
+transform/pos = Vector2( 0.559145, -2.47515 )
 texture = ExtResource( 2 )
 offset = Vector2( 0.586603, 1.38475 )
 hframes = 4
-frame = 1
 
 [node name="anim" type="AnimationPlayer" parent="."]
 
@@ -101,10 +105,11 @@ config/preprocess = 4.91377
 config/emitting = false
 config/half_extents = Vector2( 3, 3 )
 config/explosiveness = 0.147523
+config/texture = ExtResource( 4 )
 params/direction = 136.827
 params/spread = 29.8057
 params/linear_velocity = -3.08295
-params/spin_velocity = 0.0
+params/spin_velocity = 5.0
 params/orbit_velocity = 0.0
 params/gravity_direction = 167.109
 params/gravity_strength = 0.0
@@ -117,5 +122,6 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 3 )
 
 

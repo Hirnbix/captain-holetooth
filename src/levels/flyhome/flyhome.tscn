@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -9,9 +9,8 @@
 [ext_resource path="res://src/levels/flyhome/parallax.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=8]
 [ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=9]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=12]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,7 +25,6 @@ transform/pos = Vector2( 26.0001, -14.0001 )
 
 [node name="enemies" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -484.788, -79.2587 )
 
 [node name="asteroid1" parent="enemies" instance=ExtResource( 4 )]
@@ -39,7 +37,7 @@ transform/pos = Vector2( 1166.76, 111.656 )
 
 [node name="asteroid3" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 2741.79, 106.234 )
+transform/pos = Vector2( 1831.79, 146.234 )
 
 [node name="asteroid4" parent="enemies" instance=ExtResource( 4 )]
 
@@ -51,7 +49,7 @@ transform/pos = Vector2( 1335.98, 308.494 )
 
 [node name="asteroid6" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4031.84, 216.508 )
+transform/pos = Vector2( 3121.84, 256.508 )
 
 [node name="asteroid7" parent="enemies" instance=ExtResource( 4 )]
 
@@ -59,31 +57,31 @@ transform/pos = Vector2( 1743.95, 141.491 )
 
 [node name="asteroid8" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 2370.24, 280.213 )
+transform/pos = Vector2( 1460.24, 320.213 )
 
 [node name="asteroid9" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4600.8, 108.254 )
+transform/pos = Vector2( 3690.8, 148.254 )
 
 [node name="asteroid10" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3034.73, 272.418 )
+transform/pos = Vector2( 2124.73, 312.418 )
 
 [node name="asteroid11" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4232.61, 50.5924 )
+transform/pos = Vector2( 3322.61, 90.5924 )
 
 [node name="asteroid12" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3984.31, 297.048 )
+transform/pos = Vector2( 3074.31, 337.048 )
 
 [node name="asteroid13" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 5824.32, 105.736 )
+transform/pos = Vector2( 4914.32, 145.736 )
 
 [node name="asteroid14" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 5482.55, 183.69 )
+transform/pos = Vector2( 4572.55, 223.69 )
 
 [node name="asteroid15" parent="enemies" instance=ExtResource( 4 )]
 
@@ -91,35 +89,35 @@ transform/pos = Vector2( 1969.94, 308.564 )
 
 [node name="asteroid16" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4301.52, 168.653 )
+transform/pos = Vector2( 3391.52, 208.653 )
 
 [node name="asteroid17" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 6723.08, 80.5608 )
+transform/pos = Vector2( 5813.08, 120.561 )
 
 [node name="asteroid18" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4487.29, 147.052 )
+transform/pos = Vector2( 3577.29, 187.052 )
 
 [node name="asteroid19" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3452.8, 207.753 )
+transform/pos = Vector2( 2542.8, 247.753 )
 
 [node name="asteroid20" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 6120.76, 55.6274 )
+transform/pos = Vector2( 5210.76, 95.6274 )
 
 [node name="asteroid21" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3881.73, 78.2642 )
+transform/pos = Vector2( 2971.73, 118.264 )
 
 [node name="asteroid22" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4105.78, 319.947 )
+transform/pos = Vector2( 3195.78, 359.947 )
 
 [node name="asteroid23" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 2912.31, 155.597 )
+transform/pos = Vector2( 2002.31, 195.597 )
 
 [node name="asteroid24" parent="enemies" instance=ExtResource( 4 )]
 
@@ -127,15 +125,15 @@ transform/pos = Vector2( 7918.91, 95.666 )
 
 [node name="asteroid25" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 3954.29, 224.966 )
+transform/pos = Vector2( 3044.29, 264.966 )
 
 [node name="asteroid26" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4471.32, 258.113 )
+transform/pos = Vector2( 3561.32, 298.113 )
 
 [node name="asteroid27" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 5689.95, 105.715 )
+transform/pos = Vector2( 4779.95, 145.715 )
 
 [node name="asteroid28" parent="enemies" instance=ExtResource( 4 )]
 
@@ -143,15 +141,15 @@ transform/pos = Vector2( 8455.14, 95.6658 )
 
 [node name="asteroid29" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 5855.9, 208.899 )
+transform/pos = Vector2( 4945.9, 248.899 )
 
 [node name="asteroid30" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4067.74, 128.305 )
+transform/pos = Vector2( 3157.74, 168.305 )
 
 [node name="asteroid31" parent="enemies" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 6981.45, 98.1618 )
+transform/pos = Vector2( 6071.45, 138.162 )
 
 [node name="enemy2" parent="enemies" instance=ExtResource( 5 )]
 
@@ -163,75 +161,75 @@ transform/pos = Vector2( 1739.37, 229.854 )
 
 [node name="enemy4" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 2827.34, 108.181 )
+transform/pos = Vector2( 1917.34, 148.181 )
 
 [node name="enemy5" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 4163.37, 148.776 )
+transform/pos = Vector2( 3253.37, 188.776 )
 
 [node name="enemy6" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 3183.62, 205.327 )
+transform/pos = Vector2( 2273.62, 245.327 )
 
 [node name="enemy7" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 3522.85, 250.961 )
+transform/pos = Vector2( 2612.85, 290.961 )
 
 [node name="enemy8" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 5157.9, 267.422 )
+transform/pos = Vector2( 4247.9, 307.422 )
 
 [node name="enemy9" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 5166.61, 158.846 )
+transform/pos = Vector2( 4256.61, 198.846 )
 
 [node name="enemy10" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 3973.63, 126.448 )
+transform/pos = Vector2( 3063.63, 166.448 )
 
 [node name="enemy11" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 3517.98, 163.44 )
+transform/pos = Vector2( 2607.98, 203.44 )
 
 [node name="enemy12" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 3823.93, 200.256 )
+transform/pos = Vector2( 2913.93, 240.256 )
 
 [node name="enemy13" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 4039.06, 85.8162 )
+transform/pos = Vector2( 3129.06, 125.816 )
 
 [node name="enemy14" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 4303.4, 264.561 )
+transform/pos = Vector2( 3393.4, 304.561 )
 
 [node name="enemy15" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 2975.64, 209.909 )
+transform/pos = Vector2( 2065.64, 249.909 )
 
 [node name="enemy16" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 4805.67, 136.167 )
+transform/pos = Vector2( 3895.67, 176.167 )
 
 [node name="enemy17" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 5198.44, 211.93 )
+transform/pos = Vector2( 4288.44, 251.93 )
 
 [node name="enemy18" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 6792.8, 183.949 )
+transform/pos = Vector2( 5882.8, 223.949 )
 
 [node name="enemy19" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 2522.4, 206.874 )
+transform/pos = Vector2( 1612.4, 246.874 )
 
 [node name="enemy20" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 5114.46, 212.411 )
+transform/pos = Vector2( 4204.46, 252.411 )
 
 [node name="enemy21" parent="enemies" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 6157.58, 332.535 )
+transform/pos = Vector2( 5247.58, 372.535 )
 
 [node name="enemy22" parent="enemies" instance=ExtResource( 5 )]
 
@@ -239,59 +237,59 @@ transform/pos = Vector2( 7505.2, 190.355 )
 
 [node name="enemy2 2" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2671.42, 135.424 )
+transform/pos = Vector2( 1761.42, 175.424 )
 
 [node name="enemy23" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 5481.9, 241.406 )
+transform/pos = Vector2( 4571.9, 281.406 )
 
 [node name="enemy24" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 6596.77, 100.438 )
+transform/pos = Vector2( 5686.77, 140.438 )
 
 [node name="enemy25" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 6316.28, 164.13 )
+transform/pos = Vector2( 5406.28, 204.13 )
 
 [node name="enemy26" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 4231.94, 62.8522 )
+transform/pos = Vector2( 3321.94, 102.852 )
 
 [node name="enemy27" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 3111.46, 235.305 )
+transform/pos = Vector2( 2201.46, 275.305 )
 
 [node name="enemy28" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 6001.01, 74.1768 )
+transform/pos = Vector2( 5091.01, 114.177 )
 
 [node name="enemy29" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 5002.52, 110.799 )
+transform/pos = Vector2( 4092.52, 150.799 )
 
 [node name="enemy30" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 4999.1, 206.693 )
+transform/pos = Vector2( 4089.1, 246.693 )
 
 [node name="enemy31" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 4756.68, 249.159 )
+transform/pos = Vector2( 3846.68, 289.159 )
 
 [node name="enemy32" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 5415.51, 207.763 )
+transform/pos = Vector2( 4505.51, 247.763 )
 
 [node name="enemy33" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 7011.32, 98.1508 )
+transform/pos = Vector2( 6101.32, 138.151 )
 
 [node name="enemy34" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2605.03, 176.98 )
+transform/pos = Vector2( 1695.03, 216.98 )
 
 [node name="enemy35" parent="enemies" instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 2441.86, 239.314 )
+transform/pos = Vector2( 1531.86, 279.314 )
 
 [node name="parallax" parent="." instance=ExtResource( 7 )]
 
@@ -333,145 +331,9 @@ stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
-[node name="scene_teleporter" parent="." instance=ExtResource( 10 )]
+[node name="music_player" parent="." instance=ExtResource( 10 )]
 
-scene_path = "res://scenes/scn6-castle/scn6.tscn"
-
-[node name="music_player" parent="." instance=ExtResource( 11 )]
-
-stream/stream = ExtResource( 12 )
+stream/stream = ExtResource( 11 )
 stream/volume_db = 2.0
-
-[connection signal="area_enter" from="enemies/asteroid1" to="enemies/asteroid1" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid2" to="enemies/asteroid2" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid3" to="enemies/asteroid3" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid4" to="enemies/asteroid4" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid5" to="enemies/asteroid5" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid6" to="enemies/asteroid6" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid7" to="enemies/asteroid7" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid8" to="enemies/asteroid8" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid9" to="enemies/asteroid9" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid10" to="enemies/asteroid10" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid11" to="enemies/asteroid11" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid12" to="enemies/asteroid12" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid13" to="enemies/asteroid13" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid14" to="enemies/asteroid14" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid15" to="enemies/asteroid15" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid16" to="enemies/asteroid16" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid17" to="enemies/asteroid17" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid18" to="enemies/asteroid18" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid19" to="enemies/asteroid19" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid20" to="enemies/asteroid20" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid21" to="enemies/asteroid21" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid22" to="enemies/asteroid22" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid23" to="enemies/asteroid23" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid24" to="enemies/asteroid24" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid25" to="enemies/asteroid25" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid26" to="enemies/asteroid26" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid27" to="enemies/asteroid27" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid28" to="enemies/asteroid28" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid29" to="enemies/asteroid29" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid30" to="enemies/asteroid30" method="destroy"]
-
-[connection signal="area_enter" from="enemies/asteroid31" to="enemies/asteroid31" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy2" to="enemies/enemy2" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy3" to="enemies/enemy3" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy4" to="enemies/enemy4" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy5" to="enemies/enemy5" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy6" to="enemies/enemy6" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy7" to="enemies/enemy7" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy8" to="enemies/enemy8" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy9" to="enemies/enemy9" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy10" to="enemies/enemy10" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy11" to="enemies/enemy11" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy12" to="enemies/enemy12" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy13" to="enemies/enemy13" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy14" to="enemies/enemy14" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy15" to="enemies/enemy15" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy16" to="enemies/enemy16" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy17" to="enemies/enemy17" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy18" to="enemies/enemy18" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy19" to="enemies/enemy19" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy20" to="enemies/enemy20" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy21" to="enemies/enemy21" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy22" to="enemies/enemy22" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy2 2" to="enemies/enemy2 2" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy23" to="enemies/enemy23" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy24" to="enemies/enemy24" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy25" to="enemies/enemy25" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy26" to="enemies/enemy26" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy27" to="enemies/enemy27" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy28" to="enemies/enemy28" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy29" to="enemies/enemy29" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy30" to="enemies/enemy30" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy31" to="enemies/enemy31" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy32" to="enemies/enemy32" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy33" to="enemies/enemy33" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy34" to="enemies/enemy34" method="destroy"]
-
-[connection signal="area_enter" from="enemies/enemy35" to="enemies/enemy35" method="destroy"]
 
 

@@ -13,8 +13,4 @@ SPEED = 200
 
 texture = ExtResource( 3 )
 
-[connection signal="enter_screen" from="visibility" to="." method="_on_visibility_enter_screen"]
-
-[connection signal="exit_screen" from="visibility" to="." method="_on_visibility_exit_screen"]
-
 

@@ -14,7 +14,7 @@
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/actors/enemies/enemy.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/actors/enemies/forest_crawler.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=17]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=18]
@@ -245,8 +245,6 @@ transform/scale = Vector2( 1, 1.29413 )
 
 [node name="interactables" type="Node2D" parent="world"]
 
-editor/display_folded = true
-
 [node name="rock" parent="world/interactables" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2381.47, 1263.25 )
@@ -273,8 +271,6 @@ transform/pos = Vector2( 3860.96, 1840.83 )
 transform/pos = Vector2( 3915.1, 1840.39 )
 
 [node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
-
-editor/display_folded = true
 
 [node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
 

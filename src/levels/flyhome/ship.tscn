@@ -8,7 +8,7 @@
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=7]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -9.51361, -23.7438, 9.6867, -20.4345, 27.1633, -6.96246, 31.8831, 8.08408, 14.0829, 18.1764, -21.5754, 17.1294, -26.5304, 1.67323, -22.953, -18.1604 )
@@ -91,7 +91,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 55.8667, 80.5271 )
 transform/rot = 7.0
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -198,8 +198,6 @@ drag_margin/bottom = 0.2
 [node name="mobile_ui" parent="." instance=ExtResource( 7 )]
 
 editor/display_folded = true
-
-[connection signal="area_enter" from="player" to="player" method="_on_collision"]
 
 [connection signal="body_enter" from="player" to="player" method="_on_collision"]
 

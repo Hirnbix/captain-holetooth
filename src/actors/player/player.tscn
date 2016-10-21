@@ -269,9 +269,5 @@ trigger = false
 
 visibility/visible = true
 
-[node name="ship" parent="mobile_ui"]
-
-visibility/visible = false
-
 
 [editable path="mobile_ui"]
