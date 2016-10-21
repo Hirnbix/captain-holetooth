@@ -2,15 +2,18 @@
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/levels/flyhome/ship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/player/ship/ship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/flyhome/asteroid.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/levels/flyhome/enemy1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/levels/flyhome/enemy2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/levels/flyhome/parallax.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/levels/flyhome/flyhome_parallax.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=8]
 [ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=9]
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=11]
+
+
+
 
 [node name="Node2D" type="Node2D"]
 

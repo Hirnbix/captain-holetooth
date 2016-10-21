@@ -260,17 +260,17 @@ transform/pos = Vector2( 2815.6, 1528.28 )
 
 [node name="rewards" type="Node" parent="world/interactables"]
 
-editor/display_folded = true
-
 [node name="reward" parent="world/interactables/rewards" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 3860.96, 1840.83 )
 
 [node name="reward1" parent="world/interactables/rewards" instance=ExtResource( 14 )]
 
-transform/pos = Vector2( 3915.1, 1840.39 )
+transform/pos = Vector2( 3900.58, 1840.39 )
 
 [node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
+
+editor/display_folded = true
 
 [node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
 
