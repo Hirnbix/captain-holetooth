@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://src/levels/flyhome/flying_thing.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/levels/flyhome/enemy_shot.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/player/ship/flying_npc.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/enemies/bullets/enemy_shot.png" type="Texture" id=2]
 
 [sub_resource type="ColorRamp" id=1]
 
@@ -33,7 +33,6 @@ config/amount = 32
 config/lifetime = 0.5
 config/time_scale = 1.0
 config/explosiveness = 0.1
-config/texture = null
 config/h_frames = 1
 config/v_frames = 1
 params/direction = 0.0

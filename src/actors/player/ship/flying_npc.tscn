@@ -1,8 +1,6 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://src/levels/flyhome/flying_thing.gd" type="Script" id=1]
-[ext_resource path="res://src/levels/flyhome/fire_puff_anim_spritesheet.png" type="Texture" id=2]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/player/ship/flying_npc.gd" type="Script" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -66,13 +64,15 @@ monitorable = false
 collision/layers = 4
 collision/mask = 3
 script/script = ExtResource( 1 )
-SPEED = -200
+SPEED = 200
 Y_RANDOM = 10
 motion = "linear"
 destroy_sound = "explode"
 reset_bonus = true
 
 [node name="sprite" type="Sprite" parent="."]
+
+visibility/visible = false
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
@@ -105,9 +105,7 @@ transform/scale = Vector2( 0.503598, 0.558148 )
 config/amount = 19
 config/lifetime = 2.0
 config/time_scale = 1.14
-config/emitting = false
 config/explosiveness = 0.250373
-config/texture = ExtResource( 2 )
 config/h_frames = 8
 config/v_frames = 8
 params/direction = 180.0
@@ -133,8 +131,6 @@ randomness/initial_size = 1.0
 randomness/final_size = 1.0
 randomness/anim_speed_scale = 1.0
 color/color_ramp = SubResource( 4 )
-
-[node name="sfx" parent="." instance=ExtResource( 3 )]
 
 [connection signal="area_enter" from="." to="." method="destroy"]
 

@@ -1,14 +1,13 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://src/levels/flyhome/rail.gd" type="Script" id=1]
-[ext_resource path="res://src/levels/flyhome/ship.gd" type="Script" id=2]
-[ext_resource path="res://src/levels/flyhome/ship_spritesheet.png" type="Texture" id=3]
+[ext_resource path="res://src/actors/player/ship/ship.gd" type="Script" id=2]
+[ext_resource path="res://src/actors/player/ship/ship_spritesheet.png" type="Texture" id=3]
 [ext_resource path="res://src/objects/thruster/thruster.png" type="Texture" id=4]
-[ext_resource path="res://src/levels/flyhome/explosion.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=6]
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -9.51361, -23.7438, 9.6867, -20.4345, 27.1633, -6.96246, 31.8831, 8.08408, 14.0829, 18.1764, -21.5754, 17.1294, -26.5304, 1.67323, -22.953, -18.1604 )
@@ -19,27 +18,6 @@ offsets = FloatArray( 0, 0.000522193, 1 )
 colors = ColorArray( 1, 1, 1, 0, 0.835938, 0.835938, 0.835938, 1, 0.998305, 0.998305, 0.998305, 0.0103306 )
 
 [sub_resource type="Animation" id=3]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprite:visibility/visible")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
-tracks/1/type = "value"
-tracks/1/path = NodePath("thruster:config/emitting")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
-tracks/2/type = "value"
-tracks/2/path = NodePath("explosion:config/emitting")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 0.1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
-
-[sub_resource type="Animation" id=4]
 
 length = 1.0
 loop = true
@@ -55,7 +33,7 @@ tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0, 0.9 ), "transitions":FloatArray( 1, 2.54912 ), "update":0, "values":[ Vector2( 1.98509, 0.243739 ), Vector2( 0, 0 ) ] }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource/name = "hit"
 length = 1.0
@@ -91,7 +69,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 55.8667, 80.5271 )
 transform/rot = 7.0
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -104,11 +82,11 @@ __meta__ = { "_edit_group_":true }
 
 [node name="sprite" type="Sprite" parent="player"]
 
-transform/pos = Vector2( 0.714439, 0.0877223 )
+transform/pos = Vector2( 1.30923, 0.160753 )
 transform/rot = -7.0
 texture = ExtResource( 3 )
 hframes = 8
-frame = 4
+frame = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 
@@ -155,9 +133,8 @@ color/color_ramp = SubResource( 2 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/explode = SubResource( 3 )
-anims/flying = SubResource( 4 )
-anims/hit = SubResource( 5 )
+anims/flying = SubResource( 3 )
+anims/hit = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -167,14 +144,7 @@ autoplay = "flying"
 
 transform/pos = Vector2( 15.2003, 13.8224 )
 
-[node name="explosion" parent="player" instance=ExtResource( 5 )]
-
-config/lifetime = 0.3
-config/time_scale = 0.468446
-config/explosiveness = 0.1
-params/gravity_strength = 9.8
-
-[node name="sfx" parent="player" instance=ExtResource( 6 )]
+[node name="sfx" parent="player" instance=ExtResource( 5 )]
 
 [node name="camera" type="Camera2D" parent="."]
 
@@ -195,7 +165,7 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="mobile_ui" parent="." instance=ExtResource( 7 )]
+[node name="mobile_ui" parent="." instance=ExtResource( 6 )]
 
 editor/display_folded = true
 

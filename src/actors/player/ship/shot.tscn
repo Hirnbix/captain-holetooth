@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://src/levels/flyhome/flying_thing.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/levels/flyhome/shot.gd" type="Script" id=2]
+[ext_resource path="res://src/actors/player/ship/flying_npc.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/player/ship/shot.gd" type="Script" id=2]
 [ext_resource path="res://src/actors/player/bullet.png" type="Texture" id=3]
-[ext_resource path="res://src/levels/flyhome/small_star.png" type="Texture" id=4]
+[ext_resource path="res://src/objects/rewards/small_star.png" type="Texture" id=4]
 
 [sub_resource type="ColorRamp" id=1]
 
@@ -65,5 +65,9 @@ randomness/initial_size = 0.0
 randomness/final_size = 0.0
 randomness/anim_speed_scale = 0.0
 color/color_ramp = SubResource( 1 )
+
+[connection signal="enter_screen" from="visibility" to="." method="_on_visibility_enter_screen"]
+
+[connection signal="exit_screen" from="visibility" to="." method="_on_visibility_exit_screen"]
 
 

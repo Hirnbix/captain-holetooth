@@ -1,5 +1,4 @@
-
-extends "flying_thing.gd"
+extends "res://src/actors/player/ship/flying_npc.gd"
 
 export var shoot_interval = 0.5
 
@@ -12,7 +11,7 @@ func _on_visibility_enter_screen():
 	timer.start()
 	while !destroyed && is_inside_tree():
 		# Instance a shot
-		var shot = preload("enemy_shot.tscn").instance()
+		var shot = preload("res://src/actors/enemies/bullets/enemy_shot.tscn").instance()
 		# Add it to parent, so it has world coordinates
 		get_parent().add_child(shot)
 		# Set pos as "shoot_from" Position2D node

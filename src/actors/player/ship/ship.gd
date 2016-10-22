@@ -46,13 +46,13 @@ func _process(delta):
 	
 	if (shooting and not prev_shooting):
 		# Just pressed
-		var shot = preload("res://src/levels/flyhome/shot.tscn").instance()
+		var shot = preload("shot.tscn").instance()
 		# Use the Position2D as reference
 		shot.set_pos(get_node("shootfrom").get_global_pos())
 		# Put it two parents above, so it is not moved by us
 		get_node("../..").add_child(shot)
 		# Play sound
-		get_node("sfx").play("shoot")
+		#get_node("sfx").play("shoot")
 	
 	prev_shooting = shooting
 

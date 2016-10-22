@@ -10,7 +10,7 @@ var destroyed = false
 var speed = Vector2()
 var extra_motion = Vector2()
 
-const ship_type = preload("ship.gd")
+const ship_type = preload("res://src/actors/player/ship/ship.gd")
 
 
 
