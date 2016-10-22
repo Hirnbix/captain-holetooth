@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -9,7 +9,9 @@
 [ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/debug_tape_under_construction/construction-tape-fox-surfboards-XhjxP7-clipart.png" type="Texture" id=12]
 
 [node name="Node2D" type="Node2D"]
 
@@ -60,45 +62,93 @@ stream/volume_db = 2.0
 
 [node name="sugarcubes" parent="npcs" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 622.724, 71.2974 )
+transform/pos = Vector2( 1675.05, 48.6396 )
+SPEED = -180
 motion = "linear"
 
 [node name="sugarcubes1" parent="npcs" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 490.057, 163.352 )
+transform/pos = Vector2( 769.502, 180.975 )
+SPEED = -180
 
 [node name="sugarcubes2" parent="npcs" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 412.442, 86.6399 )
+SPEED = -180
 
 [node name="sugarcubes3" parent="npcs" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 537.889, 112.812 )
+transform/pos = Vector2( 1026.29, 183.303 )
+SPEED = -180
 
 [node name="sugarcubes4" parent="npcs" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 394.392, 195.842 )
+SPEED = -180
 
 [node name="sugarcubes5" parent="npcs" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 166.06, 67.6873 )
+transform/pos = Vector2( 858.38, 120.555 )
+SPEED = -180
 
 [node name="soap_bubble" parent="npcs" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 193.135, 110.105 )
+transform/pos = Vector2( 2539.47, 64.7893 )
+SPEED = -30
 
 [node name="soap_bubble1" parent="npcs" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 161.547, 171.475 )
+transform/pos = Vector2( 1813.05, 126.159 )
+SPEED = -30
 
 [node name="soap_bubble2" parent="npcs" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 277.969, 72.1998 )
+transform/pos = Vector2( 2128.35, 72.1998 )
+SPEED = -30
 
 [node name="soap_bubble3" parent="npcs" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 269.847, 136.277 )
+transform/pos = Vector2( 2377.02, 181.593 )
+SPEED = -30
 
-[node name="sfx" parent="." instance=ExtResource( 10 )]
+[node name="tornado" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1262.57, 70.2682 )
+SPEED = -50
+
+[node name="tornado1" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1143.59, 126.585 )
+
+[node name="tornado2" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 683.253, 50.2234 )
+
+[node name="tornado3" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1906.5, 171.355 )
+
+[node name="tornado4" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 982.33, 74.8062 )
+
+[node name="tornado5" parent="npcs" instance=ExtResource( 10 )]
+
+transform/pos = Vector2( 1448.07, 137.744 )
+
+[node name="sfx" parent="." instance=ExtResource( 11 )]
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = -63.0
+margin/right = 1145.0
+margin/bottom = 424.0
+texture = ExtResource( 12 )
+stretch_mode = 0
 
 

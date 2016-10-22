@@ -412,6 +412,7 @@ focus_mode = 2
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -463,7 +464,6 @@ flat = false
 
 [node name="jump_scn5" type="Button" parent="options_screen/settings/Debug"]
 
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
