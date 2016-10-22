@@ -31,7 +31,6 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="world"]
 
-editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 z/z = -1
 mode = 0
@@ -108,8 +107,11 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 
 [node name="cave_background" parent="world/tile_map" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
+
+[node name="tex_cave" parent="world/tile_map/cave_background"]
+
+polygon = Vector2Array( 192.536, 76.4254, 20.8518, -63.6256, -130.795, -68.3344, -129.785, -51.1215, -127.804, -49.2805, -125.705, -47.0989, -127.844, -44.0992, -127.685, -39.0815, -125.625, -38.2089, -125.546, -34.3366, -128.675, -32.2095, -128.042, -23.974, -130.795, -20.7521, -61.2829, 58.8953, 33.4001, 135.078, 103.557, 168.85, 181.129, 260.207, 306.285, 258.022, 312.54, 527.754, 512.261, 527.754, 608.422, 252.747, 608.422, 69.4086, 391.442, 42.2474, 363.518, 42.2474, 359.388, 52.4328, 356.923, 45.6425, 351.991, 45.6425, 349.526, 49.0377, 348.435, 46.2132, 341.023, 45.1799, 338.38, 47.033, 336.592, 45.3068, 328.589, 46.3954, 326.67, 47.7618, 325.925, 46.4331, 323.694, 46.6686, 322.04, 45.7578, 318.6, 47.1241, 317.949, 42.6611, 312.54, 42.2474 )
 
 [node name="props" type="Node" parent="world/tile_map"]
 
@@ -245,6 +247,8 @@ transform/scale = Vector2( 1, 1.29413 )
 
 [node name="interactables" type="Node2D" parent="world"]
 
+editor/display_folded = true
+
 [node name="rock" parent="world/interactables" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2381.47, 1263.25 )
@@ -319,7 +323,7 @@ transform/pos = Vector2( 3710.72, 1394.25 )
 
 [node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
 
-transform/pos = Vector2( 3781.93, 1393.02 )
+transform/pos = Vector2( 4608, 1912 )
 
 [node name="scene_teleporter" parent="world" instance=ExtResource( 16 )]
 
@@ -328,8 +332,6 @@ transform/pos = Vector2( 5000.11, 1150.48 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="NPCs" type="Node2D" parent="world"]
-
-editor/display_folded = true
 
 [node name="Yan" parent="world/NPCs" instance=ExtResource( 17 )]
 
@@ -354,3 +356,4 @@ stream/stream = ExtResource( 20 )
 [connection signal="body_enter" from="world/scene_teleporter" to="world/scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 
 
+[editable path="world/tile_map/cave_background"]

@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://src/actors/player/ship/flying_npc.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugracubes_from_hell.gd" type="Script" id=2]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.gd" type="Script" id=2]
 [ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.png" type="Texture" id=3]
 
 [node name="sugarcubes" instance=ExtResource( 1 )]
 
 script/script = ExtResource( 2 )
+SPEED = -200
 motion = "zigzag"
-destroy_sound = "none"
 shoot_interval = 0.5
 
 [node name="sprite" parent="."]

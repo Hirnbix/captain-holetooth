@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=10]
 
 [node name="Node2D" type="Node2D"]
 
@@ -59,6 +61,7 @@ stream/volume_db = 2.0
 [node name="sugarcubes" parent="npcs" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 622.724, 71.2974 )
+motion = "linear"
 
 [node name="sugarcubes1" parent="npcs" instance=ExtResource( 8 )]
 
@@ -78,6 +81,24 @@ transform/pos = Vector2( 394.392, 195.842 )
 
 [node name="sugarcubes5" parent="npcs" instance=ExtResource( 8 )]
 
-transform/pos = Vector2( 319.484, 142.595 )
+transform/pos = Vector2( 166.06, 67.6873 )
+
+[node name="soap_bubble" parent="npcs" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 193.135, 110.105 )
+
+[node name="soap_bubble1" parent="npcs" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 161.547, 171.475 )
+
+[node name="soap_bubble2" parent="npcs" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 277.969, 72.1998 )
+
+[node name="soap_bubble3" parent="npcs" instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 269.847, 136.277 )
+
+[node name="sfx" parent="." instance=ExtResource( 10 )]
 
 

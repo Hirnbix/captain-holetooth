@@ -1,6 +1,6 @@
 extends Area2D
 
-export var SPEED = 200
+export var SPEED = 120
 export var Y_RANDOM = 10
 export (String, "linear", "zigzag") var motion = "linear"
 export (String, "none", "explode") var destroy_sound = "explode"
@@ -29,7 +29,7 @@ func destroy(other):
 	if reset_bonus && other extends ship_type:
 		game.reset_bonus_score()
 	if destroy_sound != "none":
-		get_node("sfx").play(destroy_sound)
+		get_node("sfx").play("cork_pop")
 	set_process(false)
 	var anim = get_node("anim")
 	anim.play("explode")

@@ -1,6 +1,6 @@
 extends "res://src/actors/player/ship/flying_npc.gd"
 
-export var shoot_interval = 0.5
+export var shoot_interval = 1.2
 
 func _on_visibility_enter_screen():
 	._on_visibility_enter_screen()
