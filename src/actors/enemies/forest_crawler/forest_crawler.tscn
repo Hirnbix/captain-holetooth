@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=1]
 
-[ext_resource path="res://src/actors/enemies/forest_crawler.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/enemies/forest_crawler.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.png" type="Texture" id=2]
 [ext_resource path="res://src/objects/snow/snow.png" type="Texture" id=3]
 [ext_resource path="res://src/persist.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=5]
