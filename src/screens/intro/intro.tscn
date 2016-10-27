@@ -95,4 +95,6 @@ stream/loop = false
 
 [connection signal="pressed" from="skipbutton" to="." method="_on_skipbutton_pressed"]
 
+[connection signal="finished" from="animation_player" to="." method="_on_animation_player_finished"]
+
 
