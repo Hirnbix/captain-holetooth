@@ -34,7 +34,7 @@ tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 1.31 ), "transitions":FloatArray( 1 ), "values":[ { "args":[  ], "method":"queue_free" } ] }
 
-[node name="bullet" type="RigidBody2D"]
+[node name="bullet" type="RigidBody2D" groups=[ "player_shot" ]]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )

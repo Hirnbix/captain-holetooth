@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
 [ext_resource path="res://src/levels/forest/forest_parallax_bg.tscn" type="PackedScene" id=2]
@@ -14,12 +14,13 @@
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=17]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=18]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=18]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=21]
 
 [node name="scn3" type="Node2D"]
 
@@ -31,6 +32,7 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="world"]
 
+editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 z/z = -1
 mode = 0
@@ -307,6 +309,7 @@ transform/pos = Vector2( 3886.25, 1659.74 )
 
 [node name="reward_group_2x2" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -3320, -880 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -333,6 +336,7 @@ transform/pos = Vector2( 3659.42, 1856.34 )
 
 [node name="reward_group_2x3" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -2816, -840 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -370,6 +374,7 @@ transform/pos = Vector2( 3659.42, 1856.34 )
 
 [node name="reward_group_2x5" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -616, -648 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -439,6 +444,7 @@ transform/pos = Vector2( 3659.42, 1856.34 )
 
 [node name="reward_group_2x4" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -3584, -1352 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -465,6 +471,7 @@ transform/pos = Vector2( 3659.42, 1856.34 )
 
 [node name="reward_group_ pyramid" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -2592, -1368 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -539,6 +546,7 @@ transform/pos = Vector2( 3741.21, 1732.34 )
 
 [node name="reward_group_ pyramid1" type="Area2D" parent="world/interactables/rewards"]
 
+editor/display_folded = true
 transform/pos = Vector2( -320, -1304 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -602,68 +610,78 @@ transform/pos = Vector2( 3661.21, 1812.34 )
 
 transform/pos = Vector2( 3741.21, 1732.34 )
 
+[node name="soap_bubble" parent="world/interactables/rewards" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 352, 1040 )
+movement_speed = -40
+
+[node name="soap_bubble2" parent="world/interactables/rewards" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 400, 1016 )
+movement_speed = -40
+
 [node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
 
 editor/display_folded = true
 
-[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 834.664, 1309.6 )
 
-[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 707.665, 1225.05 )
 
-[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1125.21, 1053.06 )
 
-[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1292.11, 1059.24 )
 
-[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1607.38, 923.239 )
 
-[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 2586.9, 939.059 )
 
-[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 703.5, 491.482 )
 transform/scale = Vector2( 0.734366, 0.671311 )
 
-[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 1193.63, 460.381 )
 
-[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3546.2, 1356.19 )
 
-[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 2406.63, 815.115 )
 
-[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 3710.72, 1394.25 )
 
-[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 4608, 1912 )
 
-[node name="enemy17" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy17" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 4072, 1904 )
 
-[node name="enemy18" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 15 )]
+[node name="enemy18" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 4240, 2552 )
 
-[node name="scene_teleporter" parent="world" instance=ExtResource( 16 )]
+[node name="scene_teleporter" parent="world" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 5000.11, 1150.48 )
@@ -671,7 +689,7 @@ scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="NPCs" type="Node2D" parent="world"]
 
-[node name="Yan" parent="world/NPCs" instance=ExtResource( 17 )]
+[node name="Yan" parent="world/NPCs" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3928, 2272 )
 
@@ -685,11 +703,11 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 transform/pos = Vector2( 124.497, 1062.14 )
 transform/scale = Vector2( 4.99998, 3.59373 )
 
-[node name="hud" parent="." instance=ExtResource( 18 )]
+[node name="hud" parent="." instance=ExtResource( 19 )]
 
-[node name="music_player" parent="." instance=ExtResource( 19 )]
+[node name="music_player" parent="." instance=ExtResource( 20 )]
 
-stream/stream = ExtResource( 20 )
+stream/stream = ExtResource( 21 )
 
 [connection signal="body_enter" from="world/scene_teleporter" to="world/scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 
