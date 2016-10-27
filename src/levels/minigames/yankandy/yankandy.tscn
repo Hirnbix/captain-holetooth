@@ -11,8 +11,8 @@
 [ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shading.png" type="Texture" id=9]
 [ext_resource path="res://src/levels/minigames/yankandy/board_1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/screens/hud/mobile_ui_yankandy.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -21,7 +21,7 @@ radius = 24.9706
 
 [node name="yankandy" type="Node2D"]
 
-transform/pos = Vector2( 0, 165 )
+transform/pos = Vector2( -512, 165 )
 script/script = ExtResource( 1 )
 
 [node name="scoring" type="CanvasLayer" parent="."]
@@ -170,6 +170,7 @@ limit/left = 0
 limit/top = 0
 limit/right = 0
 limit/bottom = 1800
+limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = false
@@ -186,6 +187,7 @@ visibility/light_mask = 2
 transform/pos = Vector2( 0, -1.52588e-05 )
 transform/scale = Vector2( 0.125, 0.125 )
 enabled = true
+editor_only = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, 0 )
 scale = 1.8
@@ -272,18 +274,15 @@ max_lines_visible = -1
 
 [node name="hud" parent="." instance=ExtResource( 11 )]
 
+editor/display_folded = true
+
 [node name="hudframe" parent="hud"]
 
 visibility/visible = false
 
-[node name="mobile_ui" parent="." instance=ExtResource( 12 )]
+[node name="sfx" parent="." instance=ExtResource( 12 )]
 
-[node name="yankandy" parent="mobile_ui"]
-
-visibility/visible = true
-
-[node name="sfx" parent="." instance=ExtResource( 13 )]
+[node name="mobile_ui_yankandy" parent="." instance=ExtResource( 13 )]
 
 
 [editable path="hud"]
-[editable path="mobile_ui"]

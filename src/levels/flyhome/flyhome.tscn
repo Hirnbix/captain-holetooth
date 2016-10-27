@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/levels/flyhome/rail.gd" type="Script" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/levels/flyhome/goal_line/goal_line.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 
@@ -215,15 +214,11 @@ stream/volume_db = 2.0
 
 [node name="enemies" type="Node2D" parent="entities"]
 
-editor/display_folded = true
-
 [node name="sugarcubes" type="Node2D" parent="entities/enemies"]
-
-editor/display_folded = true
 
 [node name="sugarcube_0" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 1134.71, 82.2484 )
+transform/pos = Vector2( 1064.22, 57.0731 )
 
 [node name="sugarcube_1" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
 
@@ -263,19 +258,19 @@ editor/display_folded = true
 
 [node name="soap_bubble_0" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 1457.5, 155.052 )
+transform/pos = Vector2( 455.524, 79.5261 )
 
 [node name="soap_bubble_1" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 2144.44, 222.72 )
+transform/pos = Vector2( 764.834, 149.712 )
 
 [node name="soap_bubble_2" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 2829.32, 97.6366 )
+transform/pos = Vector2( 853.06, 120.294 )
 
 [node name="soap_bubble_3" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 3006.54, 272.586 )
+transform/pos = Vector2( 859.088, 189.508 )
 
 [node name="soap_bubble_4" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
 
@@ -315,10 +310,4 @@ transform/pos = Vector2( 3009.71, 146.875 )
 
 transform/pos = Vector2( 4361.07, 0 )
 
-[node name="scene_teleporter" parent="." instance=ExtResource( 16 )]
 
-transform/pos = Vector2( 636.335, 611.834 )
-scene_path = "res://src/levels/castle/castle_outside.tscn"
-
-
-[editable path="scene_teleporter"]

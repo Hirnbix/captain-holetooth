@@ -614,6 +614,7 @@ transform/pos = Vector2( 3741.21, 1732.34 )
 
 transform/pos = Vector2( 352, 1040 )
 movement_speed = -40
+motion = "zigzag"
 
 [node name="soap_bubble2" parent="world/interactables/rewards" instance=ExtResource( 15 )]
 

@@ -177,7 +177,6 @@ polygon = Vector2Array( 205.953, 783.098, 192.688, 783.098, 193.982, 807.039, 21
 
 [node name="board_1" type="RigidBody2D"]
 
-transform/pos = Vector2( 15, 113 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 2, 0, -185 )
@@ -283,834 +282,842 @@ script/script = ExtResource( 1 )
 
 config/polyphony = 5
 
-[node name="pins" type="Node" parent="."]
+[node name="pins" type="Area2D" parent="."]
 
 editor/display_folded = true
+transform/pos = Vector2( 327.45, 178.678 )
+transform/scale = Vector2( 1, 1 )
+z/z = 1
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
 
 [node name="pin" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 214.5, 190.5 )
+transform/pos = Vector2( -125.5, -99.5 )
 box_area = "box_area1"
 
 [node name="secret_pin" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 60.3145, 228.315 )
+transform/pos = Vector2( -279.685, -61.685 )
 transform/rot = 11.027
 box_area = "box_secret_pin"
 
 [node name="pin2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 182.5, 190.5 )
+transform/pos = Vector2( -157.5, -99.5 )
 box_area = "box_area1"
 
 [node name="pin3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 134.5, 230.5 )
+transform/pos = Vector2( -205.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 230.5 )
+transform/pos = Vector2( -173.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 198.5, 230.5 )
+transform/pos = Vector2( -141.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 118.5, 190.5 )
+transform/pos = Vector2( -221.5, -99.5 )
 box_area = "box_area1"
 
 [node name="pin8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 262.5, 230.5 )
+transform/pos = Vector2( -77.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin8 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 230.5, 230.5 )
+transform/pos = Vector2( -109.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin8 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 294.5, 230.5 )
+transform/pos = Vector2( -45.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin8 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 326.5, 230.5 )
+transform/pos = Vector2( -13.5, -59.5 )
 box_area = "box_area1"
 
 [node name="pin8 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 246.5, 190.5 )
+transform/pos = Vector2( -93.5, -99.5 )
 box_area = "box_area1"
 
 [node name="pin8 6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 190.5 )
+transform/pos = Vector2( 2.50002, -99.5 )
 box_area = "box_area1"
 
 [node name="pin8 7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 278.5, 190.5 )
+transform/pos = Vector2( -61.5, -99.5 )
 box_area = "box_area1"
 
 [node name="pin8 8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 190.5 )
+transform/pos = Vector2( -29.5, -99.5 )
 box_area = "box_area1"
 
 [node name="pin9" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 246.5, 374.5 )
+transform/pos = Vector2( -93.5, 84.5 )
 box_area = "box_area1"
 
 [node name="pin9 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 150.5, 342.5 )
+transform/pos = Vector2( -189.5, 52.5 )
 box_area = "box_area1"
 
 [node name="pin9 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 358.5 )
+transform/pos = Vector2( -173.5, 68.5 )
 box_area = "box_area1"
 
 [node name="pin9 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 206.5, 374.5 )
+transform/pos = Vector2( -133.5, 84.5 )
 box_area = "box_area1"
 
 [node name="pin9 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 134.5, 318.5 )
+transform/pos = Vector2( -205.5, 28.5 )
 box_area = "box_area1"
 
 [node name="pin87" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 326.5 )
+transform/pos = Vector2( -29.5, 36.5 )
 box_area = "box_area2"
 
 [node name="pin85" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 230.5, 398.5 )
+transform/pos = Vector2( -109.5, 108.5 )
 box_area = "box_area2"
 
 [node name="pin88" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 286.5, 374.5 )
+transform/pos = Vector2( -53.5, 84.5 )
 box_area = "box_area2"
 
 [node name="pin9 7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 342.5 )
+transform/pos = Vector2( 2.50002, 52.5 )
 box_area = "box_area2"
 
 [node name="pin89" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 334.5, 350.5 )
+transform/pos = Vector2( -5.49998, 60.5 )
 box_area = "box_area2"
 
 [node name="pin84" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 262.5, 398.5 )
+transform/pos = Vector2( -77.5, 108.5 )
 box_area = "box_area2"
 
 [node name="pin9 8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 158.5, 350.5 )
+transform/pos = Vector2( -181.5, 60.5 )
 box_area = "box_area2"
 
 [node name="pin9 9" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 182.5, 326.5 )
+transform/pos = Vector2( -157.5, 36.5 )
 box_area = "box_area2"
 
 [node name="pin910" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 91.5, 439.5 )
+transform/pos = Vector2( -248.5, 149.5 )
 box_area = "box_area2"
 
 [node name="pin912" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 195.5, 462.5 )
+transform/pos = Vector2( -144.5, 172.5 )
 box_area = "box_area2"
 
 [node name="pin913" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 199.5, 439.5 )
+transform/pos = Vector2( -140.5, 149.5 )
 box_area = "box_area2"
 
 [node name="pin914" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 163.5, 475.5 )
+transform/pos = Vector2( -176.5, 185.5 )
 box_area = "box_area2"
 
 [node name="pin915" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 163.5, 439.5 )
+transform/pos = Vector2( -176.5, 149.5 )
 box_area = "box_area3"
 
 [node name="pin916" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 131.5, 486.5 )
+transform/pos = Vector2( -208.5, 196.5 )
 box_area = "box_area3"
 
 [node name="pin917" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 131.5, 462.5 )
+transform/pos = Vector2( -208.5, 172.5 )
 box_area = "box_area3"
 
 [node name="pin918" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 127.5, 438.5 )
+transform/pos = Vector2( -212.5, 148.5 )
 box_area = "box_area3"
 
 [node name="pin919" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 195.5, 486.5 )
+transform/pos = Vector2( -144.5, 196.5 )
 box_area = "box_area3"
 
 [node name="pin920" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 150.5, 526.5 )
+transform/pos = Vector2( -189.5, 236.5 )
 box_area = "box_area3"
 
 [node name="pin921" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 126.5, 542.5 )
+transform/pos = Vector2( -213.5, 252.5 )
 box_area = "box_area3"
 
 [node name="pin922" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 542.5 )
+transform/pos = Vector2( -173.5, 252.5 )
 box_area = "box_area3"
 
 [node name="pin922 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 248.5, 574.5 )
+transform/pos = Vector2( -91.5, 284.5 )
 box_area = "box_area3"
 
 [node name="pin923" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 186.5, 564.5 )
+transform/pos = Vector2( -153.5, 274.5 )
 box_area = "box_area3"
 
 [node name="pin9223" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 210.5, 540.5 )
+transform/pos = Vector2( -129.5, 250.5 )
 box_area = "box_area3"
 
 [node name="pin9224" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 234.5, 482.5 )
+transform/pos = Vector2( -105.5, 192.5 )
 box_area = "box_area3"
 
 [node name="pin924" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 236.5, 528.5 )
+transform/pos = Vector2( -103.5, 238.5 )
 box_area = "box_area3"
 
 [node name="pin9225" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 260.5, 580.5 )
+transform/pos = Vector2( -79.5, 290.5 )
 box_area = "box_area3"
 
 [node name="pin925" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 236.5, 580.5 )
+transform/pos = Vector2( -103.5, 290.5 )
 box_area = "box_area3"
 
 [node name="pin9226" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 308.5, 564.5 )
+transform/pos = Vector2( -31.5, 274.5 )
 box_area = "box_area3"
 
 [node name="pin926" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 284.5, 540.5 )
+transform/pos = Vector2( -55.5, 250.5 )
 box_area = "box_area3"
 
 [node name="pin927" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 333.5, 543.5 )
+transform/pos = Vector2( -6.49998, 253.5 )
 box_area = "box_area3"
 
 [node name="pin9227" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 357.5, 527.5 )
+transform/pos = Vector2( 17.5, 237.5 )
 box_area = "box_area3"
 
 [node name="pin928" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 333.5, 581.5 )
+transform/pos = Vector2( -6.49998, 291.5 )
 box_area = "box_area4"
 
 [node name="pin9228" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 374.5, 542.5 )
+transform/pos = Vector2( 34.5, 252.5 )
 box_area = "box_area4"
 
 [node name="pin10" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 230.5, 294.5 )
+transform/pos = Vector2( -109.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin10 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 150.5, 262.5 )
+transform/pos = Vector2( -189.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin10 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 198.5, 294.5 )
+transform/pos = Vector2( -141.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin810" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 326.5, 294.5 )
+transform/pos = Vector2( -13.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin810 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 262.5 )
+transform/pos = Vector2( 2.50002, -27.5 )
 box_area = "box_area4"
 
 [node name="pin810 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 294.5, 294.5 )
+transform/pos = Vector2( -45.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin10 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 246.5, 262.5 )
+transform/pos = Vector2( -93.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin10 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 358.5, 230.5 )
+transform/pos = Vector2( 18.5, -59.5 )
 box_area = "box_area4"
 
 [node name="pin10 6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 278.5, 262.5 )
+transform/pos = Vector2( -61.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin10 7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 294.5 )
+transform/pos = Vector2( -173.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin810 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 262.5, 294.5 )
+transform/pos = Vector2( -77.5, 4.5 )
 box_area = "box_area4"
 
 [node name="pin10 8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 374.5, 190.5 )
+transform/pos = Vector2( 34.5, -99.5 )
 box_area = "box_area4"
 
 [node name="pin810 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 214.5, 262.5 )
+transform/pos = Vector2( -125.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin810 6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 262.5 )
+transform/pos = Vector2( -29.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin810 7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 390.5, 230.5 )
+transform/pos = Vector2( 50.5, -59.5 )
 box_area = "box_area4"
 
 [node name="pin10 9" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 182.5, 262.5 )
+transform/pos = Vector2( -157.5, -27.5 )
 box_area = "box_area4"
 
 [node name="pin90" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 326.5, 358.5 )
+transform/pos = Vector2( -13.5, 68.5 )
 box_area = "box_area4"
 
 [node name="pin96" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 358.5, 318.5 )
+transform/pos = Vector2( 18.5, 28.5 )
 box_area = "box_area4"
 
 [node name="pin8108" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 102.5, 230.5 )
+transform/pos = Vector2( -237.5, -59.5 )
 box_area = "box_area4"
 
 [node name="pin929" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 363.5, 486.5 )
+transform/pos = Vector2( 23.5, 196.5 )
 box_area = "box_area4"
 
 [node name="pin929 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 295.5, 438.5 )
+transform/pos = Vector2( -44.5, 148.5 )
 box_area = "box_area4"
 
 [node name="pin929 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 299.5, 462.5 )
+transform/pos = Vector2( -40.5, 172.5 )
 box_area = "box_area4"
 
 [node name="pin929 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 299.5, 486.5 )
+transform/pos = Vector2( -40.5, 196.5 )
 box_area = "box_area5"
 
 [node name="pin929 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 331.5, 439.5 )
+transform/pos = Vector2( -8.49998, 149.5 )
 box_area = "box_area5"
 
 [node name="pin929 6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 331.5, 475.5 )
+transform/pos = Vector2( -8.49998, 185.5 )
 box_area = "box_area5"
 
 [node name="pin929 7" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 367.5, 439.5 )
+transform/pos = Vector2( 27.5, 149.5 )
 box_area = "box_area5"
 
 [node name="pin929 8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 363.5, 462.5 )
+transform/pos = Vector2( 23.5, 172.5 )
 box_area = "box_area5"
 
 [node name="pin929 9" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 403.5, 439.5 )
+transform/pos = Vector2( 63.5, 149.5 )
 box_area = "box_area5"
 
 [node name="pin929 10" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 259.5, 439.5 )
+transform/pos = Vector2( -80.5, 149.5 )
 box_area = "box_area5"
 
 [node name="pin930" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 582.5 )
+transform/pos = Vector2( -173.5, 292.5 )
 box_area = "box_area5"
 
 [node name="pin9229" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 372.5, 604.5 )
+transform/pos = Vector2( 32.5, 314.5 )
 box_area = "box_area5"
 
 [node name="pin931" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 358.5, 622.5 )
+transform/pos = Vector2( 18.5, 332.5 )
 box_area = "box_area5"
 
 [node name="pin931 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 386.5, 578.5 )
+transform/pos = Vector2( 46.5, 288.5 )
 box_area = "box_area5"
 
 [node name="pin9229 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 410.5, 562.5 )
+transform/pos = Vector2( 70.5, 272.5 )
 box_area = "box_area5"
 
 [node name="pin9229 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 430.5, 598.5 )
+transform/pos = Vector2( 90.5, 308.5 )
 box_area = "box_area5"
 
 [node name="pin9230" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 126.5, 606.5 )
+transform/pos = Vector2( -213.5, 316.5 )
 box_area = "box_area5"
 
 [node name="pin92294" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 70.5, 598.5 )
+transform/pos = Vector2( -269.5, 308.5 )
 box_area = "box_area5"
 
 [node name="pin932" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 142.5, 622.5 )
+transform/pos = Vector2( -197.5, 332.5 )
 box_area = "box_area5"
 
 [node name="pin9313" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 110.5, 590.5 )
+transform/pos = Vector2( -229.5, 300.5 )
 box_area = "box_area5"
 
 [node name="pin92293" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 94.5, 574.5 )
+transform/pos = Vector2( -245.5, 284.5 )
 box_area = "box_area5"
 
 [node name="pin92296" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 102.5, 662.5 )
+transform/pos = Vector2( -237.5, 372.5 )
 box_area = "box_area5"
 
 [node name="pin92297" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 134.5, 662.5 )
+transform/pos = Vector2( -205.5, 372.5 )
 box_area = "box_area5"
 
 [node name="pin92298" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 662.5 )
+transform/pos = Vector2( -173.5, 372.5 )
 box_area = "box_area5"
 
 [node name="pin92299" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 174.5, 670.5 )
+transform/pos = Vector2( -165.5, 380.5 )
 box_area = "box_area5"
 
 [node name="pin92300" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 218.5, 658.5 )
+transform/pos = Vector2( -121.5, 368.5 )
 box_area = "box_area6"
 
 [node name="pin92301" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 674.5 )
+transform/pos = Vector2( -89.5, 384.5 )
 box_area = "box_area6"
 
 [node name="pin92302" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 642.5 )
+transform/pos = Vector2( -89.5, 352.5 )
 box_area = "box_area6"
 
 [node name="pin92303" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 282.5, 666.5 )
+transform/pos = Vector2( -57.5, 376.5 )
 box_area = "box_area6"
 
 [node name="pin92304" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 670.5 )
+transform/pos = Vector2( -29.5, 380.5 )
 box_area = "box_area6"
 
 [node name="pin92305" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 670.5 )
+transform/pos = Vector2( 2.50002, 380.5 )
 box_area = "box_area6"
 
 [node name="pin92306" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 350.5, 694.5 )
+transform/pos = Vector2( 10.5, 404.5 )
 box_area = "box_area6"
 
 [node name="pin92307" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 382.5, 662.5 )
+transform/pos = Vector2( 42.5, 372.5 )
 box_area = "box_area6"
 
 [node name="pin92308" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 406.5, 686.5 )
+transform/pos = Vector2( 66.5, 396.5 )
 box_area = "box_area6"
 
 [node name="pin92309" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 430.5, 662.5 )
+transform/pos = Vector2( 90.5, 372.5 )
 box_area = "box_area6"
 
 [node name="pin92311" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 430.5, 694.5 )
+transform/pos = Vector2( 90.5, 404.5 )
 box_area = "box_area6"
 
 [node name="pin92311 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 282.5, 690.5 )
+transform/pos = Vector2( -57.5, 400.5 )
 box_area = "box_area6"
 
 [node name="pin92311 3" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 702.5 )
+transform/pos = Vector2( -29.5, 412.5 )
 box_area = "box_area6"
 
 [node name="pin92311 4" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 406.5, 718.5 )
+transform/pos = Vector2( 66.5, 428.5 )
 box_area = "box_area6"
 
 [node name="pin92311 5" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 382.5, 694.5 )
+transform/pos = Vector2( 42.5, 404.5 )
 box_area = "box_area7"
 
 [node name="pin92311 6" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 134.5, 694.5 )
+transform/pos = Vector2( -205.5, 404.5 )
 box_area = "box_area7"
 
 [node name="pin92311 8" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 350.5, 726.5 )
+transform/pos = Vector2( 10.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin92311 9" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 102.5, 694.5 )
+transform/pos = Vector2( -237.5, 404.5 )
 box_area = "box_area7"
 
 [node name="pin92311 10" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 174.5, 702.5 )
+transform/pos = Vector2( -165.5, 412.5 )
 box_area = "box_area7"
 
 [node name="pin92311 11" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 706.5 )
+transform/pos = Vector2( -89.5, 416.5 )
 box_area = "box_area7"
 
 [node name="pin92311 14" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 218.5, 690.5 )
+transform/pos = Vector2( -121.5, 400.5 )
 box_area = "box_area7"
 
 [node name="pin92311 15" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 702.5 )
+transform/pos = Vector2( 2.50002, 412.5 )
 box_area = "box_area7"
 
 [node name="pin92311 16" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 694.5 )
+transform/pos = Vector2( -173.5, 404.5 )
 box_area = "box_area7"
 
 [node name="pin9231111" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 174.5, 734.5 )
+transform/pos = Vector2( -165.5, 444.5 )
 box_area = "box_area7"
 
 [node name="pin9231110" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 102.5, 726.5 )
+transform/pos = Vector2( -237.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin923117" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 134.5, 726.5 )
+transform/pos = Vector2( -205.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin9231115" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 214.5, 726.5 )
+transform/pos = Vector2( -125.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin9231117" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 166.5, 726.5 )
+transform/pos = Vector2( -173.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin923113" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 286.5, 718.5 )
+transform/pos = Vector2( -53.5, 428.5 )
 box_area = "box_area7"
 
 [node name="pin923114" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 310.5, 734.5 )
+transform/pos = Vector2( -29.5, 444.5 )
 box_area = "box_area7"
 
 [node name="pin9231116" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 342.5, 734.5 )
+transform/pos = Vector2( 2.50002, 444.5 )
 box_area = "box_area7"
 
 [node name="pin923116" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 382.5, 726.5 )
+transform/pos = Vector2( 42.5, 436.5 )
 box_area = "box_area7"
 
 [node name="pin923118" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 234.5, 826.5 )
+transform/pos = Vector2( -105.5, 536.5 )
 box_area = "box_area8"
 
 [node name="pin923119" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 350.5, 758.5 )
+transform/pos = Vector2( 10.5, 468.5 )
 box_area = "box_area8"
 
 [node name="pin92312" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 430.5, 726.5 )
+transform/pos = Vector2( 90.5, 436.5 )
 box_area = "box_area8"
 
 [node name="pin9231112" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 738.5 )
+transform/pos = Vector2( -89.5, 448.5 )
 box_area = "box_area8"
 
 [node name="pin923115" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 406.5, 750.5 )
+transform/pos = Vector2( 66.5, 460.5 )
 box_area = "box_area8"
 
 [node name="pin923120" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 266.5, 826.5 )
+transform/pos = Vector2( -73.5, 536.5 )
 box_area = "box_area8"
 
 [node name="pin923121" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 226.5, 842.5 )
+transform/pos = Vector2( -113.5, 552.5 )
 box_area = "box_area8"
 
 [node name="pin923122" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 282.5, 858.5 )
+transform/pos = Vector2( -57.5, 568.5 )
 box_area = "box_area8"
 
 [node name="pin923122 2" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 274.5, 842.5 )
+transform/pos = Vector2( -65.5, 552.5 )
 box_area = "box_area8"
 
 [node name="pin923123" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 218.5, 858.5 )
+transform/pos = Vector2( -121.5, 568.5 )
 box_area = "box_area8"
 
 [node name="pin923124" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 794.5 )
+transform/pos = Vector2( -89.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923125" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 58.5, 810.5 )
+transform/pos = Vector2( -281.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin9231113" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 226.5, 770.5 )
+transform/pos = Vector2( -113.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231118" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 50.5, 770.5 )
+transform/pos = Vector2( -289.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231120" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 98.5, 770.5 )
+transform/pos = Vector2( -241.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231121" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 130.5, 770.5 )
+transform/pos = Vector2( -209.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231123" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 178.5, 770.5 )
+transform/pos = Vector2( -161.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231124" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 250.5, 858.5 )
+transform/pos = Vector2( -89.5, 568.5 )
 box_area = "box_area8"
 
 [node name="pin9231125" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 274.5, 770.5 )
+transform/pos = Vector2( -65.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231127" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 322.5, 770.5 )
+transform/pos = Vector2( -17.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231128" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 370.5, 770.5 )
+transform/pos = Vector2( 30.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231130" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 426.5, 770.5 )
+transform/pos = Vector2( 86.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin9231131" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 450.5, 770.5 )
+transform/pos = Vector2( 110.5, 480.5 )
 box_area = "box_area8"
 
 [node name="pin923126" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 82.5, 794.5 )
+transform/pos = Vector2( -257.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923127" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 114.5, 810.5 )
+transform/pos = Vector2( -225.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923128" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 138.5, 794.5 )
+transform/pos = Vector2( -201.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923129" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 162.5, 810.5 )
+transform/pos = Vector2( -177.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923130" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 330.5, 810.5 )
+transform/pos = Vector2( -9.49998, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923131" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 354.5, 794.5 )
+transform/pos = Vector2( 14.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923132" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 378.5, 810.5 )
+transform/pos = Vector2( 38.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923133" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 410.5, 794.5 )
+transform/pos = Vector2( 70.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923134" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 442.5, 810.5 )
+transform/pos = Vector2( 102.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923135" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 306.5, 794.5 )
+transform/pos = Vector2( -33.5, 504.5 )
 box_area = "box_area8"
 
 [node name="pin923136" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 282.5, 810.5 )
+transform/pos = Vector2( -57.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923137" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 210.5, 810.5 )
+transform/pos = Vector2( -129.5, 520.5 )
 box_area = "box_area8"
 
 [node name="pin923138" parent="pins" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 186.5, 794.5 )
+transform/pos = Vector2( -153.5, 504.5 )
 box_area = "box_area8"
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
@@ -1154,11 +1161,15 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 1
+frame = 3
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
 transform/pos = Vector2( 52.7836, -16.0314 )
+
+[node name="Light2D" parent="Yan/ParticleAttractor2D1"]
+
+editor_only = false
 
 [node name="pockets" type="Area2D" parent="."]
 
