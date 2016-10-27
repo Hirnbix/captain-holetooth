@@ -166,7 +166,7 @@ func _integrate_forces(s):
 			
 			global.times_jumped = global.times_jumped +1
 			print(global.times_jumped)
-			if (global.times_jumped > 100):
+			if (global.times_jumped > 50):
 				JUMP_VELOCITY = 550
 				print("Yay! You can now jump higher")
 		
