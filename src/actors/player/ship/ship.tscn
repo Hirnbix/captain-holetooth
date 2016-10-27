@@ -79,6 +79,7 @@ angular_damp = 1.0
 collision/mask = 4
 script/script = ExtResource( 2 )
 __meta__ = { "_edit_group_":true }
+anim_player_path = null
 
 [node name="sprite" type="Sprite" parent="player"]
 
@@ -156,6 +157,7 @@ limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
 limit/bottom = 10000000
+limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -167,7 +169,9 @@ drag_margin/bottom = 0.2
 
 [node name="mobile_ui" parent="." instance=ExtResource( 6 )]
 
-editor/display_folded = true
+[node name="ship" parent="mobile_ui"]
+
+visibility/visible = true
 
 [connection signal="body_enter" from="player" to="player" method="_on_collision"]
 

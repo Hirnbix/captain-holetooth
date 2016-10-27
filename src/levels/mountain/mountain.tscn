@@ -28,7 +28,6 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="world"]
 
-editor/display_folded = true
 transform/pos = Vector2( 320, 269.814 )
 mode = 0
 tile_set = ExtResource( 3 )
@@ -63,23 +62,6 @@ params/linear_velocity = 0.0
 params/orbit_velocity = 0.01
 params/gravity_strength = 100.0
 params/radial_accel = 1.0
-
-[node name="simple_snow4" parent="world/tile_map" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 2543.17, -7.83893 )
-transform/scale = Vector2( 6.23102, 8.04376 )
-z/z = -3
-config/amount = 400
-config/lifetime = 5.0
-config/time_scale = 0.5
-config/preprocess = 8.0
-config/half_extents = Vector2( 512, 50 )
-params/direction = 0.0
-params/spread = 0.0
-params/linear_velocity = 0.0
-params/gravity_strength = 100.0
-params/radial_accel = 1.0
-color/color = Color( 1, 1, 1, 0.511272 )
 
 [node name="player" parent="world/tile_map" instance=ExtResource( 5 )]
 
@@ -232,8 +214,6 @@ transform/pos = Vector2( 1506.24, 348.918 )
 transform/scale = Vector2( 1, 1.28052 )
 
 [node name="interactables" type="Node2D" parent="world"]
-
-editor/display_folded = true
 
 [node name="rock" parent="world/interactables" instance=ExtResource( 11 )]
 

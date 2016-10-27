@@ -15,6 +15,8 @@ scale = Vector2( 1, 1 )
 
 [node name="player" type="Node2D" parent="."]
 
+visibility/visible = false
+
 [node name="left" type="TouchScreenButton" parent="player"]
 
 transform/pos = Vector2( 8, 224 )
@@ -28,7 +30,6 @@ visibility_mode = 1
 [node name="right" type="TouchScreenButton" parent="player"]
 
 transform/pos = Vector2( 80, 224 )
-transform/scale = Vector2( 1, 1 )
 normal = ExtResource( 2 )
 pressed = null
 bitmask = null

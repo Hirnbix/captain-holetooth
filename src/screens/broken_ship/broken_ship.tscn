@@ -51,7 +51,7 @@ tracks/3/keys = { "times":FloatArray( 7.3 ), "transitions":FloatArray( 1 ), "val
 
 [node name="broken_ship" type="Node2D"]
 
-transform/pos = Vector2( 17.1267, -187.103 )
+transform/pos = Vector2( -472.873, -193.103 )
 
 [node name="simple_snow" parent="." instance=ExtResource( 1 )]
 
@@ -99,6 +99,7 @@ limit/left = 0
 limit/top = -288
 limit/right = 0
 limit/bottom = 288
+limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -113,7 +114,7 @@ drag_margin/bottom = 0.2
 transform/pos = Vector2( 1.0134, 4.34583 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 6
+frame = 2
 playing = true
 offset = Vector2( 1.04063, -27.4518 )
 script/script = ExtResource( 11 )

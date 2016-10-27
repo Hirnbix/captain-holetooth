@@ -26,6 +26,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 offset = Vector2( 32, 200 )
+modulate = Color( 1, 1, 1, 0.174863 )
 region = true
 region_rect = Rect2( 0, 0, 64, 400 )
 

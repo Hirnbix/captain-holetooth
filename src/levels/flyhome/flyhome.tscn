@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=18 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/levels/flyhome/rail.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/levels/flyhome/goal_line/goal_line.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 
@@ -314,4 +315,10 @@ transform/pos = Vector2( 3009.71, 146.875 )
 
 transform/pos = Vector2( 4361.07, 0 )
 
+[node name="scene_teleporter" parent="." instance=ExtResource( 16 )]
 
+transform/pos = Vector2( 636.335, 611.834 )
+scene_path = "res://src/levels/castle/castle_outside.tscn"
+
+
+[editable path="scene_teleporter"]
