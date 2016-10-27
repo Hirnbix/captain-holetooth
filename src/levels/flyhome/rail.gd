@@ -4,15 +4,11 @@ extends Node2D
 const SPEED = 120
 var offset = 0
 
-
-#func stop():
-#	set_process(false)
-
-
-func _process(delta):
-	offset += delta*SPEED
-	set_pos(Vector2(offset, 0))
-
-
+# Start
 func _ready():
 	set_process(true)
+
+# Process - Move the screen (player and camera)
+func _process(delta):
+	offset += delta * SPEED
+	set_pos(Vector2(offset, 0))

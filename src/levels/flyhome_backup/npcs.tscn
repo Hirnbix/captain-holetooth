@@ -1,0 +1,407 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.gd" type="Script" id=2]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/player/ship/flying_npc.gd" type="Script" id=4]
+[ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/actors/enemies/tornado/tornado.gd" type="Script" id=6]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3.36158, -22.6873, 12.9881, -18.164, 21.5707, -10.2772, 21.3388, 11.0634, 8.69675, 20.11, -6.84483, 21.7338, -20.0668, 11.7593, -24.822, -5.52197, -16.1234, -19.3238, -3.94528, -23.1512 )
+
+[node name="npcs" type="Node2D"]
+
+[node name="sugarcubes" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1675.05, 48.6396 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="sugarcubes1" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 769.502, 180.975 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "zigzag"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="sugarcubes2" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 412.442, 86.6399 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "zigzag"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="sugarcubes3" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1026.29, 183.303 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "zigzag"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="sugarcubes4" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 394.392, 195.842 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "zigzag"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="sugarcubes5" type="Area2D" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 858.38, 120.555 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 2 )
+SPEED = -180
+Y_RANDOM = 10
+motion = "zigzag"
+destroy_sound = "none"
+reset_bonus = true
+shoot_interval = 0.5
+
+[node name="soap_bubble" type="Area2D" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2539.47, 64.7893 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 0
+collision/mask = 3
+script/script = ExtResource( 4 )
+SPEED = -30
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "none"
+reset_bonus = true
+
+[node name="soap_bubble1" type="Area2D" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 1813.05, 126.159 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 0
+collision/mask = 3
+script/script = ExtResource( 4 )
+SPEED = -30
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "none"
+reset_bonus = true
+
+[node name="soap_bubble2" type="Area2D" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2128.35, 72.1998 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 0
+collision/mask = 3
+script/script = ExtResource( 4 )
+SPEED = -30
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "none"
+reset_bonus = true
+
+[node name="soap_bubble3" type="Area2D" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 2377.02, 181.593 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 0
+collision/mask = 3
+script/script = ExtResource( 4 )
+SPEED = -30
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "none"
+reset_bonus = true
+
+[node name="tornado" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1262.57, 70.2682 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = -50
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[node name="tornado1" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1143.59, 126.585 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = 120
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[node name="tornado2" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 683.253, 50.2234 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = 120
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[node name="tornado3" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1906.5, 171.355 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = 120
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[node name="tornado4" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 982.33, 74.8062 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = 120
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[node name="tornado5" type="Area2D" parent="." instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1448.07, 137.744 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitoring = false
+monitorable = false
+collision/layers = 4
+collision/mask = 3
+script/script = ExtResource( 6 )
+SPEED = 120
+Y_RANDOM = 10
+motion = "linear"
+destroy_sound = "explode"
+reset_bonus = true
+
+[connection signal="area_enter" from="sugarcubes" to="sugarcubes" method="destroy"]
+
+[connection signal="area_enter" from="sugarcubes1" to="sugarcubes1" method="destroy"]
+
+[connection signal="area_enter" from="sugarcubes2" to="sugarcubes2" method="destroy"]
+
+[connection signal="area_enter" from="sugarcubes3" to="sugarcubes3" method="destroy"]
+
+[connection signal="area_enter" from="sugarcubes4" to="sugarcubes4" method="destroy"]
+
+[connection signal="area_enter" from="sugarcubes5" to="sugarcubes5" method="destroy"]
+
+[connection signal="area_enter" from="soap_bubble" to="soap_bubble" method="destroy"]
+
+[connection signal="area_enter" from="soap_bubble1" to="soap_bubble1" method="destroy"]
+
+[connection signal="area_enter" from="soap_bubble2" to="soap_bubble2" method="destroy"]
+
+[connection signal="area_enter" from="soap_bubble3" to="soap_bubble3" method="destroy"]
+
+[connection signal="area_enter" from="tornado" to="tornado" method="destroy"]
+
+[connection signal="area_enter" from="tornado1" to="tornado1" method="destroy"]
+
+[connection signal="area_enter" from="tornado2" to="tornado2" method="destroy"]
+
+[connection signal="area_enter" from="tornado3" to="tornado3" method="destroy"]
+
+[connection signal="area_enter" from="tornado4" to="tornado4" method="destroy"]
+
+[connection signal="area_enter" from="tornado5" to="tornado5" method="destroy"]
+
+

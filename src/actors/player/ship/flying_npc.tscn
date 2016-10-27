@@ -55,10 +55,11 @@ monitorable = false
 collision/layers = 4
 collision/mask = 3
 script/script = ExtResource( 1 )
-SPEED = 200
-Y_RANDOM = 10
+speed = 120
+random_y_range = 10
 motion = "linear"
 destroy_sound = "none"
+anim_player_path = null
 reset_bonus = true
 
 [node name="sprite" type="Sprite" parent="."]
