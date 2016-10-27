@@ -1,20 +1,19 @@
-[gd_scene load_steps=17 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://src/levels/flyhome/flyhome.gd" type="Script" id=1]
 [ext_resource path="res://src/levels/flyhome/rail.gd" type="Script" id=2]
 [ext_resource path="res://src/levels/flyhome/player_ship/player_ship.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/levels/flyhome/scn5-ship-bg_gradient.png" type="Texture" id=5]
-[ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=6]
-[ext_resource path="res://src/levels/flyhome/scroll_bg_cloud_3.png" type="Texture" id=7]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=10]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/levels/flyhome/goal_line/goal_line.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/levels/flyhome/scn5-ship-bg_gradient.png" type="Texture" id=4]
+[ext_resource path="res://src/levels/flyhome/scn_4_scroll_bg_fg_2.png" type="Texture" id=5]
+[ext_resource path="res://src/levels/flyhome/scroll_bg_cloud_3.png" type="Texture" id=6]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/audio/music/Joe Rosey - Frog Legs Ragtime Era Favorites - 07 - Out of the East (1918, Rector Novelty Orchestra).ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/actors/enemies/tornado/tornado.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/levels/flyhome/goal_line/goal_line.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 
@@ -62,10 +61,6 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="mobile_ui" parent="rail" instance=ExtResource( 4 )]
-
-editor/display_folded = true
-
 [node name="parallax" type="ParallaxBackground" parent="."]
 
 editor/display_folded = true
@@ -91,7 +86,7 @@ motion/mirroring = Vector2( 512, 0 )
 [node name="skygradient" type="Sprite" parent="parallax/sky"]
 
 transform/scale = Vector2( 100, 0.364574 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 centered = false
 flip_h = true
 modulate = Color( 0.0778656, 0.0923227, 0.246094, 1 )
@@ -119,7 +114,7 @@ motion/mirroring = Vector2( 800, 0 )
 [node name="Sprite1" type="Sprite" parent="parallax/mountains_back"]
 
 transform/pos = Vector2( 400, 168 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 modulate = Color( 1, 0.753845, 0.574219, 1 )
 
 [node name="bg_layer7_small_clouds" type="ParallaxLayer" parent="parallax"]
@@ -135,7 +130,7 @@ motion/mirroring = Vector2( 512, 0 )
 
 transform/pos = Vector2( -652.954, 320.499 )
 transform/scale = Vector2( 0.46875, 0.46875 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="field_middle_green_hills" type="ParallaxLayer" parent="parallax"]
 
@@ -149,7 +144,7 @@ motion/mirroring = Vector2( 800, 0 )
 
 transform/pos = Vector2( 400, 248 )
 transform/scale = Vector2( 1, 0.609375 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 flip_h = true
 modulate = Color( 0.173932, 0.296875, 0.160034, 1 )
 
@@ -166,13 +161,13 @@ motion/mirroring = Vector2( 512, 0 )
 
 transform/pos = Vector2( 152, 126 )
 z/z = 5
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Sprite5" type="Sprite" parent="parallax/bg_layer4_clouds"]
 
 transform/pos = Vector2( 305, 154.5 )
 transform/scale = Vector2( 0.46875, 0.46875 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="parallax"]
 
@@ -198,17 +193,17 @@ motion/mirroring = Vector2( 800, 0 )
 [node name="Sprite" type="Sprite" parent="parallax/ParallaxBackground/ParallaxLayer"]
 
 transform/pos = Vector2( 370.543, 354.862 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 modulate = Color( 0.0976562, 0.0904083, 0.0965238, 1 )
 
-[node name="hud" parent="." instance=ExtResource( 8 )]
+[node name="hud" parent="." instance=ExtResource( 7 )]
 
-[node name="music_player" parent="." instance=ExtResource( 9 )]
+[node name="music_player" parent="." instance=ExtResource( 8 )]
 
-stream/stream = ExtResource( 10 )
+stream/stream = ExtResource( 9 )
 stream/volume_db = 2.0
 
-[node name="sfx" parent="." instance=ExtResource( 11 )]
+[node name="sfx" parent="." instance=ExtResource( 10 )]
 
 [node name="entities" type="Node2D" parent="."]
 
@@ -216,38 +211,38 @@ stream/volume_db = 2.0
 
 [node name="sugarcubes" type="Node2D" parent="entities/enemies"]
 
-[node name="sugarcube_0" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_0" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1064.22, 57.0731 )
 
-[node name="sugarcube_1" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_1" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1555.83, 157.14 )
 
-[node name="sugarcube_2" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_2" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1875.04, 69.971 )
 
-[node name="sugarcube_3" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_3" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1873.81, 240.626 )
 
-[node name="sugarcube_4" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_4" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2273.67, 168.857 )
 motion = "zigzag"
 
-[node name="sugarcube_5" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_5" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3177.96, 64.2795 )
 motion = "zigzag"
 
-[node name="sugarcube_6" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_6" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3288.69, 150.402 )
 motion = "zigzag"
 
-[node name="sugarcube_7" parent="entities/enemies/sugarcubes" instance=ExtResource( 12 )]
+[node name="sugarcube_7" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3403.52, 254.98 )
 motion = "zigzag"
@@ -256,39 +251,39 @@ motion = "zigzag"
 
 editor/display_folded = true
 
-[node name="soap_bubble_0" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_0" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 455.524, 79.5261 )
 
-[node name="soap_bubble_1" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_1" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 764.834, 149.712 )
 
-[node name="soap_bubble_2" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_2" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 853.06, 120.294 )
 
-[node name="soap_bubble_3" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_3" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 859.088, 189.508 )
 
-[node name="soap_bubble_4" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_4" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3917.64, 70.3718 )
 
-[node name="soap_bubble_5" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_5" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 3985.8, 133.99 )
 
-[node name="soap_bubble_6" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_6" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4053.96, 199.88 )
 
-[node name="soap_bubble_7" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_7" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4124.4, 261.226 )
 
-[node name="soap_bubble_8" parent="entities/enemies/soap_bubbles" instance=ExtResource( 13 )]
+[node name="soap_bubble_8" parent="entities/enemies/soap_bubbles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 4199.38, 327.116 )
 
@@ -298,15 +293,15 @@ editor/display_folded = true
 
 [node name="tornadoes" type="Node2D" parent="entities/pickups"]
 
-[node name="tornado" parent="entities/pickups/tornadoes" instance=ExtResource( 14 )]
+[node name="tornado" parent="entities/pickups/tornadoes" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 408.283, 158.996 )
 
-[node name="tornado1" parent="entities/pickups/tornadoes" instance=ExtResource( 14 )]
+[node name="tornado1" parent="entities/pickups/tornadoes" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 3009.71, 146.875 )
 
-[node name="goal_line" parent="entities" instance=ExtResource( 15 )]
+[node name="goal_line" parent="entities" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 4361.07, 0 )
 
