@@ -10,11 +10,11 @@
 custom_solver_bias = 0.0
 points = Vector2Array( -11.1923, -10.3166, 11.8594, -9.92922, 10.116, 9.44193, -11.5797, 10.0231 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":10.0 } ]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=6]
 
 length = 1.3
 loop = false
@@ -79,7 +79,7 @@ trigger = false
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 
-frames = SubResource( 2 )
+frames = SubResource( 5 )
 animation = "default"
 frame = 1
 playing = true
@@ -97,7 +97,7 @@ rect = Rect2( -30, -30, 300, 60 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/explode = SubResource( 3 )
+anims/explode = SubResource( 6 )
 anims/zigzag = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
