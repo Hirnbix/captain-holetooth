@@ -1,15 +1,20 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://src/actors/player/ship/flying_npc.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/enemies/bullets/enemy_shot.png" type="Texture" id=2]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/enemies/bullets/enemy_shot_01.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/enemies/bullets/enemy_shot_02.png" type="Texture" id=3]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 3.36158, -22.6873, 12.9881, -18.164, 21.5707, -10.2772, 21.3388, 11.0634, 8.69675, 20.11, -6.84483, 21.7338, -20.0668, 11.7593, -24.822, -5.52197, -16.1234, -19.3238, -3.94528, -23.1512 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":25.0 } ]
+
+[sub_resource type="Animation" id=3]
 
 length = 1.3
 loop = false
@@ -30,7 +35,7 @@ tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
 length = 2.0
 loop = true
@@ -60,9 +65,11 @@ destroy_sound = "none"
 group = "none"
 reset_bonus = true
 
-[node name="sprite" type="Sprite" parent="."]
+[node name="sprite" type="AnimatedSprite" parent="."]
 
-texture = ExtResource( 2 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
@@ -82,14 +89,14 @@ rect = Rect2( -30, -30, 300, 60 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/explode = SubResource( 2 )
-anims/zigzag = SubResource( 3 )
+anims/explode = SubResource( 3 )
+anims/zigzag = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="sfx" parent="." instance=ExtResource( 3 )]
+[node name="sfx" parent="." instance=ExtResource( 4 )]
 
 [connection signal="area_enter" from="." to="." method="destroy"]
 
