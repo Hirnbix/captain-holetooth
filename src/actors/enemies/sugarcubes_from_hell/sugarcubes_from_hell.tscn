@@ -1,15 +1,24 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell.png" type="Texture" id=2]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_01.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_02.png" type="Texture" id=3]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_03.png" type="Texture" id=4]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_04.png" type="Texture" id=5]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_05.png" type="Texture" id=6]
+[ext_resource path="res://src/actors/enemies/sugarcubes_from_hell/sugarcubes_from_hell_06.png" type="Texture" id=7]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 18.4138, -16.5375, 20.5015, 1.67173, 9.71513, 10.7183, -3.7388, 15.4736, -23.5717, 0.975838, -21.716, -17.9292, -9.88585, -21.6407, 2.87218, -21.0608 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ], "loop":true, "name":"default", "speed":5.5 } ]
+
+[sub_resource type="Animation" id=3]
 
 length = 1.3
 loop = false
@@ -30,7 +39,7 @@ tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
 length = 2.0
 loop = true
@@ -45,7 +54,7 @@ tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( -1.86607
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 3 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -64,12 +73,15 @@ group = "enemy"
 reset_bonus = true
 shoot_interval = 1.2
 
-[node name="sprite" type="Sprite" parent="."]
+[node name="sprite" type="AnimatedSprite" parent="."]
 
-texture = ExtResource( 2 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
+transform/pos = Vector2( 0, 3 )
 build_mode = 0
 polygon = Vector2Array( 2.87218, -21.0608, -9.88585, -21.6407, -21.716, -17.9292, -23.5717, 0.975838, -3.7388, 15.4736, 9.71513, 10.7183, 20.5015, 1.67173, 18.4138, -16.5375 )
 shape_range = Vector2( 0, 0 )
@@ -90,14 +102,14 @@ rect = Rect2( -30, -30, 300, 60 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/explode = SubResource( 2 )
-anims/zigzag = SubResource( 3 )
+anims/explode = SubResource( 3 )
+anims/zigzag = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="sfx" parent="." instance=ExtResource( 3 )]
+[node name="sfx" parent="." instance=ExtResource( 8 )]
 
 [connection signal="area_enter" from="." to="." method="_on_sugarcube_area_enter"]
 

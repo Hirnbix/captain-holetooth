@@ -12,7 +12,7 @@ points = Vector2Array( 3.36158, -22.6873, 12.9881, -18.164, 21.5707, -10.2772, 2
 
 [sub_resource type="SpriteFrames" id=4]
 
-animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":8.0 } ]
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":12.0 } ]
 
 [sub_resource type="Animation" id=2]
 
@@ -83,6 +83,7 @@ reset_bonus = false
 transform/rot = -17.6414
 frames = SubResource( 4 )
 animation = "default"
+frame = 1
 playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]

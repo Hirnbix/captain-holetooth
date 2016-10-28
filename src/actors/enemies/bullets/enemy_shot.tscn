@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://src/actors/player/ship/flying_npc.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/enemies/bullets/enemy_shot_01.png" type="Texture" id=2]
-[ext_resource path="res://src/actors/enemies/bullets/enemy_shot_02.png" type="Texture" id=3]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/enemies/bullets/sugar_cube_shot_01.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/enemies/bullets/sugar_cube_shot_02.png" type="Texture" id=3]
+[ext_resource path="res://src/actors/enemies/bullets/sugar_cube_shot_03.png" type="Texture" id=4]
+[ext_resource path="res://src/actors/enemies/bullets/sugar_cube_shot_04.png" type="Texture" id=5]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -12,7 +14,7 @@ points = Vector2Array( 3.36158, -22.6873, 12.9881, -18.164, 21.5707, -10.2772, 2
 
 [sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":25.0 } ]
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ], "loop":true, "name":"default", "speed":6.0 } ]
 
 [sub_resource type="Animation" id=3]
 
@@ -23,7 +25,7 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:visibility/visible")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ false ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:monitoring")
 tracks/1/interp = 1
@@ -69,6 +71,7 @@ reset_bonus = true
 
 frames = SubResource( 2 )
 animation = "default"
+frame = 3
 playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
@@ -96,7 +99,7 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="sfx" parent="." instance=ExtResource( 4 )]
+[node name="sfx" parent="." instance=ExtResource( 6 )]
 
 [connection signal="area_enter" from="." to="." method="destroy"]
 
