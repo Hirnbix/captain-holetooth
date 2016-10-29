@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_01.png" type="Texture" id=2]
+[ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_02.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":12.0 } ]
+
+[node name="limkolomro" type="Node2D" groups=[ "player" ]]
+
+[node name="bat_body" type="KinematicBody2D" parent="."]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 8.00097
+script/script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bat_body"]
+
+transform/pos = Vector2( 56, -56 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 1
+playing = true
+centered = false
+
+
