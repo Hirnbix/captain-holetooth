@@ -81,6 +81,7 @@ trigger = false
 
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 modulate = Color( 1, 1, 1, 0.918033 )
 

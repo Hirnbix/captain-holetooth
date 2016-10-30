@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://src/objects/rewards/small_star.png" type="Texture" id=1]
+
+[sub_resource type="ColorRamp" id=4]
+
+offsets = FloatArray( 0, 0.164794, 0.516854, 0.895131, 1 )
+colors = ColorArray( 0.957031, 0.947452, 0.343933, 1, 0.804688, 0.468181, 0.198029, 1, 0.675781, 0.179504, 0.179504, 1, 0.582031, 0.582031, 0.582031, 0.868442, 0.46875, 0.43396, 0.43396, 0.569721 )
+
+[node name="explosion_particle" type="Particles2D"]
+
+visibility/blend_mode = 1
+config/amount = 32
+config/lifetime = 4.0
+config/time_scale = 5.0
+config/preprocess = 4.0
+config/half_extents = Vector2( 0, 8 )
+config/local_space = false
+config/explosiveness = 0.33779
+config/texture = ExtResource( 1 )
+params/direction = 90.0
+params/spread = 10.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 2.0
+params/radial_accel = 5.0
+params/tangential_accel = 5.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 5.0
+params/final_size = 0.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 6.0
+params/anim_initial_pos = 0.0
+color/color = Color( 0.839844, 0.41008, 0.41008, 1 )
+color/color_ramp = SubResource( 4 )
+
+

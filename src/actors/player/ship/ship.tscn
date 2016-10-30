@@ -5,7 +5,7 @@
 [ext_resource path="res://src/actors/player/ship/ship_spritesheet.png" type="Texture" id=3]
 [ext_resource path="res://src/objects/thruster/thruster.png" type="Texture" id=4]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/screens/hud/mobile_ui.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/screens/hud/mobile_ui_ship.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -157,7 +157,6 @@ limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
 limit/bottom = 10000000
-limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -168,10 +167,6 @@ drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
 [node name="mobile_ui" parent="." instance=ExtResource( 6 )]
-
-[node name="ship" parent="mobile_ui"]
-
-visibility/visible = true
 
 [connection signal="body_enter" from="player" to="player" method="_on_collision"]
 
