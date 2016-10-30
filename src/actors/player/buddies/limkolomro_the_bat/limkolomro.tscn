@@ -7,52 +7,54 @@
 [sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 8.41296, 2.01296, -4.38704, 2.01296, -4.38704, -4.38704, 8.41296, -4.38704 )
+points = Vector2Array( 2.8, -0.4, -3.6, -0.4, -0.4, -3.6 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":12.0 } ]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 
 resource/name = "bat_fly"
-length = 2.0
+length = 4.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("bat_body/AnimatedSprite:transform/pos")
+tracks/0/path = NodePath(".:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.5, 1, 1.5, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 56, -56 ), Vector2( 40, -40 ), Vector2( 24, -56 ), Vector2( 40, -56 ), Vector2( 56, -56 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 1, 2, 3 ), "transitions":FloatArray( -4, -4, -4, -4 ), "update":0, "values":[ Vector2( 0, 0 ), Vector2( -16, 16 ), Vector2( 0, 32 ), Vector2( 16, 16 ) ] }
 
 [node name="limkolomro" type="Node2D" groups=[ "player" ]]
 
+transform/pos = Vector2( -0.00384738, 0.00384738 )
+
 [node name="bat_body" type="KinematicBody2D" parent="."]
 
+transform/pos = Vector2( -2.62361, 13.3764 )
 input/pickable = false
 shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 2.5, 0, 0, 5, 42.9676, -34.0648 )
+shapes/0/transform = Matrix32( 2.5, 0, 0, 5, 35, -41 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 16
 collision/margin = 5.0
 script/script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat_body"]
 
 transform/pos = Vector2( 26.5829, -56 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "default"
-frame = 1
 playing = true
 centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bat_body"]
 
-transform/pos = Vector2( 42.9676, -34.0648 )
+transform/pos = Vector2( 35, -41 )
 transform/scale = Vector2( 2.5, 5 )
 build_mode = 0
-polygon = Vector2Array( 8.41296, 2.01296, -4.38704, 2.01296, -4.38704, -4.38704, 8.41296, -4.38704 )
+polygon = Vector2Array( 2.8, -0.4, -3.6, -0.4, -0.4, -3.6 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
@@ -61,9 +63,9 @@ trigger = false
 playback/process_mode = 1
 playback/default_blend_time = 1.0
 root/root = NodePath("..")
-anims/bat_fly = SubResource( 2 )
+anims/bat_fly = SubResource( 4 )
 playback/active = true
-playback/speed = -0.53
+playback/speed = 1.0
 blend_times = [  ]
 autoplay = "bat_fly"
 

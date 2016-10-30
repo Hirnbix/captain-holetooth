@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 6.39274
 
-[sub_resource type="ColorRamp" id=4]
+[sub_resource type="ColorRamp" id=2]
 
 offsets = FloatArray( 0, 1 )
 colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
@@ -79,7 +79,7 @@ params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
 randomness/direction = 1.0
-color/color_ramp = SubResource( 4 )
+color/color_ramp = SubResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
 
