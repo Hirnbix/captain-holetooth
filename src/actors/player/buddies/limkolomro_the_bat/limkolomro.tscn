@@ -1,18 +1,38 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro.gd" type="Script" id=1]
 [ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_01.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_02.png" type="Texture" id=3]
 
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 10.813, 2.81296, -5.18704, 2.81296, -5.18704, -5.18704, 10.813, -5.18704 )
+
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":12.0 } ]
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "bat_fly"
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bat_body/AnimatedSprite:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.5, 1, 1.5, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 56, -56 ), Vector2( 40, -40 ), Vector2( 24, -56 ), Vector2( 40, -56 ), Vector2( 56, -56 ) ] }
 
 [node name="limkolomro" type="Node2D" groups=[ "player" ]]
 
 [node name="bat_body" type="KinematicBody2D" parent="."]
 
 input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 29.187, -50.813 )
+shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 8.00097
@@ -20,11 +40,29 @@ script/script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat_body"]
 
-transform/pos = Vector2( 56, -56 )
+transform/pos = Vector2( 49.9975, -49.9975 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bat_body"]
+
+transform/pos = Vector2( 29.187, -50.813 )
+build_mode = 0
+polygon = Vector2Array( 10.813, 2.81296, -5.18704, 2.81296, -5.18704, -5.18704, 10.813, -5.18704 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 1.0
+root/root = NodePath("..")
+anims/bat_fly = SubResource( 2 )
+playback/active = true
+playback/speed = -0.53
+blend_times = [  ]
+autoplay = "bat_fly"
 
 
