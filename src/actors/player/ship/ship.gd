@@ -50,7 +50,8 @@ func _process(delta):
 	if(Input.is_action_pressed("move_right")):
 		motion += Vector2(1, 0)
 	# Input: SHOOT
-	if(Input.is_action_just_pressed("shoot")):
+	# REMOVED FOR 2.1 Stable: if(Input.is_action_just_pressed("shoot")):
+	if(Input.is_action_pressed("shoot")):
 		# Create a new shot instance
 		var shot = preload("shot.tscn").instance()
 		
