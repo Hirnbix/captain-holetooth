@@ -21,7 +21,7 @@ radius = 24.9706
 
 [node name="yankandy" type="Node2D"]
 
-transform/pos = Vector2( -512, 165 )
+transform/pos = Vector2( 0, 165 )
 script/script = ExtResource( 1 )
 
 [node name="scoring" type="CanvasLayer" parent="."]
@@ -33,7 +33,6 @@ scale = Vector2( 1, 1 )
 
 [node name="score_text" type="Label" parent="scoring"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -68,7 +67,6 @@ max_lines_visible = -1
 
 [node name="multiplier_text" type="Label" parent="scoring"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -170,7 +168,6 @@ limit/left = 0
 limit/top = 0
 limit/right = 0
 limit/bottom = 1800
-limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = false
@@ -187,7 +184,6 @@ visibility/light_mask = 2
 transform/pos = Vector2( 0, -1.52588e-05 )
 transform/scale = Vector2( 0.125, 0.125 )
 enabled = true
-editor_only = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, 0 )
 scale = 1.8
@@ -273,8 +269,6 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="hud" parent="." instance=ExtResource( 11 )]
-
-editor/display_folded = true
 
 [node name="hudframe" parent="hud"]
 

@@ -82,6 +82,7 @@ tracks/4/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 )
 
 transform/pos = Vector2( 166.5, 273.5 )
 transform/scale = Vector2( 0.328125, 0.328125 )
+z/z = 1
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 0.894568, 0.981129, -1.15461, 1.05275, -9, 2.10583 )
@@ -108,8 +109,6 @@ __meta__ = { "_edit_group_":true }
 box_area = null
 
 [node name="sfx" parent="." instance=ExtResource( 2 )]
-
-config/polyphony = 5
 
 [node name="pin" type="Sprite" parent="."]
 
@@ -170,6 +169,8 @@ margin/right = 40.0
 margin/bottom = 10.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
 text = "Bonus"
 percent_visible = 1.0
 lines_skipped = 0

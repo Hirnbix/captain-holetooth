@@ -26,13 +26,14 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 180.0
-margin/top = 0.0
-margin/right = 510.0
-margin/bottom = 17.0
+margin/left = 174.0
+margin/top = 6.0
+margin/right = 504.0
+margin/bottom = 23.0
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 0
+__meta__ = { "_edit_group_":true }
 
 [node name="items_label" type="Label" parent="hudframe"]
 
@@ -148,27 +149,28 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 10.0
-margin/top = 10.0
-margin/right = 73.0
-margin/bottom = 43.0
+margin/left = 5.0
+margin/top = 6.0
+margin/right = 76.0
+margin/bottom = 24.0
 custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Main Menu"
+text = "< Main Menu"
 flat = false
 
 [node name="sound_off" type="TextureButton" parent="."]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 92.0
-margin/top = 17.0
-margin/right = 113.0
-margin/bottom = 33.0
+margin/left = 91.0
+margin/top = 10.0
+margin/right = 112.0
+margin/bottom = 26.0
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null

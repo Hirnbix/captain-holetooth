@@ -27,14 +27,11 @@ tracks/0/keys = { "times":FloatArray( 0, 1, 2, 3 ), "transitions":FloatArray( -4
 
 [node name="limkolomro" type="Node2D" groups=[ "player" ]]
 
-transform/pos = Vector2( -0.00384738, 0.00384738 )
-
 [node name="bat_body" type="KinematicBody2D" parent="."]
 
-transform/pos = Vector2( -2.62361, 13.3764 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 2.5, 0, 0, 5, 35, -41 )
+shapes/0/transform = Matrix32( 2.5, 0, 0, 5, -29, -65 )
 shapes/0/trigger = false
 collision/layers = 2
 collision/mask = 16
@@ -43,7 +40,7 @@ script/script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="bat_body"]
 
-transform/pos = Vector2( 26.5829, -56 )
+transform/pos = Vector2( -37.4171, -80 )
 frames = SubResource( 2 )
 animation = "default"
 playing = true
@@ -51,7 +48,7 @@ centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bat_body"]
 
-transform/pos = Vector2( 35, -41 )
+transform/pos = Vector2( -29, -65 )
 transform/scale = Vector2( 2.5, 5 )
 build_mode = 0
 polygon = Vector2Array( 2.8, -0.4, -3.6, -0.4, -0.4, -3.6 )

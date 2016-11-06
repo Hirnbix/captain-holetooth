@@ -9,7 +9,7 @@ extends Node
 # Exampel of use: global.music.volume = 0.5 # Stores the music volume globally to 50%
 # You will have to make the actual changes in their appropriate scripts
 var music = {
-	volume = 0, # TODO: Set back to 1 when we are compiling for release. Turned it OFF to prevent going insane!
+	volume = 80, # TODO: Set back to 1 when we are compiling for release. Turned it OFF to prevent going insane!
 	enabled = true,
 }
 

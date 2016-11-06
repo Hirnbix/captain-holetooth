@@ -275,5 +275,7 @@ default/reverb_room = 0
 
 [node name="limkolomro" parent="." instance=ExtResource( 6 )]
 
+transform/pos = Vector2( -20.0038, -59.9962 )
+
 
 [editable path="sfx"]

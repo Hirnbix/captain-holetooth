@@ -42,7 +42,7 @@ samples/punch = { "db":0.0, "pitch":1.0, "sample":ExtResource( 15 ) }
 samples/schwuit = { "db":0.0, "pitch":1.0, "sample":ExtResource( 16 ) }
 samples/shoot = { "db":0.0, "pitch":1.0, "sample":ExtResource( 17 ) }
 samples/sound_coin = { "db":0.0, "pitch":1.0, "sample":ExtResource( 18 ) }
-samples/step = { "db":0.0, "pitch":1.2, "sample":ExtResource( 19 ) }
+samples/step = { "db":-3.0, "pitch":1.0, "sample":ExtResource( 19 ) }
 samples/wood_knock = { "db":0.0, "pitch":1.0, "sample":ExtResource( 20 ) }
 samples/yan_secret_pin = { "db":0.0, "pitch":1.0, "sample":ExtResource( 21 ) }
 

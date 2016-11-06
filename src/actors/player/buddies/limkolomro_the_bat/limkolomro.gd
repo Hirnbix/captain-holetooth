@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # Gameplay Variables
 var speed = 220  # Speed this will move
-var distanceBetween = 100    # Distance between this and the player before we start moving towards
+var distanceBetween = 200    # Distance between this and the player before we start moving towards
 
 # References
 var playerNode; # Player node

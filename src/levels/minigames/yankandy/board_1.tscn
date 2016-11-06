@@ -177,6 +177,7 @@ polygon = Vector2Array( 205.953, 783.098, 192.688, 783.098, 193.982, 807.039, 21
 
 [node name="board_1" type="RigidBody2D"]
 
+transform/pos = Vector2( 16, 112 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 2, 0, -185 )
@@ -280,14 +281,10 @@ script/script = ExtResource( 1 )
 
 [node name="sfx" parent="." instance=ExtResource( 2 )]
 
-config/polyphony = 5
-
 [node name="pins" type="Area2D" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 327.45, 178.678 )
-transform/scale = Vector2( 1, 1 )
-z/z = 1
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1161,15 +1158,11 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 3
+frame = 1
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
 transform/pos = Vector2( 52.7836, -16.0314 )
-
-[node name="Light2D" parent="Yan/ParticleAttractor2D1"]
-
-editor_only = false
 
 [node name="pockets" type="Area2D" parent="."]
 
