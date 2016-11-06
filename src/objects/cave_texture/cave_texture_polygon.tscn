@@ -1,14 +1,6 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://src/objects/cave_texture/cave material.tres" type="Shader" id=1]
-[ext_resource path="res://src/objects/cave_texture/NormalMap.png" type="Texture" id=2]
-[ext_resource path="res://src/objects/cave_texture/cave_underground.png" type="Texture" id=3]
-
-[sub_resource type="CanvasItemMaterial" id=1]
-
-shader/shader = ExtResource( 1 )
-shader/shading_mode = 0
-shader_param/normal = ExtResource( 2 )
+[ext_resource path="res://src/objects/cave_texture/cave_underground.png" type="Texture" id=1]
 
 [node name="cave_background" type="Node2D"]
 
@@ -16,7 +8,6 @@ transform/pos = Vector2( 105, -30 )
 
 [node name="tex_cave" type="Polygon2D" parent="."]
 
-material/material = SubResource( 1 )
 transform/pos = Vector2( -242.229, -56.5702 )
 transform/scale = Vector2( 3.24454, 2.3563 )
 z/z = -1
@@ -25,7 +16,7 @@ uv = Vector2Array( 102.416, -4.72131, 20.8518, -63.6256, -120.032, -67.5526, -11
 color = Color( 0.292522, 0.291595, 0.410156, 1 )
 vertex_colors = ColorArray(  )
 offset = Vector2( 2, 2 )
-texture/texture = ExtResource( 3 )
+texture/texture = ExtResource( 1 )
 texture/offset = Vector2( 0, 0 )
 texture/scale = Vector2( 2, 2 )
 texture/rotation = 0.0
