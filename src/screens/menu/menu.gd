@@ -38,26 +38,33 @@ func _ready():
 # Start Game
 func _on_startbutton_pressed():
 	transition.fade_to("res://src/screens/intro/intro.tscn")
+	get_node("sfx").play("click")
 
 # Options
 func _on_optionsbutton_pressed():
 	options_screen.show()
+	get_node("sfx").play("click")
 
 # Exit
 func _on_exitbutton_pressed():
 	options_screen.hide()
-
+	get_node("sfx").play("click")
+	
 # Close Options
 func _on_btn_close_options_pressed():
 	options_screen.hide()
+	get_node("sfx").play("click")
 
 # Change Language to German
 func _on_de_button_pressed():
+	get_node("sfx").play("click")
 	TranslationServer.set_locale("de_DE")
 	get_tree().reload_current_scene()
 
+
 # Change Language to English
 func _on_en_button_pressed():
+	get_node("sfx").play("click")
 	TranslationServer.set_locale("en_GB")
 	get_tree().reload_current_scene()
 

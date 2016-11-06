@@ -6,9 +6,6 @@
 [ext_resource path="res://src/objects/torch/feuer.png" type="Texture" id=4]
 [ext_resource path="res://src/objects/torch/torch.png" type="Texture" id=5]
 
-
-
-
 [sub_resource type="SampleLibrary" id=1]
 
 samples/torchfire = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }

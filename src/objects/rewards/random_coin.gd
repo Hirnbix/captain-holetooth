@@ -16,6 +16,7 @@ func _ready():
 	sprite.set_texture(tex)
 
 func take():
+	get_node("sfx").play("sound_coin")
 	get_node("sfx").play("chime")
 	anim.play("taken")
 	yield(anim, "finished")
