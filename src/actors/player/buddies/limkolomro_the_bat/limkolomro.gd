@@ -13,7 +13,7 @@ func _ready():
 	plrLastPos = playerNode.get_global_pos() # Make this not null for first frame
 	set_fixed_process(true)
 
-func _fixed_process(delta):
+func _process(delta):
 	var plrPos = playerNode.get_global_pos()
 	print(plrPos)
 	var distancePlayerMoved = plrLastPos.distance_to(plrPos) # The distance between player this and last frame

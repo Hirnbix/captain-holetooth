@@ -46,7 +46,6 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 26.5829, -56 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 1
 playing = true
 centered = false
 
