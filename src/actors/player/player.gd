@@ -111,7 +111,7 @@ func _integrate_forces(s):
 		
 		bi.set_linear_velocity(Vector2(800.0*ss, -80))
 		get_node("sprite/smoke").set_emitting(true)
-		get_node("sfx").play("shoot")
+		get_node("sfx").play("schwuit")
 		PS2D.body_add_collision_exception(bi.get_rid(), get_rid()) # Make bullet and this not collide
 	else:
 		shoot_time += step
@@ -158,7 +158,7 @@ func _integrate_forces(s):
 			lv.y = -JUMP_VELOCITY
 			jumping = true
 			stopping_jump = false
-			get_node("sfx").play("jump")
+			get_node("sfx").play("flupp")
 			
 			# THIS IS FOR FUTURE USE - Its a statistics thing for players to see like "Hey you only jumped 20 times during the whole game..."
 			# Whatever use it is, i think its a fun element to talk about :D

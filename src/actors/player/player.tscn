@@ -109,6 +109,11 @@ tracks/0/path = NodePath("sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3, 4, 5, 6, 7 ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("sfx:play/play")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":2, "values":[ "step", "step" ] }
 
 [sub_resource type="Animation" id=12]
 
@@ -164,7 +169,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 35
-frame = 24
+frame = 22
 
 [node name="smoke" type="Particles2D" parent="sprite"]
 
@@ -264,10 +269,11 @@ trigger = false
 
 [node name="sfx" parent="." instance=ExtResource( 4 )]
 
+default/reverb_room = 0
+
 [node name="mobile_ui_player" parent="." instance=ExtResource( 5 )]
 
 [node name="limkolomro" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( -70.0038, 10.0038 )
 
-
+[editable path="sfx"]
