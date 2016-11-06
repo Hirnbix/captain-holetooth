@@ -169,7 +169,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 35
-frame = 7
+frame = 9
 
 [node name="smoke" type="Particles2D" parent="sprite"]
 
