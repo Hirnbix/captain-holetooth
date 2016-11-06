@@ -9,7 +9,7 @@ var playerNode; # Player node
 var plrLastPos; # Players current position (Saved for next frame)
 
 func _ready():
-	playerNode = get_node("/root/scn3/world/tile_map/player")
+	playerNode = get_node("../../../player")
 	plrLastPos = playerNode.get_global_pos() # Make this not null for first frame
 	set_fixed_process(true)
 

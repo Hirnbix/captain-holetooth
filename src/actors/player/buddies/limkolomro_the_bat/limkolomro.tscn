@@ -4,7 +4,7 @@
 [ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_01.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/player/buddies/limkolomro_the_bat/limkolomro_02.png" type="Texture" id=3]
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 2.8, -0.4, -3.6, -0.4, -0.4, -3.6 )
@@ -13,7 +13,7 @@ points = Vector2Array( 2.8, -0.4, -3.6, -0.4, -0.4, -3.6 )
 
 animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":12.0 } ]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource/name = "bat_fly"
 length = 4.0
@@ -33,7 +33,7 @@ transform/pos = Vector2( -0.00384738, 0.00384738 )
 
 transform/pos = Vector2( -2.62361, 13.3764 )
 input/pickable = false
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.5, 0, 0, 5, 35, -41 )
 shapes/0/trigger = false
 collision/layers = 2
@@ -46,6 +46,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 26.5829, -56 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 centered = false
 
@@ -63,7 +64,7 @@ trigger = false
 playback/process_mode = 1
 playback/default_blend_time = 1.0
 root/root = NodePath("..")
-anims/bat_fly = SubResource( 4 )
+anims/bat_fly = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
