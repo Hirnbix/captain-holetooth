@@ -4,7 +4,7 @@
 
 [node name="sfx" type="SamplePlayer"]
 
-config/polyphony = 1
+config/polyphony = 5
 config/samples = ExtResource( 1 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
