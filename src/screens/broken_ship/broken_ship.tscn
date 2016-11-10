@@ -55,7 +55,7 @@ transform/pos = Vector2( -472.873, -193.103 )
 
 [node name="simple_snow" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 21.7879, -98.8567 )
+transform/pos = Vector2( 491.788, -68.8567 )
 transform/scale = Vector2( 1.65413, 0.704852 )
 config/amount = 500
 config/half_extents = Vector2( 200, 5 )
@@ -66,7 +66,7 @@ params/radial_accel = 20.0
 
 [node name="bg_broken_ship" type="Sprite" parent="."]
 
-transform/pos = Vector2( 232.417, 256.65 )
+transform/pos = Vector2( 772.417, 256.65 )
 z/z = -1
 texture = ExtResource( 2 )
 
@@ -99,7 +99,6 @@ limit/left = 0
 limit/top = -288
 limit/right = 0
 limit/bottom = 288
-limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -114,7 +113,6 @@ drag_margin/bottom = 0.2
 transform/pos = Vector2( 1.0134, 4.34583 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 6
 playing = true
 offset = Vector2( 1.04063, -27.4518 )
 script/script = ExtResource( 11 )
