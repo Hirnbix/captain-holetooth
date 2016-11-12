@@ -166,9 +166,8 @@ drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="mobile_ui" parent="." instance=ExtResource( 6 )]
+[node name="mobile_ui_ship" parent="." instance=ExtResource( 6 )]
 
 [connection signal="body_enter" from="player" to="player" method="_on_collision"]
 
 
-[editable path="mobile_ui"]

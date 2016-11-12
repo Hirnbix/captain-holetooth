@@ -169,7 +169,7 @@ script/script = ExtResource( 1 )
 
 texture = ExtResource( 2 )
 hframes = 35
-frame = 9
+frame = 8
 
 [node name="smoke" type="Particles2D" parent="sprite"]
 
@@ -279,3 +279,4 @@ transform/pos = Vector2( -20.0038, -59.9962 )
 
 
 [editable path="sfx"]
+[editable path="mobile_ui_player"]
