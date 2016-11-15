@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://src/actors/player/ship/ship.gd" type="Script" id=1]
 [ext_resource path="res://src/actors/player/ship/ship_spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://src/objects/thruster/thruster.png" type="Texture" id=3]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/screens/hud/mobile_ui_ship.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -139,6 +140,8 @@ blend_times = [  ]
 autoplay = "flying"
 
 [node name="sfx" parent="." instance=ExtResource( 4 )]
+
+[node name="mobile_ui_ship" parent="." instance=ExtResource( 5 )]
 
 [connection signal="area_enter" from="." to="." method="_on_player_area_enter"]
 
