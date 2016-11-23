@@ -40,6 +40,7 @@ script/script = ExtResource( 2 )
 [node name="player" parent="rail" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 87.8219, 143.308 )
+z/z = 1
 
 [node name="camera" type="Camera2D" parent="rail"]
 
@@ -51,7 +52,6 @@ limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
 limit/bottom = 10000000
-limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -192,7 +192,7 @@ motion/mirroring = Vector2( 800, 0 )
 
 [node name="Sprite" type="Sprite" parent="parallax/ParallaxBackground/ParallaxLayer"]
 
-transform/pos = Vector2( 370.543, 354.862 )
+transform/pos = Vector2( 373.867, 354.862 )
 texture = ExtResource( 5 )
 modulate = Color( 0.0976562, 0.0904083, 0.0965238, 1 )
 
