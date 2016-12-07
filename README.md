@@ -1,4 +1,5 @@
-<img src="https://www.evernote.com/l/AqTdM384IEBEiptfiQwxQ0ocOSyuSwWQZH8B/image.png" alt="Screen%20Shot%202016-12-06%20at%2019.16.33" />
+##Thanks to all funders and donators!
+<a href="https://pixelfunder.com/project/captain-holetooth/"><img src="https://www.evernote.com/l/AqTdM384IEBEiptfiQwxQ0ocOSyuSwWQZH8B/image.png" alt="Screen%20Shot%202016-12-06%20at%2019.16.33" /></a>
 
 ##Captain Holetooth - the Videogame!
 
