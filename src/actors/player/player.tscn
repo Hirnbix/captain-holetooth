@@ -167,6 +167,7 @@ script/script = ExtResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 hframes = 35
 frame = 8
@@ -236,6 +237,7 @@ limit/left = 0
 limit/top = 0
 limit/right = 10000000
 limit/bottom = 10000000
+limit/smoothed = false
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = false
@@ -272,6 +274,8 @@ trigger = false
 default/reverb_room = 0
 
 [node name="mobile_ui_player" parent="." instance=ExtResource( 5 )]
+
+editor/display_folded = true
 
 [node name="limkolomro" parent="." instance=ExtResource( 6 )]
 

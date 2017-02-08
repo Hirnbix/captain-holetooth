@@ -1,42 +1,17 @@
 
 extends RigidBody2D
 
-# Character Demo, written by Juan Linietsky.
-#
-# Implementation of a 2D Character controller.
-# This implementation uses the physics engine for
-# controlling a character, in a very similar way
-# than a 3D character controller would be implemented.
-#
-# Using the physics engine for this has the main
-# advantages:
-# -Easy to write.
-# -Interaction with other physics-based objects is free
-# -Only have to deal with the object linear velocity, not position
-# -All collision/area framework available
-# 
-# But also has the following disadvantages:
-#  
-# -Objects may bounce a little bit sometimes
-# -Going up ramps sends the chracter flying up, small hack is needed.
-# -A ray collider is needed to avoid sliding down on ramps and  
-#   undesiderd bumps, small steps and rare numerical precision errors.
-#   (another alternative may be to turn on friction when the character is not moving).
-# -Friction cant be used, so floor velocity must be considered
-#  for moving platforms.
-
 # Member variables
 var anim = ""
 var siding_left = false
 var jumping = false
-var stopping_jump = false
 var shooting = false
 
-var WALK_ACCEL = 800.0
+var WALK_ACCEL = 3000.0 # Higher = Better control, Lower = Sluggish
 var WALK_DEACCEL = 800.0
 var WALK_MAX_VELOCITY = 200.0
-var AIR_ACCEL = 200.0
-var AIR_DEACCEL = 200.0
+var AIR_ACCEL = 10000.0 # It's over 9000! 
+var AIR_DEACCEL = 1200.0 # Make it higher to give the player better air control, or slower to make the game more "realistic"
 var JUMP_VELOCITY = 480
 var STOP_JUMP_FORCE = 900.0
 
@@ -60,7 +35,7 @@ var enemy
 
 
 func _integrate_forces(s):
-	var lv = s.get_linear_velocity()
+	var linear_vel = s.get_linear_velocity()
 	var step = s.get_step()
 	
 	var new_anim = anim
@@ -81,7 +56,7 @@ func _integrate_forces(s):
 		get_parent().add_child(e)
 	
 	# Deapply prev floor velocity
-	lv.x -= floor_h_velocity
+	linear_vel.x -= floor_h_velocity
 	floor_h_velocity = 0.0
 	
 	# Find the floor (a contact with upwards facing collision normal)
@@ -116,6 +91,8 @@ func _integrate_forces(s):
 	else:
 		shoot_time += step
 	
+	# Calculate air born time in order to control when to stop jump
+	# from the user releasing jump or reaching max jump height
 	if (found_floor):
 		airborne_time = 0.0
 	else:
@@ -125,63 +102,78 @@ func _integrate_forces(s):
 
 	# Process jump
 	if (jumping):
-		if (lv.y > 0):
+		if (linear_vel.y > 0):
 			# Set off the jumping flag if going down
 			jumping = false
-			
-		elif (not jump):
-			stopping_jump = true
-		
-		if (stopping_jump):
-			lv.y += STOP_JUMP_FORCE*step
-			
-			
+
+		if (!jump):
+			linear_vel.y += STOP_JUMP_FORCE*step
 	
 	if (on_floor):
 		# Process logic when character is on floor
 		if (move_left and not move_right):
-			if (lv.x > -WALK_MAX_VELOCITY):
-				lv.x -= WALK_ACCEL*step
+			if (linear_vel.x > -WALK_MAX_VELOCITY):
+				linear_vel.x -= WALK_ACCEL*step
+				# Prevent player from exceeding max walk velocity
+				if(linear_vel.x < -WALK_MAX_VELOCITY):
+					linear_vel.x = -WALK_MAX_VELOCITY
+				
 		elif (move_right and not move_left):
-			if (lv.x < WALK_MAX_VELOCITY):
-				lv.x += WALK_ACCEL*step
+			if (linear_vel.x < WALK_MAX_VELOCITY):
+				linear_vel.x += WALK_ACCEL*step
+				# Prevent player from exceeding max walk velocity
+				if(linear_vel.x > WALK_MAX_VELOCITY):
+					linear_vel.x = WALK_MAX_VELOCITY
 		else:
-			var xv = abs(lv.x)
+			var xv = abs(linear_vel.x)
 			xv -= WALK_DEACCEL*step
 			if (xv < 0):
 				xv = 0
-			lv.x = sign(lv.x)*xv
+			linear_vel.x = sign(linear_vel.x)*xv
 
 		
-		# Check jump
-		if (not jumping and jump):
-			lv.y = -JUMP_VELOCITY
+		# If we can, and want to JUMP - Jump!
+		if (!jumping && jump):
+			# Set velocity upwards 
+			linear_vel.y = -JUMP_VELOCITY
+			
+			# Notify code that we are jumping
 			jumping = true
-			stopping_jump = false
+			
+			# Play the player's jump sound
 			get_node("sfx").play("flupp")
 			
 			# THIS IS FOR FUTURE USE - Its a statistics thing for players to see like "Hey you only jumped 20 times during the whole game..."
 			# Whatever use it is, i think its a fun element to talk about :D
 			# I don't care often about the "use" of things... just having it for fun is good enough ;)
-			
 			global.times_jumped = global.times_jumped +1
-			print(global.times_jumped)
+			# print(global.times_jumped)
+			
+			# Achievement for jumping 50 times - Increased jump height
 			if (global.times_jumped > 50):
 				JUMP_VELOCITY = 550
-				print("Yay! You can now jump higher")
+				# print("Yay! You can now jump higher")
+				# TODO: Print an achievement notification message to the player
 		
-		# Check siding
-		if (lv.x < 0 and move_left):
+		# Check siding direction
+		if (linear_vel.x < 0 && move_left):
 			new_siding_left = true
-		elif (lv.x > 0 and move_right):
+		elif (linear_vel.x > 0 && move_right):
 			new_siding_left = false
+		
+		# Check jumping
 		if (jumping):
+			# Set the next animation
 			new_anim = "jumping"
-		elif (abs(lv.x) < 0.1):
+		
+		# Handling an idle player
+		elif (abs(linear_vel.x) < 0.1): # Using a 0.1 padding for when we consider the player to be idle
 			if (shoot_time < MAX_SHOOT_POSE_TIME):
 				new_anim = "idle_weapon"
 			else:
 				new_anim = "idle"
+		
+		# The player is moving (not jumping)
 		else:
 			if (shoot_time < MAX_SHOOT_POSE_TIME):
 				new_anim = "run_weapon"
@@ -189,20 +181,29 @@ func _integrate_forces(s):
 				new_anim = "run"
 	else:
 		# Process logic when the character is in the air
-		if (move_left and not move_right):
-			if (lv.x > -WALK_MAX_VELOCITY):
-				lv.x -= AIR_ACCEL*step
-		elif (move_right and not move_left):
-			if (lv.x < WALK_MAX_VELOCITY):
-				lv.x += AIR_ACCEL*step
+		# When we are only pressing LEFT movement
+		if (move_left && !move_right):
+			if (linear_vel.x > -WALK_MAX_VELOCITY):
+				# linear_vel.x = -WALK_MAX_VELOCITY
+				linear_vel.x -= AIR_ACCEL*step
+				if(linear_vel.x < -WALK_MAX_VELOCITY):
+					linear_vel.x = -WALK_MAX_VELOCITY
+				
+		elif (move_right && !move_left):
+			if (linear_vel.x < WALK_MAX_VELOCITY):
+				# linear_vel.x = WALK_MAX_VELOCITY
+				linear_vel.x += AIR_ACCEL*step
+				if(linear_vel.x > WALK_MAX_VELOCITY):
+					linear_vel.x = WALK_MAX_VELOCITY
 		else:
-			var xv = abs(lv.x)
-			xv -= AIR_DEACCEL*step
-			if (xv < 0):
-				xv = 0
-			lv.x = sign(lv.x)*xv
+			# Deaccelerate air movement (quickly for a smooth gameplay experience)
+			var x_vel = abs(linear_vel.x)
+			x_vel -= AIR_DEACCEL*step
+			if (x_vel < 0):
+				x_vel = 0
+			linear_vel.x = sign(linear_vel.x)*x_vel
 		
-		if (lv.y < 0):
+		if (linear_vel.y < 0):
 			if (shoot_time < MAX_SHOOT_POSE_TIME):
 				new_anim = "jumping_weapon"
 			else:
@@ -233,11 +234,11 @@ func _integrate_forces(s):
 	# Apply floor velocity
 	if (found_floor):
 		floor_h_velocity = s.get_contact_collider_velocity_at_pos(floor_index).x
-		lv.x += floor_h_velocity
+		linear_vel.x += floor_h_velocity
 	
 	# Finally, apply gravity and set back the linear velocity
-	lv += s.get_total_gravity()*step
-	s.set_linear_velocity(lv)
+	linear_vel += s.get_total_gravity()*step
+	s.set_linear_velocity(linear_vel)
 
 
 func _ready():
