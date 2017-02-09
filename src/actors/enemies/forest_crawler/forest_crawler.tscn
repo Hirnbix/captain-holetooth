@@ -6,10 +6,10 @@
 [ext_resource path="res://src/persist.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=5]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 14.0
+points = Vector2Array( 7.52295, -19.7423, 28.0226, 2.5522, 27.7392, 15.9667, -31.7759, 16.3446, -30.0754, 0.00156021, -9.57581, -19.6478 )
 
 [sub_resource type="Animation" id=2]
 
@@ -71,15 +71,9 @@ colors = ColorArray( 1, 0.884956, 0.823009, 1, 0.768627, 0.389381, 0, 0 )
 transform/pos = Vector2( -1, 0 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.08072, -2.16144 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 1 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 6.48431, 3.24216 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 1 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, -12.495, 3.53415 )
-shapes/2/trigger = false
-collision/layers = 1
+collision/layers = 2
 collision/mask = 1
 mode = 2
 mass = 1.0
@@ -129,31 +123,18 @@ texture = ExtResource( 2 )
 hframes = 8
 frame = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionPolygon2D" parent="."]
 
-transform/pos = Vector2( -1.08072, -2.16144 )
-shape = SubResource( 1 )
+build_mode = 0
+polygon = Vector2Array( 7.52295, -19.7423, 28.0226, 2.5522, 27.7392, 15.9667, -31.7759, 16.3446, -30.0754, 0.00156021, -9.57581, -19.6478 )
+shape_range = Vector2( 0, 0 )
 trigger = false
-_update_shape_index = -1
-
-[node name="CollisionShape2D 2" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( 6.48431, 3.24216 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = -1
-
-[node name="CollisionShape2D 3" type="CollisionShape2D" parent="."]
-
-transform/pos = Vector2( -12.495, 3.53415 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = -1
 
 [node name="raycast_left" type="RayCast2D" parent="."]
 
 transform/pos = Vector2( -33.2868, -9.34363 )
 enabled = true
+exclude_parent = true
 cast_to = Vector2( 0, 45 )
 layer_mask = 1
 type_mask = 15
@@ -162,6 +143,7 @@ type_mask = 15
 
 transform/pos = Vector2( 29.1987, -9.34363 )
 enabled = true
+exclude_parent = true
 cast_to = Vector2( 0, 45 )
 layer_mask = 1
 type_mask = 15

@@ -333,7 +333,6 @@ transform/pos = Vector2( 3659.42, 1856.34 )
 
 [node name="reward_group_2x3" type="Area2D" parent="world/interactables/rewards"]
 
-editor/display_folded = true
 transform/pos = Vector2( -2816, -840 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -619,8 +618,6 @@ transform/pos = Vector2( 400, 1016 )
 movement_speed = -40
 
 [node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
-
-editor/display_folded = true
 
 [node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
 
