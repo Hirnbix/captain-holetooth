@@ -617,6 +617,11 @@ motion = "zigzag"
 transform/pos = Vector2( 400, 1016 )
 movement_speed = -40
 
+[node name="soap_bubble3" parent="world/interactables/rewards" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 996.705, 1301.12 )
+movement_speed = -40
+
 [node name="enemies" type="Node" parent="world/interactables" groups=[ "enemies" ]]
 
 [node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 16 )]
