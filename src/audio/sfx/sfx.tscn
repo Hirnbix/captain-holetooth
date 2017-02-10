@@ -15,7 +15,7 @@ default/filter/type = 0
 default/filter/cutoff = 0.0
 default/filter/resonance = 0.0
 default/filter/gain = 0.0
-default/reverb_room = 2
+default/reverb_room = 0
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 

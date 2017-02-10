@@ -186,6 +186,7 @@ visibility/light_mask = 2
 transform/pos = Vector2( 0, -1.52588e-05 )
 transform/scale = Vector2( 0.125, 0.125 )
 enabled = true
+editor_only = false
 texture = ExtResource( 7 )
 offset = Vector2( 0, 0 )
 scale = 1.8
