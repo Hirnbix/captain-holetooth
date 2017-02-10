@@ -5,7 +5,7 @@
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble_02.png" type="Texture" id=3]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=4]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -11.1923, -10.3166, 11.8594, -9.92922, 10.116, 9.44193, -11.5797, 10.0231 )
@@ -48,8 +48,8 @@ tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( -1.86607
 
 [node name="soap_bubble" type="Area2D"]
 
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
+input/pickable = true
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.193703, -0.19371 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -58,8 +58,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 monitoring = false
 monitorable = false
-collision/layers = 0
-collision/mask = 3
+collision/layers = 18
 script/script = ExtResource( 1 )
 movement_speed = -80
 random_y_range = 10
@@ -70,7 +69,6 @@ reset_bonus = false
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 0.193703, -0.19371 )
 build_mode = 0
 polygon = Vector2Array( -11.5797, 10.0231, 10.116, 9.44193, 11.8594, -9.92922, -11.1923, -10.3166 )
@@ -107,6 +105,8 @@ autoplay = ""
 [node name="sfx" parent="." instance=ExtResource( 4 )]
 
 [connection signal="area_enter" from="." to="." method="_on_soap_bubble_area_enter"]
+
+[connection signal="body_enter" from="." to="." method="_on_soap_bubble_body_enter"]
 
 [connection signal="enter_screen" from="visibility" to="." method="_on_visibility_enter_screen"]
 
