@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=1]
+[gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.tex" type="Texture" id=2]
@@ -11,17 +11,18 @@
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/screens/menu/gb.png" type="Texture" id=10]
 [ext_resource path="res://src/screens/menu/de.png" type="Texture" id=11]
-[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=12]
 [ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=13]
 [ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=14]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
 [ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
-[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=17]
-[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=18]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=19]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=20]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=21]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=17]
+[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=18]
+[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=19]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=20]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=22]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Animation" id=1]
 
@@ -109,11 +110,9 @@ music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/vol
 
 [node name="art" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="gametitle" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 355, 95 )
+transform/pos = Vector2( 357, 89 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 8, 1, 264, 152 )
 
@@ -130,7 +129,6 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-editor/display_folded = true
 transform/pos = Vector2( 595.2, 190.4 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
@@ -147,7 +145,9 @@ modulate = Color( 0, 0, 0, 0.326798 )
 
 [node name="thruster" parent="art/splashscreen_schiff" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 108.264, 17.6317 )
+transform/pos = Vector2( 85.0126, 23.0998 )
+transform/rot = -94.9
+transform/scale = Vector2( 1, -1.78624 )
 config/flip_h = true
 
 [node name="anims" type="AnimationPlayer" parent="art"]
@@ -166,7 +166,7 @@ autoplay = "gametitle_animations"
 editor/display_folded = true
 transform/pos = Vector2( 239, 146 )
 texture = ExtResource( 6 )
-__meta__ = { "_edit_group_":true }
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="skull_eye" type="Sprite" parent="art/keyvisual_lochzahn"]
 
@@ -198,10 +198,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 430.0
-margin/top = 240.0
-margin/right = 462.0
-margin/bottom = 262.0
+margin/left = 330.0
+margin/top = 260.0
+margin/right = 362.0
+margin/bottom = 282.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -214,10 +214,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 470.0
-margin/top = 240.0
-margin/right = 502.0
-margin/bottom = 262.0
+margin/left = 370.0
+margin/top = 260.0
+margin/right = 402.0
+margin/bottom = 282.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -226,14 +226,15 @@ params/scale = Vector2( 2, 2 )
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
 
+visibility/blend_mode = 2
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 256.0
-margin/top = 176.0
-margin/right = 416.0
-margin/bottom = 216.0
+margin/left = 250.0
+margin/top = 170.0
+margin/right = 490.0
+margin/bottom = 210.0
 custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -243,14 +244,15 @@ flat = false
 
 [node name="optionsbutton" type="Button" parent="menu_buttons"]
 
+visibility/blend_mode = 2
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 256.0
-margin/top = 224.0
-margin/right = 420.0
-margin/bottom = 264.0
+margin/left = 250.0
+margin/top = 220.0
+margin/right = 490.0
+margin/bottom = 250.0
 custom_fonts/font = ExtResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -264,13 +266,13 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 440.0
-margin/top = 220.0
-margin/right = 499.0
-margin/bottom = 234.0
+margin/left = 250.0
+margin/top = 260.0
+margin/right = 322.0
+margin/bottom = 287.0
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Language"
+text = "Pick Language"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -425,7 +427,7 @@ margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
 custom_styles/tab_fg = ExtResource( 15 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 17 )
 
 [node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
 
@@ -433,7 +435,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 17 )
+theme/theme = ExtResource( 18 )
 margin/left = 4.0
 margin/top = 10.0
 margin/right = 246.0
@@ -451,7 +453,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 17 )
+theme/theme = ExtResource( 18 )
 margin/left = 4.0
 margin/top = 50.0
 margin/right = 246.0
@@ -469,7 +471,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 17 )
+theme/theme = ExtResource( 18 )
 margin/left = 4.0
 margin/top = 91.0
 margin/right = 246.0
@@ -487,7 +489,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 17 )
+theme/theme = ExtResource( 18 )
 margin/left = 4.0
 margin/top = 130.0
 margin/right = 246.0
@@ -505,7 +507,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 17 )
+theme/theme = ExtResource( 18 )
 margin/left = 4.0
 margin/top = 178.0
 margin/right = 246.0
@@ -530,7 +532,7 @@ margin/left = 12.0
 margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 17 )
 
 [node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
@@ -563,7 +565,7 @@ margin/bottom = 287.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 18 )
+textures/normal = ExtResource( 19 )
 params/scale = Vector2( 0.6, 0.6 )
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
@@ -599,13 +601,13 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 19 )
+textures/normal = ExtResource( 20 )
 
-[node name="music_player" parent="." instance=ExtResource( 20 )]
+[node name="music_player" parent="." instance=ExtResource( 21 )]
 
-stream/stream = ExtResource( 21 )
+stream/stream = ExtResource( 22 )
 
-[node name="sfx" parent="." instance=ExtResource( 22 )]
+[node name="sfx" parent="." instance=ExtResource( 23 )]
 
 [connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
 
