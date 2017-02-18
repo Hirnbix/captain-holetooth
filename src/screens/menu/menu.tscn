@@ -336,8 +336,6 @@ visible_characters = -1
 
 [node name="Audio" type="Tabs" parent="options_screen/settings"]
 
-editor/display_folded = true
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -413,9 +411,58 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
+[node name="hbox1" type="HBoxContainer" parent="options_screen/settings/Audio/vbox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 472.0
+margin/bottom = 36.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Sound_volume_label" type="Label" parent="options_screen/settings/Audio/vbox/hbox1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 2.0
+margin/right = 72.0
+margin/bottom = 14.0
+text = "Sound Volume:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="volume_slide" type="HSlider" parent="options_screen/settings/Audio/vbox/hbox1"]
+
+rect/min_size = Vector2( 100, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 92.0
+margin/top = 0.0
+margin/right = 192.0
+margin/bottom = 16.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false

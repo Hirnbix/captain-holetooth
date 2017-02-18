@@ -8,7 +8,7 @@ func _ready():
 	var initial_pos_player = get_node("/root/scn3/world/initial_spawn_player").get_global_pos()
 	
 	# Set player position
-	get_node("/root/scn3/world/tile_map/player").set_global_pos(initial_pos_player)
+	get_node("/root/scn3/player").set_global_pos(initial_pos_player)
 	
 	# Get enemy group
 	game.open_scene("scn3")
