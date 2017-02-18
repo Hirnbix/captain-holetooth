@@ -2,14 +2,14 @@ extends KinematicBody2D
 
 # Gameplay Variables
 var speed = 220  # Speed this will move
-var distanceBetween = 200    # Distance between this and the player before we start moving towards
+var distanceBetween = 100    # Distance between this and the player before we start moving towards
 
 # References
 var playerNode; # Player node
 var plrLastPos; # Players current position (Saved for next frame)
 
 func _ready():
-	playerNode = get_node("../../../player")
+	playerNode = get_node("/root/scn3/player")
 	plrLastPos = playerNode.get_global_pos() # Make this not null for first frame
 	set_fixed_process(true)
 
