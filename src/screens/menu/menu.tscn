@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
-[ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.tex" type="Texture" id=2]
+[ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
 [ext_resource path="res://src/screens/menu/scn1_menu_bg.png" type="Texture" id=3]
 [ext_resource path="res://src/screens/menu/splashscreen_ship_scn1.png" type="Texture" id=4]
 [ext_resource path="res://src/objects/thruster/thruster.tscn" type="PackedScene" id=5]
@@ -34,7 +34,7 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("gametitle:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4, 0.7 ), "transitions":FloatArray( 1, 1, 0.25, 0.25 ), "update":0, "values":[ Vector2( 355, -89 ), Vector2( 355, 95 ), Vector2( 355, 87 ), Vector2( 355, 95 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 0.25 ), "update":0, "values":[ Vector2( 355, -89 ), Vector2( 355, 95 ), Vector2( 355, 87 ) ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("keyvisual_lochzahn:transform/scale")
 tracks/1/interp = 1
@@ -112,7 +112,7 @@ music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/vol
 
 [node name="gametitle" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 357, 89 )
+transform/pos = Vector2( 355, 87 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 8, 1, 264, 152 )
 
@@ -129,7 +129,7 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 595.2, 190.4 )
+transform/pos = Vector2( 594.637, 190.291 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
@@ -336,6 +336,7 @@ visible_characters = -1
 
 [node name="Audio" type="Tabs" parent="options_screen/settings"]
 
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -463,6 +464,7 @@ focus_mode = 2
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
