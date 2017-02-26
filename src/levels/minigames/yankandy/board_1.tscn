@@ -1164,15 +1164,11 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 0
+frame = 3
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
 transform/pos = Vector2( 52.7836, -16.0314 )
-
-[node name="Light2D" parent="Yan/ParticleAttractor2D1"]
-
-editor_only = false
 
 [node name="pockets" type="Area2D" parent="."]
 

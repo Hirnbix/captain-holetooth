@@ -3,7 +3,7 @@
 [ext_resource path="res://src/levels/minigames/yankandy/pin.gd" type="Script" id=1]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/levels/minigames/yankandy/pin.png" type="Texture" id=3]
-[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -150,7 +150,7 @@ autoplay = ""
 visibility/opacity = 0.0
 visibility/self_opacity = 0.0
 transform/pos = Vector2( 45.7143, 0 )
-transform/scale = Vector2( 3, 3 )
+transform/scale = Vector2( 2, 2 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
