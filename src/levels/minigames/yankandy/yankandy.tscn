@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://src/levels/minigames/yankandy/yankandy.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/mobile_ui_yankandy.tscn" type="PackedScene" id=2]
@@ -11,9 +11,10 @@
 [ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shine.png" type="Texture" id=9]
 [ext_resource path="res://src/levels/minigames/yankandy/sprite_candyball_shading.png" type="Texture" id=10]
 [ext_resource path="res://src/levels/minigames/yankandy/board_1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/fonts/menufont_16.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/fonts/icon_font16.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://src/fonts/c64_font16.fnt" type="BitmapFont" id=13]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=15]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -34,16 +35,20 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="score_text" type="Label" parent="scoring"]
+[node name="score_container" type="Node2D" parent="scoring"]
+
+transform/pos = Vector2( 228, 70 )
+
+[node name="score_digit" type="Label" parent="scoring/score_container"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 360.0
-margin/top = 40.0
-margin/right = 431.0
-margin/bottom = 59.0
+margin/left = 221.0
+margin/top = 10.0
+margin/right = 292.0
+margin/bottom = 29.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
@@ -51,16 +56,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="score_description" type="Label" parent="scoring/score_text"]
+[node name="score_description" type="Label" parent="scoring/score_container"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = -40.0
-margin/top = 40.0
-margin/right = 51.0
-margin/bottom = 54.0
+margin/left = 91.0
+margin/top = 10.0
+margin/right = 182.0
+margin/bottom = 24.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Score"
@@ -68,16 +73,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="multiplier_text" type="Label" parent="scoring"]
+[node name="multiplier_digit" type="Label" parent="scoring/score_container"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 400.0
-margin/top = 90.0
-margin/right = 422.0
-margin/bottom = 109.0
+margin/left = 221.0
+margin/top = 30.0
+margin/right = 243.0
+margin/bottom = 49.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
@@ -85,16 +90,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="multiplier" type="Label" parent="scoring/multiplier_text"]
+[node name="multiplier_label" type="Label" parent="scoring/score_container"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 20.0
-margin/top = 0.0
-margin/right = 111.0
-margin/bottom = 14.0
+margin/left = 91.0
+margin/top = 30.0
+margin/right = 182.0
+margin/bottom = 44.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Multiplier (Pins hit)"
@@ -102,12 +107,12 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Polygon2D" type="Polygon2D" parent="scoring"]
+[node name="Polygon2D" type="Polygon2D" parent="scoring/score_container"]
 
-transform/pos = Vector2( 474.97, 99.6248 )
-transform/scale = Vector2( 4.00268, 1.20312 )
+transform/pos = Vector2( 135.909, 22.9273 )
+transform/scale = Vector2( 1.75058, 0.433121 )
 z/z = -1
-polygon = Vector2Array( -26.2114, -12.935, 13.7618, -12.935, 13.7618, 12.0001, -26.2114, 12.0001 )
+polygon = Vector2Array( -31.9373, -52.935, 59.461, -52.935, 59.461, 62.5061, -31.9373, 62.5061 )
 uv = Vector2Array(  )
 color = Color( 0.184314, 0.239216, 0.254902, 0.756863 )
 vertex_colors = ColorArray(  )
@@ -254,31 +259,67 @@ modulate = Color( 0.457031, 0.176743, 0.176743, 1 )
 transform/pos = Vector2( 15, -52 )
 mass = 204.082
 
-[node name="instructions" type="Label" parent="."]
+[node name="instruction_icons" type="Label" parent="."]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 360.0
-margin/top = -155.0
-margin/right = 498.0
-margin/bottom = -87.0
+margin/left = 336.0
+margin/top = -157.0
+margin/right = 366.0
+margin/bottom = -89.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "ARROW keys left/right ... Move ball\nARROW down ... release ball\nSPACE ... reset ball"
+text = "AD\n"
 align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="hud" parent="." instance=ExtResource( 13 )]
+[node name="instruction_text" type="Label" parent="instruction_icons"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -20.0
+margin/top = 2.0
+margin/right = 104.0
+margin/bottom = 70.0
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Move ball\n\nDrop ball\n\nSPACE = Reset ball"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="instruction_icons1" type="Label" parent="instruction_icons"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 10.0
+margin/top = 21.0
+margin/right = 23.0
+margin/bottom = 48.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "S\n"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="hud" parent="." instance=ExtResource( 14 )]
 
 [node name="hudframe" parent="hud"]
 
 visibility/visible = false
 
-[node name="sfx" parent="." instance=ExtResource( 14 )]
+[node name="sfx" parent="." instance=ExtResource( 15 )]
 
 [connection signal="pressed" from="hud/go_to_menu" to="hud" method="_on_go_to_menu_pressed"]
 
