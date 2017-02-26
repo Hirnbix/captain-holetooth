@@ -1,8 +1,8 @@
 extends Node2D
 
 func _process(delta):
-	get_node("scoring/score_container/score_digit").set_text(str(global.yankandy_score_total))
-	get_node("scoring/score_container/multiplier_digit").set_text(str(global.yankandy_score_multiplier))
+	get_node("scoring/scoring_container/score_panel/score_digit").set_text(str(global.yankandy_score_total))
+	get_node("scoring/scoring_container/multiplier_panel/multiplier_digit").set_text(str(global.yankandy_score_multiplier))
 
 func reset_globals():
 	global.yankandy_score_pins = 0

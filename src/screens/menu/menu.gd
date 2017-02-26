@@ -83,12 +83,12 @@ func update_locale():
 	# Setup Language buttons
 	# - German
 	if current_locale == "de_DE":
-		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_DE.tex")
+		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
 		game_title.set_texture(tex_de)
 
 	# - English
 	if current_locale == "en_GB":
-		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.tex")
+		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
 		game_title.set_texture(tex_en)
 
 
