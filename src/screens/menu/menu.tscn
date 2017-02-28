@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=1]
+[gd_scene load_steps=28 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
@@ -16,11 +16,14 @@
 [ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=14]
 [ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=15]
 [ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=16]
-[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=17]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=18]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=20]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/screens/global-ui-templates/menu_buttons.tres" type="StyleBox" id=17]
+[ext_resource path="res://src/fonts/menufont_24.fnt" type="BitmapFont" id=18]
+[ext_resource path="res://src/screens/ui-icons-set-16x16/check-2x.png" type="Texture" id=19]
+[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=20]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=21]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=23]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=24]
 
 [sub_resource type="Animation" id=1]
 
@@ -439,32 +442,17 @@ bbcode/enabled = false
 bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to http://www.hirnbix.com/parentalcontrols"
 visible_characters = -1
 
-[node name="playtime_settings" type="VBoxContainer" parent="options_screen/settings/Parental Controls"]
+[node name="playtime_settings" type="HBoxContainer" parent="options_screen/settings/Parental Controls"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 10.0
-margin/top = 77.0
-margin/right = 466.0
-margin/bottom = 226.0
+margin/left = 16.0
+margin/top = 66.0
+margin/right = 468.0
+margin/bottom = 91.0
 alignment = 0
-
-[node name="playtime_limit" type="LineEdit" parent="options_screen/settings/Parental Controls/playtime_settings"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 456.0
-margin/bottom = 29.0
-placeholder/alpha = 0.6
-focus_mode = 2
-caret/caret_blink = false
-caret/caret_blink_speed = 0.65
 
 [node name="playtime_limit_label" type="Label" parent="options_screen/settings/Parental Controls/playtime_settings"]
 
@@ -473,13 +461,29 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = -14.0
-margin/right = 456.0
-margin/bottom = -2.0
+margin/top = 6.0
+margin/right = 218.0
+margin/bottom = 18.0
 text = "Adjust the duration of gameplay (in minutes)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="playtime_limit" type="LineEdit" parent="options_screen/settings/Parental Controls/playtime_settings"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 222.0
+margin/top = 1.0
+margin/right = 268.0
+margin/bottom = 23.0
+placeholder/alpha = 0.6
+max_length = 2
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
 
 [node name="playtime_confirm" type="Button" parent="options_screen/settings/Parental Controls/playtime_settings"]
 
@@ -487,14 +491,19 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -1.0
-margin/top = 36.0
-margin/right = 457.0
-margin/bottom = 55.0
+margin/left = 272.0
+margin/top = 0.0
+margin/right = 357.0
+margin/bottom = 25.0
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/normal = ExtResource( 17 )
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Confirm"
+icon = ExtResource( 19 )
 flat = false
 
 [node name="Audio" type="Tabs" parent="options_screen/settings"]
@@ -672,7 +681,7 @@ margin/bottom = 287.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 17 )
+textures/normal = ExtResource( 20 )
 params/scale = Vector2( 0.6, 0.6 )
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
@@ -708,13 +717,13 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 18 )
+textures/normal = ExtResource( 21 )
 
-[node name="music_player" parent="." instance=ExtResource( 19 )]
+[node name="music_player" parent="." instance=ExtResource( 22 )]
 
-stream/stream = ExtResource( 20 )
+stream/stream = ExtResource( 23 )
 
-[node name="sfx" parent="." instance=ExtResource( 21 )]
+[node name="sfx" parent="." instance=ExtResource( 24 )]
 
 [connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 

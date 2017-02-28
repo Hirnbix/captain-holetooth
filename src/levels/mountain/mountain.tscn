@@ -250,7 +250,7 @@ scene_path = "res://src/levels/forest/forest.tscn"
 [node name="scene_teleporter 2" parent="world" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 4027.92, 1126.71 )
-scene_path = "res://src/screens/broken_ship/broken_ship.tscn"
+scene_path = "res://src/screens/cutscenes/broken_ship/broken_ship.tscn"
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
