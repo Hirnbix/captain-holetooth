@@ -28,10 +28,11 @@ var current_locale = TranslationServer.get_locale()
 # -- START --
 func _ready():
 	# Update music player volume the initial music volume stored in global
-	music_volume_slider.set_value(global.music.volume * 100)
-
+	music_volume_slider.set_value(global.music.volume * 100) 
+	# Set playtime limit field
+	get_node("options_screen/settings/Parental Controls/playtime_settings/playtime_limit").set_text(str(global.playtime_limit_minutes))
 	# Updates locale on scene
-	update_locale()
+	#update_locale()
 
 
 # -- BUTTON PRESSES --
@@ -69,31 +70,37 @@ func _on_en_button_pressed():
 	get_tree().reload_current_scene()
 
 
-# -- LOCALE / LANGUAGES --
+ #-- LOCALE / LANGUAGES --
 # Updates all locale on Main Menu according to current_locale selected
-func update_locale():
-	# Update Locale Text
-	menu_buttons.get_node("startbutton").set_text(tr("KEY_START"))
-	menu_buttons.get_node("optionsbutton").set_text(tr("KEY_OPTIONS"))
-	options_screen.get_node("settings").set_tab_title(0, tr("KEY_GENERAL_INFO"))
-	options_screen.get_node("settings").set_tab_title(1, tr("KEY_AUDIO"))
-	options_screen.get_node("settings").set_tab_title(2, tr("KEY_DEBUG"))
-	options_screen.get_node("settings").set_tab_title(3, tr("KEY_CREDITS"))
+#func update_locale():
+#	# DISABLED FOR NOW
+#	# Will add more languages when there is more time.
+#			
+#			
+#			
+#			# Update Locale Text
+#		#	menu_buttons.get_node("startbutton").set_text(tr("KEY_START"))
+#		#	menu_buttons.get_node("optionsbutton").set_text(tr("KEY_OPTIONS"))
+#		#	options_screen.get_node("settings").set_tab_title(0, tr("KEY_GENERAL_INFO"))
+#		#	options_screen.get_node("settings").set_tab_title(1, tr("KEY_AUDIO"))
+#		#	options_screen.get_node("settings").set_tab_title(2, tr("KEY_DEBUG"))
+#		#	options_screen.get_node("settings").set_tab_title(3, tr("KEY_CREDITS"))
+#		
+#			# Setup Language buttons
+#			# - German
+#		#	if current_locale == "de_DE":
+#		#		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
+#		#		game_title.set_texture(tex_de)
+#		#
+#		#	# - English
+#		#	if current_locale == "en_GB":
+#		#		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
+#		#		game_title.set_texture(tex_en)
+#
+#
+ #-- MUSIC --
+ #Updates global music volume when slider has been changed
 
-	# Setup Language buttons
-	# - German
-	if current_locale == "de_DE":
-		var tex_de = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
-		game_title.set_texture(tex_de)
-
-	# - English
-	if current_locale == "en_GB":
-		var tex_en = ResourceLoader.load("res://src/screens/menu/scn1_menu_gametitle_EN.png")
-		game_title.set_texture(tex_en)
-
-
-# -- MUSIC --
-# Updates global music volume when slider has been changed
 func _on_music_volume_value_changed( value ):
 	# Set global music volume
 	global.music.volume = value/100
@@ -130,3 +137,9 @@ func _on_jump_castle_pressed():
 func _on_donate_button_pressed():
 	OS.shell_open("https://www.patreon.com/hirnbix")
 	pass # replace with function body
+
+
+func _on_playtime_confirm_pressed():
+	global.playtime_limit_minutes = get_node("options_screen/settings/Parental Controls/playtime_settings/playtime_limit").get_text()
+	global.playtime_limit_seconds = int(global.playtime_limit_minutes) * 60
+	print(global.playtime_limit_seconds)

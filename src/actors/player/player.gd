@@ -9,9 +9,9 @@ var shooting = false
 
 var WALK_ACCEL = 3000.0 # Higher = Better control, Lower = Sluggish
 var WALK_DEACCEL = 800.0
-var WALK_MAX_VELOCITY = 200.0
+var WALK_MAX_VELOCITY = 300.0
 var AIR_ACCEL = 10000.0 # It's over 9000! 
-var AIR_DEACCEL = 1200.0 # Make it higher to give the player better air control, or slower to make the game more "realistic"
+var AIR_DEACCEL = 100.0 # Make it higher to give the player better air control, or slower to make the game more "realistic"
 var JUMP_VELOCITY = 480
 var STOP_JUMP_FORCE = 900.0
 
@@ -239,10 +239,20 @@ func _integrate_forces(s):
 	# Finally, apply gravity and set back the linear velocity
 	linear_vel += s.get_total_gravity()*step
 	s.set_linear_velocity(linear_vel)
+	
 
 
 func _ready():
+	set_process(true)
 	enemy = ResourceLoader.load("res://scenes/scn3-forest/enemy.tscn")
+	# Update play time, has to go into a global function at some point
+func _process(delta):
+	global.time_elapsed += delta
+	print(global.time_elapsed)
+	if global.time_elapsed >= int(global.playtime_limit_seconds):
+		print("Time elpased!")
+		#show(Popup)
+		global.time_elapsed = 0
 
 
 #	if !Globals.has_singleton("Facebook"):

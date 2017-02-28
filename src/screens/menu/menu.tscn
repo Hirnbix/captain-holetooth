@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
@@ -9,20 +9,18 @@
 [ext_resource path="res://src/screens/menu/skull_eye.png" type="Texture" id=7]
 [ext_resource path="res://src/screens/menu/skull_eye.gd" type="Script" id=8]
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/screens/menu/gb.png" type="Texture" id=10]
-[ext_resource path="res://src/screens/menu/de.png" type="Texture" id=11]
-[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=12]
-[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=13]
-[ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=14]
-[ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=15]
-[ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=16]
-[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=17]
-[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=18]
-[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=19]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=20]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=21]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=22]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=13]
+[ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=14]
+[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=16]
+[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=17]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=18]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Animation" id=1]
 
@@ -44,7 +42,22 @@ tracks/2/type = "value"
 tracks/2/path = NodePath("splashscreen_schiff:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( -4, -4 ), "update":0, "values":[ Vector2( 595.2, 190.4 ), Vector2( -108.8, 54.4 ) ] }
+tracks/2/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 595.2, 280.4 ), Vector2( -274, 162 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("splashscreen_schiff:transform/scale")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 1.8 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 1.5, 1.5 ) ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 1.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 15.6, 5.45 ), Vector2( 102.347, 22.0765 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/scale")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -61,13 +74,13 @@ draw_bg = true
 
 [sub_resource type="Theme" id=3]
 
-default_font = ExtResource( 13 )
+default_font = ExtResource( 12 )
 Button/colors/font_color = Color( 0.478431, 0.352941, 0.321569, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 3
-Button/fonts/font = ExtResource( 14 )
+Button/fonts/font = ExtResource( 11 )
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
@@ -80,7 +93,7 @@ TabContainer/constants/label_valign_bg = 2
 TabContainer/constants/label_valign_fg = 0
 TabContainer/constants/side_margin = 8
 TabContainer/constants/top_margin = 19
-TabContainer/fonts/font = ExtResource( 13 )
+TabContainer/fonts/font = ExtResource( 12 )
 TabContainer/icons/decrement = null
 TabContainer/icons/decrement_hilite = null
 TabContainer/icons/increment = null
@@ -129,15 +142,16 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 594.637, 190.291 )
-transform/scale = Vector2( 0.8, 0.8 )
+transform/pos = Vector2( 73.68, 209.36 )
+transform/scale = Vector2( 1.38333, 1.38333 )
 z/z = 3
 texture = ExtResource( 4 )
+__meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
-transform/pos = Vector2( 30, 20 )
-transform/scale = Vector2( 0.7, 0.7 )
+transform/pos = Vector2( 102.347, 22.0765 )
+transform/scale = Vector2( 0.65, 0.65 )
 z/z = 2
 z/relative = false
 texture = ExtResource( 4 )
@@ -192,38 +206,6 @@ transform/scale = Vector2( 1, 1.3446 )
 transform/pos = Vector2( 0.440125, 0 )
 z/z = 2
 
-[node name="en_button" type="TextureButton" parent="menu_buttons"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 330.0
-margin/top = 260.0
-margin/right = 362.0
-margin/bottom = 282.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 10 )
-params/scale = Vector2( 2, 2 )
-
-[node name="de_button" type="TextureButton" parent="menu_buttons"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 370.0
-margin/top = 260.0
-margin/right = 402.0
-margin/bottom = 282.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 11 )
-params/scale = Vector2( 2, 2 )
-
 [node name="startbutton" type="Button" parent="menu_buttons"]
 
 visibility/blend_mode = 2
@@ -232,10 +214,10 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 250.0
-margin/top = 170.0
+margin/top = 177.0
 margin/right = 490.0
-margin/bottom = 210.0
-custom_fonts/font = ExtResource( 12 )
+margin/bottom = 217.0
+custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -250,32 +232,15 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 250.0
-margin/top = 220.0
+margin/top = 227.0
 margin/right = 490.0
-margin/bottom = 250.0
-custom_fonts/font = ExtResource( 12 )
+margin/bottom = 267.0
+custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Options / Info"
 flat = false
-
-[node name="change_locale_label" type="Label" parent="menu_buttons"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 250.0
-margin/top = 260.0
-margin/right = 322.0
-margin/bottom = 287.0
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Pick Language"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="options_screen" type="Area2D" parent="."]
 
@@ -294,16 +259,156 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = SubResource( 3 )
-margin/left = 8.0
+margin/left = 0.0
 margin/top = 16.0
-margin/right = 504.0
-margin/bottom = 280.0
-custom_styles/tab_fg = ExtResource( 15 )
-custom_styles/panel = ExtResource( 16 )
-tab_align = 1
+margin/right = 510.0
+margin/bottom = 290.0
+custom_styles/tab_fg = ExtResource( 13 )
+custom_styles/panel = ExtResource( 14 )
+tab_align = 0
 tabs_visible = true
 
-[node name="General" type="Tabs" parent="options_screen/settings"]
+[node name="Instructions" type="Tabs" parent="options_screen/settings"]
+
+editor/display_folded = true
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
+
+[node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/Instructions"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 14.0
+margin/right = 16.0
+margin/bottom = 32.0
+custom_fonts/normal_font = ExtResource( 12 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
+visible_characters = -1
+
+[node name="Debug" type="Tabs" parent="options_screen/settings"]
+
+editor/display_folded = true
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 12.0
+margin/top = 23.0
+margin/right = 12.0
+margin/bottom = 1.0
+custom_styles/tab_fg = ExtResource( 13 )
+custom_fonts/font = ExtResource( 15 )
+
+[node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 16 )
+margin/left = 4.0
+margin/top = 10.0
+margin/right = 246.0
+margin/bottom = 42.0
+custom_fonts/font = ExtResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Forest Level"
+flat = false
+
+[node name="jump_scn4" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 16 )
+margin/left = 4.0
+margin/top = 50.0
+margin/right = 246.0
+margin/bottom = 82.0
+custom_fonts/font = ExtResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Mountain Level"
+flat = false
+
+[node name="jump_scn5" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 16 )
+margin/left = 4.0
+margin/top = 91.0
+margin/right = 246.0
+margin/bottom = 123.0
+custom_fonts/font = ExtResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Fly home Level"
+flat = false
+
+[node name="jump_castle" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 16 )
+margin/left = 4.0
+margin/top = 130.0
+margin/right = 246.0
+margin/bottom = 162.0
+custom_fonts/font = ExtResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Castle Level"
+flat = false
+
+[node name="jump_minigame" type="Button" parent="options_screen/settings/Debug"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 16 )
+margin/left = 4.0
+margin/top = 178.0
+margin/right = 246.0
+margin/bottom = 218.0
+custom_fonts/font = ExtResource( 12 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Play \"Yan Kandy\" Minigame"
+flat = false
+
+[node name="Parental Controls" type="Tabs" parent="options_screen/settings"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -316,7 +421,7 @@ margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
 
-[node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/General"]
+[node name="instruction_text" type="RichTextLabel" parent="options_screen/settings/Parental Controls"]
 
 anchor/right = 1
 anchor/bottom = 1
@@ -328,11 +433,69 @@ margin/left = 16.0
 margin/top = 14.0
 margin/right = 16.0
 margin/bottom = 32.0
-custom_fonts/normal_font = ExtResource( 13 )
+custom_fonts/normal_font = ExtResource( 12 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
+bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to http://www.hirnbix.com/parentalcontrols"
 visible_characters = -1
+
+[node name="playtime_settings" type="VBoxContainer" parent="options_screen/settings/Parental Controls"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 10.0
+margin/top = 77.0
+margin/right = 466.0
+margin/bottom = 226.0
+alignment = 0
+
+[node name="playtime_limit" type="LineEdit" parent="options_screen/settings/Parental Controls/playtime_settings"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 456.0
+margin/bottom = 29.0
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="playtime_limit_label" type="Label" parent="options_screen/settings/Parental Controls/playtime_settings"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = -14.0
+margin/right = 456.0
+margin/bottom = -2.0
+text = "Adjust the duration of gameplay (in minutes)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="playtime_confirm" type="Button" parent="options_screen/settings/Parental Controls/playtime_settings"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -1.0
+margin/top = 36.0
+margin/right = 457.0
+margin/bottom = 55.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Confirm"
+flat = false
 
 [node name="Audio" type="Tabs" parent="options_screen/settings"]
 
@@ -370,7 +533,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 472.0
+margin/right = 566.0
 margin/bottom = 16.0
 custom_constants/separation = 20
 alignment = 0
@@ -420,7 +583,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 20.0
-margin/right = 472.0
+margin/right = 566.0
 margin/bottom = 36.0
 custom_constants/separation = 20
 alignment = 0
@@ -462,114 +625,9 @@ tick_count = 0
 ticks_on_borders = false
 focus_mode = 2
 
-[node name="Debug" type="Tabs" parent="options_screen/settings"]
-
-visibility/visible = false
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 12.0
-margin/top = 23.0
-margin/right = 12.0
-margin/bottom = 1.0
-custom_styles/tab_fg = ExtResource( 15 )
-custom_fonts/font = ExtResource( 17 )
-
-[node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 18 )
-margin/left = 4.0
-margin/top = 10.0
-margin/right = 246.0
-margin/bottom = 42.0
-custom_fonts/font = ExtResource( 13 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Forest Level"
-flat = false
-
-[node name="jump_scn4" type="Button" parent="options_screen/settings/Debug"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 18 )
-margin/left = 4.0
-margin/top = 50.0
-margin/right = 246.0
-margin/bottom = 82.0
-custom_fonts/font = ExtResource( 13 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Mountain Level"
-flat = false
-
-[node name="jump_scn5" type="Button" parent="options_screen/settings/Debug"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 18 )
-margin/left = 4.0
-margin/top = 91.0
-margin/right = 246.0
-margin/bottom = 123.0
-custom_fonts/font = ExtResource( 13 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Fly home Level"
-flat = false
-
-[node name="jump_castle" type="Button" parent="options_screen/settings/Debug"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 18 )
-margin/left = 4.0
-margin/top = 130.0
-margin/right = 246.0
-margin/bottom = 162.0
-custom_fonts/font = ExtResource( 13 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Castle Level"
-flat = false
-
-[node name="jump_minigame" type="Button" parent="options_screen/settings/Debug"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 18 )
-margin/left = 4.0
-margin/top = 178.0
-margin/right = 246.0
-margin/bottom = 218.0
-custom_fonts/font = ExtResource( 13 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Play \"Yan Kandy\" Minigame"
-flat = false
-
 [node name="Credits" type="Tabs" parent="options_screen/settings"]
 
+editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -581,7 +639,7 @@ margin/left = 12.0
 margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 15 )
 
 [node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
@@ -595,7 +653,7 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 13 )
+custom_fonts/normal_font = ExtResource( 12 )
 custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\tIvan Skodje\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
@@ -614,7 +672,7 @@ margin/bottom = 287.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 19 )
+textures/normal = ExtResource( 17 )
 params/scale = Vector2( 0.6, 0.6 )
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
@@ -650,23 +708,17 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 20 )
+textures/normal = ExtResource( 18 )
 
-[node name="music_player" parent="." instance=ExtResource( 21 )]
+[node name="music_player" parent="." instance=ExtResource( 19 )]
 
-stream/stream = ExtResource( 22 )
+stream/stream = ExtResource( 20 )
 
-[node name="sfx" parent="." instance=ExtResource( 23 )]
-
-[connection signal="pressed" from="menu_buttons/en_button" to="." method="_on_en_button_pressed"]
-
-[connection signal="pressed" from="menu_buttons/de_button" to="." method="_on_de_button_pressed"]
+[node name="sfx" parent="." instance=ExtResource( 21 )]
 
 [connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 
 [connection signal="pressed" from="menu_buttons/optionsbutton" to="." method="_on_optionsbutton_pressed"]
-
-[connection signal="value_changed" from="options_screen/settings/Audio/vbox/hbox/volume_slide" to="." method="_on_music_volume_value_changed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_scn3" to="." method="_on_jump_scn3_pressed"]
 
@@ -677,6 +729,10 @@ stream/stream = ExtResource( 22 )
 [connection signal="pressed" from="options_screen/settings/Debug/jump_castle" to="." method="_on_jump_castle_pressed"]
 
 [connection signal="pressed" from="options_screen/settings/Debug/jump_minigame" to="." method="_on_jump_minigame_pressed"]
+
+[connection signal="pressed" from="options_screen/settings/Parental Controls/playtime_settings/playtime_confirm" to="." method="_on_playtime_confirm_pressed"]
+
+[connection signal="value_changed" from="options_screen/settings/Audio/vbox/hbox/volume_slide" to="." method="_on_music_volume_value_changed"]
 
 [connection signal="pressed" from="options_screen/settings/Credits/donate_button" to="." method="_on_donate_button_pressed"]
 

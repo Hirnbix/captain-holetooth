@@ -13,6 +13,11 @@ var music = {
 	enabled = true,
 }
 
+var time_elapsed = 0
+
+var playtime_limit_minutes = 15
+var playtime_limit_seconds = playtime_limit_minutes * 60
+
 # Statistics
 var times_jumped = 0
 
