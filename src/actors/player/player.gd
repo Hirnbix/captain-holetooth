@@ -7,13 +7,13 @@ var siding_left = false
 var jumping = false
 var shooting = false
 
-var WALK_ACCEL = 3000.0 # Higher = Better control, Lower = Sluggish
-var WALK_DEACCEL = 800.0
+var WALK_ACCEL = 2000.0 # Higher = Better control, Lower = Sluggish
+var WALK_DEACCEL = 2000.0
 var WALK_MAX_VELOCITY = 300.0
-var AIR_ACCEL = 10000.0 # It's over 9000! 
-var AIR_DEACCEL = 100.0 # Make it higher to give the player better air control, or slower to make the game more "realistic"
-var JUMP_VELOCITY = 480
-var STOP_JUMP_FORCE = 900.0
+var AIR_ACCEL = 300.0 # It's over 9000! 
+var AIR_DEACCEL = 2900.0 # Make it higher to give the player better air control, or slower to make the game more "realistic"
+var JUMP_VELOCITY = 438
+var STOP_JUMP_FORCE = 2000.0
 
 var MAX_FLOOR_AIRBORNE_TIME = 0.15
 

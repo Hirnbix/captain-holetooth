@@ -274,7 +274,6 @@ tabs_visible = true
 [node name="Instructions" type="Tabs" parent="options_screen/settings"]
 
 editor/display_folded = true
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -413,6 +412,7 @@ flat = false
 
 [node name="Parental Controls" type="Tabs" parent="options_screen/settings"]
 
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -438,8 +438,8 @@ margin/right = 16.0
 margin/bottom = 32.0
 custom_fonts/normal_font = ExtResource( 12 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to http://www.hirnbix.com/parentalcontrols"
+bbcode/enabled = true
+bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to [url=<url>]http://www.hirnbix.com/parentalcontrols[/url]"
 visible_characters = -1
 
 [node name="playtime_settings" type="HBoxContainer" parent="options_screen/settings/Parental Controls"]

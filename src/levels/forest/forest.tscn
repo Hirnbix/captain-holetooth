@@ -869,6 +869,11 @@ motion = "zigzag"
 transform/pos = Vector2( 417.249, 1026.61 )
 movement_speed = -40
 
+[node name="soap_bubble20" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 927.249, 926.61 )
+movement_speed = -40
+
 [node name="soap_bubble6" parent="world/interactables/rewards" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 3812, 1172 )
@@ -1037,7 +1042,7 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
-transform/pos = Vector2( 5020, 3265.94 )
+transform/pos = Vector2( 120, 1085.94 )
 transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="hud" parent="." instance=ExtResource( 21 )]
