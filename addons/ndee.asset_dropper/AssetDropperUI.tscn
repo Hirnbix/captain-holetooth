@@ -1,0 +1,440 @@
+[gd_scene format=1]
+
+[node name="AssetPlacerUI" type="WindowDialog"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 519.0
+margin/bottom = 337.0
+popup/exclusive = false
+window/title = "Asset Dropper Settings"
+
+[node name="set_target_node" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 206.0
+margin/top = 298.0
+margin/right = 365.0
+margin/bottom = 326.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Set Target Node (T Key)"
+flat = false
+
+[node name="clear_target_node" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 379.0
+margin/top = 298.0
+margin/right = 504.0
+margin/bottom = 326.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Clear Target Node"
+flat = false
+
+[node name="grid_size" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 63.0
+margin/right = 40.0
+margin/bottom = 103.0
+
+[node name="check_button" type="CheckButton" parent="grid_size"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 14.0
+margin/right = 78.0
+margin/bottom = 38.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="grid" type="SpinBox" parent="grid_size"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 158.0
+margin/top = 14.0
+margin/right = 232.0
+margin/bottom = 38.0
+range/min = 0.0
+range/max = 5008.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+editable = false
+prefix = ""
+suffix = ""
+
+[node name="Label" type="Label" parent="grid_size/grid"]
+
+visibility/opacity = 0.5
+anchor/left = 1
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 150.0
+margin/top = 6.0
+margin/right = 78.0
+margin/bottom = -8.0
+text = "Grid Size"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="drop_mode" type="Control" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="grid_angle" type="Control" parent="drop_mode"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 110.0
+margin/right = 40.0
+margin/bottom = 150.0
+
+[node name="check_button" type="CheckButton" parent="drop_mode/grid_angle"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 14.0
+margin/right = 78.0
+margin/bottom = 38.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="grid" type="SpinBox" parent="drop_mode/grid_angle"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 158.0
+margin/top = 14.0
+margin/right = 232.0
+margin/bottom = 38.0
+range/min = 0.0
+range/max = 360.0
+range/step = 1.0
+range/page = 0.0
+range/value = 15.0
+range/exp_edit = false
+range/rounded = false
+editable = false
+prefix = ""
+suffix = ""
+
+[node name="Label" type="Label" parent="drop_mode/grid_angle/grid"]
+
+visibility/opacity = 0.5
+anchor/left = 1
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 150.0
+margin/top = 6.0
+margin/right = 78.0
+margin/bottom = -8.0
+text = "Snap Angle"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="grid_scale" type="Control" parent="drop_mode"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 156.0
+margin/right = 40.0
+margin/bottom = 196.0
+
+[node name="check_button" type="CheckButton" parent="drop_mode/grid_scale"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 14.0
+margin/right = 78.0
+margin/bottom = 38.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+
+[node name="grid" type="SpinBox" parent="drop_mode/grid_scale"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 158.0
+margin/top = 14.0
+margin/right = 232.0
+margin/bottom = 38.0
+range/min = 0.0
+range/max = 100.0
+range/step = 0.1
+range/page = 0.0
+range/value = 0.1
+range/exp_edit = false
+range/rounded = false
+editable = false
+prefix = ""
+suffix = ""
+
+[node name="Label" type="Label" parent="drop_mode/grid_scale/grid"]
+
+visibility/opacity = 0.5
+anchor/left = 1
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 150.0
+margin/top = 6.0
+margin/right = 78.0
+margin/bottom = -8.0
+text = "Snap Scale"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="use_scale" type="CheckBox" parent="drop_mode"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 215.0
+margin/right = 142.0
+margin/bottom = 238.0
+toggle_mode = true
+is_pressed = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Enable Scaling"
+flat = false
+align = 0
+
+[node name="use_rotation" type="CheckBox" parent="drop_mode"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 244.0
+margin/right = 151.0
+margin/bottom = 267.0
+toggle_mode = true
+is_pressed = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Enable Rotation"
+flat = false
+align = 0
+
+[node name="draw_mode" type="Control" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+
+[node name="align_asset_to_stroke" type="CheckBox" parent="draw_mode"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 123.0
+margin/right = 234.0
+margin/bottom = 146.0
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Align Node to Stroke Direction"
+flat = false
+align = 0
+
+[node name="stroke_distance" type="SpinBox" parent="draw_mode"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 131.0
+margin/top = 158.0
+margin/right = 227.0
+margin/bottom = 182.0
+range/min = 0.0
+range/max = 1006.0
+range/step = 1.0
+range/page = 0.0
+range/value = 100.0
+range/exp_edit = false
+range/rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="Label" type="Label" parent="draw_mode/stroke_distance"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -116.0
+margin/top = 6.0
+margin/right = -16.0
+margin/bottom = 20.0
+text = "Stroke Distance"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="asset_index_mode" type="OptionButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 381.0
+margin/top = 28.0
+margin/right = 504.0
+margin/bottom = 48.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Random"
+flat = false
+align = 0
+selected = 0
+items = [ "Random", null, false, -1, null, "Cyclic", null, false, -1, null, "Manual", null, false, -1, null ]
+
+[node name="Label" type="Label" parent="asset_index_mode"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -114.0
+margin/top = 4.0
+margin/right = -4.0
+margin/bottom = 18.0
+text = "Asset Pick Mode:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="asset_draw_mode" type="OptionButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 98.0
+margin/top = 28.0
+margin/right = 238.0
+margin/bottom = 48.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Drop"
+flat = false
+align = 0
+selected = 0
+items = [ "Drop", null, false, -1, null, "Draw", null, false, -1, null ]
+
+[node name="Label1" type="Label" parent="asset_draw_mode"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -80.0
+margin/top = 5.0
+margin/right = -4.0
+margin/bottom = 19.0
+text = "Draw Mode:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
