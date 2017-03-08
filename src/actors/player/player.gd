@@ -248,9 +248,9 @@ func _ready():
 	# Update play time, has to go into a global function at some point
 func _process(delta):
 	global.time_elapsed += delta
-	print(global.time_elapsed)
+	#print(global.time_elapsed)
 	if global.time_elapsed >= int(global.playtime_limit_seconds):
-		print("Time elpased!")
+		#print("Time elpased!")
 		#show(Popup)
 		global.time_elapsed = 0
 

@@ -39,6 +39,7 @@ z/relative = false
 
 [node name="tile_map" type="TileMap" parent="world"]
 
+editor/display_folded = true
 transform/pos = Vector2( 1, 0 )
 z/z = -1
 mode = 0
@@ -110,6 +111,7 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 
 [node name="cave_background" parent="world/tile_map" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
 
 [node name="tex_cave" parent="world/tile_map/cave_background"]
@@ -161,6 +163,8 @@ transform/pos = Vector2( 2538.31, 1731.69 )
 transform/pos = Vector2( 2538.31, 1731.69 )
 
 [node name="props" type="Node" parent="world/tile_map"]
+
+editor/display_folded = true
 
 [node name="moving_platform" parent="world/tile_map/props" instance=ExtResource( 9 )]
 
@@ -1042,7 +1046,7 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
-transform/pos = Vector2( 120, 1085.94 )
+transform/pos = Vector2( 4080, 2255.94 )
 transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="hud" parent="." instance=ExtResource( 21 )]

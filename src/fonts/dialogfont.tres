@@ -1,0 +1,6 @@
+[gd_resource type="DynamicFontData" format=1]
+
+[resource]
+
+font_path = "res://src/fonts/C64Font.ttf"
+
