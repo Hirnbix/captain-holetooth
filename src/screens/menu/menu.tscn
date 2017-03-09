@@ -35,7 +35,7 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("gametitle:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.2, 0.4 ), "transitions":FloatArray( 1, 1, 0.25 ), "update":0, "values":[ Vector2( 355, -89 ), Vector2( 355, 95 ), Vector2( 355, 87 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.4, 0.5 ), "transitions":FloatArray( 4, 0.25, 0.25 ), "update":0, "values":[ Vector2( 359, -90 ), Vector2( 359, 100 ), Vector2( 359, 100 ) ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("keyvisual_lochzahn:transform/scale")
 tracks/1/interp = 1
@@ -128,8 +128,17 @@ music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/vol
 
 [node name="gametitle" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 355, 87 )
+transform/pos = Vector2( 359, 100 )
+z/z = 1
 texture = ExtResource( 2 )
+region_rect = Rect2( 8, 1, 264, 152 )
+
+[node name="gametitle1" type="Sprite" parent="art/gametitle"]
+
+transform/pos = Vector2( 0, 3 )
+z/z = -1
+texture = ExtResource( 2 )
+modulate = Color( 0, 0, 0, 0.371608 )
 region_rect = Rect2( 8, 1, 264, 152 )
 
 [node name="bg" type="Node2D" parent="art"]
@@ -145,16 +154,16 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 73.68, 209.36 )
-transform/scale = Vector2( 1.38333, 1.38333 )
+transform/pos = Vector2( 212.946, 228.33 )
+transform/scale = Vector2( 1.22756, 1.22756 )
 z/z = 3
 texture = ExtResource( 4 )
 __meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
-transform/pos = Vector2( 102.347, 22.0765 )
-transform/scale = Vector2( 0.65, 0.65 )
+transform/pos = Vector2( 79.1821, 17.6366 )
+transform/scale = Vector2( 0.690056, 0.690056 )
 z/z = 2
 z/relative = false
 texture = ExtResource( 4 )
@@ -204,10 +213,22 @@ script/script = ExtResource( 8 )
 transform/pos = Vector2( -180.023, -41.2257 )
 transform/scale = Vector2( 1, 1.3446 )
 
-[node name="menu_buttons" type="Node2D" parent="."]
+[node name="menu_buttons" type="VBoxContainer" parent="."]
 
-transform/pos = Vector2( 0.440125, 0 )
-z/z = 2
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 1
+size_flags/vertical = 1
+size_flags/stretch_ratio = 2.0
+margin/left = -250.0
+margin/top = -170.0
+margin/right = -480.0
+margin/bottom = -260.0
+alignment = 1
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
 
@@ -216,10 +237,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 250.0
-margin/top = 177.0
-margin/right = 490.0
-margin/bottom = 217.0
+margin/left = 0.0
+margin/top = 21.0
+margin/right = 230.0
+margin/bottom = 43.0
 custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -234,10 +255,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 250.0
-margin/top = 227.0
-margin/right = 490.0
-margin/bottom = 267.0
+margin/left = 0.0
+margin/top = 47.0
+margin/right = 230.0
+margin/bottom = 69.0
 custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
