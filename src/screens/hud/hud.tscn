@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://src/screens/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud_bg.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://src/screens/hud/sound_off.png" type="Texture" id=6]
 [ext_resource path="res://src/screens/hud/sound_on.png" type="Texture" id=7]
+[ext_resource path="res://src/actors/yan/yan_unlock_animation.tres" type="Animation" id=8]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -176,6 +177,17 @@ enabled_focus_mode = 0
 shortcut = null
 textures/normal = ExtResource( 6 )
 textures/pressed = ExtResource( 7 )
+
+[node name="animations" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/yan_unlock = ExtResource( 8 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]
 

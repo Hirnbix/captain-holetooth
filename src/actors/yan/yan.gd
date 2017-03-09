@@ -4,30 +4,32 @@ extends Area2D
 # member variables here, example:
 # var a=2
 # var b="textvar"
-
-var dialog_yan = [
-["Person A", "Hello/d050.../d005/bworld!"],
-["Person B", "This is some sort of /wdialogue/r!"],
-"I think I can get it to draw a /slimited/r amount of characters if I wanted to.",
-"/d050.../d005/wI think I will get to it/d100 /d002some other time.",
-["Person A", "Okay, that is all."] ]
+onready var animations = find_node("animations")
+onready var talkbox = get_node("yan_talkbox")
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	get_node("yan_talkbox").hide()
-	pass
+	set_process_input(true)
+	
+func _input(e):
+	if e.is_action_pressed("shoot"):
+		print("Enter pressed")
+		talkbox.next_line()
 
 func _on_Yan_body_enter( body ):
 	if body.get_name() == "player":
 		print("ENTER Yans dialogue")
-		get_node("yan_talkbox").show()
-		dialog.run_dialog(dialog_yan)
-		print(dialog_yan)
-		pass # replace with function body
+		#get_node("yan_talkbox").show()
+		talkbox.show()
+		print(global.characters_met)
+		talkbox.run_dialog(talkbox.dialog_yan)
+		#print(dialog_yan)
 
 func _on_Yan_body_exit( body ):
 	if body.get_name() == "player":
 		print("EXIT Yans dialogue")
-		get_node("yan_talkbox").hide()
-		pass # replace with function body
+		talkbox.hide()
+	if global.characters_met.has("Yan"):
+		print("Yan already met")
+	else:
+		global.characters_met.append("Yan")
+		

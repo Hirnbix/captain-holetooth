@@ -27,14 +27,15 @@ extends Patch9Frame # If you're using a different node than this, replace the na
 # FIXME: Proper spacing for differing font sizes
 # FIXME: Make the name tag not get affected by the font size.
 
-var temp_diag = [
-["Person A", "Hello/d050.../d005/bworld!"],
-["Person B", "This is some sort of /wdialogue/r!"],
-"I think I can get it to draw a /slimited/r amount of characters if I wanted to.",
-"/d050.../d005/wI think I will get to it/d100 /d002some other time.",
-["Person A", "Okay, that is all."] ]
+var dialog_yan = [
+"Oh Captain! I didn't expect /d020.../d005/byou /rdown here.",
+"Yes. Well... I'm surprised too. I'm looking for my ship.",
+"I heard a rumbling noise near the mountains.",
+"Go /s< left /rhere it's a shortcut to the mountains.",
+"I'll be on my way, see you later!",
+"Yes, good luck."]
 
-const DEFAULT_FONT_SIZE = 16
+const DEFAULT_FONT_SIZE = 12
 const DEFAULT_DELAY     = 0.05
 const TEXT_DELAY        = 1
 const TEXT_SHAKE        = 2
@@ -56,7 +57,7 @@ var char_pos       = 0 # The amount of characters to process for the _draw funct
 var text_offset    = Vector2(12,12) # Spacing for the text draw.
 var char_amt       = 0 # Amount of characters allowed in a line.
 var line_amt       = 0 # Amount of lines allowed in the box.
-var cutoff         = 48 # Maximum amount of allowed characters before breaking the text.
+var cutoff         = 0 # Maximum amount of allowed characters before breaking the text.
 var delay          = DEFAULT_DELAY # Amount of time before adding to char_pos.
 var time           = 0.0 # General time counter.
 var counter        = 0.0 # Delay counter.
@@ -75,10 +76,10 @@ signal dialog_end
 
 func _ready():
 	# TODO: Figure out a better way to manage character spacing.
-	char_amt = int(floor((get_rect().size.x - text_offset.x) / 8))
-	line_amt = int(floor((get_rect().size.y - text_offset.y) / 9))
+	char_amt = 255
+	line_amt = 5
 	print(char_amt, " ", line_amt)
-	print(temp_diag)
+	#print(dialog_yan)
 	set_fixed_process(true)
 	
 	# Temporary junk
@@ -180,7 +181,7 @@ func next_line():
 		
 		if progress < input_dialog.size():
 			var item = input_dialog[progress] # get new variable from array
-			char_pos = 0 # reset character position
+			char_pos = 2 # reset character position
 			mods.clear()
 			
 			if typeof(item) == TYPE_ARRAY: 
