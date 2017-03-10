@@ -289,7 +289,6 @@ stream/stream = ExtResource( 3 )
 
 [node name="pins" type="Area2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 327.45, 178.678 )
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -1161,10 +1160,6 @@ __meta__ = { "_edit_lock_":true }
 editor/display_folded = true
 transform/pos = Vector2( 51.6378, -34.5576 )
 z/z = 0
-
-[node name="Sprite" parent="Yan"]
-
-frame = 3
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
