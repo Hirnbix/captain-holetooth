@@ -30,7 +30,7 @@ tracks/2/keys = { "times":FloatArray( 0, 1, 2, 3 ), "transitions":FloatArray( 1,
 [sub_resource type="Animation" id=2]
 
 resource/name = "taken"
-length = 4.0
+length = 15.0
 loop = false
 step = 0.0
 tracks/0/type = "value"
@@ -75,10 +75,11 @@ script/script = ExtResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0.559145, -2.47515 )
+transform/pos = Vector2( 0.559145, -3.34028 )
 texture = ExtResource( 2 )
 offset = Vector2( 0.586603, 1.38475 )
 hframes = 4
+frame = 1
 
 [node name="anim" type="AnimationPlayer" parent="."]
 

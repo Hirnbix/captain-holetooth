@@ -184,6 +184,7 @@ invert/border = 100.0
 
 transform/pos = Vector2( 247, -68 )
 transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 0.5, 0, 0, 0.5, 0, 0 )
@@ -251,7 +252,7 @@ enabled = true
 editor_only = false
 texture = ExtResource( 6 )
 offset = Vector2( 0, 0 )
-scale = 1.8
+scale = 1.5
 color = Color( 1, 1, 1, 1 )
 energy = 0.5
 mode = 0
@@ -271,7 +272,7 @@ shadow/item_mask = 1
 
 transform/pos = Vector2( 243, -116 )
 transform/scale = Vector2( 0.5, 0.5 )
-z/z = 1
+z/z = 2
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
@@ -376,10 +377,6 @@ max_lines_visible = -1
 visibility/visible = false
 
 [node name="sfx" parent="." instance=ExtResource( 14 )]
-
-[connection signal="pressed" from="hud/go_to_menu" to="hud" method="_on_go_to_menu_pressed"]
-
-[connection signal="pressed" from="hud/sound_off" to="hud" method="_on_sound_off_pressed"]
 
 
 [editable path="hud"]

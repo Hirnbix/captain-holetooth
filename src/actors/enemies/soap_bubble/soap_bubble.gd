@@ -1,7 +1,7 @@
 extends "res://src/actors/player/ship/flying_npc.gd"
 
 onready var REWARD = preload("res://src/objects/rewards/reward.tscn")
-
+onready var animation = get_node("anim_player")
 # PLAYER
 # On Collision with another Body
 func _on_soap_bubble_body_enter( body ):
@@ -10,6 +10,8 @@ func _on_soap_bubble_body_enter( body ):
 	
 	# If soap got hit by a player.tscn
 	if(groups.has("player")):
+		animation.play("soap_pop")
+		print("popped")
 		.destroy(body)
 	
 	# If the soap got hit by a player bullet.tscn
