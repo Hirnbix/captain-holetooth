@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=1]
+
+[node name="reward_group_2x4" type="Area2D"]
+
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = { "_edit_group_":true }
+
+[node name="reward1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 0, 0 )
+
+[node name="reward2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 40, 0 )
+
+[node name="reward3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 0, 40 )
+
+[node name="reward4" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 40, 40 )
+
+
