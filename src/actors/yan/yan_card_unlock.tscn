@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://src/actors/yan/yan_card_80x80.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/yan/yan_card_unlock.gd" type="Script" id=2]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -14,15 +15,10 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 2, 3.4, 5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ] }
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect/scale")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 2, 3.4, 5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.3, 0.3 ) ] }
 
 [node name="yan_card_unlock" type="TextureFrame"]
 
-rect/scale = Vector2( 0.5, 0.5 )
+rect/scale = Vector2( 0.3, 0.3 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -47,5 +43,7 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="sfx" parent="." instance=ExtResource( 3 )]
 
 
