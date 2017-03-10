@@ -1,29 +1,30 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.gd" type="Script" id=1]
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble_01.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble_02.png" type="Texture" id=3]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble_pop.png" type="Texture" id=4]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=5]
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -11.1923, -10.3166, 11.8594, -9.92922, 10.116, 9.44193, -11.5797, 10.0231 )
 
 [sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":10.0 } ]
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":10.0 }, { "frames":[ ExtResource( 4 ) ], "loop":true, "name":"popped", "speed":5.0 } ]
 
 [sub_resource type="Animation" id=3]
 
-length = 1.3
+length = 0.2
 loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:visibility/visible")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:monitoring")
 tracks/1/interp = 1
@@ -34,6 +35,11 @@ tracks/2/path = NodePath(".:monitorable")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:animation")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0.1 ), "transitions":FloatArray( 1 ), "update":1, "values":[ "popped" ] }
 
 [sub_resource type="Animation" id=4]
 
@@ -49,7 +55,7 @@ tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( -1.86607
 [node name="soap_bubble" type="Area2D"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 5 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.193703, -0.19371 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -102,7 +108,7 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="sfx" parent="." instance=ExtResource( 4 )]
+[node name="sfx" parent="." instance=ExtResource( 5 )]
 
 [connection signal="area_enter" from="." to="." method="_on_soap_bubble_area_enter"]
 

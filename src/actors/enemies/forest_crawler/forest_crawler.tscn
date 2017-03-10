@@ -134,7 +134,6 @@ trigger = false
 
 transform/pos = Vector2( -33.2868, -9.34363 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 45 )
 layer_mask = 1
 type_mask = 15
@@ -143,7 +142,6 @@ type_mask = 15
 
 transform/pos = Vector2( 29.1987, -9.34363 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 45 )
 layer_mask = 1
 type_mask = 15
