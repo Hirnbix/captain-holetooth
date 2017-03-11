@@ -2,14 +2,14 @@
 
 [ext_resource path="res://src/screens/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://src/actors/yan/yan_card_80x80.png" type="Texture" id=2]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/screens/hud/hud_bg.png" type="Texture" id=4]
-[ext_resource path="res://src/fonts/tiny_8.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://src/fonts/counter_interface_8.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://src/screens/hud/sound_off.png" type="Texture" id=8]
-[ext_resource path="res://src/screens/hud/sound_on.png" type="Texture" id=9]
-[ext_resource path="res://src/actors/yan/yan_unlock_animation.tres" type="Animation" id=10]
+[ext_resource path="res://src/screens/hud/hud_bg.png" type="Texture" id=3]
+[ext_resource path="res://src/fonts/tiny_8.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://src/fonts/counter_interface_8.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://src/screens/hud/sound_off.png" type="Texture" id=7]
+[ext_resource path="res://src/screens/hud/sound_on.png" type="Texture" id=8]
+[ext_resource path="res://src/actors/yan/yan_unlock_animation.tres" type="Animation" id=9]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=10]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -38,8 +38,6 @@ modulate = Color( 1, 1, 1, 0 )
 expand = true
 stretch_mode = 0
 
-[node name="sfx" parent="yan_card_unlock" instance=ExtResource( 3 )]
-
 [node name="hudframe" type="TextureFrame" parent="."]
 
 focus/ignore_mouse = true
@@ -50,7 +48,7 @@ margin/left = 174.0
 margin/top = 6.0
 margin/right = 504.0
 margin/bottom = 23.0
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 0
 __meta__ = { "_edit_group_":true }
@@ -66,7 +64,7 @@ margin/left = 6.0
 margin/top = 6.0
 margin/right = 91.0
 margin/bottom = 26.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )
 text = "Items collected"
@@ -84,7 +82,7 @@ margin/left = 82.0
 margin/top = -8.0
 margin/right = 124.0
 margin/bottom = 14.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.214844, 0.161461, 0.0990295, 1 )
 text = "0"
 align = 1
@@ -104,7 +102,7 @@ margin/left = 137.0
 margin/top = 6.0
 margin/right = 177.0
 margin/bottom = 19.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "SCORE"
 percent_visible = 1.0
 lines_skipped = 0
@@ -120,7 +118,7 @@ margin/left = 31.0
 margin/top = -7.0
 margin/right = 73.0
 margin/bottom = 13.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
@@ -140,7 +138,7 @@ margin/left = 229.0
 margin/top = 6.0
 margin/right = 280.0
 margin/bottom = 12.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "Highscore"
 percent_visible = 1.0
 lines_skipped = 0
@@ -156,7 +154,7 @@ margin/left = 53.0
 margin/top = -3.0
 margin/right = 64.0
 margin/bottom = 10.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.546875, 0.194397, 0.268748, 1 )
 text = "0"
 percent_visible = 1.0
@@ -173,7 +171,7 @@ margin/left = 5.0
 margin/top = 6.0
 margin/right = 76.0
 margin/bottom = 24.0
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -194,19 +192,21 @@ margin/bottom = 26.0
 toggle_mode = true
 enabled_focus_mode = 0
 shortcut = null
-textures/normal = ExtResource( 8 )
-textures/pressed = ExtResource( 9 )
+textures/normal = ExtResource( 7 )
+textures/pressed = ExtResource( 8 )
 
 [node name="animations" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/yan_unlock_anim = ExtResource( 10 )
+anims/yan_unlock_anim = ExtResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="sfx" parent="." instance=ExtResource( 10 )]
 
 [connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]
 

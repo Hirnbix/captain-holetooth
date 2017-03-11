@@ -6,13 +6,13 @@ export (NodePath) var highscore_text #= get_node("hudframe/highscore_label/highs
 export (NodePath) var sound_off_button #= get_node("hudframe/sound_off")
 
 onready var animations = get_node("animations")
+onready var yan = get_parent().find_node("Yan")
 
 func _on_met_yan():
 #	get_node("sfx").play("card_unlock")
 	animations.play("yan_unlock_anim")
 
 func _ready():
-	var yan = get_parent().find_node("Yan")
 	if yan:
 		print("Yan is present")
 		yan.connect("met_yan", self,"_on_met_yan")
