@@ -8,7 +8,7 @@ export (NodePath) var sound_off_button #= get_node("hudframe/sound_off")
 onready var animations = get_node("animations")
 
 func _on_met_yan():
-	get_node("sfx").play("card_unlock")
+#	get_node("sfx").play("card_unlock")
 	animations.play("yan_unlock_anim")
 
 func _ready():
