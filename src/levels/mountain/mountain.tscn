@@ -36,6 +36,7 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="world"]
 
+editor/display_folded = true
 transform/pos = Vector2( 320, 269.814 )
 mode = 0
 tile_set = ExtResource( 3 )
@@ -111,6 +112,7 @@ transform/pos = Vector2( 1205.87, -95.223 )
 
 [node name="cave_background" parent="world/tile_map" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 1052, 592.186 )
 
 [node name="tex_cave" parent="world/tile_map/cave_background"]
@@ -149,6 +151,8 @@ transform/rot = 5.81798
 transform/pos = Vector2( 1332, 11 )
 
 [node name="fireflies" type="Node2D" parent="world/tile_map"]
+
+editor/display_folded = true
 
 [node name="fireflies" parent="world/tile_map/fireflies" instance=ExtResource( 10 )]
 
