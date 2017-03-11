@@ -13,7 +13,6 @@ func _on_met_yan():
 
 func _ready():
 	var yan = get_parent().find_node("Yan")
-	print (yan.get_name())
 	if yan:
 		print("Yan is present")
 		yan.connect("met_yan", self,"_on_met_yan")
