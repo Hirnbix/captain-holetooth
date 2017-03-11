@@ -5,11 +5,30 @@ export (NodePath) var score_text #final_score_text = get_node("hudframe/finalsco
 export (NodePath) var highscore_text #= get_node("hudframe/highscore_label/highscore_display")
 export (NodePath) var sound_off_button #= get_node("hudframe/sound_off")
 
+onready var animations = get_node("animations")
+onready var yan = get_parent().find_node("Yan")
+onready var whatsmyparent = get_parent().get_name()
+onready var whatsmyowner = get_owner().get_name()
+
+func _on_met_yan():
+	get_node("sfx").play("card_unlock")
+	animations.play("yan_unlock_anim")
+
 func _ready():
+	print ("My parent is: " + whatsmyparent)
+	print ("My owner is: " + whatsmyowner)
+	
+	print (yan.get_name())
+	if yan.has_node("Yan"):
+		print("Yan is present")
+		yan.connect("met_yan", self,"_on_met_yan")
+		animations.play("yan_unlock_anim")
+	
 	update_scores()
 	game.connect("scores_changed", self, "update_scores")
 	update_sound_hud()
-		
+
+
 # Update scores
 func update_scores():
 	get_node(collected_text).set_text(str(game.items_collected))
