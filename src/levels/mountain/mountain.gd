@@ -11,6 +11,5 @@ func _ready():
 	else:
 		global.last_pos[1].x += 100#adding beacause the player would spawn in the teleport
 		initial_pos_player = global.last_pos[1]
-		global.last_pos[1] = Vector2(0,0)
 	# Set player position
 	get_node("/root/scn4/world/tile_map/player").set_global_pos(initial_pos_player)

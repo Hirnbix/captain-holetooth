@@ -73,7 +73,7 @@ params/radial_accel = 1.0
 
 [node name="player" parent="world/tile_map" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( -148, 92.186 )
+transform/pos = Vector2( 4940.33, 844.584 )
 
 [node name="snowballs" type="Node2D" parent="world/tile_map"]
 
@@ -111,7 +111,6 @@ transform/pos = Vector2( 1205.87, -95.223 )
 
 [node name="cave_background" parent="world/tile_map" instance=ExtResource( 7 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 1052, 592.186 )
 
 [node name="tex_cave" parent="world/tile_map/cave_background"]
@@ -150,8 +149,6 @@ transform/rot = 5.81798
 transform/pos = Vector2( 1332, 11 )
 
 [node name="fireflies" type="Node2D" parent="world/tile_map"]
-
-editor/display_folded = true
 
 [node name="fireflies" parent="world/tile_map/fireflies" instance=ExtResource( 10 )]
 
@@ -252,7 +249,7 @@ scene_path = "res://src/levels/forest/forest.tscn"
 
 [node name="scene_teleporter 2" parent="world" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 5580, 1140 )
+transform/pos = Vector2( 4027.92, 1126.71 )
 scene_path = "res://src/screens/cutscenes/broken_ship/broken_ship.tscn"
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
