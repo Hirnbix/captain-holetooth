@@ -6,23 +6,19 @@ export (NodePath) var highscore_text #= get_node("hudframe/highscore_label/highs
 export (NodePath) var sound_off_button #= get_node("hudframe/sound_off")
 
 onready var animations = get_node("animations")
-#onready var yan = get_parent().find_node("Yan")
-#onready var whatsmyparent = get_parent().get_name()
-#onready var whatsmyowner = get_owner().get_name()
 
-#func _on_met_yan():
-#	get_node("sfx").play("card_unlock")
-#	animations.play("yan_unlock_anim")
+func _on_met_yan():
+	get_node("sfx").play("card_unlock")
+	animations.play("yan_unlock_anim")
 
 func _ready():
-#	print ("My parent is: " + whatsmyparent)
-#	print ("My owner is: " + whatsmyowner)
-	
-#	print (yan.get_name())
-#	if yan.has_node("Yan"):
-#		print("Yan is present")
-	#yan.connect("met_yan", self,"_on_met_yan")
-	animations.play("yan_unlock_anim")
+	var yan = get_parent().find_node("Yan")
+	print (yan.get_name())
+	if yan:
+		print("Yan is present")
+		yan.connect("met_yan", self,"_on_met_yan")
+		animations.play("yan_unlock_anim")
+		print("working")
 	
 	update_scores()
 	game.connect("scores_changed", self, "update_scores")

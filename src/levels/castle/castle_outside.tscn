@@ -12,12 +12,12 @@
 [ext_resource path="res://src/scene_teleporter.gd" type="Script" id=10]
 [ext_resource path="res://src/objects/platforms/small_one_way_platform.tscn" type="PackedScene" id=11]
 
-[sub_resource type="ColorRamp" id=2]
+[sub_resource type="ColorRamp" id=1]
 
 offsets = FloatArray( 0, 1 )
 colors = ColorArray( 0.90625, 0.90625, 0.90625, 1, 1, 1, 1, 0.042549 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 5.59285, 53.2617 )
@@ -84,7 +84,7 @@ randomness/direction = 0.2
 randomness/spin_velocity = 5.0
 randomness/initial_angle = 1.0
 randomness/hue_variation = 0.5
-color/color_ramp = SubResource( 2 )
+color/color_ramp = SubResource( 1 )
 
 [node name="rewards" type="Node2D" parent="."]
 
@@ -139,7 +139,7 @@ stream/stream = ExtResource( 9 )
 transform/pos = Vector2( 735, 235 )
 transform/scale = Vector2( 0.78125, 1.40625 )
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 5.21364, 0, 0, 0.505573, 8.2016e-05, 3.55554 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -175,7 +175,7 @@ transform/scale = Vector2( 0.20915, 0.17037 )
 
 transform/pos = Vector2( 8.2016e-05, 3.55554 )
 transform/scale = Vector2( 5.21364, 0.505573 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
