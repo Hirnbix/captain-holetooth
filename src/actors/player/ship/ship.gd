@@ -29,6 +29,9 @@ var speed = Vector2(0, 0)
 var motion_factor = Vector2(1, 1) # multiplies base motion
 var root_motion = Vector2(0, 0) # applyed to base motion
 
+# Shoot delay
+var shoot_delay_sec = 0.3
+
 # Coin
 const coin_type = preload("res://src/objects/rewards/reward.gd")
 
@@ -51,7 +54,8 @@ func _process(delta):
 		motion += Vector2(1, 0)
 	# Input: SHOOT
 	# REMOVED FOR 2.1 Stable: if(Input.is_action_just_pressed("shoot")):
-	if(Input.is_action_pressed("shoot")):
+	if(Input.is_action_pressed("shoot") && timer.get_time_left()<=0):
+		timer.start()
 		# Create a new shot instance
 		var shot = preload("shot.tscn").instance()
 		
@@ -89,11 +93,16 @@ func _process(delta):
 	# Set new player position
 	set_pos(pos)
 
-
+var timer = null
 # Start
 func _ready():
 	# Screen size is used to calculate whether or not the player is inside it
 	screen_size = get_viewport().get_rect().size
+	
+	timer = Timer.new()
+	add_child(timer)
+	timer.set_one_shot(true)
+	timer.set_wait_time(shoot_delay_sec)
 	
 	# Enable process
 	set_process(true)
