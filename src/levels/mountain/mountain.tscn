@@ -36,7 +36,6 @@ script/script = ExtResource( 1 )
 
 [node name="tile_map" type="TileMap" parent="world"]
 
-editor/display_folded = true
 transform/pos = Vector2( 320, 269.814 )
 mode = 0
 tile_set = ExtResource( 3 )
@@ -74,7 +73,7 @@ params/radial_accel = 1.0
 
 [node name="player" parent="world/tile_map" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 4940.33, 844.584 )
+transform/pos = Vector2( -148, 92.186 )
 
 [node name="snowballs" type="Node2D" parent="world/tile_map"]
 
@@ -253,7 +252,7 @@ scene_path = "res://src/levels/forest/forest.tscn"
 
 [node name="scene_teleporter 2" parent="world" instance=ExtResource( 13 )]
 
-transform/pos = Vector2( 4027.92, 1126.71 )
+transform/pos = Vector2( 5580, 1140 )
 scene_path = "res://src/screens/cutscenes/broken_ship/broken_ship.tscn"
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]

@@ -373,8 +373,6 @@ transform/pos = Vector2( 24.7671, 249.674 )
 
 [node name="interactables" type="Node2D" parent="world"]
 
-editor/display_folded = true
-
 [node name="rock" parent="world/interactables" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2381.47, 1263.25 )
@@ -449,6 +447,32 @@ transform/pos = Vector2( 3698.38, 1815.61 )
 transform/pos = Vector2( 3658.38, 1815.61 )
 
 [node name="reward33" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 3659.42, 1856.34 )
+
+[node name="reward_group_2x4" type="Area2D" parent="world/interactables/rewards"]
+
+transform/pos = Vector2( -3578, -1358 )
+input/pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = { "_edit_group_":true }
+
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_2x4" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 3698.38, 1855.61 )
+
+[node name="reward34" parent="world/interactables/rewards/reward_group_2x4" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 3698.38, 1815.61 )
+
+[node name="reward35" parent="world/interactables/rewards/reward_group_2x4" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 3658.38, 1815.61 )
+
+[node name="reward33" parent="world/interactables/rewards/reward_group_2x4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3659.42, 1856.34 )
 
