@@ -30,7 +30,7 @@ var motion_factor = Vector2(1, 1) # multiplies base motion
 var root_motion = Vector2(0, 0) # applyed to base motion
 
 # Shoot delay
-var shoot_delay_sec = 0.3
+var shoot_delay_sec = 0.08
 
 # Coin
 const coin_type = preload("res://src/objects/rewards/reward.gd")
