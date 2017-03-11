@@ -1,26 +1,26 @@
 [gd_scene load_steps=24 format=1]
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
-[ext_resource path="res://src/actors/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/levels/forest/forest_parallax_bg.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/areas/area_forest/tileset_forest.tres" type="TileSet" id=4]
-[ext_resource path="res://src/objects/signpost/signpost.png" type="Texture" id=5]
-[ext_resource path="res://src/objects/plants/random_flowers.scn" type="PackedScene" id=6]
-[ext_resource path="res://src/objects/cave_texture/cave_texture_polygon.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/objects/cave_foliage/cave_foliage.scn" type="PackedScene" id=8]
-[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/objects/fireflies/fireflies.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/objects/platforms/moving_platform.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/objects/platforms/one_way_platform.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/objects/platforms/small_one_way_platform.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/objects/birds/birds.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=17]
-[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.tscn" type="PackedScene" id=18]
-[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=19]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=20]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/levels/forest/forest_parallax_bg.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/areas/area_forest/tileset_forest.tres" type="TileSet" id=6]
+[ext_resource path="res://src/objects/signpost/signpost.png" type="Texture" id=7]
+[ext_resource path="res://src/objects/plants/random_flowers.scn" type="PackedScene" id=8]
+[ext_resource path="res://src/objects/cave_texture/cave_texture_polygon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/objects/cave_foliage/cave_foliage.scn" type="PackedScene" id=10]
+[ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/fireflies/fireflies.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/platforms/moving_platform.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/objects/platforms/one_way_platform.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/platforms/small_one_way_platform.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/objects/birds/birds.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/actors/enemies/soap_bubble/soap_bubble.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/actors/enemies/forest_crawler/forest_crawler.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=23]
 
@@ -28,21 +28,29 @@
 
 script/script = ExtResource( 1 )
 
-[node name="player" parent="." instance=ExtResource( 2 )]
+[node name="hud" parent="." instance=ExtResource( 2 )]
+
+[node name="Yan" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 3928, 2269 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 104, 1056 )
 z/relative = false
 
 [node name="world" type="Node2D" parent="."]
 
-[node name="parallax_bg" parent="world" instance=ExtResource( 3 )]
+editor/display_folded = true
+
+[node name="parallax_bg" parent="world" instance=ExtResource( 5 )]
 
 [node name="tile_map" type="TileMap" parent="world"]
 
 transform/pos = Vector2( 1, 0 )
 z/z = -1
 mode = 0
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 6 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 8
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -61,54 +69,54 @@ __meta__ = { "_edit_lock_":true }
 [node name="signpost" type="Sprite" parent="world/tile_map"]
 
 transform/pos = Vector2( 4072.62, 1388.1 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="plants" type="Node2D" parent="world/tile_map"]
 
 editor/display_folded = true
 
-[node name="random_plants_flower" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2234.49, 1330.51 )
 
-[node name="random_plants_flower1" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower1" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2204.17, 1322.32 )
 
-[node name="random_plants_flower2" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower2" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2017.14, 1210.83 )
 
-[node name="random_plants_flower3" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower3" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 381.557, 1070.35 )
 
-[node name="random_plants_flower4" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower4" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 233.102, 1068.81 )
 
-[node name="random_plants_flower5" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower5" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 3019, 1256 )
 
-[node name="random_plants_flower6" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower6" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 3223, 1388 )
 
-[node name="random_plants_flower7" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower7" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1963, 1388.79 )
 
-[node name="random_plants_flower8" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower8" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 2251.55, 933.682 )
 
-[node name="random_plants_flower9" parent="world/tile_map/plants" instance=ExtResource( 6 )]
+[node name="random_plants_flower9" parent="world/tile_map/plants" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1686.55, 1380.68 )
 
-[node name="cave_background" parent="world/tile_map" instance=ExtResource( 7 )]
+[node name="cave_background" parent="world/tile_map" instance=ExtResource( 9 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
@@ -117,99 +125,99 @@ transform/pos = Vector2( 2972.69, 1400.31 )
 
 polygon = Vector2Array( 192.536, 76.4254, 20.8518, -63.6256, -130.795, -68.3344, -129.785, -51.1215, -127.804, -49.2805, -125.705, -47.0989, -127.844, -44.0992, -127.685, -39.0815, -125.625, -38.2089, -125.546, -34.3366, -128.675, -32.2095, -128.042, -23.974, -130.795, -20.7521, -61.2829, 58.8953, 33.4001, 135.078, 103.557, 168.85, 181.129, 260.207, 223.776, 262.932, 225.429, 1029.09, 1152.49, 1028.49, 1147.72, 60.1347, 608.422, 69.4086, 391.442, 42.2474, 363.518, 42.2474, 359.388, 52.4328, 356.923, 45.6425, 351.991, 45.6425, 349.526, 49.0377, 348.435, 46.2132, 341.023, 45.1799, 338.38, 47.033, 336.592, 45.3068, 328.589, 46.3954, 326.67, 47.7618, 325.925, 46.4331, 323.694, 46.6686, 322.04, 45.7578, 318.6, 47.1241, 317.949, 42.6611, 312.54, 42.2474 )
 
-[node name="random_plants_flowers" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 748.31, 511.69 )
 
-[node name="random_plants_flowers1" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers1" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 838.31, 881.69 )
 
-[node name="random_plants_flowers2" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers2" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 838.31, 881.69 )
 
-[node name="random_plants_flowers3" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers3" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1068.31, 1711.69 )
 
-[node name="random_plants_flowers4" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers4" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1598.31, 2181.69 )
 
-[node name="random_plants_flowers5" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers5" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1858.31, 2161.69 )
 
-[node name="random_plants_flowers6" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers6" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1858.31, 2161.69 )
 
-[node name="random_plants_flowers7" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers7" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1968.31, 1911.69 )
 
-[node name="random_plants_flowers8" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers8" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2438.31, 1841.69 )
 
-[node name="random_plants_flowers9" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers9" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2538.31, 1731.69 )
 
-[node name="random_plants_flowers10" parent="world/tile_map/cave_background" instance=ExtResource( 8 )]
+[node name="random_plants_flowers10" parent="world/tile_map/cave_background" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 2538.31, 1731.69 )
 
-[node name="waterdrop" parent="world/tile_map/cave_background" instance=ExtResource( 9 )]
+[node name="waterdrop" parent="world/tile_map/cave_background" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 transform/pos = Vector2( -546.62, -147.17 )
 transform/scale = Vector2( 1, 1.29413 )
 
-[node name="waterdrop1" parent="world/tile_map/cave_background" instance=ExtResource( 9 )]
+[node name="waterdrop1" parent="world/tile_map/cave_background" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 778.31, 454.69 )
 transform/scale = Vector2( 1, 2.34375 )
 
-[node name="waterdrop2" parent="world/tile_map/cave_background" instance=ExtResource( 9 )]
+[node name="waterdrop2" parent="world/tile_map/cave_background" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 518.31, 454.69 )
 transform/scale = Vector2( 1, 2.34375 )
 
-[node name="fireflies" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 373, 160 )
 transform/scale = Vector2( 1.40625, 0.533334 )
 
-[node name="fireflies1" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies1" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1998, 343.467 )
 transform/scale = Vector2( 0.3125, 0.133334 )
 
-[node name="fireflies2" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies2" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1493, 294.4 )
 transform/scale = Vector2( 1.71875, 0.733335 )
 
-[node name="fireflies3" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies3" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 1973, 349.867 )
 transform/scale = Vector2( 1.71875, 0.733335 )
 
-[node name="fireflies4" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies4" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2193, 153.6 )
 transform/scale = Vector2( 1.71875, 0.733335 )
 
-[node name="fireflies5" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies5" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2253, 128 )
 transform/scale = Vector2( 1.71875, 0.733335 )
 
-[node name="fireflies6" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 10 )]
+[node name="fireflies6" parent="world/tile_map/cave_background/waterdrop2" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 2213, 149.333 )
 transform/scale = Vector2( 1.09375, 0.466668 )
@@ -218,7 +226,7 @@ transform/scale = Vector2( 1.09375, 0.466668 )
 
 editor/display_folded = true
 
-[node name="moving_platform" parent="world/tile_map/props" instance=ExtResource( 11 )]
+[node name="moving_platform" parent="world/tile_map/props" instance=ExtResource( 13 )]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 922, 762 )
@@ -226,7 +234,7 @@ z/z = -1
 motion = Vector2( 0, 140 )
 cycle = 3.0
 
-[node name="moving_platform1" parent="world/tile_map/props" instance=ExtResource( 11 )]
+[node name="moving_platform1" parent="world/tile_map/props" instance=ExtResource( 13 )]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 4257.04, 2147.64 )
@@ -234,7 +242,7 @@ z/z = -1
 motion = Vector2( 0, 200 )
 cycle = 6.0
 
-[node name="moving_platform2" parent="world/tile_map/props" instance=ExtResource( 11 )]
+[node name="moving_platform2" parent="world/tile_map/props" instance=ExtResource( 13 )]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 5341.32, 2952.13 )
@@ -242,126 +250,126 @@ z/z = -1
 motion = Vector2( 0, 200 )
 cycle = 6.0
 
-[node name="one_way_platform" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 982, 422 )
 
-[node name="one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 3712.9, 1770.57 )
 z/z = -1
 
-[node name="one_way_platform9" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform9" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 4089.65, 2461.98 )
 z/z = -1
 
-[node name="one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 3983.57, 1708.87 )
 z/z = -1
 
-[node name="one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 692, 532 )
 
-[node name="one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 392, 432 )
 
-[node name="one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 1372.69, 951.347 )
 
-[node name="one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 1482, 722 )
 
-[node name="one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 12 )]
+[node name="one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 1382, 592 )
 
-[node name="small_one_way_platform" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1702, 812 )
 z/z = -1
 
-[node name="small_one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform1" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 2023.52, 1269.15 )
 z/z = -1
 
-[node name="small_one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform2" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1937.78, 1169.15 )
 z/z = -1
 
-[node name="small_one_way_platform3" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform3" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1992.83, 1073.73 )
 z/z = -1
 
-[node name="small_one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform4" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 4483.85, 3348.61 )
 z/z = -1
 
-[node name="small_one_way_platform12" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform12" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 5832, 2442 )
 z/z = -1
 
-[node name="small_one_way_platform13" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform13" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 5912, 2572 )
 z/z = -1
 
-[node name="small_one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform5" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1989.22, 881.782 )
 z/z = -1
 
-[node name="small_one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform6" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3002, 862 )
 z/z = -1
 
-[node name="small_one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform7" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3172, 692 )
 z/z = -1
 
-[node name="small_one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform8" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3082, 782 )
 z/z = -1
 
-[node name="small_one_way_platform9" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform9" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3262, 622 )
 z/z = -1
 
-[node name="small_one_way_platform10" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform10" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 4082, 832 )
 z/z = -1
 
-[node name="small_one_way_platform10 2" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform10 2" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3672, 632 )
 z/z = -1
 
-[node name="small_one_way_platform10 3" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform10 3" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 3882, 732 )
 z/z = -1
 
-[node name="small_one_way_platform11" parent="world/tile_map/props" instance=ExtResource( 13 )]
+[node name="small_one_way_platform11" parent="world/tile_map/props" instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 4016, 932 )
 z/z = -1
 
-[node name="birds" parent="world/tile_map" instance=ExtResource( 14 )]
+[node name="birds" parent="world/tile_map" instance=ExtResource( 16 )]
 
 transform/pos = Vector2( 24.7671, 249.674 )
 
@@ -369,54 +377,54 @@ transform/pos = Vector2( 24.7671, 249.674 )
 
 editor/display_folded = true
 
-[node name="rock" parent="world/interactables" instance=ExtResource( 15 )]
+[node name="rock" parent="world/interactables" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2381.47, 1263.25 )
 
-[node name="rock2" parent="world/interactables" instance=ExtResource( 15 )]
+[node name="rock2" parent="world/interactables" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2902.92, 1519.33 )
 
-[node name="rock3" parent="world/interactables" instance=ExtResource( 15 )]
+[node name="rock3" parent="world/interactables" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2769.6, 753.6 )
 
-[node name="rock1" parent="world/interactables" instance=ExtResource( 15 )]
+[node name="rock1" parent="world/interactables" instance=ExtResource( 17 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 2815.6, 1528.28 )
 
 [node name="rewards" type="Node2D" parent="world/interactables"]
 
-[node name="reward" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3928.66, 1578.46 )
 
-[node name="reward2" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward2" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3796.18, 1721.06 )
 
-[node name="reward3" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward3" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 4328, 2552 )
 
-[node name="reward4" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward4" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 4288, 2552 )
 
-[node name="reward5" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward5" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 4016, 2272 )
 
-[node name="reward6" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward6" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 4040, 2272 )
 
-[node name="reward7" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward7" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 4032, 2256 )
 
-[node name="reward1" parent="world/interactables/rewards" instance=ExtResource( 16 )]
+[node name="reward1" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3886.25, 1659.74 )
 
@@ -430,19 +438,19 @@ linear_damp = 0.1
 angular_damp = 1.0
 __meta__ = { "_edit_group_":true }
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3698.38, 1855.61 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3698.38, 1815.61 )
 
-[node name="reward35" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 16 )]
+[node name="reward35" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3658.38, 1815.61 )
 
-[node name="reward33" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 16 )]
+[node name="reward33" parent="world/interactables/rewards/reward_group_2x2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3659.42, 1856.34 )
 
@@ -455,31 +463,31 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3698.38, 1855.61 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3698.38, 1815.61 )
 
-[node name="reward35" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward35" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3658.38, 1815.61 )
 
-[node name="reward37" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward37" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3624, 1768 )
 
-[node name="reward38" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward38" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3624, 1728 )
 
-[node name="reward36" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward36" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3864, 1904 )
 
-[node name="reward33" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 16 )]
+[node name="reward33" parent="world/interactables/rewards/reward_group_2x3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3659.42, 1856.34 )
 
@@ -493,67 +501,67 @@ linear_damp = 0.1
 angular_damp = 1.0
 __meta__ = { "_edit_group_":true }
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 162.34 )
 
-[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 162.34 )
 
-[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 122.34 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 122.34 )
 
-[node name="reward33" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward33" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 131.21, 162.34 )
 
-[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 162.34 )
 
-[node name="reward39" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward39" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 291.21, 162.34 )
 
-[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 122.34 )
 
-[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 291.21, 122.34 )
 
-[node name="reward42" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward42" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 331.21, 162.34 )
 
-[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 82.34 )
 
-[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 82.34 )
 
-[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 82.34 )
 
-[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 131.21, 122.34 )
 
-[node name="reward47" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward47" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 91.21, 162.34 )
 
-[node name="reward48" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 16 )]
+[node name="reward48" parent="world/interactables/rewards/reward_group_ pyramid2" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 42.34 )
 
@@ -567,47 +575,47 @@ linear_damp = 0.1
 angular_damp = 1.0
 __meta__ = { "_edit_group_":true }
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 162.34 )
 
-[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 162.34 )
 
-[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 122.34 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 122.34 )
 
-[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 162.34 )
 
-[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 122.34 )
 
-[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 291.21, 122.34 )
 
-[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 82.34 )
 
-[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 82.34 )
 
-[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 82.34 )
 
-[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 16 )]
+[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid3" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 131.21, 122.34 )
 
@@ -621,47 +629,47 @@ linear_damp = 0.1
 angular_damp = 1.0
 __meta__ = { "_edit_group_":true }
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 162.34 )
 
-[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 162.34 )
 
-[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 122.34 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 122.34 )
 
-[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 162.34 )
 
-[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 122.34 )
 
-[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 291.21, 122.34 )
 
-[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 251.21, 82.34 )
 
-[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 211.21, 82.34 )
 
-[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 171.21, 82.34 )
 
-[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 16 )]
+[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid4" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 131.21, 122.34 )
 
@@ -674,268 +682,260 @@ gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
-[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward3 2" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3701.21, 1852.34 )
 
-[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward36" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3741.21, 1852.34 )
 
-[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward37" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3741.21, 1812.34 )
 
-[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward34" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3701.21, 1812.34 )
 
-[node name="reward33" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward33" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3661.21, 1852.34 )
 
-[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward38" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3781.21, 1852.34 )
 
-[node name="reward39" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward39" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3821.21, 1852.34 )
 
-[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward40" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3781.21, 1812.34 )
 
-[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward41" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3821.21, 1812.34 )
 
-[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward43" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3781.21, 1772.34 )
 
-[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward44" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3741.21, 1772.34 )
 
-[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward45" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3701.21, 1772.34 )
 
-[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward46" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3661.21, 1812.34 )
 
-[node name="reward48" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 16 )]
+[node name="reward48" parent="world/interactables/rewards/reward_group_ pyramid1" instance=ExtResource( 18 )]
 
 transform/pos = Vector2( 3741.21, 1732.34 )
 
-[node name="soap_bubble" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 352, 1040 )
 movement_speed = -40
 motion = "zigzag"
 
-[node name="soap_bubble1" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble1" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 902.64, 1152.78 )
 movement_speed = -40
 motion = "zigzag"
 
-[node name="soap_bubble4" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble4" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 476.723, 1132.22 )
 movement_speed = -40
 motion = "zigzag"
 
-[node name="soap_bubble2" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble2" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 417.249, 1026.61 )
 movement_speed = -40
 
-[node name="soap_bubble20" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble20" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 927.249, 926.61 )
 movement_speed = -40
 
-[node name="soap_bubble6" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble6" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 3812, 1172 )
 movement_speed = -40
 
-[node name="soap_bubble7" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble7" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 3222, 972 )
 movement_speed = -40
 
-[node name="soap_bubble8" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble8" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 2942, 662 )
 movement_speed = -40
 
-[node name="soap_bubble9" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble9" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 3102, 1072 )
 movement_speed = -40
 
-[node name="soap_bubble10" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble10" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 2602, 792 )
 movement_speed = -40
 
-[node name="soap_bubble11" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble11" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4502, 972 )
 movement_speed = -40
 
-[node name="soap_bubble12" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble12" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4112, 2212 )
 movement_speed = -40
 
-[node name="soap_bubble21" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble21" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4242, 2282 )
 movement_speed = -40
 
-[node name="soap_bubble22" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble22" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4292, 2212 )
 movement_speed = -40
 
-[node name="soap_bubble23" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble23" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4382, 1882 )
 movement_speed = -40
 
-[node name="soap_bubble24" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble24" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4302, 2382 )
 movement_speed = -40
 
-[node name="soap_bubble13" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble13" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5632, 2602 )
 movement_speed = -40
 
-[node name="soap_bubble14" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble14" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5542, 2812 )
 movement_speed = -40
 
-[node name="soap_bubble15" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble15" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5262, 2322 )
 movement_speed = -40
 
-[node name="soap_bubble16" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble16" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5522, 2172 )
 movement_speed = -40
 
-[node name="soap_bubble17" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble17" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4822, 3452 )
 movement_speed = -40
 
-[node name="soap_bubble18" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble18" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4072, 3022 )
 movement_speed = -40
 
-[node name="soap_bubble19" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble19" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 4132, 3082 )
 movement_speed = -40
 
-[node name="soap_bubble3" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble3" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1683.11, 607.906 )
 movement_speed = -40
 
-[node name="soap_bubble5" parent="world/interactables/rewards" instance=ExtResource( 17 )]
+[node name="soap_bubble5" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 780.01, 396.936 )
 movement_speed = -40
 
 [node name="enemies" type="Node2D" parent="world/interactables" groups=[ "enemies" ]]
 
-[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 834.664, 1309.6 )
 
-[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 6" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 707.665, 1225.05 )
 
-[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 7" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1125.21, 1053.06 )
 
-[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 8" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1292.11, 1059.24 )
 
-[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 9" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1607.38, 923.239 )
 
-[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 10" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 2586.9, 939.059 )
 
-[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 11" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 703.5, 491.482 )
 transform/scale = Vector2( 0.734366, 0.671311 )
 
-[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 12" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1193.63, 460.381 )
 
-[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 14" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 3546.2, 1356.19 )
 
-[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy 15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 2406.63, 815.115 )
 
-[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy15" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 3710.72, 1394.25 )
 
-[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy16" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 4608, 1912 )
 
-[node name="enemy17" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy17" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 4072, 1904 )
 
-[node name="enemy18" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 18 )]
+[node name="enemy18" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 4240, 2552 )
 
-[node name="scene_teleporter" parent="world" instance=ExtResource( 19 )]
+[node name="scene_teleporter" parent="world" instance=ExtResource( 21 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 5000.11, 1150.48 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
 
-[node name="scene_teleporter1" parent="world" instance=ExtResource( 19 )]
+[node name="scene_teleporter1" parent="world" instance=ExtResource( 21 )]
 
 editor/display_folded = true
 transform/pos = Vector2( 6180, 2480 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
-
-[node name="NPCs" type="Node2D" parent="world"]
-
-transform/pos = Vector2( 0, -3 )
-
-[node name="Yan" parent="world/NPCs" instance=ExtResource( 20 )]
-
-transform/pos = Vector2( 3928, 2272 )
 
 [node name="teleporter_spawn_scn3" type="Position2D" parent="world"]
 
@@ -946,8 +946,6 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 transform/pos = Vector2( 4080, 2255.94 )
 transform/scale = Vector2( 4.99998, 3.59373 )
-
-[node name="hud" parent="." instance=ExtResource( 21 )]
 
 [node name="music_player" parent="." instance=ExtResource( 22 )]
 
