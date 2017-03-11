@@ -1,11 +1,7 @@
 extends Node2D
 
-onready var yan = self.find_node("Yan")
 # -- START --
 func _ready():
-	
-	print (yan.get_name())
-	
 	# Get initial player spawn position
 	var initial_pos_player = get_node("/root/scn3/world/initial_spawn_player").get_global_pos()
 	
