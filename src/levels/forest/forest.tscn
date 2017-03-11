@@ -41,8 +41,6 @@ z/relative = false
 
 [node name="world" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="parallax_bg" parent="world" instance=ExtResource( 5 )]
 
 [node name="tile_map" type="TileMap" parent="world"]
