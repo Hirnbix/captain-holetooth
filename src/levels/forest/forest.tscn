@@ -41,8 +41,11 @@ z/relative = false
 
 [node name="world" type="Node2D" parent="."]
 
+<<<<<<< Updated upstream
 editor/display_folded = true
 
+=======
+>>>>>>> Stashed changes
 [node name="parallax_bg" parent="world" instance=ExtResource( 5 )]
 
 [node name="tile_map" type="TileMap" parent="world"]
@@ -944,7 +947,7 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
-transform/pos = Vector2( 4080, 2255.94 )
+transform/pos = Vector2( 180, 1055.94 )
 transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="music_player" parent="." instance=ExtResource( 22 )]
