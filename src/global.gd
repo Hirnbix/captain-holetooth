@@ -37,10 +37,8 @@ var yankandy_score_total = 0
 # Scene related
 var currentScene = null
 
-# Check if player has visited a scene already
-var beentoscn3 = true 
-var beentoscn4 = true
-var beentoscn5 = true
+# Check if player has visited a scene already and store the last position on leaving/spawning
+var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 
 # Array for characters the player has met (to display the character cards in the options later)
 var characters_met = []

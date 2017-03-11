@@ -8,8 +8,13 @@ func _ready():
 	var initial_pos_player = get_node("/root/scn3/world/initial_spawn_player").get_global_pos()
 	
 	# Set player position
+	if global.last_pos[0] == Vector2(0,0):
+		initial_pos_player = get_node("/root/scn3/world/initial_spawn_player").get_global_pos()
+	else:
+		global.last_pos[0].x -= 100
+		initial_pos_player = global.last_pos[0]
+		global.last_pos[0] = Vector2(0,0)
 	get_node("/root/scn3/player").set_global_pos(initial_pos_player)
-	
 	# Get enemy group
 	game.open_scene("scn3")
 	
