@@ -20,7 +20,7 @@ var MAX_FLOOR_AIRBORNE_TIME = 0.15
 var DIR_LEFT = Vector2(-1,1)
 var DIR_RIGHT = Vector2(1,1)
 var CURR_DIR = Vector2(-1,1)
-var LAST_DIR = Vector2(-1,1)
+var LAST_DIR = Vector2(0,0)
 
 var airborne_time = 1e20
 var shoot_time = 1e20
