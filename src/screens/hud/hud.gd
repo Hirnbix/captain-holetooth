@@ -13,7 +13,7 @@ func _on_met_yan():
 	animations.play("yan_unlock_anim")
 
 func _ready():
-	if yan && global.last_pos[0].x ==0 && global.last_pos[0].y ==0:
+	if yan && global.last_pos[0] == Vector2(0,0):
 		print("Yan is present")
 		yan.connect("met_yan", self,"_on_met_yan")
 		animations.play("yan_unlock_anim")

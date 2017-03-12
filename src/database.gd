@@ -7,7 +7,7 @@ func _ready():
 	set_process_input(true)
 	
 func _input(e):
-	if e.is_action_pressed("reload"):
+	if e.is_action_pressed("reload") && global.debug_mode:
 		global.score = 0
 		db = {}
 		
