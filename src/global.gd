@@ -8,6 +8,8 @@ extends Node
 # Audio Data
 # Exampel of use: global.music.volume = 0.5 # Stores the music volume globally to 50%
 # You will have to make the actual changes in their appropriate scripts
+export var debug_mode = 1 # 1 for debug and 0 for release mode
+
 var music = {
 	volume = 0, # <0, 1> TODO: Set back to 1 when we are compiling for release. Turned it OFF to prevent going insane!
 	enabled = true,
@@ -55,4 +57,3 @@ func _ready():
 func add_score(value=1):
 	score += value
 	database.set_key("score", score)
-	
