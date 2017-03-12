@@ -17,6 +17,11 @@ var STOP_JUMP_FORCE = 2000.0
 
 var MAX_FLOOR_AIRBORNE_TIME = 0.15
 
+var DIR_LEFT = Vector2(-1,1)
+var DIR_RIGHT = Vector2(1,1)
+var CURR_DIR = Vector2(-1,1)
+var LAST_DIR = Vector2(-1,1)
+
 var airborne_time = 1e20
 var shoot_time = 1e20
 
@@ -48,6 +53,7 @@ func _integrate_forces(s):
 	var shoot = Input.is_action_pressed("shoot")
 	var spawn = Input.is_action_pressed("spawn")
 	
+	
 	if spawn:
 		var e = enemy.instance()
 		var p = get_pos()
@@ -68,28 +74,6 @@ func _integrate_forces(s):
 		if (ci.dot(Vector2(0, -1)) > 0.6):
 			found_floor = true
 			floor_index = x
-	
-	# A good idea when impementing characters of all kinds,
-	# compensates for physics imprecission, as well as human reaction delay.
-	if (shoot and not shooting):
-		shoot_time = 0
-		var bi = bullet.instance()
-		var ss
-		if (siding_left):
-			ss = -1.0
-		else:
-			ss = 1.0
-		var pos = get_pos() + get_node("bullet_shoot").get_pos()*Vector2(ss, 1.0)
-		
-		bi.set_pos(pos)
-		get_parent().add_child(bi)
-		
-		bi.set_linear_velocity(Vector2(800.0*ss, -80))
-		get_node("sprite/smoke").set_emitting(true)
-		get_node("sfx").play("schwuit")
-		PS2D.body_add_collision_exception(bi.get_rid(), get_rid()) # Make bullet and this not collide
-	else:
-		shoot_time += step
 	
 	# Calculate air born time in order to control when to stop jump
 	# from the user releasing jump or reaching max jump height
@@ -112,6 +96,7 @@ func _integrate_forces(s):
 	if (on_floor):
 		# Process logic when character is on floor
 		if (move_left and not move_right):
+			CURR_DIR = DIR_LEFT
 			if (linear_vel.x > -WALK_MAX_VELOCITY):
 				linear_vel.x -= WALK_ACCEL*step
 				# Prevent player from exceeding max walk velocity
@@ -119,6 +104,7 @@ func _integrate_forces(s):
 					linear_vel.x = -WALK_MAX_VELOCITY
 				
 		elif (move_right and not move_left):
+			CURR_DIR = DIR_RIGHT
 			if (linear_vel.x < WALK_MAX_VELOCITY):
 				linear_vel.x += WALK_ACCEL*step
 				# Prevent player from exceeding max walk velocity
@@ -130,8 +116,7 @@ func _integrate_forces(s):
 			if (xv < 0):
 				xv = 0
 			linear_vel.x = sign(linear_vel.x)*xv
-
-		
+	
 		# If we can, and want to JUMP - Jump!
 		if (!jumping && jump):
 			# Set velocity upwards 
@@ -155,11 +140,6 @@ func _integrate_forces(s):
 				# print("Yay! You can now jump higher")
 				# TODO: Print an achievement notification message to the player
 		
-		# Check siding direction
-		if (linear_vel.x < 0 && move_left):
-			new_siding_left = true
-		elif (linear_vel.x > 0 && move_right):
-			new_siding_left = false
 		
 		# Check jumping
 		if (jumping):
@@ -183,6 +163,7 @@ func _integrate_forces(s):
 		# Process logic when the character is in the air
 		# When we are only pressing LEFT movement
 		if (move_left && !move_right):
+			CURR_DIR = DIR_LEFT
 			if (linear_vel.x > -WALK_MAX_VELOCITY):
 				# linear_vel.x = -WALK_MAX_VELOCITY
 				linear_vel.x -= AIR_ACCEL*step
@@ -190,6 +171,7 @@ func _integrate_forces(s):
 					linear_vel.x = -WALK_MAX_VELOCITY
 				
 		elif (move_right && !move_left):
+			CURR_DIR = DIR_RIGHT
 			if (linear_vel.x < WALK_MAX_VELOCITY):
 				# linear_vel.x = WALK_MAX_VELOCITY
 				linear_vel.x += AIR_ACCEL*step
@@ -215,14 +197,41 @@ func _integrate_forces(s):
 			else:
 				new_anim = "falling"
 	
-	# Update siding
-	if (new_siding_left != siding_left):
-		if (new_siding_left):
-			get_node("sprite").set_scale(Vector2(-1, 1))
-		else:
-			get_node("sprite").set_scale(Vector2(1, 1))
+	# A good idea when impementing characters of all kinds,
+	# compensates for physics imprecission, as well as human reaction delay.
+	if (shoot and not shooting):
+		shoot_time = 0
+		var bi = bullet.instance()
+		var ss
+		#if (CURR_DIR==DIR_LEFT):
+		#	ss = -1.0
+		#else:
+		#	ss = 1.0
+		var pos = get_pos() + get_node("bullet_shoot").get_pos()*CURR_DIR
 		
-		siding_left = new_siding_left
+		bi.set_pos(pos)
+		get_parent().add_child(bi)
+		
+		bi.set_linear_velocity(Vector2(800.0*CURR_DIR.x, -80))
+		get_node("sprite/smoke").set_emitting(true)
+		get_node("sfx").play("schwuit")
+		PS2D.body_add_collision_exception(bi.get_rid(), get_rid()) # Make bullet and this not collide
+	else:
+		shoot_time += step
+	# Check siding direction
+	#if (linear_vel.x < 0 && move_left):
+	#	new_siding_left = true
+	#elif (linear_vel.x > 0 && move_right):
+	#	new_siding_left = false
+		
+	# Update siding
+	if (LAST_DIR!=CURR_DIR):
+		if (move_left):
+			get_node("sprite").set_scale(DIR_LEFT)
+			LAST_DIR = DIR_LEFT
+		elif(move_right):
+			get_node("sprite").set_scale(DIR_RIGHT)
+			LAST_DIR = DIR_RIGHT
 	
 	# Change animation
 	if (new_anim != anim):
