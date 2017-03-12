@@ -141,8 +141,8 @@ func _integrate_forces(s):
 			jumping = true
 			
 			# Play the player's jump sound
-			get_node("sfx").play("flupp")
-			
+			if !get_node("sfx").is_active():
+				get_node("sfx").play("flupp")
 			# THIS IS FOR FUTURE USE - Its a statistics thing for players to see like "Hey you only jumped 20 times during the whole game..."
 			# Whatever use it is, i think its a fun element to talk about :D
 			# I don't care often about the "use" of things... just having it for fun is good enough ;)
