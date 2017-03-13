@@ -3,6 +3,14 @@ extends TextureFrame
 # Level path to the scene we are switching to
 var level_path = "res://src/levels/forest/forest.tscn"
 
+func _ready():
+	set_process(true)
+
+func _process(delta):
+	if Input.is_action_pressed("ui_accept"):
+		_on_skipbutton_pressed()
+
+
 # Mouse click on screen to continue
 func _on_skipbutton_pressed():
 	transition.fade_to(level_path)

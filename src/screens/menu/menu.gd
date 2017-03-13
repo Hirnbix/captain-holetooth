@@ -33,6 +33,7 @@ func _ready():
 	get_node("options_screen/settings/Parental Controls/playtime_settings/playtime_limit").set_text(str(global.playtime_limit_minutes))
 	# Updates locale on scene
 	#update_locale()
+	get_node("menu_buttons/startbutton").grab_focus()
 
 
 # -- BUTTON PRESSES --
