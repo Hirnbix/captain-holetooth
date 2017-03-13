@@ -593,7 +593,6 @@ z/z = -1
 [node name="signpost3" type="Sprite" parent="world/tile_map/props"]
 
 transform/pos = Vector2( 6190, 1720 )
-transform/scale = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 centered = false
 flip_h = true
