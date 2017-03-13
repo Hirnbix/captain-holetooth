@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://src/levels/forest/scroll_bg_sky.png" type="Texture" id=1]
-[ext_resource path="res://src/levels/forest/scroll_bg_cloud_1.png" type="Texture" id=2]
-[ext_resource path="res://src/levels/forest/scroll_bg_cloud_2.png" type="Texture" id=3]
-[ext_resource path="res://src/levels/flyhome/scroll_bg_cloud_3.png" type="Texture" id=4]
+[ext_resource path="res://src/levels/forest/art/scroll_bg_cloud_1.png" type="Texture" id=1]
+[ext_resource path="res://src/levels/forest/art/scroll_bg_cloud_2.png" type="Texture" id=2]
+[ext_resource path="res://src/levels/flyhome/scroll_bg_cloud_3.png" type="Texture" id=3]
 
 [node name="parallax_bg_scn5" type="ParallaxBackground"]
 
@@ -27,10 +26,8 @@ motion/mirroring = Vector2( 800, 0 )
 [node name="Sprite" type="Sprite" parent="sky"]
 
 transform/pos = Vector2( 27, 0 )
-transform/scale = Vector2( 32, 0.675983 )
-texture = ExtResource( 1 )
 centered = false
-modulate = Color( 0.893013, 0.313185, 0.0454102, 1 )
+modulate = Color( 0.285156, 0.14114, 0.0746307, 1 )
 
 [node name="clouds" type="ParallaxLayer" parent="."]
 
@@ -42,38 +39,38 @@ motion/mirroring = Vector2( 800, 0 )
 
 transform/pos = Vector2( 82.9768, 34.4884 )
 transform/scale = Vector2( 0.570494, 0.570494 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="Sprite 2" type="Sprite" parent="clouds"]
 
 transform/pos = Vector2( 404, 14 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="Sprite 3" type="Sprite" parent="clouds"]
 
 transform/pos = Vector2( 196.692, 47.3458 )
 transform/scale = Vector2( 0.666471, 0.666471 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 centered = false
 
 [node name="Sprite 4" type="Sprite" parent="clouds"]
 
 transform/pos = Vector2( 686.547, 49.17 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 centered = false
 
 [node name="Sprite 5" type="Sprite" parent="clouds"]
 
 transform/pos = Vector2( 304.637, 71.6825 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="Sprite 6" type="Sprite" parent="clouds"]
 
 transform/pos = Vector2( 589.165, 11.12 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 centered = false
 
 
