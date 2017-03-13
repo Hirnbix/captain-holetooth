@@ -26,7 +26,10 @@ func _enter_tree():
 func _input(e):
 	if e.is_action_pressed("reload") && global.debug_mode:
 		score = 0
-		db = {"high_score":db["high_score"]} # save only high_score on reload		
+		if db.size():
+			db = {"high_score":db["high_score"]} # save only high_score on reload
+		else:
+			db = {"high_score": 0}
 		save_game()
 		load_game()
 		emit_signal("scores_changed")
