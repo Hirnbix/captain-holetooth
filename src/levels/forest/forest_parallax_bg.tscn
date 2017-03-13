@@ -41,7 +41,6 @@ centered = false
 
 [node name="clouds" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -27.7009, -11.0803 )
 motion/scale = Vector2( 0.1, 0.03 )
 motion/offset = Vector2( 0, 0 )
@@ -56,15 +55,8 @@ centered = false
 
 [node name="Sprite 2" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 404, 14 )
+transform/pos = Vector2( 404, 30 )
 texture = ExtResource( 2 )
-centered = false
-
-[node name="Sprite 3" type="Sprite" parent="clouds"]
-
-transform/pos = Vector2( 196.692, 47.3458 )
-transform/scale = Vector2( 0.666471, 0.666471 )
-texture = ExtResource( 3 )
 centered = false
 
 [node name="Sprite 4" type="Sprite" parent="clouds"]
@@ -75,15 +67,14 @@ centered = false
 
 [node name="Sprite 6" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 879.165, 71.12 )
+transform/pos = Vector2( 919.165, 47.12 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="mountains" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 visibility/blend_mode = 1
-transform/pos = Vector2( 0, 21 )
+transform/pos = Vector2( 0, 29 )
 z/relative = false
 motion/scale = Vector2( 0.2, 0 )
 motion/offset = Vector2( 0, 0 )
@@ -132,10 +123,16 @@ randomness/final_size = 1.0
 color/color = Color( 0.484375, 0.455994, 0.455994, 1 )
 color/color_ramp = SubResource( 1 )
 
+[node name="Sprite 3" type="Sprite" parent="mountains"]
+
+transform/pos = Vector2( 168.991, 143.266 )
+transform/scale = Vector2( 0.666471, 0.666471 )
+texture = ExtResource( 3 )
+centered = false
+
 [node name="hills" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 0, 30 )
+transform/pos = Vector2( 0, 54 )
 motion/scale = Vector2( 0.4, 0.4 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 1024, 0 )
