@@ -437,3 +437,5 @@ text = "This scene serves as a tool for editing the tileset.\nNodes (sprites) a
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+
