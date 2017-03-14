@@ -303,7 +303,6 @@ tabs_visible = true
 
 [node name="Instructions" type="Tabs" parent="options_screen/settings"]
 
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus_neighbour/right = NodePath("../Debug")
