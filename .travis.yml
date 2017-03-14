@@ -9,8 +9,8 @@ install:
   - wget https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.debug.64
 before_script:
 script:    
-  - mkdir -p ./../exports/captain
-  - godot.x11.opt.tools.64 -export "Linux X11" ../exports/captain
-  - chmod 777 $(dirname $PWD)/exports/captain
+  - mkdir -p exports/captain
+  - ./godot.x11.opt.tools.64 -export "Linux X11" exports/captain
+  - chmod 777 exports/captain
   - ls
 after_success:
