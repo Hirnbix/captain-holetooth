@@ -6,7 +6,7 @@ before_install:
 install:
   - mkdir -p ~/.godot/templates
   - wget -P ~/.godot/templates/ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.64
-  - wget -P /.. https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.tools.64
+  - wget -P /../ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.tools.64
   - wget -P ~/.godot/templates/ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.debug.64
 before_script:
 script:    
