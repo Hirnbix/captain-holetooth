@@ -18,12 +18,15 @@ func _ready():
 		yan.connect("met_yan", self,"_on_met_yan")
 		animations.play("yan_unlock_anim")
 		print("working")
-	
+	set_process_input(true)
 	update_scores()
 	game.connect("scores_changed", self, "update_scores")
 	update_sound_hud()
 
-
+func _input(event):
+	if Input.is_action_pressed("ui_cancel"):
+		_on_go_to_menu_pressed()
+	
 # Update scores
 func update_scores():
 	get_node(collected_text).set_text(str(game.items_collected))
