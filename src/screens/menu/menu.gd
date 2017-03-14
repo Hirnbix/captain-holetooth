@@ -45,11 +45,14 @@ func _on_startbutton_pressed():
 # Options
 func _on_optionsbutton_pressed():
 	options_screen.show()
+	options_screen.set_process_input(true)
 	get_node("sfx").play("click")
 
 # Exit
 func _on_exitbutton_pressed():
 	options_screen.hide()
+	options_screen.set_process_input(false)
+	get_node("menu_buttons/startbutton").grab_focus()
 	get_node("sfx").play("click")
 	
 # Close Options

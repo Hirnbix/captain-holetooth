@@ -4,9 +4,9 @@ extends TextureFrame
 var level_path = "res://src/levels/forest/forest.tscn"
 
 func _ready():
-	set_process(true)
+	set_process_input(true)
 
-func _process(delta):
+func _input(event):
 	if Input.is_action_pressed("ui_accept"):
 		_on_skipbutton_pressed()
 
