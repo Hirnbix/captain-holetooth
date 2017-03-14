@@ -1,0 +1,15 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler: gcc
+before_install:
+install:
+  - wget https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.tools.64
+  - wget https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.debug.64
+  - wget https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.64
+before_script:
+script:    
+  mkdir -p ./../exports/captain
+  godot.x11.opt.tools.64 -export "Linux X11" $(dirname $PWD)/exports/captain
+  chmod 777 $(dirname $PWD)/exports/captain
+after_success:
