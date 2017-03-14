@@ -17,4 +17,5 @@ script:
   - ./godot.x11.opt.tools.64 -export "Linux X11" /exports/captain
   - chmod 777 exports/captain
   - ls
+  - ls ~/.godot/templates/
 after_success:
