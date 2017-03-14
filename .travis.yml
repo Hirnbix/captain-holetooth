@@ -10,7 +10,7 @@ install:
 before_script:
 script:    
   - mkdir -p exports/captain
-  - ./godot.x11.opt.tools.64 -export "Linux X11" exports/captain
+  - sudo ./godot.x11.opt.tools.64 -export "Linux X11" exports/captain
   - chmod 777 exports/captain
   - ls
 after_success:
