@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Hirnbix/captain-holetooth.svg?branch=master)](https://travis-ci.org/Hirnbix/captain-holetooth)
+
 ##Captain Holetooth - the Videogame!
 
 The "Captain Holetooth" explorative platformer lives in a unique, story packed world. 
