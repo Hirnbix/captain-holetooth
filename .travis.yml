@@ -13,10 +13,5 @@ script:
   - mv ~/.godot/templates/godot.x11.opt.64 ~/.godot/templates/linux_x11_64_release
   - mv ~/.godot/templates/godot.x11.opt.debug.64 ~/.godot/templates/linux_x11_64_debug
   - mkdir ./../exports
-  - chmod 777 ./../godot_server.server.opt.tools.64
-  - chmod 777 ./../exports
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/name
-  - ls
-  - ls ./..
-  - ls ~/.godot/templates/
 after_success:
