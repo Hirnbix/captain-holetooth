@@ -24,9 +24,9 @@ script:
   - mkdir ./../exports
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
-  - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag
-  - zip ./../exports/linux.$GAME_NAME.$target_tag.zip $GAME_NAME.$target_tag data.pck;
-  - zip ./../exports/windows.$GAME_NAME.$target_tag.zip $GAME_NAME.$target_tag.exe data.pck;
+  - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
+  - zip ./../exports/linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag data.pck;
+  - zip ./../exports/windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck;
   - ls ./../exports
 after_success:
 deploy:
