@@ -15,7 +15,7 @@ script:
   - mkdir ./../exports
   - chmod 777 ./godot.x11.opt.tools.64
   - chmod 777 ./../exports
-  - ./../godot.x11.opt.tools.64 -export "Linux X11" $(dirname $PWD)/exports
+  - ./../godot.x11.opt.tools.64 -export "Linux X11" $(dirname $PWD)/../exports
   - ls
   - ls ~/.godot/templates/
 after_success:
