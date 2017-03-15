@@ -8,9 +8,9 @@ env:
 before_install:
 install:
   - mkdir -p ~/.godot/templates
-  - wget -P ~/.godot/templates/ $(BUILD_SOURCE_URL)godot.x11.opt.64
-  - wget -P ~/.godot/templates/ $(BUILD_SOURCE_URL)godot.x11.opt.debug.64
-  - wget -P ./../ $(BUILD_SOURCE_URL)godot_server.server.opt.tools.64
+  - wget -P ~/.godot/templates/ ($BUILD_SOURCE_URL)godot.x11.opt.64
+  - wget -P ~/.godot/templates/ ($BUILD_SOURCE_URL)godot.x11.opt.debug.64
+  - wget -P ./../ ($BUILD_SOURCE_URL)godot_server.server.opt.tools.64
 before_script:
 script:    
   - mv ~/.godot/templates/godot.x11.opt.64 ~/.godot/templates/linux_x11_64_release
