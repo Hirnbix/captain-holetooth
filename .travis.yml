@@ -4,9 +4,10 @@ notifications:
 sudo: required
 dist: trusty
 compiler: gcc
-before_install:
-  - GAME_NAME=captain_holetooth
-  - BUILD_SOURCE_URL="https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/"
+env:
+  global:
+    - GAME_NAME=captain_holetooth
+    - BUILD_SOURCE_URL="https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/"  
 install:
   - mkdir -p ~/.godot/templates
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.x11.opt.64
