@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/Hirnbix/captain-holetooth.svg?branch=master)](https://travis-ci.org/Hirnbix/captain-holetooth)
 
 ## Captain Holetooth - the Videogame!
-*All characters & story elements © Oliver Rühl 2017
+All characters & story elements © Oliver Rühl 2017
 
 The "Captain Holetooth" explorative platformer lives in a unique, story packed world. 
 A cast of amazing characters helps Captain Holetooth to defend the "magic candy" (working title). 
