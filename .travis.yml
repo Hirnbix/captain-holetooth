@@ -2,12 +2,15 @@ language: cpp
 sudo: required
 dist: trusty
 compiler: gcc
+env:
+- GAME_NAME=captain_holetooth
+- BUILD_SOURCE_URL=https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/
 before_install:
 install:
   - mkdir -p ~/.godot/templates
-  - wget -P ~/.godot/templates/ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.64
-  - wget -P ./../ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot_server.server.opt.tools.64
-  - wget -P ~/.godot/templates/ https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/godot.x11.opt.debug.64
+  - wget -P ~/.godot/templates/ $(BUILD_SOURCE_URL)godot.x11.opt.64
+  - wget -P ~/.godot/templates/ $(BUILD_SOURCE_URL)godot.x11.opt.debug.64
+  - wget -P ./../ $(BUILD_SOURCE_URL)godot_server.server.opt.tools.64
 before_script:
 script:    
   - mv ~/.godot/templates/godot.x11.opt.64 ~/.godot/templates/linux_x11_64_release
@@ -15,4 +18,6 @@ script:
   - mkdir ./../exports
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/name
+  - zip ./../exports/$GAME_NAME_$target_tag.zip $GAME_NAME.$target_tag.exe data.pck;
+  -ls ./../exports
 after_success:
