@@ -54,10 +54,8 @@ script:
 - zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck
 #- ls .
 #- echo $JAVA_HOME
-#- echo $ANDROID_HOME
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
-#- cd $ANDROID_HOME
 #- ls .
 after_success:
 deploy:
