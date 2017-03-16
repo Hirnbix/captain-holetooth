@@ -64,6 +64,7 @@ script:
 - ls -all /app/build/outputs/apk/
 - ls -all /
 - ls /usr/local/android-sdk/platform-tools/
+- sudo find / -type f -name "*.apk"
 after_success:
 deploy:
   provider: releases
