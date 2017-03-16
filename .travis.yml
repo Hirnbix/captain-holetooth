@@ -23,6 +23,8 @@ script:
   - mv ~/.godot/templates/godot.x11.opt.debug.64 ~/.godot/templates/linux_x11_64_debug
   - mv ~/.godot/templates/godot.windows.opt.64.exe ~/.godot/templates/windows_64_release.exe
   - mv ~/.godot/templates/godot.windows.opt.debug.64.exe ~/.godot/templates/windows_64_debug.exe
+  - mv ~/.godot/templates/libgodot.android.opt.release.x86.so ~/.godot/templates/android_release.apk
+  - mv ~/.godot/templates/libgodot.android.opt.debug.x86.so ~/.godot/templates/android_debug.apk
   - mkdir ./../exports
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
