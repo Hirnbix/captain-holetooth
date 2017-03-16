@@ -50,7 +50,7 @@ script:
 - echo $JAVA_HOME
 - echo $ANDROID_HOME
 - echo $GODOT_CACHE
-- echo $GODOT_Templates
+- echo $GODOT_TEMPLATES
 - cd $ANDROID_HOME
 - ls .
 after_success:
