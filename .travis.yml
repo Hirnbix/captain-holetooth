@@ -36,6 +36,9 @@ script:
 - mv ~/.godot/templates/godot.x11.opt.debug.64 ~/.godot/templates/linux_x11_64_debug
 - mv ~/.godot/templates/godot.windows.opt.64.exe ~/.godot/templates/windows_64_release.exe
 - mv ~/.godot/templates/godot.windows.opt.debug.64.exe ~/.godot/templates/windows_64_debug.exe
+- mv debug.keystore?dl=0 debug.keystore
+- mv ~/.godot/templates/android_release.apk?dl=0 ~/.godot/templates/android_release.apk
+- mv ~/.godot/templates/android_debug.apk?dl=0 ~/.godot/templates/android_debug.apk
 #- mv ~/.godot/templates/godot.osx.opt.fat ~/.godot/templates/osx_release.fat
 #- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
 - mkdir ./../exports
