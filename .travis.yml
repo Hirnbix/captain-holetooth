@@ -42,6 +42,8 @@ script:
 - zip linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag data.pck
 - zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck
 - ls .
+- echo $JAVA_HOME
+- echo $ANDROID_HOME
 after_success:
 deploy:
   provider: releases
