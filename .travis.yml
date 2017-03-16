@@ -30,8 +30,8 @@ script:
 - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
 - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
 - cd ./../exports/
-- zip linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag exports/data.pck
-- zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe exports/data.pck
+- zip linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag data.pck
+- zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck
 - ls .
 after_success:
 deploy:
