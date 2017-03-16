@@ -14,6 +14,8 @@ install:
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.x11.opt.debug.64
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.64.exe
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.debug.64.exe
+  - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"libgodot.android.opt.release.x86.so
+  - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"libgodot.android.opt.debug.x86.so
   - wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
 before_script:
 script:    
@@ -25,8 +27,9 @@ script:
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
   - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
-  - zip ./../exports/linux.$GAME_NAME.$target_tag.zip ./../exports/linux.$GAME_NAME.$target_tag ./../exports/data.pck;
-  - zip ./../exports/windows.$GAME_NAME.$target_tag.zip ./../exports/windows.$GAME_NAME.$target_tag.exe ./../exports/data.pck;
+  - ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$target_tag.apk
+  - zip ./../exports/linux.$GAME_NAME.$target_tag.zip ./../exports/linux.$GAME_NAME.$target_tag ./../exports/data.pck
+  - zip ./../exports/windows.$GAME_NAME.$target_tag.zip ./../exports/windows.$GAME_NAME.$target_tag.exe ./../exports/data.pck
   - ls ./../exports
 after_success:
 deploy:
@@ -35,8 +38,9 @@ deploy:
     secure: "O7UIyEXATIHl7k+AwU0Pm2MZp50MSXGyPYj5pwiHvqVcPMqKigKm606TuUsTefOMcjpa1ADu2IErzYjo//z2Q6I5k7piiwELPdZfiC9tM/yhEPTWa4ObRAa0LT/RG4aCOuDvC0x280gTiviP19KUpELPDSEBzMrJOFoVPnwmd8jJ/sk6d38LK9zG6GxVwqHjIB0kqdRmrc8XHs0dNwTVf35ZCuui/6B+7UAXT8sfSMtKLBeYEbR2ln82aBfHyHSOaSutSDTq2PLMxDFf9Sonf5Ds7q7M4qA+xvlYQXp2Cj0kpP453IDPHEBJWLvghGxzu5I2ZkT/5z0JSBIYOgA8ktiOzTfblDKFT3cFhpxjMenKVqnJW2X46aKqb/Ku/469m2wrm9z1kziKDOTkQsZHZRZImIs5p6Tv3PHr30unoIJcPiN2pgAbFh494vAWt4zgI3+IC5kYzO3ycqu8ydILq97D6lIkc6wDZExCwWbI3WsO107ZbuqRe/g7AMw6ObvpBZUEIaXThjMpbWrJu8WoRDq65ZqcSeJOS/3PUe/MfcHkgElHTfovMihLQLyyX1v738lR7/e8Ht+1wvd9eynSwcVOKSYCsD8GdWlhSpix2lo5KmiLJfGKPV1yKIE0BJtjK/0mWqQpqHg196FHWlyUjOOKpd9oq2oXTKM9c4RGrd0="
   file_glob: true
   file:
-    - ./../exports/windows.$GAME_NAME.$target_tag.zip
     - ./../exports/linux.$GAME_NAME.$target_tag.zip
+    - ./../exports/windows.$GAME_NAME.$target_tag.zip
+    - ./../exports/android.$GAME_NAME.$target_tag.apk
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
