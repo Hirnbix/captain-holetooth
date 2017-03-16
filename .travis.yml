@@ -56,7 +56,7 @@ script:
 #- echo $JAVA_HOME
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
-#- ls .
+- ./../exports/
 after_success:
 deploy:
   provider: releases
