@@ -1,10 +1,9 @@
-language: Android
+language: android
 android:
   components:
-    - tools
-    - platform-tools
-    - build-tools-24.0.2
+    - build-tools-24
     - android-24
+    - extra
 notifications:
   email: false
 sudo: required
