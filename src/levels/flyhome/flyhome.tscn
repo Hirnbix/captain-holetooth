@@ -27,7 +27,7 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 75.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Color( 0.556793, 0.649815, 0.695312, 1 ), Color( 0.0778656, 0.0923227, 0.246094, 1 ) ] }
 
-[node name="flyhome" type="Node2D"]
+[node name="flyhome5" type="Node2D"]
 
 transform/pos = Vector2( 1, 0 )
 script/script = ExtResource( 1 )
