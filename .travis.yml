@@ -45,6 +45,7 @@ script:
 - ls .
 - echo $JAVA_HOME
 - echo $ANDROID_HOME
+- ls /home/travis/build/Hirnbix/captain-holetooth/android-sdk
 after_success:
 deploy:
   provider: releases
