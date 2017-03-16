@@ -43,15 +43,15 @@ script:
 #- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
 - mkdir ./../exports
 - chmod 777 ./../godot_server.server.opt.tools.64
-- ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
-- ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
+- ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$TRAVIS_TAG
+- ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$TRAVIS_TAG.exe
 #  - ./../godot_server.server.opt.tools.64 -export "Mac OSX" ./../exports/macos.$GAME_NAME.$target_tag.app.zip
-- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$target_tag.apk
+- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk
 #- ls .
 #- ls /usr/local/android-sdk/
 - cd ./../exports/
-- zip linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag data.pck
-- zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck
+- zip linux.$GAME_NAME.$TRAVIS_TAG.zip linux.$GAME_NAME.$TRAVIS_TAG data.pck
+- zip windows.$GAME_NAME.$TRAVIS_TAG.zip windows.$GAME_NAME.$TRAVIS_TAG.exe data.pck
 #- ls .
 #- echo $JAVA_HOME
 #- echo $GODOT_CACHE
@@ -63,9 +63,9 @@ deploy:
   api_key:
     secure: "qKoyg0NzH/JqxNQsSAflmQ+/NKSZYE+PNrv56t4ESoIemhDWfcq+WQpMEODJKDhi0RQu3u2DLCJWB0BCWz/AHJvzw98KPQqukTOy6CkWPi8+UXsPHM0S94DKDVhAJJr/YxySrsI13xwyGT27LEnkhRdC6j8laFO+/8pHV0/XaBFVgZttRYcuFAgzJyc8sAM+cWviaSItXPb+/AhpjwlCFMltSFPVmCRzGyDTcHchEJnkCZMBgCDs3CdoMBhKMg5bb1e6Sb2gi6yzZxDSPMxTHgDqIJOS6xUajCE4N9Lya7WXJeop7LPo1ij4XviPHbei9vcn3DjyAdqr3U6ph9AQgzheDxy1TBVtcHWZ3EJ75PZ/dnrq9m5VJbucy1vzv81KrG9IOvM4SfzkxXEL+WXL0D6m9W0SN2psGZK0TpYUydcSMZM5mfxjRxEa8JQyQYzrz2QVNxz5yLOuOTF+SUGvwOPoZP8eMQ6uOTWx8H40B5qOtBxv/nBSoHLo+cVI/tJkvk0o0rmTsmz5cU5iKgsOgN0UXm6NZwsKgzorMkam1LV7tSo9PJ/plC70IYol3ChQXkwwr9XgYbPO+Jh1AqpkL3b/oMVYjBVQOK6SN/lhJOt/FGMScH0vUwQdyokTnS1TqmxFQaQysBf+S6geLjG6DuLMG+iTg14QFYsAwLDjiiA="
   file:
-    - "./../exports/linux.$GAME_NAME.$target_tag.zip"
-    - "./../exports/windows.$GAME_NAME.$target_tag.zip"
-    - "./../exports/android.$GAME_NAME.$target_tag.apk"
+    - "./../exports/linux.$GAME_NAME.$TRAVIS_TAG.zip"
+    - "./../exports/windows.$GAME_NAME.$TRAVIS_TAG.zip"
+    - "./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk"
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
