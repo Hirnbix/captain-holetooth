@@ -65,6 +65,7 @@ deploy:
   file:
     - "./../exports/linux.$GAME_NAME.$target_tag.zip"
     - "./../exports/windows.$GAME_NAME.$target_tag.zip"
+    - "./../exports/android.$GAME_NAME.$target_tag.apk"
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
