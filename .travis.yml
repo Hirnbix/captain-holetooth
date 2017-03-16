@@ -18,8 +18,8 @@ install:
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.x11.opt.debug.64
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.64.exe
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.debug.64.exe
-  - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"libgodot.android.opt.release.x86.so
-  - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"libgodot.android.opt.debug.x86.so
+  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/19cb4vo03gyf0ni/android_release.apk?dl=0
+  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/mu9mddmme4kg025/android_debug.apk?dl=0
   - wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
 before_script:
 script:    
@@ -27,8 +27,6 @@ script:
   - mv ~/.godot/templates/godot.x11.opt.debug.64 ~/.godot/templates/linux_x11_64_debug
   - mv ~/.godot/templates/godot.windows.opt.64.exe ~/.godot/templates/windows_64_release.exe
   - mv ~/.godot/templates/godot.windows.opt.debug.64.exe ~/.godot/templates/windows_64_debug.exe
-  - mv ~/.godot/templates/libgodot.android.opt.release.x86.so ~/.godot/templates/android_release.apk
-  - mv ~/.godot/templates/libgodot.android.opt.debug.x86.so ~/.godot/templates/android_debug.apk
   - mkdir ./../exports
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
