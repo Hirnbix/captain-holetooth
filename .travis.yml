@@ -10,6 +10,7 @@ dist: trusty
 compiler: gcc
 env:
   global:
+  - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
   - GAME_NAME=captain_holetooth
   - BUILD_SOURCE_URL="https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/"
 install:
