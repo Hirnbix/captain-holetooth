@@ -7,7 +7,7 @@ android:
 notifications:
   email: false
 sudo: required
-dist: trusty
+dist: precise
 compiler: gcc
 env:
   global:
