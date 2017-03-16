@@ -56,9 +56,10 @@ script:
 #- echo $JAVA_HOME
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
-- ls ./../exports/
-- ls .
-- ls ./../
+- ls -all ./../exports/
+- ls -all .
+- ls -all ./../
+- ls -all ./../captain-holetooth
 after_success:
 deploy:
   provider: releases
