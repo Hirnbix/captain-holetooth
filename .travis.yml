@@ -57,6 +57,8 @@ script:
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
 - ls ./../exports/
+- ls .
+- ls ./../
 after_success:
 deploy:
   provider: releases
