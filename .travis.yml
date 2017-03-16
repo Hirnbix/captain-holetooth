@@ -10,6 +10,8 @@ dist: trusty
 compiler: gcc
 env:
   global:
+  - GODOT_CACHE=~/.godot
+  - GODOT_TEMPLATES="$GODOT_CACHE"/tempates
   - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
   - GAME_NAME=captain_holetooth
   - BUILD_SOURCE_URL="https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/"
@@ -45,6 +47,8 @@ script:
 - ls .
 - echo $JAVA_HOME
 - echo $ANDROID_HOME
+- echo $GODOT_CACHE
+- echo $GODOT_Templates
 - ls /home/travis/build/Hirnbix/captain-holetooth/android-sdk
 after_success:
 deploy:
