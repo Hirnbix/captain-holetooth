@@ -27,6 +27,7 @@ install:
 #- wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.osx.opt.debug.fat
 - wget -P ~/.godot/templates/ https://www.dropbox.com/s/19cb4vo03gyf0ni/android_release.apk?dl=0
 - wget -P ~/.godot/templates/ https://www.dropbox.com/s/mu9mddmme4kg025/android_debug.apk?dl=0
+- wget -P ~/.godot/ https://www.dropbox.com/s/raarhm1p5ulayl3/editor_settings.tres?dl=0
 - wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
 before_script:
 script:
