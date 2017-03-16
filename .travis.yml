@@ -11,7 +11,7 @@ compiler: gcc
 env:
   global:
   - GODOT_CACHE=~/.godot
-  - GODOT_TEMPLATES="$GODOT_CACHE"/tempates
+  - GODOT_TEMPLATES=${GODOT_CACHE}/templates
   - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
   - GAME_NAME=captain_holetooth
   - BUILD_SOURCE_URL="https://github.com/GodotBuilder/godot-builds/releases/download/2.1_20170121/"
@@ -33,8 +33,8 @@ script:
 - mv ~/.godot/templates/godot.x11.opt.debug.64 ~/.godot/templates/linux_x11_64_debug
 - mv ~/.godot/templates/godot.windows.opt.64.exe ~/.godot/templates/windows_64_release.exe
 - mv ~/.godot/templates/godot.windows.opt.debug.64.exe ~/.godot/templates/windows_64_debug.exe
-- mv ~/.godot/templates/godot.osx.opt.fat ~/.godot/templates/osx_release.fat
-- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
+#- mv ~/.godot/templates/godot.osx.opt.fat ~/.godot/templates/osx_release.fat
+#- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
 - mkdir ./../exports
 - chmod 777 ./../godot_server.server.opt.tools.64
 - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
@@ -49,7 +49,8 @@ script:
 - echo $ANDROID_HOME
 - echo $GODOT_CACHE
 - echo $GODOT_Templates
-- ls /home/travis/build/Hirnbix/captain-holetooth/android-sdk
+- cd $ANDROID_HOME
+- ls .
 after_success:
 deploy:
   provider: releases
