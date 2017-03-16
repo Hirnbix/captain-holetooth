@@ -61,6 +61,7 @@ script:
 - ls -all ./../
 - ls -all ./../captain-holetooth
 - ls -all app/build/outputs/apk/
+- ls -all /app/build/outputs/apk/
 - ls -all /
 after_success:
 deploy:
