@@ -18,8 +18,8 @@ install:
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.x11.opt.debug.64
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.64.exe
   - wget -P ~/.godot/templates/ "$BUILD_SOURCE_URL"godot.windows.opt.debug.64.exe
-  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/19cb4vo03gyf0ni/android_release.apk?dl=0
-  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/mu9mddmme4kg025/android_debug.apk?dl=0
+#  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/19cb4vo03gyf0ni/android_release.apk?dl=0
+#  - wget -P ~/.godot/templates/ https://www.dropbox.com/s/mu9mddmme4kg025/android_debug.apk?dl=0
   - wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
 before_script:
 script:    
@@ -31,7 +31,7 @@ script:
   - chmod 777 ./../godot_server.server.opt.tools.64
   - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$target_tag
   - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
-  - ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$target_tag.apk
+#  - ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$target_tag.apk
   - zip ./../exports/linux.$GAME_NAME.$target_tag.zip ./../exports/linux.$GAME_NAME.$target_tag ./../exports/data.pck
   - zip ./../exports/windows.$GAME_NAME.$target_tag.zip ./../exports/windows.$GAME_NAME.$target_tag.exe ./../exports/data.pck
   - ls ./../exports
@@ -44,7 +44,7 @@ deploy:
   file:
     - ./../exports/linux.$GAME_NAME.$target_tag.zip
     - ./../exports/windows.$GAME_NAME.$target_tag.zip
-    - ./../exports/android.$GAME_NAME.$target_tag.apk
+#    - ./../exports/android.$GAME_NAME.$target_tag.apk
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
