@@ -47,18 +47,18 @@ script:
 - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$target_tag.exe
 #  - ./../godot_server.server.opt.tools.64 -export "Mac OSX" ./../exports/macos.$GAME_NAME.$target_tag.app.zip
 - ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$target_tag.apk
-- ls .
-- ls /usr/local/android-sdk/
+#- ls .
+#- ls /usr/local/android-sdk/
 - cd ./../exports/
 - zip linux.$GAME_NAME.$target_tag.zip linux.$GAME_NAME.$target_tag data.pck
 - zip windows.$GAME_NAME.$target_tag.zip windows.$GAME_NAME.$target_tag.exe data.pck
-- ls .
-- echo $JAVA_HOME
-- echo $ANDROID_HOME
-- echo $GODOT_CACHE
-- echo $GODOT_TEMPLATES
-- cd $ANDROID_HOME
-- ls .
+#- ls .
+#- echo $JAVA_HOME
+#- echo $ANDROID_HOME
+#- echo $GODOT_CACHE
+#- echo $GODOT_TEMPLATES
+#- cd $ANDROID_HOME
+#- ls .
 after_success:
 deploy:
   provider: releases
