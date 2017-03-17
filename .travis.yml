@@ -46,7 +46,7 @@ script:
 - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$TRAVIS_TAG
 - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$TRAVIS_TAG.exe
 #  - ./../godot_server.server.opt.tools.64 -export "Mac OSX" ./../exports/macos.$GAME_NAME.$target_tag.app.zip
-- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk
+- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/test.apk
 #- ls .
 #- ls /usr/local/android-sdk/
 - cd ./../exports/
@@ -73,7 +73,7 @@ deploy:
   file:
     - "./../exports/linux.$GAME_NAME.$TRAVIS_TAG.zip"
     - "./../exports/windows.$GAME_NAME.$TRAVIS_TAG.zip"
-    - "./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk"
+    - "./../exports/test.apk"
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
