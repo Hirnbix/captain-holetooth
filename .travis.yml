@@ -55,7 +55,8 @@ script:
 - zip linux.$GAME_NAME.$TRAVIS_TAG.zip linux.$GAME_NAME.$TRAVIS_TAG data.pck
 - zip windows.$GAME_NAME.$TRAVIS_TAG.zip windows.$GAME_NAME.$TRAVIS_TAG.exe data.pck
 #- ls .
-#- echo $JAVA_HOME
+- echo $JAVA_HOME
+- echo $ANDROID_HOME
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
 - ls -all ./../exports/
