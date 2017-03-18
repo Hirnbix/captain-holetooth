@@ -44,7 +44,7 @@ script:
 #- mv ~/.godot/templates/godot.osx.opt.fat ~/.godot/templates/osx_release.fat
 #- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
 - mkdir ./../exports
-- chmod 777 ./../godot_server.server.opt.tools.64
+- chmod 777 ./../godot_server.server.tools.64
 - ./../godot_server.server.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$TRAVIS_TAG
 - ./../godot_server.server.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$TRAVIS_TAG.exe
 #  - ./../godot_server.server.opt.tools.64 -export "Mac OSX" ./../exports/macos.$GAME_NAME.$target_tag.app.zip
