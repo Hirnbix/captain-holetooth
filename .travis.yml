@@ -29,7 +29,8 @@ install:
 - wget -P ~/.godot/templates/ https://www.dropbox.com/s/mu9mddmme4kg025/android_debug.apk?dl=0
 - wget -P ~/.godot/ https://www.dropbox.com/s/raarhm1p5ulayl3/editor_settings.tres?dl=0
 - wget https://www.dropbox.com/s/0w48cysxdjc9zko/debug.keystore?dl=0
-- wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
+#- wget -P ./../ "$BUILD_SOURCE_URL"godot_server.server.opt.tools.64
+- wget -P ./../ https://www.dropbox.com/s/hz1ox1cs4bfouwr/godot_server.server.tools.64?dl=0
 before_script:
 script:
 - mv ~/.godot/templates/godot.x11.opt.64 ~/.godot/templates/linux_x11_64_release
@@ -39,6 +40,7 @@ script:
 - mv debug.keystore?dl=0 debug.keystore
 - mv ~/.godot/templates/android_release.apk?dl=0 ~/.godot/templates/android_release.apk
 - mv ~/.godot/templates/android_debug.apk?dl=0 ~/.godot/templates/android_debug.apk
+- mv ./../godot_server.server.tools.64?dl=0 ./../godot_server.server.tools.64
 #- mv ~/.godot/templates/godot.osx.opt.fat ~/.godot/templates/osx_release.fat
 #- mv ~/.godot/templates/godot.osx.opt.debug.fat ~/.godot/templates/osx_debug.fat
 - mkdir ./../exports
@@ -46,7 +48,7 @@ script:
 - ./../godot_server.server.opt.tools.64 -export "Linux X11" ./../exports/linux.$GAME_NAME.$TRAVIS_TAG
 - ./../godot_server.server.opt.tools.64 -export "Windows Desktop" ./../exports/windows.$GAME_NAME.$TRAVIS_TAG.exe
 #  - ./../godot_server.server.opt.tools.64 -export "Mac OSX" ./../exports/macos.$GAME_NAME.$target_tag.app.zip
-- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/test.apk
+- ./../godot_server.server.opt.tools.64 -export "Android" ./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk
 #- ls .
 #- ls /usr/local/android-sdk/
 - cd ./../exports/
@@ -57,11 +59,11 @@ script:
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
 - ls -all ./../exports/
-- ls -all .
-- ls -all ./../
-- ls -all ./../captain-holetooth
-- ls /usr/local/android-sdk/platform-tools/
-- sudo find / -type f -name "*.apk"
+#- ls -all .
+#- ls -all ./../
+#- ls -all ./../captain-holetooth
+#- ls /usr/local/android-sdk/platform-tools/
+#- sudo find / -type f -name "*.apk"
 after_success:
 deploy:
   provider: releases
@@ -70,7 +72,7 @@ deploy:
   file:
     - "./../exports/linux.$GAME_NAME.$TRAVIS_TAG.zip"
     - "./../exports/windows.$GAME_NAME.$TRAVIS_TAG.zip"
-    - "./../exports/test.apk"
+    - "./../exports/android.$GAME_NAME.$TRAVIS_TAG.apk"
   skip_cleanup: true
   on:
     repo: Hirnbix/captain-holetooth
