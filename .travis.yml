@@ -60,8 +60,8 @@ script:
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
 - ls -all ./../exports/
-#- ls -all .
-#- ls -all ./../
+- ls -all .
+- ls -all ./../
 #- ls -all ./../captain-holetooth
 #- ls /usr/local/android-sdk/platform-tools/
 #- sudo find / -type f -name "*.apk"
