@@ -37,6 +37,7 @@ script:
 - mv ~/.godot/templates/godot.windows.opt.64.exe ~/.godot/templates/windows_64_release.exe
 - mv ~/.godot/templates/godot.windows.opt.debug.64.exe ~/.godot/templates/windows_64_debug.exe
 - mv debug.keystore?dl=0 debug.keystore
+- mv ~/.godot/editor_settings.tres?dl=0 ~/.godot/editor_settings.tres
 - mv ~/.godot/templates/android_release.apk?dl=0 ~/.godot/templates/android_release.apk
 - mv ~/.godot/templates/android_debug.apk?dl=0 ~/.godot/templates/android_debug.apk
 - mv ./../godot_server.server.tools.64?dl=0 ./../godot_server.server.tools.64
