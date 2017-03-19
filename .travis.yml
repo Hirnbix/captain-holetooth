@@ -61,7 +61,7 @@ script:
 - ls -all ./../exports/
 - ls -all .
 - ls -all ./../
-#- ls -all /usr/lib/
+- ls -all /usr/local/android-sdk-24.0.2/platform-tools/
 - ls -all ./../captain-holetooth
 #- ls /usr/local/android-sdk/platform-tools/
 - sudo find / -type f -name "*.apk"
