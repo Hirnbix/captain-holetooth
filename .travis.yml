@@ -55,17 +55,17 @@ script:
 - zip linux.$GAME_NAME.$TRAVIS_TAG.zip linux.$GAME_NAME.$TRAVIS_TAG data.pck
 - zip windows.$GAME_NAME.$TRAVIS_TAG.zip windows.$GAME_NAME.$TRAVIS_TAG.exe data.pck
 #- ls .
-- echo $JAVA_HOME
-- echo $ANDROID_HOME
+#- echo $JAVA_HOME
+#- echo $ANDROID_HOME
 #- echo $GODOT_CACHE
 #- echo $GODOT_TEMPLATES
-- ls -all ./../exports/
-- ls -all .
-- ls -all ./../
+#- ls -all ./../exports/
+#- ls -all .
+#- ls -all ./../
 #- ls -all /usr/local/android-sdk
-- ls -all /usr/local/android-sdk-24.0.2/platform-tools/
-- ls -all ./../captain-holetooth
-- echo $TRAVIS_BUILD_DIR
+#- ls -all /usr/local/android-sdk-24.0.2/platform-tools/
+#- ls -all ./../captain-holetooth
+#- echo $TRAVIS_BUILD_DIR
 #- ls /usr/local/android-sdk/platform-tools/
 - sudo find / -type f -name "*.apk"
 after_success:
