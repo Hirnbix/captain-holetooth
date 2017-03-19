@@ -63,6 +63,7 @@ script:
 - ls -all ./../
 - ls -all /usr/local/android-sdk-24.0.2/platform-tools/
 - ls -all ./../captain-holetooth
+- echo TRAVIS_BUILD_DIR
 #- ls /usr/local/android-sdk/platform-tools/
 - sudo find / -type f -name "*.apk"
 after_success:
