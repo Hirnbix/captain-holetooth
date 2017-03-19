@@ -61,7 +61,7 @@ script:
 - ls -all ./../exports/
 - ls -all .
 - ls -all ./../
-- ls -all /usr/local/android-sdk
+#- ls -all /usr/local/android-sdk
 - ls -all /usr/local/android-sdk-24.0.2/platform-tools/
 - ls -all ./../captain-holetooth
 - echo $TRAVIS_BUILD_DIR
