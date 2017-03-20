@@ -293,8 +293,8 @@ transform/scale = Vector2( 1.09375, 0.466668 )
 [node name="waterdrop4" parent="world/tile_map/cave_background" instance=ExtResource( 11 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 1160.82, 841.69 )
-transform/scale = Vector2( 1, 2.34375 )
+transform/pos = Vector2( 859.487, 870.465 )
+transform/scale = Vector2( 1, 1.28029 )
 
 [node name="fireflies" parent="world/tile_map/cave_background/waterdrop4" instance=ExtResource( 12 )]
 
@@ -614,8 +614,6 @@ transform/pos = Vector2( 24.7671, 249.674 )
 
 [node name="interactables" type="Node2D" parent="world"]
 
-editor/display_folded = true
-
 [node name="rock" parent="world/interactables" instance=ExtResource( 17 )]
 
 transform/pos = Vector2( 2381.47, 1263.25 )
@@ -638,8 +636,6 @@ editor/display_folded = true
 transform/pos = Vector2( 2815.6, 1528.28 )
 
 [node name="rewards" type="Node2D" parent="world/interactables"]
-
-editor/display_folded = true
 
 [node name="reward" parent="world/interactables/rewards" instance=ExtResource( 18 )]
 
@@ -1355,6 +1351,12 @@ transform/pos = Vector2( 352, 1040 )
 movement_speed = -40
 motion = "zigzag"
 
+[node name="soap_bubble25" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 567.612, 868.837 )
+movement_speed = -40
+motion = "zigzag"
+
 [node name="soap_bubble1" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 902.64, 1152.78 )
@@ -1437,6 +1439,36 @@ movement_speed = -40
 transform/pos = Vector2( 5632, 2602 )
 movement_speed = -40
 
+[node name="soap_bubble26" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5025.91, 2561 )
+movement_speed = -40
+
+[node name="soap_bubble27" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5081.31, 2603.11 )
+movement_speed = -40
+
+[node name="soap_bubble28" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 4926.18, 2563.22 )
+movement_speed = -40
+
+[node name="soap_bubble29" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5059.15, 2493.41 )
+movement_speed = -40
+
+[node name="soap_bubble30" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 4969.4, 2492.3 )
+movement_speed = -40
+
+[node name="soap_bubble31" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 4969.4, 2492.3 )
+movement_speed = -40
+
 [node name="soap_bubble14" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5542, 2812 )
@@ -1450,6 +1482,31 @@ movement_speed = -40
 [node name="soap_bubble16" parent="world/interactables/rewards" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 5522, 2172 )
+movement_speed = -40
+
+[node name="soap_bubble32" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 6000.67, 1637.93 )
+movement_speed = -40
+
+[node name="soap_bubble33" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5878.79, 1606.9 )
+movement_speed = -40
+
+[node name="soap_bubble34" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5914.24, 1641.25 )
+movement_speed = -40
+
+[node name="soap_bubble35" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5943.05, 1600.25 )
+movement_speed = -40
+
+[node name="soap_bubble36" parent="world/interactables/rewards" instance=ExtResource( 19 )]
+
+transform/pos = Vector2( 5802.33, 1626.85 )
 movement_speed = -40
 
 [node name="soap_bubble17" parent="world/interactables/rewards" instance=ExtResource( 19 )]
@@ -1498,8 +1555,6 @@ transform/pos = Vector2( 752, 822 )
 transform/pos = Vector2( 962, 322 )
 
 [node name="enemies" type="Node2D" parent="world/interactables" groups=[ "enemies" ]]
-
-editor/display_folded = true
 
 [node name="enemy 5" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 21 )]
 
@@ -1553,6 +1608,10 @@ transform/pos = Vector2( 4608, 1912 )
 [node name="enemy17" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 21 )]
 
 transform/pos = Vector2( 4072, 1904 )
+
+[node name="enemy19" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 21 )]
+
+transform/pos = Vector2( 3874.77, 2679.62 )
 
 [node name="enemy18" parent="world/interactables/enemies" groups=[ "enemies" ] instance=ExtResource( 21 )]
 

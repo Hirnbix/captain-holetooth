@@ -14,49 +14,48 @@ scale = Vector2( 1, 1 )
 
 [node name="left" type="TouchScreenButton" parent="."]
 
-transform/pos = Vector2( 0, 232 )
+transform/pos = Vector2( 0, 175 )
 normal = ExtResource( 1 )
 pressed = null
 bitmask = null
-passby_press = false
+passby_press = true
 action = "move_left"
 visibility_mode = 1
 
 [node name="right" type="TouchScreenButton" parent="."]
 
-transform/pos = Vector2( 72, 232 )
+transform/pos = Vector2( 72, 174 )
 normal = ExtResource( 2 )
 pressed = null
 bitmask = null
-passby_press = false
+passby_press = true
 action = "move_right"
 visibility_mode = 1
 
 [node name="up" type="TouchScreenButton" parent="."]
 
-transform/pos = Vector2( 456, 160 )
+transform/pos = Vector2( 38, 119 )
 normal = ExtResource( 3 )
 pressed = null
 bitmask = null
-passby_press = false
+passby_press = true
 action = "move_up"
 visibility_mode = 1
 
 [node name="down" type="TouchScreenButton" parent="."]
 
-transform/pos = Vector2( 513, 289 )
+transform/pos = Vector2( 97, 285 )
 transform/rot = -180.0
 normal = ExtResource( 3 )
 pressed = null
 bitmask = null
-passby_press = false
+passby_press = true
 action = "move_down"
 visibility_mode = 1
 
 [node name="fire" type="TouchScreenButton" parent="."]
 
-transform/pos = Vector2( 391, 254 )
-transform/rot = 90.0
+transform/pos = Vector2( 440, 220 )
 normal = ExtResource( 4 )
 pressed = null
 bitmask = null

@@ -270,7 +270,17 @@ trigger = false
 
 [node name="mobile_ui_player" parent="." instance=ExtResource( 5 )]
 
-editor/display_folded = true
+[node name="left" parent="mobile_ui_player"]
+
+transform/pos = Vector2( 8, 214 )
+
+[node name="right" parent="mobile_ui_player"]
+
+transform/pos = Vector2( 80, 214 )
+
+[node name="fire" parent="mobile_ui_player"]
+
+transform/pos = Vector2( 372, 216 )
 
 
 [editable path="sfx"]
