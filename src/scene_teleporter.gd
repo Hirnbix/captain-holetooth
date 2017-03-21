@@ -1,10 +1,10 @@
 extends Area2D
 
-var node_path = self.get_path()
+#onready var node_path = self.get_path()
 export(String, FILE, "*.tscn") var scene_path
 
 func _ready():
-	print (scene_path + ", " + node_path)
+	print (scene_path + ", " + get_path())
 	find_node("teleporter_debug_label").set_text(scene_path)
 	
 func _on_scene_teleporter_body_enter( body ):

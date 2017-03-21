@@ -8,7 +8,7 @@ export (String, "none", "explode") var destroy_sound = "none"
 export (String, "none", "enemy", "pickup") var group = "none" # Allow you to quickly set group
 
 # Animation player
-onready var anim_player = get_node("anim")
+onready var anim_player = get_node("anim_player")
 
 # Whether or not hitting this npc will result into reseting your bonus points
 export var reset_bonus = true

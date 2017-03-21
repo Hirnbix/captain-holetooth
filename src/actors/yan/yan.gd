@@ -15,7 +15,7 @@ func _ready():
 # Note: Game is for kids, so no complex stuff here. Shooting is good enough for now
 
 func _input(e):
-	if e.is_action_pressed("shoot") or e.is_action_pressed("Return"):
+	if e.is_action_pressed("shoot"):
 		print("Dialog continue pressed")
 		talkbox.next_line()
 
