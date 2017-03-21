@@ -5,15 +5,14 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 7.19586, 81.9955 )
+extents = Vector2( 3.55527, 25.2321 )
 
 [node name="scene_teleporter" type="Area2D"]
 
-transform/pos = Vector2( 256.188, 243.057 )
 transform/scale = Vector2( 5, 5 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.407145, -72.9045 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -41,7 +40,6 @@ max_lines_visible = -1
 
 [node name="teleport_collision_shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 0.407145, -72.9045 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0

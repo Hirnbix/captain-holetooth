@@ -13,10 +13,10 @@
 [ext_resource path="res://src/objects/castle_ship_floating/ship_float_castle.png" type="Texture" id=11]
 [ext_resource path="res://src/levels/castle/parallax_castle.tscn" type="PackedScene" id=12]
 
-[sub_resource type="ColorRamp" id=1]
+[sub_resource type="ColorRamp" id=3]
 
-offsets = FloatArray( 0, 1 )
-colors = ColorArray( 0.90625, 0.90625, 0.90625, 1, 1, 1, 1, 0.042549 )
+offsets = FloatArray( 0, 0.057971, 0.231884, 0.460145, 0.956522, 1 )
+colors = ColorArray( 0.814209, 0.904093, 0.90625, 0.672314, 0.277771, 0.429942, 0.433594, 1, 0.470078, 0.488979, 0.636719, 1, 0.398683, 0.228333, 0.453125, 1, 1, 1, 1, 1, 0.824219, 0.209274, 0.353402, 0 )
 
 [sub_resource type="Animation" id=2]
 
@@ -36,7 +36,7 @@ transform/pos = Vector2( 256, 297 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 100, 258 )
+transform/pos = Vector2( -92, 130 )
 
 [node name="castle_tilemap" type="TileMap" parent="."]
 
@@ -56,7 +56,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -262153, 10, -262152, 2, -327669, 536870914, -196617, 10, -196616, 2, -262133, 536870914, -131081, 10, -131080, 2, -196597, 536870914, -65545, 10, -65544, 2, -131061, 536870914, -9, 10, -8, 2, -65525, 536870914, 65527, 10, 65528, 2, 11, 536870914, 131063, 10, 131064, 2, 65547, 536870914, 196599, 10, 196600, 4, 196601, 0, 196602, 0, 196603, 1, 131083, 536870914, 262135, 10, 262136, 10, 262137, 10, 262138, 10, 262139, 2, 262142, 9, 196619, 536870914, 327671, 10, 327672, 10, 327673, 10, 327674, 10, 327675, 4, 327676, 0, 327677, 0, 327678, 6, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 536870916, 393207, 10, 393208, 10, 393209, 10, 393210, 10, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
+tile_data = IntArray( -262153, 10, -262152, 2, -327669, 536870914, -196617, 10, -196616, 2, -262133, 536870914, -131081, 10, -131080, 2, -196597, 536870914, -65545, 10, -65544, 2, -131061, 536870914, -9, 10, -8, 2, -65525, 536870914, 65527, 10, 65528, 2, 11, 536870914, 131063, 10, 131064, 2, 65547, 536870914, 196599, 10, 196600, 4, 196601, 0, 196602, 0, 196603, 1, 131083, 536870914, 262135, 10, 262136, 10, 262137, 10, 262138, 10, 262139, 2, 262142, 9, 196619, 536870914, 327671, 10, 327672, 10, 327673, 10, 327674, 10, 327675, 4, 327676, 0, 327677, 0, 327678, 6, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 536870916, 393207, 10, 393208, 10, 393209, 10, 393210, 10, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10, 458758, 1610612746 )
 
 [node name="sprite" type="Sprite" parent="castle_tilemap"]
 
@@ -84,19 +84,18 @@ params/tangential_accel = 8.0
 params/damping = 1.0
 params/initial_angle = 64.48
 params/initial_size = 0.5
-params/final_size = 1.0
+params/final_size = 2.0
 params/hue_variation = 1.0
 params/anim_speed_scale = 0.0
 params/anim_initial_pos = 0.0
 randomness/direction = 0.2
 randomness/spin_velocity = 5.0
 randomness/initial_angle = 1.0
-randomness/hue_variation = 0.5
-color/color_ramp = SubResource( 1 )
+randomness/hue_variation = 1.0
+color/color_ramp = SubResource( 3 )
 
 [node name="rewards" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 282, -66 )
 
 [node name="reward" parent="rewards" instance=ExtResource( 5 )]
@@ -129,11 +128,19 @@ transform/pos = Vector2( 582, 212 )
 
 [node name="reward7" parent="rewards" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 582, 172 )
+transform/pos = Vector2( 606, 169 )
 
 [node name="reward8" parent="rewards" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 582, 172 )
+transform/pos = Vector2( 582, 129 )
+
+[node name="reward9" parent="rewards" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 502, 57 )
+
+[node name="reward10" parent="rewards" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 310, -7 )
 
 [node name="hud" parent="." instance=ExtResource( 6 )]
 
@@ -143,26 +150,21 @@ stream/stream = ExtResource( 8 )
 
 [node name="small_one_way_platform" parent="." instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 992, 152 )
+transform/pos = Vector2( 992, 176 )
 
 [node name="small_one_way_platform1" parent="." instance=ExtResource( 9 )]
 
-editor/display_folded = true
-transform/pos = Vector2( 715, 97 )
-
-[node name="sprite" parent="small_one_way_platform1"]
-
-visibility/visible = false
+transform/pos = Vector2( 720, 103 )
 
 [node name="scene_teleporter" parent="." instance=ExtResource( 10 )]
 
-editor/display_folded = true
-transform/pos = Vector2( 732.188, 243.057 )
+transform/pos = Vector2( 732.188, 337.029 )
+transform/scale = Vector2( 5, 5.06339 )
 scene_path = "res://src/levels/castle/castle_inside.tscn"
 
 [node name="teleport_collision_shape" parent="scene_teleporter"]
 
-transform/pos = Vector2( 0.407145, -2.10453 )
+transform/pos = Vector2( -2.39285, -2.10453 )
 
 [node name="castle_ship_floating" type="TextureFrame" parent="."]
 

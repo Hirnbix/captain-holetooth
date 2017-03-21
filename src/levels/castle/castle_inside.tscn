@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://src/areas/area_castle/tileset_castle_inside.tres" type="TileSet" id=1]
 [ext_resource path="res://src/objects/torch/light.png" type="Texture" id=2]
@@ -8,19 +8,20 @@
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/audio/music/japsand.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/objects/castle_inside/castle_inside_window.png" type="Texture" id=9]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 
-closed = true
+closed = false
 cull_mode = 0
-polygon = Vector2Array( 33.7534, 4.41379, 28.4931, 4.41379, 28.4931, -34.2069, 33.7534, -34.2069 )
+polygon = Vector2Array( 29.7203, -5.51724, 29.7203, -14.3448, 30.3639, -15.1549, 31.123, -16.1103, 32.5257, -16.1103, 33.2271, -15.2276, 33.9285, -14.3448, 41.6435, 3.31035 )
 
 [node name="castle" type="Node2D"]
 
 [node name="castle_tilemap" type="TileMap" parent="."]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 320, 22 )
+transform/pos = Vector2( 343, -2 )
 z/z = -1
 mode = 0
 tile_set = ExtResource( 1 )
@@ -36,11 +37,11 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -196610, -536870905, -196609, -536870905, -262144, 7, -262141, 1610612743, -262140, 7, -131077, 2, -131075, -536870905, -131074, 7, -131073, 7, -196608, 7, -196607, 7, -196606, 7, -196605, 7, -196604, 7, -196603, 7, -65541, 2, -65538, 7, -65537, 7, -131072, 7, -131071, 7, -131070, 1610612743, -131069, 1610612743, -131068, 7, -131067, 7, -5, 2, 65531, 2, 131067, 2, 131068, 10, 131069, 10, 131070, 10, 131071, 10, 65536, 10, 65537, 10, 65538, 10, 65539, 10, 65540, 10, 65541, 10, 65542, 10, 65543, 10, 65544, 10, 196602, 10, 196603, 13, 196604, 10, 196605, 10, 196606, 10, 196607, 10, 131072, 10, 131073, 10, 131074, 10, 131075, 10, 131076, 10, 131077, 10, 131078, 10, 131079, 10, 131080, 10, 262138, 10, 262140, 10, 262141, 10, 262142, 10, 262143, 10, 196608, 10, 196609, 10, 196610, 10, 196611, 10, 196612, 10, 196613, 10, 196614, 10, 196615, 10, 196616, 10, 327674, 10, 327675, 0, 327676, 0, 327677, 0, 327678, 0, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
+tile_data = IntArray( -131077, 2, -65541, 2, -5, 2, 65531, 2, 6, 10, 131067, 2, 131068, 10, 131069, 10, 131070, 10, 131071, 10, 65536, 10, 65537, 10, 65538, 10, 65539, 10, 65540, 10, 65541, 1073741834, 65542, 10, 65543, 10, 65544, 10, 196602, 10, 196603, 13, 196604, 10, 196605, 1610612746, 196606, 1610612746, 196607, 1073741834, 131072, 10, 131073, 10, 131074, 10, 131075, 1073741834, 131076, 10, 131077, 1073741834, 131078, 10, 131079, 10, 131080, 10, 262138, 10, 262140, 10, 262141, 1073741834, 262142, 10, 262143, 1073741834, 196608, 1610612746, 196609, 10, 196610, 10, 196611, 10, 196612, 10, 196613, 10, 196614, 1073741834, 196615, 10, 196616, 10, 327674, 10, 327675, 0, 327676, 0, 327677, 0, 327678, 0, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 262150, 0, 262151, 0, 262152, 0, 262153, 0, 262154, 0, 262155, 0, 393211, 10, 393212, 10, 393213, 10, 393214, 10, 393215, 10, 327680, 10, 327681, 10, 327682, 10, 327683, 10, 327684, 10, 327685, 10, 327686, 10, 327687, 10, 327688, 10, 327689, 10, 327690, 10, 327691, 10 )
 
-[node name="Light2D" type="Light2D" parent="castle_tilemap"]
+[node name="Light2D_door" type="Light2D" parent="castle_tilemap"]
 
-transform/pos = Vector2( -335, 196 )
+transform/pos = Vector2( -326, 206 )
 transform/scale = Vector2( 6.48148, 6.22222 )
 enabled = true
 editor_only = false
@@ -62,7 +63,7 @@ shadow/buffer_size = 2048
 shadow/esm_multiplier = 80.0
 shadow/item_mask = 1
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="castle_tilemap"]
+[node name="LightOccluder2D_door" type="LightOccluder2D" parent="castle_tilemap"]
 
 transform/pos = Vector2( -645, 168 )
 transform/scale = Vector2( 11.4063, 9.0625 )
@@ -71,7 +72,8 @@ light_mask = 1
 
 [node name="player" parent="castle_tilemap" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -270, 248 )
+transform/pos = Vector2( -232, 234 )
+z/z = 1
 
 [node name="rewards" type="Node2D" parent="."]
 
@@ -121,12 +123,51 @@ stream/stream = ExtResource( 7 )
 
 [node name="scene_teleporter" parent="." instance=ExtResource( 8 )]
 
-transform/pos = Vector2( -23.812, 263.057 )
+transform/pos = Vector2( 23.1881, 250.057 )
 scene_path = "res://src/levels/castle/castle_outside.tscn"
 
 [node name="teleport_collision_shape" parent="scene_teleporter"]
 
 transform/pos = Vector2( -1.19286, -2.50453 )
+
+[node name="castle_inside_window" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 344, 160 )
+z/z = -1
+texture = ExtResource( 9 )
+modulate = Color( 0.463623, 0.499929, 0.5625, 1 )
+
+[node name="Light2D_window" type="Light2D" parent="castle_inside_window"]
+
+transform/pos = Vector2( -20.9999, -36.0007 )
+transform/scale = Vector2( 6.48148, 6.22222 )
+enabled = true
+editor_only = false
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+scale = 1.52
+color = Color( 0.832031, 0.583245, 0.383514, 1 )
+energy = 8.09
+mode = 2
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = true
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[node name="LightOccluder2D_window" type="LightOccluder2D" parent="castle_inside_window"]
+
+transform/pos = Vector2( -365.998, 89.0005 )
+transform/scale = Vector2( 11.4063, 9.0625 )
+occluder = SubResource( 1 )
+light_mask = 1
 
 
 [editable path="scene_teleporter"]

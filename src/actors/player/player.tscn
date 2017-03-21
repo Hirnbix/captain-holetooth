@@ -225,8 +225,7 @@ autoplay = ""
 
 [node name="camera" type="Camera2D" parent="."]
 
-transform/pos = Vector2( -7.37443, 1.31518 )
-transform/scale = Vector2( 1, 1.01244 )
+offset = Vector2( 20, -20 )
 anchor_mode = 1
 rotating = false
 current = true

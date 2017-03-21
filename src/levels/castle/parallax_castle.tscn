@@ -37,20 +37,20 @@ motion/mirroring = Vector2( 800, 0 )
 
 [node name="Sprite" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 82.9768, 34.4884 )
+transform/pos = Vector2( 96, 112 )
 transform/scale = Vector2( 0.570494, 0.570494 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Sprite 2" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 404, 14 )
+transform/pos = Vector2( 376, 72 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="Sprite 3" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 196.692, 47.3458 )
+transform/pos = Vector2( 168, 8 )
 transform/scale = Vector2( 0.666471, 0.666471 )
 texture = ExtResource( 2 )
 centered = false
@@ -63,7 +63,7 @@ centered = false
 
 [node name="Sprite 5" type="Sprite" parent="clouds"]
 
-transform/pos = Vector2( 304.637, 71.6825 )
+transform/pos = Vector2( 264, 160 )
 texture = ExtResource( 3 )
 centered = false
 

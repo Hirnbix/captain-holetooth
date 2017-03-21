@@ -1620,13 +1620,13 @@ transform/pos = Vector2( 4242, 2552 )
 [node name="scene_teleporter" parent="world" instance=ExtResource( 22 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 5000.11, 1150.48 )
+transform/pos = Vector2( 5000.11, 1060.48 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="scene_teleporter1" parent="world" instance=ExtResource( 22 )]
 
 editor/display_folded = true
-transform/pos = Vector2( 6040, 1110 )
+transform/pos = Vector2( 6040, 1060 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="teleporter_spawn_scn3" type="Position2D" parent="world"]
@@ -1647,3 +1647,4 @@ stream/stream = ExtResource( 24 )
 
 
 [editable path="world/tile_map/cave_background"]
+[editable path="world/scene_teleporter1"]
