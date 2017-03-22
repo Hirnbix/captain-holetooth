@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=1]
+[gd_scene load_steps=33 format=1]
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -24,6 +24,11 @@
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=24]
+[ext_resource path="res://src/objects/snow/simple_snow.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-large.png" type="Texture" id=26]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-medium.png" type="Texture" id=27]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-small.png" type="Texture" id=28]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-pile-medium.png" type="Texture" id=29]
 
 [sub_resource type="Animation" id=1]
 
@@ -36,6 +41,14 @@ tracks/0/path = NodePath(".:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.5, 1, 1.3, 1.5 ), "transitions":FloatArray( 0.25, 4, 4, 1, 4 ), "update":0, "values":[ Vector2( 6190, 1720 ), Vector2( 6190, 1713 ), Vector2( 6190, 1720 ), Vector2( 6190, 1718 ), Vector2( 6190, 1720 ) ] }
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends Area2D\n\n#onready var node_path = self.get_path()\nexport(String, FILE, \"*.tscn\") var scene_path\n\nfunc _ready():\n\tprint (scene_path + \", \" + get_path())\n\tfind_node(\"teleporter_debug_label\").set_text(scene_path)\n\t\nfunc _on_scene_teleporter_body_enter( body ):\n\tprint(\"Teleporting to \" + scene_path)\n\t#find_node(\"teleporter_debug_label\").set_text(scene_path)\n\tif body.get_name() == \"player\":\n\t\tvar current = get_tree().get_current_scene().get_name()\n\t\tglobal.last_pos[current[current.length()-1].to_int() - 3] = body.get_global_pos()\n\t\ttransition.fade_to(str(scene_path))\n\t#transition.fade_to(\"res://\" + scene_path)\n\t#var tele1pos = get_node(\"/root/scn3/tele1/teleporter1\").get_global_pos()\n\t#var tele2pos = self.get_pos()\n\t#get_node(\"/root/scn3/tile_map/player\").set_pos(tele1pos)"
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "extends Area2D\n\n#onready var node_path = self.get_path()\nexport(String, FILE, \"*.tscn\") var scene_path\n\nfunc _ready():\n\tprint (scene_path + \", \" + get_path())\n\tfind_node(\"teleporter_debug_label\").set_text(scene_path)\n\t\nfunc _on_scene_teleporter_body_enter( body ):\n\tprint(\"Teleporting to \" + scene_path)\n\t#find_node(\"teleporter_debug_label\").set_text(scene_path)\n\tif body.get_name() == \"player\":\n\t\tvar current = get_tree().get_current_scene().get_name()\n\t\tglobal.last_pos[current[current.length()-1].to_int() - 3] = body.get_global_pos()\n\t\ttransition.fade_to(str(scene_path))\n\t#transition.fade_to(\"res://\" + scene_path)\n\t#var tele1pos = get_node(\"/root/scn3/tele1/teleporter1\").get_global_pos()\n\t#var tele2pos = self.get_pos()\n\t#get_node(\"/root/scn3/tile_map/player\").set_pos(tele1pos)"
 
 [node name="scn3" type="Node2D"]
 
@@ -333,7 +346,6 @@ transform/scale = Vector2( 1.09375, 0.466668 )
 
 [node name="waterdrop6" parent="world/tile_map/cave_background" instance=ExtResource( 11 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 2434.92, 775.977 )
 transform/scale = Vector2( 1, 4.35296 )
 
@@ -364,7 +376,7 @@ transform/scale = Vector2( 1.71875, 0.733335 )
 
 [node name="fireflies5" parent="world/tile_map/cave_background/waterdrop6" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 2253, 128 )
+transform/pos = Vector2( -1525.82, -91.3976 )
 transform/scale = Vector2( 1.71875, 0.733335 )
 
 [node name="fireflies6" parent="world/tile_map/cave_background/waterdrop6" instance=ExtResource( 12 )]
@@ -613,6 +625,8 @@ autoplay = "signpost_hop"
 transform/pos = Vector2( 24.7671, 249.674 )
 
 [node name="interactables" type="Node2D" parent="world"]
+
+editor/display_folded = true
 
 [node name="rock" parent="world/interactables" instance=ExtResource( 17 )]
 
@@ -1619,20 +1633,15 @@ transform/pos = Vector2( 4242, 2552 )
 
 [node name="scene_teleporter" parent="world" instance=ExtResource( 22 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 5000.11, 1060.48 )
+script/script = SubResource( 2 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="scene_teleporter1" parent="world" instance=ExtResource( 22 )]
 
-editor/display_folded = true
 transform/pos = Vector2( 6040, 1060 )
+script/script = SubResource( 3 )
 scene_path = "res://src/levels/mountain/mountain.tscn"
-
-[node name="teleporter_spawn_scn3" type="Position2D" parent="world"]
-
-transform/pos = Vector2( 4690, 1115.94 )
-transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
@@ -1643,8 +1652,65 @@ transform/scale = Vector2( 4.99998, 3.59373 )
 
 stream/stream = ExtResource( 24 )
 
+[node name="simple_snow" parent="." instance=ExtResource( 25 )]
+
+transform/pos = Vector2( 5523.03, 635.042 )
+transform/scale = Vector2( 5.02561, 1.58224 )
+config/amount = 100
+config/lifetime = 4.0
+config/half_extents = Vector2( 80, 5 )
+
+[node name="snow_patches" type="Node2D" parent="."]
+
+transform/pos = Vector2( 5168.79, 461.355 )
+z/z = -1
+
+[node name="snow_patch_large" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 531.286, 764.623 )
+texture = ExtResource( 26 )
+
+[node name="snow_patch_large2" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 744.854, 960.5 )
+texture = ExtResource( 26 )
+flip_h = true
+
+[node name="snow_patch_large1" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 834.845, 701.755 )
+texture = ExtResource( 26 )
+
+[node name="snow_patch_medium" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 699.964, 1017.86 )
+texture = ExtResource( 27 )
+
+[node name="snow_patch_small" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 797.901, 696.718 )
+texture = ExtResource( 28 )
+
+[node name="snow_patch_small1" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 488.953, 763.777 )
+texture = ExtResource( 28 )
+flip_h = true
+
+[node name="snow__patch_pile_medium" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 612.366, 823.789 )
+texture = ExtResource( 29 )
+
+[node name="snow__patch_pile_medium1" type="Sprite" parent="snow_patches"]
+
+transform/pos = Vector2( 357.903, 699.85 )
+texture = ExtResource( 29 )
+flip_h = true
+
 [connection signal="body_enter" from="world/scene_teleporter" to="world/scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 
 
 [editable path="world/tile_map/cave_background"]
+[editable path="world/scene_teleporter"]
 [editable path="world/scene_teleporter1"]

@@ -2,8 +2,6 @@
 
 [ext_resource path="res://src/objects/snow/snow.png" type="Texture" id=1]
 
-
-
 [node name="simple_snow" type="Particles2D"]
 
 transform/pos = Vector2( 396.971, -57.6133 )
