@@ -23,7 +23,10 @@ var playtime_limit_seconds = playtime_limit_minutes * 60
 # Statistics
 var times_jumped = 0
 
-# HUD and scoring
+###################
+# HUD and scoring #
+###################
+
 const MAX_ITEMS = 120
 var score = 0
 var final_score = 0
@@ -45,14 +48,35 @@ var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 # Array for characters the player has met (to display the character cards in the options later)
 var characters_met = []
 
-# Items related
+##################
+# Items          #
+##################
+
 var kills = false
 const SCORE_MULTIPLIER = 10 # Standard Score multiplier
 const SCORE_MULTIPLIER_KILLS = 5 # Player gets penalty
 
+##################
+# Inventory      #
+##################
+
+var player_inventory = [] # For now only one item will be stored here, but its good to have it no? :D
+
+func manage_inv(inv_action, inv_item):
+	if inv_action == "pickup":
+		global.player_inventory.append(inv_item)
+		print(str(inv_item) + " added to inventory")
+		
+	elif inv_action == "drop":
+		global.player_inventory.erase(inv_item)
+		print(str(inv_item) + " removed from inventory")
+
+##################
+# Database       #
+##################
+
 func _ready():
 	score = database.get_key("score", 0)
-	
 
 func add_score(value=1):
 	score += value
