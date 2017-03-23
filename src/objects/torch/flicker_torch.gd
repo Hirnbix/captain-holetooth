@@ -1,5 +1,5 @@
 
-extends Light2D
+extends Sprite
 
 # member variables here, example:
 # var a=2
@@ -12,7 +12,7 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	set_process(true)
-	get_node("SamplePlayer2D").play("torchfire")
+	#find_node("SamplePlayer2D").play("torchfire")
  
 func _process(delta):
 	if time >= timeout:
@@ -23,12 +23,10 @@ func _process(delta):
 func _timeout():
 	time = 0
 	timeout = rand_range(1,2)
-	var rndscalex = rand_range(10,18)
-	var rndenergy = rand_range(1,4.5)
+	var rndscalex = rand_range(1,1.3)
 
 	#print(rndscalex + " " + rndscaley)
 	self.set_scale(Vector2(rndscalex, rndscalex))
-	self.set_energy(rndenergy)
 	
 
 
