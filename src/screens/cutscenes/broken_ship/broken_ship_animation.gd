@@ -13,4 +13,4 @@ func _fixed_process(delta):
 
 func gotonext():
 	print("Going to next")
-	transition.fade_to("res://src/levels/flyhome/flyhome.tscn")
+	transition.fade_to("res://src/screens/cutscenes/cutscene_ship_repair/cutscene_ship_repair.tscn")
