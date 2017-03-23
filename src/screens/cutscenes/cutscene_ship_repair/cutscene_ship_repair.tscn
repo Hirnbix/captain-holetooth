@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://src/screens/cutscenes/cutscene_ship_repair/cutscene_ship_repair.gd" type="Script" id=1]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://src/screens/cutscenes/cutscene_ship_repair/cutscene_ship_repair.png" type="Texture" id=3]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/audio/music/scn2_comic_music.ogg" type="AudioStream" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "intro"
+length = 20.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("cutscene_ship_repair:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 5, 10, 15 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3 ] }
+
+[node name="cutscene_ship_repair" type="TextureFrame"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+stretch_mode = 0
+script/script = ExtResource( 1 )
+
+[node name="skipbutton" type="TextureButton" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+
+[node name="click_to_skip_label" type="Label" parent="skipbutton"]
+
+hint/tooltip = "Start the game here"
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 333.0
+margin/top = 266.0
+margin/right = 498.0
+margin/bottom = 287.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 1
+text = "Click to skip"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="cutscene_ship_repair" type="Sprite" parent="."]
+
+visibility/behind_parent = true
+texture = ExtResource( 3 )
+centered = false
+hframes = 4
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/intro = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "intro"
+
+[node name="music_player" parent="." instance=ExtResource( 4 )]
+
+stream/stream = ExtResource( 5 )
+stream/loop = false
+
+[connection signal="pressed" from="skipbutton" to="." method="_on_skipbutton_pressed"]
+
+[connection signal="finished" from="animation_player" to="." method="_on_animation_player_finished"]
+
+
