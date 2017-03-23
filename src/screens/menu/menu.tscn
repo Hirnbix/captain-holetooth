@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=1]
+[gd_scene load_steps=31 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
@@ -9,22 +9,23 @@
 [ext_resource path="res://src/screens/menu/skull_eye.png" type="Texture" id=7]
 [ext_resource path="res://src/screens/menu/skull_eye.gd" type="Script" id=8]
 [ext_resource path="res://src/objects/waterdrops/waterdrop.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=10]
-[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=12]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/screens/menu/options_screen.gd" type="Script" id=14]
-[ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=15]
-[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=16]
-[ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=17]
-[ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=18]
-[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=19]
-[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=20]
-[ext_resource path="res://src/screens/global-ui-templates/menu_buttons.tres" type="StyleBox" id=21]
-[ext_resource path="res://src/fonts/menufont_24.fnt" type="BitmapFont" id=22]
-[ext_resource path="res://src/screens/ui-icons-set-16x16/check-2x.png" type="Texture" id=23]
-[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=24]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=25]
+[ext_resource path="res://src/fonts/newsgeek20.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://src/fonts/newsgeek16.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/audio/music/scn1_menu_music.ogg" type="AudioStream" id=13]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/screens/menu/options_screen.gd" type="Script" id=15]
+[ext_resource path="res://src/fonts/berry12.fnt" type="BitmapFont" id=16]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=17]
+[ext_resource path="res://src/screens/menu/ui_templates/tab_styleboxflat.tres" type="StyleBox" id=18]
+[ext_resource path="res://src/screens/menu/ui_templates/tab_panel_flat.tres" type="StyleBox" id=19]
+[ext_resource path="res://src/fonts/berry16.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=21]
+[ext_resource path="res://src/screens/global-ui-templates/menu_buttons.tres" type="StyleBox" id=22]
+[ext_resource path="res://src/fonts/menufont_24.fnt" type="BitmapFont" id=23]
+[ext_resource path="res://src/screens/ui-icons-set-16x16/check-2x.png" type="Texture" id=24]
+[ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=25]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=26]
 
 [sub_resource type="Animation" id=1]
 
@@ -78,13 +79,13 @@ draw_bg = true
 
 [sub_resource type="Theme" id=3]
 
-default_font = ExtResource( 16 )
+default_font = ExtResource( 17 )
 Button/colors/font_color = Color( 0.478431, 0.352941, 0.321569, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 3
-Button/fonts/font = ExtResource( 15 )
+Button/fonts/font = ExtResource( 16 )
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
@@ -97,7 +98,7 @@ TabContainer/constants/label_valign_bg = 2
 TabContainer/constants/label_valign_fg = 0
 TabContainer/constants/side_margin = 8
 TabContainer/constants/top_margin = 19
-TabContainer/fonts/font = ExtResource( 16 )
+TabContainer/fonts/font = ExtResource( 17 )
 TabContainer/icons/decrement = null
 TabContainer/icons/decrement_hilite = null
 TabContainer/icons/increment = null
@@ -234,20 +235,21 @@ size_flags/stretch_ratio = 2.0
 margin/left = -250.0
 margin/top = -170.0
 margin/right = -480.0
-margin/bottom = -260.0
+margin/bottom = -280.0
 alignment = 1
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
 
 visibility/blend_mode = 2
+rect/min_size = Vector2( 180, 43 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 21.0
+margin/top = 14.0
 margin/right = 230.0
-margin/bottom = 43.0
+margin/bottom = 57.0
 custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -258,32 +260,33 @@ flat = false
 [node name="optionsbutton" type="Button" parent="menu_buttons"]
 
 visibility/blend_mode = 2
+rect/min_size = Vector2( 150, 35 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 47.0
+margin/top = 61.0
 margin/right = 230.0
-margin/bottom = 69.0
-custom_fonts/font = ExtResource( 10 )
+margin/bottom = 96.0
+custom_fonts/font = ExtResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Options / Info"
 flat = false
 
-[node name="music_player" parent="." instance=ExtResource( 11 )]
+[node name="music_player" parent="." instance=ExtResource( 12 )]
 
-stream/stream = ExtResource( 12 )
+stream/stream = ExtResource( 13 )
 
-[node name="sfx" parent="." instance=ExtResource( 13 )]
+[node name="sfx" parent="." instance=ExtResource( 14 )]
 
 [node name="options_screen" type="Node2D" parent="."]
 
 visibility/visible = false
 z/z = 2
-script/script = ExtResource( 14 )
+script/script = ExtResource( 15 )
 
 [node name="settings" type="TabContainer" parent="options_screen"]
 
@@ -296,8 +299,8 @@ margin/left = 0.0
 margin/top = 16.0
 margin/right = 510.0
 margin/bottom = 290.0
-custom_styles/tab_fg = ExtResource( 17 )
-custom_styles/panel = ExtResource( 18 )
+custom_styles/tab_fg = ExtResource( 18 )
+custom_styles/panel = ExtResource( 19 )
 tab_align = 0
 tabs_visible = true
 
@@ -327,7 +330,7 @@ margin/left = 16.0
 margin/top = 14.0
 margin/right = 16.0
 margin/bottom = 32.0
-custom_fonts/normal_font = ExtResource( 16 )
+custom_fonts/normal_font = ExtResource( 17 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
@@ -346,8 +349,8 @@ margin/left = 12.0
 margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
-custom_styles/tab_fg = ExtResource( 17 )
-custom_fonts/font = ExtResource( 19 )
+custom_styles/tab_fg = ExtResource( 18 )
+custom_fonts/font = ExtResource( 20 )
 script/script = SubResource( 4 )
 
 [node name="jump_scn3" type="Button" parent="options_screen/settings/Debug"]
@@ -358,12 +361,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 20 )
+theme/theme = ExtResource( 21 )
 margin/left = 4.0
 margin/top = 10.0
 margin/right = 246.0
 margin/bottom = 42.0
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -378,12 +381,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 20 )
+theme/theme = ExtResource( 21 )
 margin/left = 4.0
 margin/top = 50.0
 margin/right = 246.0
 margin/bottom = 82.0
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -398,12 +401,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 20 )
+theme/theme = ExtResource( 21 )
 margin/left = 4.0
 margin/top = 91.0
 margin/right = 246.0
 margin/bottom = 123.0
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -417,12 +420,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 20 )
+theme/theme = ExtResource( 21 )
 margin/left = 4.0
 margin/top = 130.0
 margin/right = 246.0
 margin/bottom = 162.0
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -437,12 +440,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 20 )
+theme/theme = ExtResource( 21 )
 margin/left = 4.0
 margin/top = 178.0
 margin/right = 246.0
 margin/bottom = 210.0
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 17 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -475,7 +478,7 @@ margin/left = 16.0
 margin/top = 14.0
 margin/right = 16.0
 margin/bottom = 32.0
-custom_fonts/normal_font = ExtResource( 16 )
+custom_fonts/normal_font = ExtResource( 17 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to [url=<url>]http://www.hirnbix.com/parentalcontrols[/url]"
@@ -534,15 +537,15 @@ margin/left = 272.0
 margin/top = 0.0
 margin/right = 357.0
 margin/bottom = 25.0
-custom_styles/pressed = ExtResource( 21 )
-custom_styles/normal = ExtResource( 21 )
-custom_fonts/font = ExtResource( 22 )
+custom_styles/pressed = ExtResource( 22 )
+custom_styles/normal = ExtResource( 22 )
+custom_fonts/font = ExtResource( 23 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Confirm"
-icon = ExtResource( 23 )
+icon = ExtResource( 24 )
 flat = false
 
 [node name="Audio" type="Tabs" parent="options_screen/settings"]
@@ -688,7 +691,7 @@ margin/left = 12.0
 margin/top = 23.0
 margin/right = 12.0
 margin/bottom = 1.0
-custom_fonts/font = ExtResource( 19 )
+custom_fonts/font = ExtResource( 20 )
 
 [node name="credits_text" type="RichTextLabel" parent="options_screen/settings/Credits"]
 
@@ -702,7 +705,7 @@ margin/left = 6.0
 margin/top = 5.0
 margin/right = 5.0
 margin/bottom = 5.0
-custom_fonts/normal_font = ExtResource( 16 )
+custom_fonts/normal_font = ExtResource( 17 )
 custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
 bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\tIvan Skodje\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
@@ -721,7 +724,7 @@ margin/bottom = 287.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 24 )
+textures/normal = ExtResource( 25 )
 params/scale = Vector2( 0.6, 0.6 )
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
@@ -757,7 +760,7 @@ margin/bottom = -18.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 25 )
+textures/normal = ExtResource( 26 )
 
 [connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 
