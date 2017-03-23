@@ -9,6 +9,12 @@ func _ready():
 	
 func _on_scene_teleporter_body_enter( body ):
 	print("Teleporting to " + scene_path)
+	
+	if global.player_inventory.has("Ship Wing"):
+		print("You have the wing")
+	else:
+		print("Sorry, no wing")
+	
 	#find_node("teleporter_debug_label").set_text(scene_path)
 	if body.get_name() == "player":
 		var current = get_tree().get_current_scene().get_name()
