@@ -83,6 +83,7 @@ trigger = false
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 
+visibility/blend_mode = 1
 frames = SubResource( 2 )
 animation = "default"
 frame = 1

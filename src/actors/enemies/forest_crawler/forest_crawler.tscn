@@ -52,14 +52,14 @@ tracks/0/keys = { "times":FloatArray( 0, 0.75, 1.5, 2.25, 3, 3.75, 4.5, 5.25, 6,
 [sub_resource type="Animation" id=4]
 
 resource/name = "walk"
-length = 1.25
+length = 2.0
 loop = true
 step = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3, 4, 0 ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3, 4, 5, 6, 7, 7 ] }
 
 [sub_resource type="ColorRamp" id=5]
 
@@ -121,7 +121,7 @@ autoplay = ""
 
 texture = ExtResource( 2 )
 hframes = 8
-frame = 2
+frame = 7
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
 
