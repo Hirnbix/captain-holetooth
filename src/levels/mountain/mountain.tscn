@@ -227,8 +227,6 @@ transform/scale = Vector2( 1, 1.28052 )
 
 [node name="interactables" type="Node2D" parent="world"]
 
-editor/display_folded = true
-
 [node name="rock" parent="world/interactables" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1497.6, 57.6 )

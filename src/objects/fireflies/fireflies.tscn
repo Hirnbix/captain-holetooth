@@ -17,15 +17,13 @@ animations = [ { "frames":[ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 )
 
 [node name="fireflies" type="Node2D"]
 
-transform/pos = Vector2( 3, 3 )
-transform/scale = Vector2( 0.1, 0.1 )
 z/z = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 8
 playing = true
 
 [node name="AnimatedSprite1" type="AnimatedSprite" parent="."]
@@ -33,6 +31,7 @@ playing = true
 transform/rot = -99.5805
 frames = SubResource( 1 )
 animation = "default"
+frame = 7
 playing = true
 modulate = Color( 1, 1, 1, 0.23673 )
 

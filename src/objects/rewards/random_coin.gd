@@ -10,7 +10,7 @@ func _ready():
 	var sprite = get_node("sprite")
 	var tex_num = randi()%11+1
 	var seek = randi()%4+1
-	var tex_name = ("res://src/objects/rewards/" + str(tex_num) + ".tex")
+	var tex_name = ("res://src/objects/rewards/" + str(tex_num) + ".png")
 	var tex = load(tex_name)
 	anim.seek(seek, false)
 	sprite.set_texture(tex)
