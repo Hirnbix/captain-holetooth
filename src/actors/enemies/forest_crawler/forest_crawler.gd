@@ -69,13 +69,17 @@ func _integrate_forces(s):
 		if (wall_side != 0 and wall_side != direction):
 			direction = -direction
 			get_node("sprite").set_scale(Vector2(-direction, 1))
+			
 		if (direction < 0 and not rc_left.is_colliding() and rc_right.is_colliding()):
 			direction = -direction
 			print("Direction changed right?")
+			get_node("anim").play("turn")
 			get_node("sprite").set_scale(Vector2(-direction, 1))
+			
 		elif (direction > 0 and not rc_right.is_colliding() and rc_left.is_colliding()):
 			direction = -direction
 			print("Direction changed left?")
+			get_node("anim").play("turn")
 			get_node("sprite").set_scale(Vector2(-direction, 1))
 		
 		lv.x = direction*WALK_SPEED
