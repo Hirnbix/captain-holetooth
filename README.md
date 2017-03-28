@@ -11,7 +11,6 @@ All characters & story elements © Oliver Rühl 2017
 
 The "Captain Holetooth" explorative platformer lives in a unique, story packed world. 
 A cast of amazing characters helps Captain Holetooth to defend the "magic candy" (working title). 
-This game is based on my books, so some work has already been done in terms of story.
 
 * Deep backstory, rich world 
 * Explorative nature is appealing to many audiences 
