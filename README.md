@@ -14,7 +14,9 @@ A cast of amazing characters helps Captain Holetooth to defend the "magic candy"
 * Explorative nature is appealing to many audiences
 * Characters are revealed during gameplay
 * Episodic content or chapters are planned (at least 5 short chapters are already written)
-* Godot Engine powered and the game BETA is already available for **Mac, Android, Linux, PC.**
+* Open source game engine: Godot Engine
+* The game BETA is already available for **Mac, Android, Linux, PC.**
+* Controller support
 
 ## Media
 * [See the media gallery on Hirnbix.com](https://www.hirnbix.com/gallery/)
