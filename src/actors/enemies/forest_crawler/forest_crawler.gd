@@ -64,7 +64,8 @@ func _integrate_forces(s):
 			elif (dp.x < -0.9):
 				wall_side = -1.0
 
-		# Is this meant for changing direction?
+		# Changing direction
+		# Todo: Add turning animation
 
 		if (wall_side != 0 and wall_side != direction):
 			direction = -direction
