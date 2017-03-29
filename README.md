@@ -2,8 +2,6 @@
 
 ![Forest Level](https://static1.squarespace.com/static/58b986429de4bb1343d8d3b6/58bc7ab4b8a79bbdc67e5098/58bdcadbf5e2319165a285cc/1490266441042/Screen+Shot+2017-03-06+at+21.44.43.png?format=750w)
 
-
-
 [![Build Status](https://travis-ci.org/Hirnbix/captain-holetooth.svg?branch=master)](https://travis-ci.org/Hirnbix/captain-holetooth)
 
 ## Captain Holetooth - the Videogame!
@@ -16,7 +14,7 @@ A cast of amazing characters helps Captain Holetooth to defend the "magic candy"
 * Explorative nature is appealing to many audiences
 * Characters are revealed during gameplay
 * Episodic content or chapters are planned (at least 5 short chapters are already written)
-* Godot Engine powered and an Alpha Version is already available for **Mac, Android, Linux, PC.**
+* Godot Engine powered and the game BETA is already available for **Mac, Android, Linux, PC.**
 
 ## Media
 * [See the media gallery on Hirnbix.com](https://www.hirnbix.com/gallery/)
