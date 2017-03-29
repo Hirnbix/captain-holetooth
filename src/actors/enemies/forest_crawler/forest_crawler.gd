@@ -66,6 +66,7 @@ func _integrate_forces(s):
 
 		# Changing direction
 		# Todo: Add turning animation
+		# Testing
 
 		if (wall_side != 0 and wall_side != direction):
 			direction = -direction
