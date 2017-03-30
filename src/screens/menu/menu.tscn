@@ -23,7 +23,7 @@
 [ext_resource path="res://src/screens/menu/ui_templates/button_theme.tres" type="Theme" id=21]
 [ext_resource path="res://src/screens/global-ui-templates/menu_buttons.tres" type="StyleBox" id=22]
 [ext_resource path="res://src/fonts/menufont_24.fnt" type="BitmapFont" id=23]
-[ext_resource path="res://src/screens/ui-icons-set-16x16/check-2x.png" type="Texture" id=24]
+[ext_resource path="res://src/screens/ui-icons/icon-font-18/PNG/untitled-e90d.png" type="Texture" id=24]
 [ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=25]
 [ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=26]
 
