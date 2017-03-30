@@ -26,7 +26,7 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.1, 0.3, 0.4, 0.6, 0.8, 0.9 ), "transitions":FloatArray( 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25 ), "update":1, "values":[ 1, 2, 3, 4, 5, 6, 7 ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.9 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ 0, 1, 2, 3 ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite:transform/pos")
 tracks/1/interp = 1
@@ -79,15 +79,15 @@ angular_damp = 1.0
 collision/mask = 4
 script/script = ExtResource( 2 )
 __meta__ = { "_edit_group_":true }
-anim_player_path = null
+anim_player_path = NodePath("anim")
 
 [node name="sprite" type="Sprite" parent="player"]
 
-transform/pos = Vector2( 1.30923, 0.160753 )
+transform/pos = Vector2( 0.770627, 0.0946213 )
 transform/rot = -7.0
 texture = ExtResource( 3 )
-hframes = 8
-frame = 3
+hframes = 4
+frame = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 
