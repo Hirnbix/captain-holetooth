@@ -83,11 +83,11 @@ anim_player_path = NodePath("anim")
 
 [node name="sprite" type="Sprite" parent="player"]
 
-transform/pos = Vector2( 0.770627, 0.0946213 )
+transform/pos = Vector2( 0.0608602, 0.00747271 )
 transform/rot = -7.0
 texture = ExtResource( 3 )
 hframes = 4
-frame = 1
+frame = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 

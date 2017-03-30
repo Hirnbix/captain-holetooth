@@ -3,7 +3,7 @@
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
 [ext_resource path="res://src/screens/menu/scn1_menu_bg.png" type="Texture" id=3]
-[ext_resource path="res://src/screens/menu/splashscreen_ship_scn1.png" type="Texture" id=4]
+[ext_resource path="res://src/objects/castle_ship_floating/ship_float_castle.png" type="Texture" id=4]
 [ext_resource path="res://src/objects/thruster/thruster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/screens/menu/splash_screen_lochzahn_single_scn1.png" type="Texture" id=6]
 [ext_resource path="res://src/screens/menu/skull_eye.png" type="Texture" id=7]
@@ -49,20 +49,15 @@ tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 595.2, 280.4 ), Vector2( -274, 162 ) ] }
 tracks/3/type = "value"
-tracks/3/path = NodePath("splashscreen_schiff:transform/scale")
+tracks/3/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = { "times":FloatArray( 0, 1.8 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 1.5, 1.5 ) ] }
+tracks/3/keys = { "times":FloatArray( 0, 1.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 15.6, 5.45 ), Vector2( 102.347, 22.0765 ) ] }
 tracks/4/type = "value"
-tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/pos")
+tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/scale")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = { "times":FloatArray( 0, 1.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 15.6, 5.45 ), Vector2( 102.347, 22.0765 ) ] }
-tracks/5/type = "value"
-tracks/5/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/scale")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
+tracks/4/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -135,7 +130,7 @@ music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/vol
 [node name="gametitle" type="Sprite" parent="art"]
 
 editor/display_folded = true
-transform/pos = Vector2( 359, 100 )
+transform/pos = Vector2( 359, -90 )
 z/z = 1
 texture = ExtResource( 2 )
 region_rect = Rect2( 8, 1, 264, 152 )
@@ -161,17 +156,16 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-editor/display_folded = true
-transform/pos = Vector2( -274, 162 )
-transform/scale = Vector2( 1.5, 1.5 )
+transform/pos = Vector2( 595.2, 280.4 )
+transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
 __meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
-transform/pos = Vector2( 102.347, 22.0765 )
-transform/scale = Vector2( 0.4, 0.4 )
+transform/pos = Vector2( 15.6, 5.45 )
+transform/scale = Vector2( 0.8, 0.8 )
 z/z = 2
 z/relative = false
 texture = ExtResource( 4 )
@@ -199,6 +193,7 @@ autoplay = "gametitle_animations"
 
 editor/display_folded = true
 transform/pos = Vector2( 239, 146 )
+transform/scale = Vector2( 8, 8 )
 texture = ExtResource( 6 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
