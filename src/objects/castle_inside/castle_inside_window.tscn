@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://src/objects/castle_inside/castle_inside_window.png" type="Texture" id=1]
+[ext_resource path="res://src/objects/torch/light.png" type="Texture" id=2]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+
+closed = false
+cull_mode = 0
+polygon = Vector2Array( 30.0261, -5.31822, 30.06, -13.4194, 30.1789, -14.1889, 30.5695, -14.766, 30.9771, -15.2576, 31.5545, -15.5569, 32.4037, -15.5141, 32.9811, -15.3431, 33.5075, -14.8515, 34.034, -14.2316, 34.2548, -13.4194, 41.6435, 3.31035 )
+
+[node name="castle_inside_window" type="Sprite"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 344, 160 )
+z/z = -1
+texture = ExtResource( 1 )
+flip_h = true
+modulate = Color( 0.463623, 0.499929, 0.5625, 1 )
+
+[node name="Light2D_window" type="Light2D" parent="."]
+
+transform/pos = Vector2( -12.1936, -42.0007 )
+transform/scale = Vector2( 6.48148, 6.22222 )
+enabled = true
+editor_only = false
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+scale = 1.52
+color = Color( 0.832031, 0.583245, 0.383514, 1 )
+energy = 8.09
+mode = 2
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = true
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+[node name="LightOccluder2D_window" type="LightOccluder2D" parent="."]
+
+transform/pos = Vector2( -361.93, 84.3514 )
+transform/scale = Vector2( 11.4063, 9.0625 )
+occluder = SubResource( 1 )
+light_mask = 1
+
+

@@ -8,13 +8,13 @@
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/audio/music/japsand.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/scene_teleporter.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/objects/castle_inside/castle_inside_window.png" type="Texture" id=9]
+[ext_resource path="res://src/objects/castle_inside/castle_inside_window.tscn" type="PackedScene" id=9]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 
 closed = false
 cull_mode = 0
-polygon = Vector2Array( 29.7203, -5.51724, 29.7203, -14.3448, 30.3639, -15.1549, 31.123, -16.1103, 32.5257, -16.1103, 33.2271, -15.2276, 33.9285, -14.3448, 41.6435, 3.31035 )
+polygon = Vector2Array( 30.0261, -5.31822, 30.06, -13.4194, 30.1789, -14.1889, 30.5695, -14.766, 30.9771, -15.2576, 31.5545, -15.5569, 32.4037, -15.5141, 32.9811, -15.3431, 33.5075, -14.8515, 34.034, -14.2316, 34.2548, -13.4194, 41.6435, 3.31035 )
 
 [node name="castle" type="Node2D"]
 
@@ -130,44 +130,16 @@ scene_path = "res://src/levels/castle/castle_outside.tscn"
 
 transform/pos = Vector2( -1.19286, -2.50453 )
 
-[node name="castle_inside_window" type="Sprite" parent="."]
+[node name="castle_inside_window" parent="." instance=ExtResource( 9 )]
 
-visibility/behind_parent = true
-transform/pos = Vector2( 344, 160 )
-z/z = -1
-texture = ExtResource( 9 )
-modulate = Color( 0.463623, 0.499929, 0.5625, 1 )
+[node name="castle_inside_window1" parent="." instance=ExtResource( 9 )]
 
-[node name="Light2D_window" type="Light2D" parent="castle_inside_window"]
+transform/pos = Vector2( 607.444, 162.395 )
 
-transform/pos = Vector2( -20.9999, -36.0007 )
-transform/scale = Vector2( 6.48148, 6.22222 )
-enabled = true
-editor_only = false
-texture = ExtResource( 2 )
-offset = Vector2( 0, 0 )
-scale = 1.52
-color = Color( 0.832031, 0.583245, 0.383514, 1 )
-energy = 8.09
-mode = 2
-range/height = 0.0
-range/z_min = -1024
-range/z_max = 1024
-range/layer_min = 0
-range/layer_max = 0
-range/item_mask = 1
-shadow/enabled = true
-shadow/color = Color( 0, 0, 0, 0 )
-shadow/buffer_size = 2048
-shadow/esm_multiplier = 80.0
-shadow/item_mask = 1
+[node name="Light2D_window" parent="castle_inside_window1"]
 
-[node name="LightOccluder2D_window" type="LightOccluder2D" parent="castle_inside_window"]
-
-transform/pos = Vector2( -365.998, 89.0005 )
-transform/scale = Vector2( 11.4063, 9.0625 )
-occluder = SubResource( 1 )
-light_mask = 1
+transform/pos = Vector2( 7.80636, -42.0007 )
 
 
 [editable path="scene_teleporter"]
+[editable path="castle_inside_window1"]
