@@ -14,7 +14,7 @@ radius = 17.5258
 transform/pos = Vector2( 30, 30 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 1, -3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1, -13 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -27,7 +27,7 @@ script/script = ExtResource( 1 )
 
 [node name="shape" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 1, -3 )
+transform/pos = Vector2( 1, -13 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
