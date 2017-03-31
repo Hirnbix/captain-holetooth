@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=1]
+[gd_scene load_steps=32 format=1]
 
 [ext_resource path="res://src/screens/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/menu/scn1_menu_gametitle_EN.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://src/screens/ui-icons/icon-font-18/PNG/untitled-e90d.png" type="Texture" id=24]
 [ext_resource path="res://src/screens/menu/donate_button.tex" type="Texture" id=25]
 [ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=26]
+[ext_resource path="res://src/screens/menu/texture-button-character-card.png" type="Texture" id=27]
 
 [sub_resource type="Animation" id=1]
 
@@ -58,6 +59,16 @@ tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/sca
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../character-cards:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 2, 2.1, 2.2, 2.3, 2.4 ), "transitions":FloatArray( 0.25, 0.25, 0.25, 0.25, 1 ), "update":0, "values":[ Vector2( 143, 187 ), Vector2( 151, 195 ), Vector2( 143, 187 ), Vector2( 151, 195 ), Vector2( 143, 187 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("../character-cards:visibility/visible")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0, 1.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ false, true ] }
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -130,7 +141,7 @@ music_volume_slider_path = NodePath("options_screen/settings/Audio/vbox/hbox/vol
 [node name="gametitle" type="Sprite" parent="art"]
 
 editor/display_folded = true
-transform/pos = Vector2( 359, -90 )
+transform/pos = Vector2( 359, 100 )
 z/z = 1
 texture = ExtResource( 2 )
 region_rect = Rect2( 8, 1, 264, 152 )
@@ -156,7 +167,7 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 595.2, 280.4 )
+transform/pos = Vector2( 456.128, 261.456 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
@@ -164,8 +175,8 @@ __meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
-transform/pos = Vector2( 15.6, 5.45 )
-transform/scale = Vector2( 0.8, 0.8 )
+transform/pos = Vector2( 38.7325, 9.88373 )
+transform/scale = Vector2( 0.76, 0.76 )
 z/z = 2
 z/relative = false
 texture = ExtResource( 4 )
@@ -193,7 +204,6 @@ autoplay = "gametitle_animations"
 
 editor/display_folded = true
 transform/pos = Vector2( 239, 146 )
-transform/scale = Vector2( 8, 8 )
 texture = ExtResource( 6 )
 __meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
@@ -227,10 +237,10 @@ focus/stop_mouse = false
 size_flags/horizontal = 1
 size_flags/vertical = 1
 size_flags/stretch_ratio = 2.0
-margin/left = -250.0
-margin/top = -170.0
-margin/right = -480.0
-margin/bottom = -280.0
+margin/left = -264.0
+margin/top = -168.0
+margin/right = -494.0
+margin/bottom = -297.0
 alignment = 1
 
 [node name="startbutton" type="Button" parent="menu_buttons"]
@@ -242,9 +252,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 14.0
+margin/top = 23.0
 margin/right = 230.0
-margin/bottom = 57.0
+margin/bottom = 66.0
 custom_fonts/font = ExtResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -261,9 +271,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 61.0
+margin/top = 70.0
 margin/right = 230.0
-margin/bottom = 96.0
+margin/bottom = 105.0
 custom_fonts/font = ExtResource( 11 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -476,7 +486,7 @@ margin/bottom = 32.0
 custom_fonts/normal_font = ExtResource( 17 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to [url=<url>]http://www.hirnbix.com/parentalcontrols[/url]"
+bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to [url=https://www.hirnbix.com/parentalcontrols]https://www.hirnbix.com/parentalcontrols[/url]"
 visible_characters = -1
 
 [node name="playtime_settings" type="HBoxContainer" parent="options_screen/settings/Parental Controls"]
@@ -530,7 +540,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 272.0
 margin/top = 0.0
-margin/right = 357.0
+margin/right = 359.0
 margin/bottom = 25.0
 custom_styles/pressed = ExtResource( 22 )
 custom_styles/normal = ExtResource( 22 )
@@ -757,6 +767,29 @@ enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 26 )
 
+[node name="character-cards" type="Node2D" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 143, 187 )
+transform/rot = 44.9388
+z/z = -1
+
+[node name="character-cards-button" type="TextureButton" parent="character-cards"]
+
+rect/min_size = Vector2( 64, 43 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 82.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 27 )
+
 [connection signal="pressed" from="menu_buttons/startbutton" to="." method="_on_startbutton_pressed"]
 
 [connection signal="pressed" from="menu_buttons/optionsbutton" to="." method="_on_optionsbutton_pressed"]
@@ -780,5 +813,7 @@ textures/normal = ExtResource( 26 )
 [connection signal="pressed" from="options_screen/settings/Credits/donate_button" to="." method="_on_donate_button_pressed"]
 
 [connection signal="pressed" from="options_screen/exitbutton" to="." method="_on_exitbutton_pressed"]
+
+[connection signal="pressed" from="character-cards/character-cards-button" to="." method="_on_charactercardsbutton_pressed"]
 
 

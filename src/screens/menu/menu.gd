@@ -116,26 +116,26 @@ func _on_music_volume_value_changed( value ):
 # -- DEBUG --
 # DEBUG: Jump to scene 3
 func _on_jump_scn3_pressed():
-	print("Debug: Jumping to Scene 3")
+	print("Transition to Scene 3")
 	transition.fade_to("res://src/levels/forest/forest.tscn")
 
 # DEBUG: Jump to scene 4
 func _on_jump_scn4_pressed():
-	print("Debug: Jumping to Scene 4")
+	print("Transition to mountain")
 	transition.fade_to("res://src/levels/mountain/mountain.tscn")
 
 # DEBUG: Jump to scene 5
 func _on_jump_scn5_pressed():
-	print("Debug: Jumping to Scene 5")
+	print("Transition to fly home")
 	transition.fade_to("res://src/levels/flyhome/flyhome.tscn")
 
 # DEBUG: Jump to minigame
 func _on_jump_minigame_pressed():
-	print("Debug: Jumping to minigame")
+	print("Transition to minigame")
 	transition.fade_to("res://src/levels/minigames/yankandy/yankandy.tscn")
 
 func _on_jump_castle_pressed():
-	print("Debug: Jumping to minigame")
+	print("Transition to castle")
 	transition.fade_to("res://src/levels/castle/castle_outside.tscn")
 	
 func _on_donate_button_pressed():
@@ -147,3 +147,8 @@ func _on_playtime_confirm_pressed():
 	global.playtime_limit_minutes = get_node("options_screen/settings/Parental Controls/playtime_settings/playtime_limit").get_text()
 	global.playtime_limit_seconds = int(global.playtime_limit_minutes) * 60
 	print(global.playtime_limit_seconds)
+
+
+func _on_charactercardsbutton_pressed():
+	print("Transition to character cards")
+	transition.fade_to("res://src/screens/character-cards/character-cards.tscn")

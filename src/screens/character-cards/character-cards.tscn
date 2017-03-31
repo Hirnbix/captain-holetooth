@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://src/screens/character-cards/character-cards.gd" type="Script" id=1]
+[ext_resource path="res://src/screens/character-cards/character-card-yan-mockup.png" type="Texture" id=2]
+[ext_resource path="res://src/screens/character-cards/character-card-ship-mockup.png" type="Texture" id=3]
+[ext_resource path="res://src/screens/character-cards/character-card-header.png" type="Texture" id=4]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=5]
+
+[node name="character-cards" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="art" type="Node2D" parent="."]
+
+[node name="card-container-scrollable" type="ScrollContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 8.0
+margin/top = 40.0
+margin/right = 512.0
+margin/bottom = 288.0
+scroll/horizontal = false
+scroll/vertical = true
+
+[node name="card_container" type="VBoxContainer" parent="card-container-scrollable"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 128.0
+margin/bottom = 740.0
+custom_constants/separation = 24
+alignment = 0
+
+[node name="yan-card" type="TextureFrame" parent="card-container-scrollable/card_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 128.0
+margin/bottom = 167.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="ship-card" type="TextureFrame" parent="card-container-scrollable/card_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 191.0
+margin/right = 128.0
+margin/bottom = 358.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="captain-holetooth-card" type="TextureFrame" parent="card-container-scrollable/card_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 382.0
+margin/right = 128.0
+margin/bottom = 549.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="rootninja-card" type="TextureFrame" parent="card-container-scrollable/card_container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 573.0
+margin/right = 128.0
+margin/bottom = 740.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Container" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="header" type="TextureFrame" parent="Container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 512.0
+margin/bottom = 38.0
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="TextureButton" type="TextureButton" parent="Container/header"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 480.0
+margin/top = 8.0
+margin/right = 520.0
+margin/bottom = 48.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+
+[connection signal="pressed" from="Container/header/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+
