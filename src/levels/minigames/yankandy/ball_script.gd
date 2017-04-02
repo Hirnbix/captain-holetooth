@@ -13,7 +13,7 @@ func _fixed_process(delta):
 	
 	randomize()
 	var random_friction = randf()*0.3+0.05
-	var random_bounce = randf()*0.4+0.09
+	var random_bounce = randf()*0.8+0.09
 
 	self.set_friction(random_friction)
 	self.set_bounce(random_bounce)
@@ -33,7 +33,7 @@ func _fixed_process(delta):
 	if Input.is_action_pressed("ui_down") and released == false:
 			print("Release!")
 			released = true
-			set_mass(85)
+			set_mass(95)
 			set_gravity_scale(0.8)
 			direction += Vector2(0,0.01)
 	
@@ -43,8 +43,6 @@ func _fixed_process(delta):
 		get_node("Camera2D").set_pos(ballpos + variance)
 	
 	self.set_pos(ballpos + direction)
-	get_node("../ball_effects").set_pos(ballpos)
-
 func _ready():
 	set_fixed_process(true)
 	set_mass(1)
