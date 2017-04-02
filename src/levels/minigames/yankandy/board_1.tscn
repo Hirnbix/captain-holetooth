@@ -180,6 +180,7 @@ polygon = Vector2Array( 205.953, 783.098, 192.688, 783.098, 193.982, 807.039, 21
 [node name="board_1" type="RigidBody2D"]
 
 transform/pos = Vector2( 16, 112 )
+z/z = -1
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 2, 0, -185 )
@@ -289,8 +290,8 @@ stream/stream = ExtResource( 3 )
 
 [node name="pins" type="Area2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 327.45, 178.678 )
+z/relative = false
 input/pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -1164,7 +1165,7 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 1
+frame = 5
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
@@ -1172,6 +1173,7 @@ transform/pos = Vector2( 52.7836, -16.0314 )
 
 [node name="pockets" type="Area2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 120.5, -5.5 )
 transform/scale = Vector2( 1.67188, 1.20312 )
 input/pickable = true

@@ -82,7 +82,6 @@ tracks/4/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 )
 
 transform/pos = Vector2( 166.5, 273.5 )
 transform/scale = Vector2( 0.328125, 0.328125 )
-z/z = 1
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 0.894568, 0.981129, -1.15461, 1.05275, -9, 2.10583 )
