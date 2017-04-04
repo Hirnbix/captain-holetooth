@@ -63,7 +63,6 @@ drag_margin/bottom = 0.2
 
 [node name="parallax" type="ParallaxBackground" parent="."]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -104,7 +103,6 @@ autoplay = "day_to_night"
 
 [node name="mountains_back" type="ParallaxLayer" parent="parallax"]
 
-editor/display_folded = true
 z/z = 1
 z/relative = false
 motion/scale = Vector2( 0.2, 1 )
