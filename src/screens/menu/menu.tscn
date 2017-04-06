@@ -290,7 +290,7 @@ stream/stream = ExtResource( 13 )
 [node name="options_screen" type="Node2D" parent="."]
 
 visibility/visible = false
-z/z = 2
+z/z = 5
 script/script = ExtResource( 15 )
 
 [node name="settings" type="TabContainer" parent="options_screen"]
@@ -769,9 +769,7 @@ textures/normal = ExtResource( 26 )
 
 [node name="character-cards" type="Node2D" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( 143, 187 )
-transform/rot = 44.9388
+transform/pos = Vector2( 200, 176 )
 z/z = -1
 
 [node name="character-cards-button" type="TextureButton" parent="character-cards"]
