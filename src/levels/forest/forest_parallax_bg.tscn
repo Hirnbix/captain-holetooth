@@ -28,7 +28,6 @@ scroll/ignore_camera_zoom = false
 
 [node name="sky" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 motion/scale = Vector2( 1, 0 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 1024, 0 )

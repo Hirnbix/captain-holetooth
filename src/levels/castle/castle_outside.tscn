@@ -13,7 +13,7 @@
 [ext_resource path="res://src/objects/castle_ship_floating/ship_float_castle.png" type="Texture" id=11]
 [ext_resource path="res://src/levels/castle/parallax_castle.tscn" type="PackedScene" id=12]
 
-[sub_resource type="ColorRamp" id=3]
+[sub_resource type="ColorRamp" id=1]
 
 offsets = FloatArray( 0, 0.057971, 0.231884, 0.460145, 0.956522, 1 )
 colors = ColorArray( 0.814209, 0.904093, 0.90625, 0.672314, 0.277771, 0.429942, 0.433594, 1, 0.470078, 0.488979, 0.636719, 1, 0.398683, 0.228333, 0.453125, 1, 1, 1, 1, 1, 0.824219, 0.209274, 0.353402, 0 )
@@ -92,7 +92,7 @@ randomness/direction = 0.2
 randomness/spin_velocity = 5.0
 randomness/initial_angle = 1.0
 randomness/hue_variation = 1.0
-color/color_ramp = SubResource( 3 )
+color/color_ramp = SubResource( 1 )
 
 [node name="rewards" type="Node2D" parent="."]
 

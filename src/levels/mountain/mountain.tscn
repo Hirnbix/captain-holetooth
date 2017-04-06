@@ -146,7 +146,7 @@ transform/pos = Vector2( 3896, 578.186 )
 
 [node name="tex_cave" parent="world/tile_map/rootninja-cave"]
 
-polygon = Vector2Array( 274.843, -18.7338, -35.8325, -69.6611, -32.0674, -65.5956, -34.2771, -61.0314, -34.3193, -54.6393, -32.8408, -52.6638, -34.3473, -50.3839, -34.2771, -42.4704, -33.6143, -40.3405, -32.0674, -38.8191, -33.2827, -35.9284, -34.4527, -34.4078, -35.8325, 174.79, 274.843, 174.79 )
+polygon = Vector2Array( 276.136, -189.222, 56.0737, -181.159, -36.6975, -65.7234, -34.2771, -61.0314, -34.3193, -54.6393, -32.8408, -52.6638, -34.3473, -50.3839, -34.2771, -42.4704, -33.6143, -40.3405, -32.0674, -38.8191, -33.2827, -35.9284, -34.4527, -34.4078, -35.8325, 174.79, 274.843, 174.79 )
 color = Color( 0.59375, 0.43647, 0.234253, 1 )
 
 [node name="fireflies" type="Node2D" parent="world/tile_map"]
@@ -193,6 +193,16 @@ transform/rot = -6.18679
 
 transform/pos = Vector2( 3515.26, 373.448 )
 transform/rot = -6.18679
+
+[node name="torch6" parent="world/tile_map/torches" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 3712.68, 383.379 )
+transform/rot = 6.95851
+
+[node name="torch7" parent="world/tile_map/torches" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 3671.68, 368.379 )
+transform/rot = -13.2758
 
 [node name="torch4" parent="world/tile_map/torches" instance=ExtResource( 11 )]
 
