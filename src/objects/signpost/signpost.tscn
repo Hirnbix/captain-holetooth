@@ -10,7 +10,7 @@ centered = false
 
 [node name="signpost_sticker" type="Sprite" parent="."]
 
-transform/pos = Vector2( 6.11887, 5.74125 )
+transform/pos = Vector2( 6, 6 )
 texture = ExtResource( 2 )
 centered = false
 

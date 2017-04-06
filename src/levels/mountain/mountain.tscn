@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=22 format=1]
 
 [ext_resource path="res://src/levels/mountain/mountain.gd" type="Script" id=1]
 [ext_resource path="res://src/objects/snow/simple_snow.tscn" type="PackedScene" id=2]
@@ -14,9 +14,11 @@
 [ext_resource path="res://src/objects/rock/rock.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/objects/rewards/reward.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/scene_teleporter.gd" type="Script" id=14]
-[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=15]
-[ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=16]
-[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/objects/signpost/signpost.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/objects/signpost/signpost-stickers/signpost_sticker_rootninja.png" type="Texture" id=16]
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/audio/music/windloop.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=19]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -204,6 +206,12 @@ transform/rot = 6.95851
 transform/pos = Vector2( 3671.68, 368.379 )
 transform/rot = -13.2758
 
+[node name="torch8" parent="world/tile_map/torches" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 3607.33, 380.693 )
+transform/rot = -13.2758
+z/z = 5
+
 [node name="torch4" parent="world/tile_map/torches" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3939.26, 757.448 )
@@ -256,7 +264,7 @@ transform/scale = Vector2( 1, 1.28052 )
 
 [node name="rock" parent="world/interactables" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 1385.6, 57.6 )
+transform/pos = Vector2( 1339.6, 312.6 )
 
 [node name="rock2" parent="world/interactables" instance=ExtResource( 12 )]
 
@@ -422,16 +430,39 @@ max_lines_visible = -1
 [node name="teleport_collision_shape" type="CollisionShape2D" parent="world/scene_teleporter 2"]
 
 transform/pos = Vector2( 6.66409, -42.0128 )
-transform/scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="hud" parent="." instance=ExtResource( 15 )]
+[node name="signpost" parent="world" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 1505, 52 )
+
+[node name="signpost_sticker" parent="world/signpost"]
+
+texture = ExtResource( 16 )
+
+[node name="signpost1" parent="world" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 2959, 364 )
+
+[node name="signpost_sticker" parent="world/signpost1"]
+
+texture = ExtResource( 16 )
+
+[node name="signpost2" parent="world" instance=ExtResource( 15 )]
+
+transform/pos = Vector2( 3903.38, 496.425 )
+
+[node name="signpost_sticker" parent="world/signpost2"]
+
+texture = ExtResource( 16 )
+
+[node name="hud" parent="." instance=ExtResource( 17 )]
 
 [node name="wind_loop" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 16 )
+stream/stream = ExtResource( 18 )
 stream/play = true
 stream/loop = true
 stream/volume_db = 0.0
@@ -440,7 +471,7 @@ stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 
-[node name="sfx" parent="." instance=ExtResource( 17 )]
+[node name="sfx" parent="." instance=ExtResource( 19 )]
 
 [connection signal="body_enter" from="world/scene_teleporter" to="world/scene_teleporter" method="_on_scene_teleporter_body_enter"]
 
@@ -450,3 +481,6 @@ stream/buffering_ms = 500
 [editable path="world/tile_map/cave_background"]
 [editable path="world/tile_map/rootninja-cave"]
 [editable path="world/tile_map/torches/torch1"]
+[editable path="world/signpost"]
+[editable path="world/signpost1"]
+[editable path="world/signpost2"]
