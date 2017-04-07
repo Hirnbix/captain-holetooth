@@ -1,4 +1,5 @@
 All character designs & story elements © Oliver Rühl 2017
+
 Please read the COPYRIGHT_NOTICE.txt for more info regarding the art used in this game.
 
 ![Menu Screen](https://static1.squarespace.com/static/58b986429de4bb1343d8d3b6/58bc7ab4b8a79bbdc67e5098/58c715fb725e25b97bcee06c/1490266416695/Screen+Shot+2017-03-13+at+22.53.39.png?format=750w)
