@@ -59,16 +59,6 @@ tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/sca
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
-tracks/5/type = "value"
-tracks/5/path = NodePath("../character-cards:transform/pos")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = { "times":FloatArray( 2, 2.1, 2.2, 2.3, 2.4 ), "transitions":FloatArray( 0.25, 0.25, 0.25, 0.25, 1 ), "update":0, "values":[ Vector2( 143, 187 ), Vector2( 151, 195 ), Vector2( 143, 187 ), Vector2( 151, 195 ), Vector2( 143, 187 ) ] }
-tracks/6/type = "value"
-tracks/6/path = NodePath("../character-cards:visibility/visible")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = { "times":FloatArray( 0, 1.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ false, true ] }
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -767,22 +757,31 @@ enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 26 )
 
-[node name="character-cards" type="Node2D" parent="."]
+[node name="character-cards" type="Control" parent="."]
 
-transform/pos = Vector2( 200, 176 )
-z/z = -1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 168.0
+margin/top = 152.0
+margin/right = 192.0
+margin/bottom = 240.0
 
 [node name="character-cards-button" type="TextureButton" parent="character-cards"]
 
-rect/min_size = Vector2( 64, 43 )
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 0.0
-margin/right = 64.0
-margin/bottom = 82.0
+margin/top = 48.0
+margin/right = -64.0
+margin/bottom = -34.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
