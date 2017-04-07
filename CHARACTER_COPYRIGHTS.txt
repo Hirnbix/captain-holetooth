@@ -3,6 +3,6 @@
 Hello everyone,
 
 The game is open source and can be modified and used as stated in the Apache License.
-This file is to clarify how to handle the art files.
+This file is to clarify how the art files are handled.
 
 1) You are not allowed to use the characters from my game in any other game and just rename them
