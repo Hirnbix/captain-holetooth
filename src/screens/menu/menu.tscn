@@ -33,7 +33,7 @@
 resource/name = "gametitle_animations"
 length = 4.0
 loop = false
-step = 0.1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("gametitle:transform/pos")
 tracks/0/interp = 2
@@ -58,7 +58,17 @@ tracks/4/type = "value"
 tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/scale")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
+tracks/4/keys = { "times":FloatArray( 0, 3.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../character-cards:rect/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 2.45, 2.8, 2.8, 2.9, 2.95 ), "transitions":FloatArray( 0.25, 0.25, 0.25, 4, 4 ), "update":0, "values":[ Vector2( 168, -136 ), Vector2( 168, 136 ), Vector2( 168, 144 ), Vector2( 168, 140 ), Vector2( 168, 144 ) ] }
+tracks/6/type = "value"
+tracks/6/path = NodePath("../character-cards:rect/rotation")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray(  ), "transitions":FloatArray(  ), "update":0, "values":[  ] }
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -157,7 +167,7 @@ texture = ExtResource( 3 )
 
 [node name="splashscreen_schiff" type="Sprite" parent="art"]
 
-transform/pos = Vector2( 456.128, 261.456 )
+transform/pos = Vector2( -274, 162 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
@@ -165,8 +175,8 @@ __meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
-transform/pos = Vector2( 38.7325, 9.88373 )
-transform/scale = Vector2( 0.76, 0.76 )
+transform/pos = Vector2( 102.347, 22.0765 )
+transform/scale = Vector2( 0.4, 0.4 )
 z/z = 2
 z/relative = false
 texture = ExtResource( 4 )
@@ -759,14 +769,18 @@ textures/normal = ExtResource( 26 )
 
 [node name="character-cards" type="Control" parent="."]
 
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 168.0
-margin/top = 152.0
-margin/right = 192.0
-margin/bottom = 240.0
+margin/left = -168.0
+margin/top = -144.0
+margin/right = -192.0
+margin/bottom = -232.0
 
 [node name="character-cards-button" type="TextureButton" parent="character-cards"]
 
@@ -779,9 +793,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 48.0
+margin/top = 40.0
 margin/right = -64.0
-margin/bottom = -34.0
+margin/bottom = -42.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
