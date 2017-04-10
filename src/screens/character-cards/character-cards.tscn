@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://src/screens/character-cards/character-cards-main-node.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/character-cards/character_card_container.gd" type="Script" id=2]
-[ext_resource path="res://src/objects/character_cards/character_card.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/screens/character-cards/character-card-header.png" type="Texture" id=4]
-[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=6]
-[ext_resource path="res://src/screens/character-cards/character-card-bg-pattern.png" type="Texture" id=7]
+[ext_resource path="res://src/screens/character-cards/character-card-header.png" type="Texture" id=3]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=5]
+[ext_resource path="res://src/screens/character-cards/character-card-bg-pattern.png" type="Texture" id=6]
 
 [node name="character-cards" type="Control"]
 
@@ -35,29 +34,24 @@ margin/bottom = 288.0
 scroll/horizontal = false
 scroll/vertical = true
 
-[node name="card_container" type="VBoxContainer" parent="card-container-scrollable"]
+[node name="card_container" type="HBoxContainer" parent="card-container-scrollable"]
 
+rect/min_size = Vector2( 480, 288 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
+margin/right = 480.0
+margin/bottom = 288.0
 custom_constants/separation = 24
 alignment = 0
 script/script = ExtResource( 2 )
 
 [node name="character_card_default_placement" type="Position2D" parent="card-container-scrollable/card_container"]
 
-transform/pos = Vector2( 88, 88 )
-
-[node name="character_card" parent="card-container-scrollable/card_container" instance=ExtResource( 3 )]
-
-editor/display_folded = true
-visibility/visible = false
-transform/pos = Vector2( 432, 104 )
+transform/pos = Vector2( 82, 146 )
 
 [node name="Container" type="CanvasLayer" parent="."]
 
@@ -76,7 +70,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 512.0
 margin/bottom = 38.0
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 stretch_mode = 0
 
 [node name="description_text" type="Label" parent="Container/header"]
@@ -89,7 +83,7 @@ margin/left = 205.0
 margin/top = 5.0
 margin/right = 472.0
 margin/bottom = 36.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 4 )
 text = "Here you can see all the character you\'ve met.\nFlip the cards over and read more details about them!"
 percent_visible = 1.0
 lines_skipped = 0
@@ -112,7 +106,7 @@ margin/bottom = 12.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 6 )
+textures/normal = ExtResource( 5 )
 
 [node name="BackgroundTexture" type="TextureFrame" parent="."]
 
@@ -125,7 +119,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 512.0
 margin/bottom = 288.0
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 modulate = Color( 0.211258, 0.277344, 0.233975, 1 )
 stretch_mode = 2
 __meta__ = { "_edit_lock_":true }
@@ -133,4 +127,3 @@ __meta__ = { "_edit_lock_":true }
 [connection signal="pressed" from="Container/header/TextureButton" to="." method="_on_TextureButton_pressed"]
 
 
-[editable path="card-container-scrollable/card_container/character_card"]

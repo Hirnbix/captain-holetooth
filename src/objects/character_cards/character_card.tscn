@@ -22,6 +22,7 @@ step = 0.1
 
 [node name="character_card" type="Node2D"]
 
+z/z = 1
 script/script = ExtResource( 1 )
 button_path = NodePath("character_card_button")
 
@@ -127,7 +128,6 @@ shortcut = null
 
 [node name="character_card_text" type="RichTextLabel" parent="."]
 
-visibility/visible = false
 visibility/opacity = 0.0
 anchor/left = 1
 anchor/top = 1

@@ -47,7 +47,7 @@ var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 
 # Array for characters the player has met (to display the character cards in the options later)
 # Captain Holetooth is in there by default
-var characters_met = ["Captain Holetooth", "Yan"]
+var characters_met = ["Captain Holetooth", "Yan", "Debug card", "Captain Holetooth", "Yan", "Debug card"]
 
 ######################################
 #  Dictionary Character descriptions #

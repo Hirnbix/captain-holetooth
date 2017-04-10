@@ -22,16 +22,18 @@ func _ready():
 	button.set_toggle_mode(true)
 	
 	# Disable button
-	# button.set_disabled(true)
+	#button.set_disabled(true)
 
 
 # On button toggle
 func on_toggled(pressed):
 	if(pressed):
 		print("Hello!")
+
 	else:
 		print("Goodbye!")
 		anim.play_backwards("flip_card")
+
 
 
 # On button pressed
