@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://src/screens/character-cards/character-cards.gd" type="Script" id=1]
-[ext_resource path="res://src/screens/character-cards/character-card-yan-mockup.png" type="Texture" id=2]
-[ext_resource path="res://src/objects/snow/snow.png" type="Texture" id=3]
-[ext_resource path="res://src/objects/torch/light.png" type="Texture" id=4]
-[ext_resource path="res://src/screens/character-cards/character-card-header.png" type="Texture" id=5]
-[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=6]
-[ext_resource path="res://src/screens/character-cards/character-card-flipside.png" type="Texture" id=7]
-[ext_resource path="res://src/screens/character-cards/character-card-bg-pattern.png" type="Texture" id=8]
+[ext_resource path="res://src/screens/character-cards/character_card.gd" type="Script" id=2]
+[ext_resource path="res://src/screens/character-cards/character-card-flipside.png" type="Texture" id=3]
+[ext_resource path="res://src/screens/character-cards/character-card-yan-mockup.png" type="Texture" id=4]
+[ext_resource path="res://src/objects/snow/snow.png" type="Texture" id=5]
+[ext_resource path="res://src/objects/torch/light.png" type="Texture" id=6]
+[ext_resource path="res://src/fonts/berry8.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://src/screens/character-cards/character-card-header.png" type="Texture" id=8]
+[ext_resource path="res://src/screens/menu/close_button.png" type="Texture" id=9]
+[ext_resource path="res://src/screens/character-cards/character-card-bg-pattern.png" type="Texture" id=10]
 
 [sub_resource type="ColorRamp" id=1]
 
@@ -21,50 +23,60 @@ length = 1.5
 loop = false
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card:texture")
+tracks/0/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite:texture")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.9, 1 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ ExtResource( 7 ), ExtResource( 7 ), ExtResource( 2 ) ] }
+tracks/0/keys = { "times":FloatArray( 0, 0.9, 1 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ) ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card:modulate")
+tracks/1/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite:modulate")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = { "times":FloatArray( 0, 0.9, 0.9, 0.95, 1.15, 1.5 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.542969, 0.542969, 0.542969, 1 ), Color( 0.390625, 0.390625, 0.390625, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ), Color( 1, 1, 1, 1 ) ] }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card:texture:flags")
+tracks/2/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite:texture:flags")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = { "times":FloatArray( 0.4, 1.5 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 4, 0 ] }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card:transform/scale")
+tracks/3/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite:transform/scale")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = { "times":FloatArray( 0, 0.8, 0.9, 1, 1.1, 1.5 ), "transitions":FloatArray( 4, 4, 1, 1, 0.25, 0.25 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 0.75, 1 ), Vector2( 0.5, 1 ), Vector2( 0, 1 ), Vector2( 0.25, 1 ), Vector2( 1, 1 ) ] }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../card-container-scrollable/card_container/yan_card:transform/scale")
+tracks/4/path = NodePath("../card-container-scrollable/card_container/character_card:transform/scale")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = { "times":FloatArray( 0, 0.9, 1.5 ), "transitions":FloatArray( 0.25, 0.25, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ] }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card/yan-card1:transform/scale")
+tracks/5/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite/yan-card1:transform/scale")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = { "times":FloatArray( 0.6, 1.1, 1.3, 1.5 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 0.851736, 0.745269 ), Vector2( 1.36517, 0.644663 ), Vector2( 1.20401, 0.923569 ), Vector2( 1.04284, 1 ) ] }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../card-container-scrollable/card_container/yan_card/yan-card/Particles2D:config/emitting")
+tracks/6/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_sprite/Particles2D:config/emitting")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = { "times":FloatArray( 0, 0.85, 1.4 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ false, true, false ] }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../card-container-scrollable/card_container/yan_card/Light2D:scale")
+tracks/7/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_light:scale")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = { "times":FloatArray( 0, 1.05 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.01, 3.74 ] }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../card-container-scrollable/card_container/yan_card/Light2D:energy")
+tracks/8/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_light:energy")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = { "times":FloatArray( 0, 0.85, 1.05, 1.3 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":0, "values":[ 0.01, 0.01, 4.48, 0.01 ] }
+tracks/9/type = "value"
+tracks/9/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_text:visibility/visible")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = { "times":FloatArray( 0, 1.1, 1.5 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ false, true, true ] }
+tracks/10/type = "value"
+tracks/10/path = NodePath("../card-container-scrollable/card_container/character_card/character_card_text:visibility/opacity")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = { "times":FloatArray( 0, 1.1, 1.5 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ 0.0, 0.0, 1.0 ] }
 
 [sub_resource type="Animation" id=3]
 
@@ -72,21 +84,6 @@ resource/name = "flip_polygon_card"
 length = 2.0
 loop = true
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("../card-container-scrollable/card_container/Polygon2D:polygon")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1, 1.1, 1.5, 2 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2Array( -8, -8, 128, -8, 128, 192, -8.00003, 192 ), Vector2Array( 48, 8, 48, -24, 48, 200, 48, 176 ), Vector2Array( 40, -24, 48, 0, 48, 168, 40, 200 ), Vector2Array( 18.6667, -16.8889, 80, -8, 80, 184, 18.6667, 196.444 ), Vector2Array( -8, -8, 128, -8, 128, 192, -8.00003, 192 ) ] }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../card-container-scrollable/card_container/Polygon2D:texture/texture")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ ExtResource( 7 ), ExtResource( 2 ) ] }
-tracks/2/type = "value"
-tracks/2/path = NodePath("../card-container-scrollable/card_container/Polygon2D:transform/scale")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ] }
 
 [node name="character-cards" type="Control"]
 
@@ -128,24 +125,28 @@ margin/bottom = 0.0
 custom_constants/separation = 24
 alignment = 0
 
-[node name="yan_card" type="Node2D" parent="card-container-scrollable/card_container"]
+[node name="character_card" type="Node2D" parent="card-container-scrollable/card_container"]
 
 transform/pos = Vector2( 77, 145 )
+script/script = ExtResource( 2 )
+button_path = NodePath("character_card_button")
 
-[node name="yan-card" type="Sprite" parent="card-container-scrollable/card_container/yan_card"]
+[node name="character_card_sprite" type="Sprite" parent="card-container-scrollable/card_container/character_card"]
 
+editor/display_folded = true
+transform/pos = Vector2( 0, 32 )
 z/z = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
-[node name="yan-card1" type="Sprite" parent="card-container-scrollable/card_container/yan_card/yan-card"]
+[node name="yan-card1" type="Sprite" parent="card-container-scrollable/card_container/character_card/character_card_sprite"]
 
 transform/pos = Vector2( 4.86374e-05, -1.20253 )
-transform/scale = Vector2( 1.04284, 1 )
+transform/scale = Vector2( 0.851736, 0.745269 )
 z/z = -1
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 modulate = Color( 0, 0, 0, 0.442627 )
 
-[node name="Particles2D" type="Particles2D" parent="card-container-scrollable/card_container/yan_card/yan-card"]
+[node name="Particles2D" type="Particles2D" parent="card-container-scrollable/card_container/character_card/character_card_sprite"]
 
 transform/pos = Vector2( -1.43051e-06, -4.5 )
 transform/scale = Vector2( 0.875, 0.890625 )
@@ -156,7 +157,7 @@ config/preprocess = 1.0
 config/emitting = false
 config/half_extents = Vector2( 80, 80 )
 config/explosiveness = 0.0
-config/texture = ExtResource( 3 )
+config/texture = ExtResource( 5 )
 params/direction = 0.0
 params/spread = 90.0
 params/linear_velocity = 0.0
@@ -177,15 +178,15 @@ randomness/initial_size = 2.0
 color/color = Color( 0.566406, 0.566406, 0.566406, 1 )
 color/color_ramp = SubResource( 1 )
 
-[node name="Light2D" type="Light2D" parent="card-container-scrollable/card_container/yan_card"]
+[node name="character_card_light" type="Light2D" parent="card-container-scrollable/card_container/character_card"]
 
 transform/pos = Vector2( 0, -0.993866 )
 transform/scale = Vector2( 1, 2.12025 )
 enabled = true
 editor_only = false
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 offset = Vector2( 0, 0 )
-scale = 3.74
+scale = 0.01
 color = Color( 1, 1, 1, 1 )
 energy = 0.01
 mode = 0
@@ -201,7 +202,7 @@ shadow/buffer_size = 2048
 shadow/esm_multiplier = 80.0
 shadow/item_mask = 1
 
-[node name="card_button" type="TextureButton" parent="card-container-scrollable/card_container/yan_card"]
+[node name="character_card_button" type="TextureButton" parent="card-container-scrollable/card_container/character_card"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -215,20 +216,26 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 
-[node name="Polygon2D" type="Polygon2D" parent="card-container-scrollable/card_container"]
+[node name="character_card_text" type="RichTextLabel" parent="card-container-scrollable/card_container/character_card"]
 
-transform/pos = Vector2( 176, 72 )
-polygon = Vector2Array( -8, -8, 128, -8, 128, 192, -8.00003, 192 )
-uv = Vector2Array( 0, 3.8147e-06, 128, 2.17557e-06, 128, 192, 0, 192 )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = ColorArray(  )
-offset = Vector2( 0, 0 )
-texture/texture = ExtResource( 2 )
-texture/offset = Vector2( 0, 0 )
-texture/scale = Vector2( 1, 1 )
-texture/rotation = 0.0
-invert/enable = false
-invert/border = 100.0
+visibility/visible = false
+visibility/opacity = 0.0
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 126.0
+margin/right = -355.0
+margin/bottom = -63.0
+custom_fonts/normal_font = ExtResource( 7 )
+bbcode/enabled = false
+bbcode/bbcode = "Captin Holetooth\n\nHe is the main character He is the main characterHe is the main characterHe is the main characterHe is the main characterHe is the main characterHe is the main characterHe is the main characterHe is the main character\nHe is the main characterHe is the main characterHe is the main characterHe is the main character\nHe is the main characterHe is the main character\nHe is the main characterHe is the main characterHe is the main characterHe is the main characterHe is the main character\nHe is the main characterHe is the main characterHe is the main character\nHe is the main characterHe is the main character\n"
+visible_characters = -1
 
 [node name="Container" type="CanvasLayer" parent="."]
 
@@ -247,23 +254,43 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 512.0
 margin/bottom = 38.0
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 stretch_mode = 0
+
+[node name="description_text" type="Label" parent="Container/header"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 12.0
+margin/top = 43.0
+margin/right = 279.0
+margin/bottom = 74.0
+custom_fonts/font = ExtResource( 7 )
+text = "Here you can see all the character you\'ve met.\nFlip the cards over and read more details about them!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="TextureButton" type="TextureButton" parent="Container/header"]
 
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 480.0
-margin/top = 8.0
-margin/right = 520.0
-margin/bottom = 48.0
+margin/left = 27.0
+margin/top = 28.0
+margin/right = 11.0
+margin/bottom = 12.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 6 )
+textures/normal = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -288,12 +315,10 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 512.0
 margin/bottom = 288.0
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 modulate = Color( 0.211258, 0.277344, 0.233975, 1 )
 stretch_mode = 2
 __meta__ = { "_edit_lock_":true }
-
-[connection signal="pressed" from="card-container-scrollable/card_container/yan_card/card_button" to="." method="_on_card_button_pressed"]
 
 [connection signal="pressed" from="Container/header/TextureButton" to="." method="_on_TextureButton_pressed"]
 
