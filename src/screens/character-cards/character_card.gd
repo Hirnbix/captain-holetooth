@@ -1,7 +1,7 @@
 extends Node2D
 
 # animation Node
-onready var anim = get_node("../../../AnimationPlayer")
+onready var anim = get_node("AnimationPlayer")
 
 # Get node
 export (NodePath) var button_path
@@ -9,6 +9,7 @@ onready var button = get_node(button_path)
 
 # Start
 func _ready():
+	
 	# Create connetion for TOGGLE
 	button.connect("toggled", self, "on_toggled")
 	
