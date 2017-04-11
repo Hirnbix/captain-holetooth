@@ -36,7 +36,7 @@ tracks/0/keys = { "times":FloatArray( 0, 2 ), "transitions":FloatArray( -0.65975
 [sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
-_data = { "points":Vector2Array( 0, 0, -2.43643, 5.00422, 46.43, -103.745, -31.7331, -2.99371, 0, 0, 195.516, 145.33 ) }
+_data = { "points":Vector2Array( 0, 0, -1.21821, 2.50211, 46.43, -103.745, -60.4234, -46.95, 60.4234, 46.95, 114.979, 53.6157, -5.41498, 1.80499, 0, 0, 296.381, 156.501 ) }
 
 [node name="castle_outside" type="Node2D"]
 
@@ -45,6 +45,7 @@ transform/pos = Vector2( 256, 297 )
 [node name="player" parent="." instance=ExtResource( 1 )]
 
 transform/pos = Vector2( -92, 130 )
+z/z = 1
 
 [node name="castle_tilemap" type="TileMap" parent="."]
 
@@ -160,6 +161,10 @@ stream/stream = ExtResource( 8 )
 
 transform/pos = Vector2( 992, 176 )
 
+[node name="small_one_way_platform2" parent="." instance=ExtResource( 9 )]
+
+transform/pos = Vector2( 91.3037, 230.15 )
+
 [node name="small_one_way_platform1" parent="." instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 720, 103 )
@@ -197,21 +202,6 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "ship_floating"
 
-[node name="castle_ship_shadow" type="TextureFrame" parent="castle_ship_floating"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 72.0
-margin/top = 477.0
-margin/right = 456.0
-margin/bottom = 501.0
-texture = ExtResource( 11 )
-modulate = Color( 0, 0, 0, 0.349725 )
-expand = true
-stretch_mode = 0
-
 [node name="Sprite" type="Sprite" parent="castle_ship_floating"]
 
 transform/pos = Vector2( 51.5015, -25.6794 )
@@ -231,13 +221,13 @@ Use_Texture = true
 Rope_Texture = ExtResource( 15 )
 Rope_Color = Color( 1, 1, 1, 1 )
 Width = 2.3
-Softness = 0.5
+Softness = 0.0
 Mass = 1.0
 Bounce = 0.0
 Can_sleep = true
 Linear_dumping = -1
 Angular_dumping = -1
-pined_points = [ 1, 0 ]
+pined_points = [ 2, 0 ]
 
 
 [editable path="small_one_way_platform1"]
