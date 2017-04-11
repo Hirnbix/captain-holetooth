@@ -1,4 +1,3 @@
-
 extends Node
 
 ###########
@@ -15,12 +14,19 @@ var music = {
 	enabled = true,
 }
 
+#####################
+# Parental Controls #
+#####################
+
 var time_elapsed = 0
 
 var playtime_limit_minutes = 15
 var playtime_limit_seconds = playtime_limit_minutes * 60
 
-# Statistics
+##################
+# Fun Statistics #
+##################
+
 var times_jumped = 0
 
 ###################
@@ -47,12 +53,13 @@ var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 
 # Array for characters the player has met (to display the character cards in the options later)
 # Captain Holetooth is in there by default
-var characters_met = ["Captain Holetooth", "Yan", "Debug card", "Captain Holetooth", "Yan", "Debug card"]
+var characters_met = ["Captain Holetooth1", "Yan1", "Debug card1", "Captain Holetooth2", "Yan2", "Debug card2"]
 
 ######################################
 #  Dictionary Character descriptions #
 ######################################
 
+#not yet sure where they belong, maybe better: Dictionary for characters with name, desc etc.
 
 ##################
 # Items          #
