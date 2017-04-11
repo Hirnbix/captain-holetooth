@@ -34,8 +34,6 @@ func on_toggled(pressed):
 		print("Back")
 		anim.play_backwards("flip_card")
 
-
-
 # On button pressed
 func on_pressed():
 	anim.play("flip_card")
