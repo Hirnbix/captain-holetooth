@@ -28,10 +28,10 @@ func _ready():
 # On button toggle
 func on_toggled(pressed):
 	if(pressed):
-		print("Hello!")
+		print("Front")
 
 	else:
-		print("Goodbye!")
+		print("Back")
 		anim.play_backwards("flip_card")
 
 

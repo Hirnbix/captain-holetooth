@@ -22,7 +22,6 @@ step = 0.1
 
 [node name="character_card" type="Node2D"]
 
-z/z = 1
 script/script = ExtResource( 1 )
 button_path = NodePath("character_card_button")
 
