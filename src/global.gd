@@ -53,7 +53,7 @@ var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 
 # Array for characters the player has met (to display the character cards in the options later)
 # Captain Holetooth is in there by default
-var characters_met = ["Captain Holetooth1", "Yan1", "Debug card1", "Captain Holetooth2", "Yan2", "Debug card2"]
+var characters_met = ["Captain Holetooth", "Yan"]
 
 ######################################
 #  Dictionary Character descriptions #
@@ -94,4 +94,3 @@ func _ready():
 func add_score(value=1):
 	score += value
 	database.set_key("score", score)
-	

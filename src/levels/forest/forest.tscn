@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=3]
+[ext_resource path="res://src/actors/yan/yan.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/actors/player/player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/levels/forest/forest_parallax_bg.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/areas/area_forest/tileset_forest.tres" type="TileSet" id=6]
@@ -44,9 +44,29 @@ script/script = ExtResource( 1 )
 
 [node name="hud" parent="." instance=ExtResource( 2 )]
 
+editor/display_folded = true
+
+[node name="hudframe" parent="hud"]
+
+editor/display_folded = true
+
+[node name="dialogbox" parent="hud"]
+
+margin/left = 6.0
+margin/top = 28.0
+margin/right = 500.0
+margin/bottom = 50.0
+modulate = Color( 0.0195351, 0.28125, 0.00439453, 1 )
+
 [node name="Yan" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 3928, 2269 )
+transform/pos = Vector2( 3883, 2270 )
+z/z = 0
+select_dialogbox = NodePath("../hud/dialogbox")
+
+[node name="Sprite" parent="Yan"]
+
+frame = 5
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 
@@ -54,6 +74,8 @@ transform/pos = Vector2( 104, 1056 )
 z/relative = false
 
 [node name="world" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="parallax_bg" parent="world" instance=ExtResource( 5 )]
 
@@ -124,6 +146,7 @@ transform/pos = Vector2( 1686.55, 1380.68 )
 
 [node name="cave_background" parent="world/tile_map" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2972.69, 1400.31 )
 
 [node name="tex_cave" parent="world/tile_map/cave_background"]
@@ -216,6 +239,8 @@ transform/pos = Vector2( 615.31, 909.613 )
 transform/scale = Vector2( 1, 2.25242 )
 
 [node name="props" type="Node" parent="world/tile_map"]
+
+editor/display_folded = true
 
 [node name="moving_platform" parent="world/tile_map/props" instance=ExtResource( 11 )]
 
@@ -397,6 +422,8 @@ z/z = -1
 transform/pos = Vector2( 24.7671, 249.674 )
 
 [node name="fireflies" type="Node2D" parent="world/tile_map"]
+
+editor/display_folded = true
 
 [node name="fireflies" parent="world/tile_map/fireflies" instance=ExtResource( 15 )]
 
@@ -1547,7 +1574,7 @@ scene_path = "res://src/levels/mountain/mountain.tscn"
 
 [node name="initial_spawn_player" type="Position2D" parent="world"]
 
-transform/pos = Vector2( 113.576, 1060.18 )
+transform/pos = Vector2( 4120, 2255.94 )
 transform/scale = Vector2( 4.99998, 3.59373 )
 
 [node name="music_player" parent="." instance=ExtResource( 22 )]
@@ -1642,6 +1669,8 @@ z/z = -1
 [connection signal="body_enter" from="world/scene_teleporter" to="world/scene_teleporter/teleport_collision_shape" method="_on_scene_teleporter_body_enter"]
 
 
+[editable path="hud"]
+[editable path="Yan"]
 [editable path="world/tile_map/cave_background"]
 [editable path="world/scene_teleporter"]
 [editable path="world/scene_teleporter1"]
