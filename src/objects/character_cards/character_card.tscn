@@ -138,7 +138,6 @@ autoplay = ""
 [node name="sfx" parent="." instance=ExtResource( 7 )]
 
 default/pitch_scale = 2.0
-default/reverb_room = 2
-default/reverb_send = 20.0
+default/filter/cutoff = 20.0
 
 
