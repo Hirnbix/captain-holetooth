@@ -25,12 +25,22 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.3, 0.6, 0.9 ), "transitions":FloatArray( 0.25, 0.25, 0.25, 0.25 ), "update":1, "values":[ 0, 1, 2, 3 ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": FloatArray( 0.25, 0.25, 0.25, 0.25 ),
+"update": 0,
+"values": [ 0, 1, 2, 3 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.9 ), "transitions":FloatArray( 1, 2.54912 ), "update":0, "values":[ Vector2( 1.98509, 0.243739 ), Vector2( 0, 0 ) ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.9 ),
+"transitions": FloatArray( 1, 2.54912 ),
+"update": 0,
+"values": [ Vector2( 1.98509, 0.243739 ), Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 
@@ -42,24 +52,46 @@ tracks/0/type = "value"
 tracks/0/path = NodePath(".:motion_factor")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 0.5, 1 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( -1, -1 ), Vector2( 1, 1 ) ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( -1, -1 ), Vector2( 1, 1 ) ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:transform/rot")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 1 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ 7.0, 20.857, -10.5609, 10.0091, -17.8458, -37.9272, 7.0 ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 7.0, 20.857, -10.5609, 10.0091, -17.8458, -37.9272, 7.0 ]
+}
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite:modulate")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 0.3, 1 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Color( 1, 1, 1, 1 ), Color( 1, 0.246094, 0.246094, 1 ), Color( 1, 1, 1, 1 ) ] }
+tracks/2/keys = {
+"times": FloatArray( 0, 0.3, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.246094, 0.246094, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:root_motion")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = { "times":FloatArray( 0, 0.5, 1 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 0, 0 ), Vector2( 0, 50 ), Vector2( 0, 0 ) ] }
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 50 ), Vector2( 0, 0 ) ]
+}
 
-[node name="player" type="Area2D" groups=[ "player" ]]
+[node name="player" type="Area2D" groups=[
+"player",
+]]
 
 transform/pos = Vector2( 55.8667, 80.5271 )
 transform/rot = 7.0
@@ -93,6 +125,7 @@ transform/scale = Vector2( 1, 1.68949 )
 config/amount = 4
 config/lifetime = 1.0
 config/preprocess = 0.1
+config/process_mode = 1
 config/half_extents = Vector2( 20, 10 )
 config/local_space = false
 config/texture = ExtResource( 3 )

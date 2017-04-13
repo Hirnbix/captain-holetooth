@@ -4,8 +4,8 @@ extends Area2D
 const MAX_SPEED = 250
 
 # Time in Seconds the speed boost lasts
-const SPEED_BOOST_TIME = 5 # seconds
-const SPEED_BOOST_MULTIPLIER = 2 # 2x speed multiplier
+const SPEED_BOOST_TIME = 2 # seconds
+const SPEED_BOOST_MULTIPLIER = 1.5 # 2x speed multiplier
 var speed_boost = 1 # This changes to the multipler when boost is enabled
 
 const ACC_BOOST_TIME = 5 # seconds

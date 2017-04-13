@@ -6,7 +6,7 @@ export var shoot_interval = 1.2
 onready var REWARD = preload("res://src/objects/rewards/reward.tscn")
 
 # Health
-var health = 2
+export var health = 2
 
 # Damage taken
 var damage = 0

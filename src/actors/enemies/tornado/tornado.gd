@@ -4,7 +4,7 @@ extends "res://src/actors/player/ship/flying_npc.gd"
 onready var REWARD = preload("res://src/objects/rewards/reward.tscn")
 
 # Health
-var health = 3
+export var health = 3
 
 # Damage taken
 var damage = 0
