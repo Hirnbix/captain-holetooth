@@ -10,7 +10,7 @@
 [ext_resource path="res://src/screens/hud/sound_on.png" type="Texture" id=8]
 [ext_resource path="res://src/actors/yan/yan_unlock_animation.tres" type="Animation" id=9]
 [ext_resource path="res://src/audio/sfx/sfx.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/screens/menu/scn1_menu_bg.png" type="Texture" id=11]
+[ext_resource path="res://src/screens/hud/dialog-box-patch9frame.png" type="Texture" id=11]
 [ext_resource path="res://src/dialog.gd" type="Script" id=12]
 
 [node name="hud" type="CanvasLayer"]
@@ -54,7 +54,9 @@ margin/bottom = 23.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 0
-__meta__ = { "_edit_group_":true }
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="items_label" type="Label" parent="hudframe"]
 
@@ -197,6 +199,8 @@ enabled_focus_mode = 0
 shortcut = null
 textures/normal = ExtResource( 7 )
 textures/pressed = ExtResource( 8 )
+params/resize_mode = 0
+params/stretch_mode = 0
 
 [node name="animations" type="AnimationPlayer" parent="."]
 
@@ -221,13 +225,12 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 32.0
 margin/right = 512.0
-margin/bottom = 64.0
+margin/bottom = 96.0
 texture = ExtResource( 11 )
-modulate = Color( 0.25, 0.25, 0.25, 1 )
-patch_margin/left = 5
-patch_margin/top = 5
-patch_margin/right = 5
-patch_margin/bottom = 5
+patch_margin/left = 10
+patch_margin/top = 9
+patch_margin/right = 11
+patch_margin/bottom = 10
 script/script = ExtResource( 12 )
 
 [connection signal="pressed" from="go_to_menu" to="." method="_on_go_to_menu_pressed"]

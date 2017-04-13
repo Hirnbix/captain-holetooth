@@ -57,7 +57,7 @@ const TEXT_RESET        = 0
 var font           = preload("res://src/fonts/dialog-berry8.tres") # The font to be used for drawing text
 var font_size      = DEFAULT_FONT_SIZE
 var portrait       # Texture for the portrait.
-var color          = Color(1,1,1) # Color for the text.
+var color          = Color(0,0,0) # Color for the text.
 var input_dialog   = [] # This is the variable you want to replace for processing dialogues.
 var current_string = "" # This should hold the string to iterate over.
 var tag            = "" # This string is intended for the name tag.
@@ -65,7 +65,7 @@ var mods           = [] # Array for triggering text effects. Should be set rough
 var active_mods    = 0 # used for bitwise operations.
 var progress       = -1 # value to denote progress of the dialog array.
 var char_pos       = 0 # The amount of characters to process for the _draw function. Gives a typewriter effect.
-var text_offset    = Vector2(12,12) # Spacing for the text draw.
+var text_offset    = Vector2(12,18) # Spacing for the text draw.
 var char_amt       = 0 # Amount of characters allowed in a line.
 var line_amt       = 0 # Amount of lines allowed in the box.
 var cutoff         = 0 # Maximum amount of allowed characters before breaking the text.
