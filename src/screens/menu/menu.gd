@@ -21,6 +21,10 @@ onready var music_player = get_node(music_player_path)
 export (NodePath) var music_volume_slider_path
 onready var music_volume_slider = get_node(music_volume_slider_path)
 
+# Animations
+export (NodePath) var animations_path
+onready var animations = get_node(animations_path)
+
 # Current Language Locale
 var current_locale = TranslationServer.get_locale()
 
@@ -152,3 +156,6 @@ func _on_playtime_confirm_pressed():
 func _on_charactercardsbutton_pressed():
 	print("Transition to character cards")
 	transition.fade_to("res://src/screens/character-cards/character-cards.tscn")
+
+func _on_candy_skull_button_pressed():
+	animations.connect("finished", animations, "play", ["wigglecandy"])
