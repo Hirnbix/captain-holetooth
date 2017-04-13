@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=1]
+[gd_scene load_steps=33 format=1]
 
 [ext_resource path="res://src/levels/forest/forest.gd" type="Script" id=1]
 [ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=2]
@@ -24,11 +24,12 @@
 [ext_resource path="res://src/audio/music_player/music_player.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/audio/music/Percy Wenrich - Frog Legs Ragtime Era Favorites - 02 - The Smiler (1907, Zonophone Concert Band).ogg" type="AudioStream" id=23]
 [ext_resource path="res://src/objects/snow/simple_snow.tscn" type="PackedScene" id=24]
-[ext_resource path="res://src/objects/snow_patches/snow-patch-large.png" type="Texture" id=25]
-[ext_resource path="res://src/objects/snow_patches/snow-patch-medium.png" type="Texture" id=26]
-[ext_resource path="res://src/objects/snow_patches/snow-patch-small.png" type="Texture" id=27]
-[ext_resource path="res://src/objects/snow_patches/snow-patch-pile-medium.png" type="Texture" id=28]
-[ext_resource path="res://src/objects/signpost/signpost.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/objects/snow_patches/snow_patch.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-large.png" type="Texture" id=26]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-medium.png" type="Texture" id=27]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-small.png" type="Texture" id=28]
+[ext_resource path="res://src/objects/snow_patches/snow-patch-pile-medium.png" type="Texture" id=29]
+[ext_resource path="res://src/objects/signpost/signpost.tscn" type="PackedScene" id=30]
 
 [sub_resource type="GDScript" id=1]
 
@@ -81,6 +82,8 @@ func _on_scene_teleporter_body_enter( body ):
 script/script = ExtResource( 1 )
 
 [node name="hud" parent="." instance=ExtResource( 2 )]
+
+editor/display_folded = true
 
 [node name="Yan" parent="." instance=ExtResource( 3 )]
 
@@ -1671,74 +1674,71 @@ config/half_extents = Vector2( 80, 5 )
 transform/pos = Vector2( 5168.79, 461.355 )
 z/z = -1
 
-[node name="snow_patch_large" type="Sprite" parent="snow_patches"]
-
-transform/pos = Vector2( 531.286, 764.623 )
-texture = ExtResource( 25 )
+[node name="snow_patch" parent="snow_patches" instance=ExtResource( 25 )]
 
 [node name="snow_patch_large3" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 821.674, 700.558 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 
 [node name="snow_patch_large2" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 744.854, 960.5 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 flip_h = true
 
 [node name="snow_patch_large1" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 834.845, 701.755 )
-texture = ExtResource( 25 )
+texture = ExtResource( 26 )
 
 [node name="snow_patch_medium" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 699.964, 1017.86 )
-texture = ExtResource( 26 )
+texture = ExtResource( 27 )
 
 [node name="snow_patch_small" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 797.901, 696.718 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 
 [node name="snow_patch_small1" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 488.953, 763.777 )
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
 flip_h = true
 
 [node name="snow__patch_pile_medium" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 612.366, 823.789 )
-texture = ExtResource( 28 )
+texture = ExtResource( 29 )
 
 [node name="snow__patch_pile_medium1" type="Sprite" parent="snow_patches"]
 
 transform/pos = Vector2( 357.903, 699.85 )
-texture = ExtResource( 28 )
+texture = ExtResource( 29 )
 flip_h = true
 
-[node name="signpost" parent="." instance=ExtResource( 29 )]
+[node name="signpost" parent="." instance=ExtResource( 30 )]
 
 transform/pos = Vector2( 6190.82, 1717.67 )
 flip_h = true
 
-[node name="signpost1" parent="." instance=ExtResource( 29 )]
+[node name="signpost1" parent="." instance=ExtResource( 30 )]
 
 transform/pos = Vector2( 6281.71, 2345.54 )
 transform/rot = -10.6118
 flip_h = true
 
-[node name="signpost2" parent="." instance=ExtResource( 29 )]
+[node name="signpost2" parent="." instance=ExtResource( 30 )]
 
 transform/pos = Vector2( 4836.19, 3241.49 )
 
-[node name="signpost3" parent="." instance=ExtResource( 29 )]
+[node name="signpost3" parent="." instance=ExtResource( 30 )]
 
 transform/pos = Vector2( 4924.55, 1130.11 )
 
-[node name="signpost4" parent="." instance=ExtResource( 29 )]
+[node name="signpost4" parent="." instance=ExtResource( 30 )]
 
 transform/pos = Vector2( 4029.55, 1329.74 )
 z/z = -1

@@ -31,12 +31,19 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 2 ), "transitions":FloatArray( -0.659754, -0.659754 ), "update":0, "values":[ Vector2( 51.5015, -16.1794 ), Vector2( 51.5015, -26.1794 ) ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 2 ),
+"transitions": FloatArray( -0.659754, -0.659754 ),
+"update": 0,
+"values": [ Vector2( 51.5015, -16.1794 ), Vector2( 51.5015, -26.1794 ) ]
+}
 
 [sub_resource type="Curve2D" id=3]
 
 bake_interval = 5.0
-_data = { "points":Vector2Array( 0, 0, -1.21821, 2.50211, 46.43, -103.745, -60.4234, -46.95, 60.4234, 46.95, 114.979, 53.6157, -5.41498, 1.80499, 0, 0, 296.381, 156.501 ) }
+_data = {
+"points": Vector2Array( 0, 0, -1.21821, 2.50211, 46.43, -103.745, -60.4234, -46.95, 60.4234, 46.95, 114.979, 53.6157, -5.41498, 1.80499, 0, 0, 296.381, 156.501 )
+}
 
 [node name="castle_outside" type="Node2D"]
 
@@ -79,6 +86,7 @@ transform/pos = Vector2( 251, -150 )
 config/amount = 40
 config/lifetime = 8.1
 config/preprocess = 9.0
+config/process_mode = 1
 config/half_extents = Vector2( 5, 5 )
 config/texture = ExtResource( 4 )
 params/direction = 167.556
@@ -214,7 +222,9 @@ texture = ExtResource( 11 )
 transform/pos = Vector2( 25.7558, 99.3644 )
 z/z = -1
 script/script = ExtResource( 13 )
-__meta__ = { "_editor_icon":ExtResource( 14 ) }
+__meta__ = {
+"_editor_icon": ExtResource( 14 )
+}
 Curve = SubResource( 3 )
 Bake_Interval = 5.0
 Use_Texture = true
