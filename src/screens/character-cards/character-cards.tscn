@@ -63,7 +63,9 @@ margin/bottom = 288.0
 texture = ExtResource( 3 )
 modulate = Color( 0.211258, 0.277344, 0.233975, 1 )
 stretch_mode = 2
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TextureButton" type="TextureButton" parent="."]
 
@@ -79,6 +81,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 

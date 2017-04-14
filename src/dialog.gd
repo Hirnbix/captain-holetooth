@@ -80,12 +80,24 @@ var line_done      = true # The final status of the string iteration.
 var finished       = true # A flag set when the dialog is finished in general.
 var has_tag        = false # For adding space for the tag above
 
+#//////////////////////////////
+#// Signals
+#//////////////////////////////
+
 signal dialog_start 
 signal dialog_continue
 signal dialog_end
 
+#//////////////////////////////
+#// Portraits, get texture
+#//////////////////////////////
 
 func _ready():
+	for actor in get_tree().get_nodes_in_group("actors"):
+		var actor_node_path = actor.get_path()
+		print(actor_node_path)
+		var actor_node = get_node(actor_node_path)
+
 	# TODO: Figure out a better way to manage character spacing.
 	char_amt = 255
 	line_amt = 5

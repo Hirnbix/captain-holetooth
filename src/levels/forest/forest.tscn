@@ -94,11 +94,7 @@ select_dialogbox = NodePath("../hud/dialogbox")
 
 [node name="Sprite" parent="Yan"]
 
-frame = 3
-
-[node name="Particles2D" parent="Yan"]
-
-config/process_mode = 1
+frame = 2
 
 [node name="player" parent="." instance=ExtResource( 4 )]
 

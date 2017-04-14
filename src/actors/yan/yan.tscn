@@ -13,7 +13,12 @@ extents = Vector2( 11.793, 11.4669 )
 
 [sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ], "loop":true, "name":"default", "speed":1.0 } ]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
 
 [sub_resource type="ColorRamp" id=3]
 
@@ -30,9 +35,16 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("ParticleAttractor2D1:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1, 2, 3, 4, 5 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 22.7841, -36.032 ), Vector2( 32.7841, -46.032 ), Vector2( 22.7841, -36.032 ), Vector2( 42.7841, -6.03196 ), Vector2( 22.7841, 3.96803 ), Vector2( 22.7841, -36.032 ) ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 1, 2, 3, 4, 5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 22.7841, -36.032 ), Vector2( 32.7841, -46.032 ), Vector2( 22.7841, -36.032 ), Vector2( 42.7841, -6.03196 ), Vector2( 22.7841, 3.96803 ), Vector2( 22.7841, -36.032 ) ]
+}
 
-[node name="Yan" type="Area2D"]
+[node name="Yan" type="Area2D" groups=[
+"actors",
+]]
 
 z/z = -1
 input/pickable = false
@@ -52,7 +64,9 @@ frames = SubResource( 2 )
 animation = "default"
 frame = 1
 playing = true
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Particles2D" type="Particles2D" parent="."]
 
@@ -63,6 +77,7 @@ transform/scale = Vector2( 0.947585, 1.14454 )
 config/amount = 32
 config/lifetime = 3.0
 config/preprocess = 5.0
+config/process_mode = 1
 config/texture = ExtResource( 4 )
 params/direction = 0.0
 params/spread = 20.0
@@ -86,7 +101,9 @@ randomness/linear_velocity = 1.0
 randomness/gravity_direction = 50.0
 randomness/initial_angle = 1.0
 color/color_ramp = SubResource( 3 )
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -95,7 +112,9 @@ transform/scale = Vector2( 4.57416, 3.8225 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ParticleAttractor2D1" type="ParticleAttractor2D" parent="."]
 
@@ -108,7 +127,10 @@ disable_radius = 2.0
 gravity = 50.0
 absorption = 0.0
 particles_path = NodePath("../Particles2D")
-__meta__ = { "_edit_group_":true, "_edit_lock_":true }
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Light2D" type="Light2D" parent="ParticleAttractor2D1"]
 

@@ -16,7 +16,9 @@ length = 5.0
 loop = true
 step = 0.1
 
-[node name="rootninja" type="Area2D"]
+[node name="rootninja" type="Area2D" groups=[
+"actors",
+]]
 
 z/z = -1
 input/pickable = false
