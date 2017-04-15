@@ -32,12 +32,13 @@ extends Patch9Frame # If you're using a different node than this, replace the na
 ##################
 
 var dialog_yan = [
-"Oh Captain! I didn't expect /d020.../d005/byou /rdown here.",
-"Yes. Well... I'm surprised too. I'm looking for my ship.",
-"I heard a rumbling noise near the mountains.",
-"Go /s< left /rhere it's a shortcut to the mountains.",
-"I'll be on my way, see you later!",
-"Yes, good luck."]
+"OH CAPTAIN",
+"DIDN'T EXPECT/d020.../d005/bYOU /rHERE.",
+"I'M COLLECTING MUSHROOMS.",
+"I HEARD A CRASH NOISE.",
+"GO /s< LEFT /rHERE.",
+"YOU WILL FIND THE MOUNTAIN.",
+"GOOD LUCK."]
 
 var dialog_rootninja = [
 "Uh oh... i found this thing down here...",
@@ -46,7 +47,7 @@ var dialog_rootninja = [
 "Sure, bye Rootninja!" ]
 
 
-const DEFAULT_FONT_SIZE = 12
+const DEFAULT_FONT_SIZE = 45
 const DEFAULT_DELAY     = 0.05
 const TEXT_DELAY        = 1
 const TEXT_SHAKE        = 2
@@ -65,7 +66,7 @@ var mods           = [] # Array for triggering text effects. Should be set rough
 var active_mods    = 0 # used for bitwise operations.
 var progress       = -1 # value to denote progress of the dialog array.
 var char_pos       = 0 # The amount of characters to process for the _draw function. Gives a typewriter effect.
-var text_offset    = Vector2(12,18) # Spacing for the text draw.
+var text_offset    = Vector2(15,44) # Spacing for the text draw.
 var char_amt       = 0 # Amount of characters allowed in a line.
 var line_amt       = 0 # Amount of lines allowed in the box.
 var cutoff         = 0 # Maximum amount of allowed characters before breaking the text.

@@ -55,6 +55,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision/layers = 2
 script/script = ExtResource( 1 )
 select_dialogbox = null
 
@@ -62,7 +63,7 @@ select_dialogbox = null
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 1
+frame = 3
 playing = true
 __meta__ = {
 "_edit_lock_": true
