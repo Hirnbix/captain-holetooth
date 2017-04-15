@@ -17,7 +17,12 @@ points = Vector2Array( 18.4138, -16.5375, 20.5015, 1.67173, 9.71513, 10.7183, -3
 
 [sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ], "loop":true, "name":"default", "speed":5.5 } ]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.5
+} ]
 
 [sub_resource type="Animation" id=3]
 
@@ -28,22 +33,42 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:visibility/visible")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:monitoring")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:monitorable")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":1, "values":[ false ] }
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 tracks/3/type = "value"
 tracks/3/path = NodePath("explosion_particle:config/emitting")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = { "times":FloatArray( 0, 0.2 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ true, false ] }
+tracks/3/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=4]
 
@@ -54,7 +79,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath(".:extra_motion")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 1 ), "transitions":FloatArray( -1.86607, -1.86607 ), "update":0, "values":[ Vector2( 0, -200 ), Vector2( 0, 200 ) ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( -1.86607, -1.86607 ),
+"update": 0,
+"values": [ Vector2( 0, -200 ), Vector2( 0, 200 ) ]
+}
 
 [node name="sugarcube" type="Area2D"]
 
@@ -78,12 +108,13 @@ destroy_sound = "explode"
 group = "enemy"
 reset_bonus = true
 shoot_interval = 1.2
+health = 2
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 5
+frame = 2
 playing = true
 
 [node name="collision" type="CollisionPolygon2D" parent="."]
@@ -125,6 +156,7 @@ transform/rot = 21.1023
 config/lifetime = 6.0
 config/preprocess = 2.0
 config/emitting = false
+config/process_mode = 1
 
 [connection signal="area_enter" from="." to="." method="_on_sugarcube_area_enter"]
 

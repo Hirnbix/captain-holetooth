@@ -15,12 +15,22 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:transform/pos")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0, 2 ), "transitions":FloatArray( 0.25, 4 ), "update":0, "values":[ Vector2( 0.559145, -3.34028 ), Vector2( 0.559145, -13.3403 ) ] }
+tracks/0/keys = {
+"times": FloatArray( 0, 2 ),
+"transitions": FloatArray( 0.25, 4 ),
+"update": 0,
+"values": [ Vector2( 0.559145, -3.34028 ), Vector2( 0.559145, -13.3403 ) ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 1, 2, 3 ), "transitions":FloatArray( 1, 1, 1, 1 ), "update":1, "values":[ 1, 2, 3, 3 ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 1, 2, 3 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 3 ]
+}
 
 [sub_resource type="Animation" id=2]
 
@@ -32,32 +42,62 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0 ] }
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 4 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.559145, -2.47515 ), Vector2( 0.559145, -12.4751 ) ] }
+tracks/1/keys = {
+"times": FloatArray( 0, 4 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.559145, -2.47515 ), Vector2( 0.559145, -12.4751 ) ]
+}
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite:visibility/self_opacity")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 0, 2.19, 3.98549 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ 1.0, 0.0, 0.0 ] }
+tracks/2/keys = {
+"times": FloatArray( 0, 2.19, 3.98549 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0, 0.0 ]
+}
 tracks/3/type = "value"
 tracks/3/path = NodePath("sprite:transform/rot")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = { "times":FloatArray( 0, 3.98 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, -500.0 ] }
+tracks/3/keys = {
+"times": FloatArray( 0, 3.98 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -500.0 ]
+}
 tracks/4/type = "value"
 tracks/4/path = NodePath("sprite:transform/scale")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = { "times":FloatArray( 0, 2.02 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ] }
+tracks/4/keys = {
+"times": FloatArray( 0, 2.02 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.2, 0.2 ) ]
+}
 tracks/5/type = "value"
 tracks/5/path = NodePath("Particles2D:config/emitting")
 tracks/5/interp = 1
 tracks/5/imported = false
-tracks/5/keys = { "times":FloatArray( 0, 0.0790673, 0.846486 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ false, true, false ] }
+tracks/5/keys = {
+"times": FloatArray( 0, 0.0790673, 0.846486 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
 
 [sub_resource type="ColorRamp" id=3]
 
@@ -101,6 +141,7 @@ config/lifetime = 1.5
 config/time_scale = 2.0
 config/preprocess = 4.91377
 config/emitting = false
+config/process_mode = 1
 config/half_extents = Vector2( 3, 3 )
 config/explosiveness = 0.22
 config/texture = ExtResource( 4 )

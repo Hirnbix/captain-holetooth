@@ -214,60 +214,49 @@ stream/volume_db = 2.0
 [node name="sugarcube_0" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1064.22, 57.0731 )
-health = 2
 
 [node name="sugarcube_1" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1559, 160 )
-health = 2
 
 [node name="sugarcube_11" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1511, 192 )
-health = 2
 
 [node name="sugarcube_12" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1511, 128 )
-health = 2
 
 [node name="sugarcube_13" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1551, 96 )
-health = 2
 
 [node name="sugarcube_14" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1551, 224 )
-health = 2
 
 [node name="sugarcube_15" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1551, 224 )
-health = 2
 
 [node name="sugarcube_2" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1875.04, 69.971 )
-health = 2
 
 [node name="sugarcube_3" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 1873.81, 240.626 )
-health = 2
 
 [node name="sugarcube_4" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2279, 168 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_5" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3177.96, 64.2795 )
 transform/rot = 2.18057
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_8" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
@@ -281,27 +270,23 @@ health = 8
 
 transform/pos = Vector2( 2359, 232 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_10" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2359, 104 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_6" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3288.69, 150.402 )
 transform/rot = 12.0878
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_16" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3247, 96 )
 transform/scale = Vector2( 0.5, 0.5 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_17" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
@@ -309,19 +294,16 @@ transform/pos = Vector2( 3343, 208 )
 transform/rot = -9.75459
 transform/scale = Vector2( 0.5, 0.5 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_8 2" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 2359, 168 )
 motion = "zigzag"
-health = 2
 
 [node name="sugarcube_7" parent="entities/enemies/sugarcubes" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 3403.52, 254.98 )
 motion = "zigzag"
-health = 2
 
 [node name="soap_bubbles" type="Node2D" parent="entities/enemies"]
 

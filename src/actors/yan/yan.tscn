@@ -62,7 +62,6 @@ select_dialogbox = null
 
 frames = SubResource( 2 )
 animation = "default"
-frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
