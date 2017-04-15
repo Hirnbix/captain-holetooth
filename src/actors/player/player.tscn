@@ -11,10 +11,11 @@
 custom_solver_bias = 0.5
 length = 19.178
 
-[sub_resource type="ConvexPolygonShape2D" id=14]
+[sub_resource type="CapsuleShape2D" id=14]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -10.4665, 12.9459, -12.4646, -14.5184, 2.59802, -14.7593, -1.0908, 12.8656 )
+radius = 10.0
+height = 32.0
 
 [sub_resource type="ColorRamp" id=3]
 
@@ -198,10 +199,10 @@ tracks/0/keys = {
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.76469, -1.11626, -21.9862 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1, 6 )
 shapes/0/trigger = false
 shapes/1/shape = SubResource( 14 )
-shapes/1/transform = Matrix32( 1.67224, 0, 0, 1.6003, 7.93457, 4.27963 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -309,20 +310,16 @@ transform/scale = Vector2( 0.75036, 0.741892 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -1.11626, -21.9862 )
-transform/scale = Vector2( 1, 1.76469 )
+transform/pos = Vector2( -1, 6 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionShape2D 2" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 7.93457, 4.27963 )
-transform/scale = Vector2( 1.67224, 1.6003 )
-build_mode = 0
-polygon = Vector2Array( -10.4665, 12.9459, -12.4646, -14.5184, 2.59802, -14.7593, -1.0908, 12.8656 )
-shape_range = Vector2( 1, 1 )
+shape = SubResource( 14 )
 trigger = false
+_update_shape_index = 1
 
 [node name="sfx" parent="." instance=ExtResource( 4 )]
 
