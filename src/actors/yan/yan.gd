@@ -39,6 +39,6 @@ func _on_Yan_body_exit( body ):
 		print("Yan already met") #Debug
 		dialogbox.hide()
 	else:
-		global.characters_met.append("Yan") # Add Yan to array of met characters
 		emit_signal("met_yan") # Notify HUD and play animation
+		global.characters_met.append("Yan") # Add Yan to array of met characters
 		

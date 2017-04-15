@@ -11,7 +11,8 @@ func _on_soap_bubble_body_enter( body ):
 	# If soap got hit by a player.tscn
 	if(groups.has("player")):
 		animation.play("soap_pop")
-		print("popped")
+		global.bubbles_popped += 1
+		print("popped:" + str(global.bubbles_popped))
 		.destroy(body)
 	
 	# If the soap got hit by a player bullet.tscn
@@ -28,7 +29,8 @@ func _on_soap_bubble_body_enter( body ):
 func _on_soap_bubble_area_enter( area ):
 	# Get the groups on the node involved
 	var groups = area.get_groups()
-	
+	global.bubbles_popped += 1
+	print("popped:" + str(global.bubbles_popped))
 	# If soap got hit by a player
 	if(groups.has("player")):
 		# Acceleration boost! Wooo!

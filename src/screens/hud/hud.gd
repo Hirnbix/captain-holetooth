@@ -8,10 +8,6 @@ export (NodePath) var sound_off_button #= get_node("hudframe/sound_off")
 onready var animations = get_node("animations")
 onready var yan = get_parent().find_node("Yan")
 
-func _on_met_yan():
-	get_node("sfx").play("card_unlock")
-	animations.play("yan_unlock_anim")
-
 func _ready():
 	if yan && global.last_pos[0] == Vector2(0,0):
 		yan.connect("met_yan", self,"_on_met_yan")
@@ -19,6 +15,10 @@ func _ready():
 	update_scores()
 	game.connect("scores_changed", self, "update_scores")
 	update_sound_hud()
+
+func _on_met_yan():
+	get_node("sfx").play("card_unlock")
+	animations.play("yan_unlock_anim")
 
 func _input(event):
 	if Input.is_action_pressed("ui_cancel"):

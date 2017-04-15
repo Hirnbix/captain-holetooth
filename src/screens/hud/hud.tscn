@@ -217,6 +217,7 @@ autoplay = ""
 
 [node name="dialogbox" type="Patch9Frame" parent="."]
 
+visibility/visible = false
 rect/min_size = Vector2( 448, 64 )
 focus/ignore_mouse = true
 focus/stop_mouse = true

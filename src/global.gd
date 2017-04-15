@@ -28,6 +28,7 @@ var playtime_limit_seconds = playtime_limit_minutes * 60
 ##################
 
 var times_jumped = 0
+var bubbles_popped = 0
 
 ###################
 # HUD and scoring #
@@ -53,7 +54,7 @@ var last_pos = [Vector2(0,0),Vector2(0,0),Vector2(0,0)]
 
 # Array for characters the player has met (to display the character cards in the options later)
 # Captain Holetooth is in there by default
-var characters_met = ["Captain Holetooth", "Yan"]
+var characters_met = ["Captain Holetooth"]
 
 ######################################
 #  Dictionary Character descriptions #
