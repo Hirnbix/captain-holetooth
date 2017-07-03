@@ -39,72 +39,37 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("gametitle:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.4, 0.5 ),
-"transitions": FloatArray( 4, 0.25, 0.25 ),
-"update": 0,
-"values": [ Vector2( 359, -90 ), Vector2( 359, 100 ), Vector2( 359, 100 ) ]
-}
+tracks/0/keys = { "times":FloatArray( 0, 0.4, 0.5 ), "transitions":FloatArray( 4, 0.25, 0.25 ), "update":0, "values":[ Vector2( 359, -90 ), Vector2( 359, 100 ), Vector2( 359, 100 ) ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("keyvisual_lochzahn:transform/scale")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 8, 8 ), Vector2( 1, 1 ) ]
-}
+tracks/1/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 8, 8 ), Vector2( 1, 1 ) ] }
 tracks/2/type = "value"
 tracks/2/path = NodePath("splashscreen_schiff:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 2.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 595.2, 280.4 ), Vector2( -274, 162 ) ]
-}
+tracks/2/keys = { "times":FloatArray( 0, 2.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 595.2, 280.4 ), Vector2( -274, 162 ) ] }
 tracks/3/type = "value"
 tracks/3/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 1.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 15.6, 5.45 ), Vector2( 102.347, 22.0765 ) ]
-}
+tracks/3/keys = { "times":FloatArray( 0, 1.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 15.6, 5.45 ), Vector2( 102.347, 22.0765 ) ] }
 tracks/4/type = "value"
 tracks/4/path = NodePath("splashscreen_schiff/splashscreen_schiff1:transform/scale")
 tracks/4/interp = 1
 tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0, 3.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ]
-}
+tracks/4/keys = { "times":FloatArray( 0, 3.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 0.8, 0.8 ), Vector2( 0.4, 0.4 ) ] }
 tracks/5/type = "value"
 tracks/5/path = NodePath("../character-cards:rect/pos")
 tracks/5/interp = 1
 tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 1.15, 1.35, 1.4, 1.45, 1.55, 1.65, 1.75, 1.8 ),
-"transitions": FloatArray( 0.25, 0.25, 4, 4, 1, 1, 0.25, 0.25 ),
-"update": 0,
-"values": [ Vector2( 168, -136 ), Vector2( 168, 136 ), Vector2( 168, 140 ), Vector2( 168, 144 ), Vector2( 168, 136 ), Vector2( 168, 144 ), Vector2( 168, 141 ), Vector2( 168, 144 ) ]
-}
+tracks/5/keys = { "times":FloatArray( 1.15, 1.35, 1.4, 1.45, 1.55, 1.65, 1.75, 1.8 ), "transitions":FloatArray( 0.25, 0.25, 4, 4, 1, 1, 0.25, 0.25 ), "update":0, "values":[ Vector2( 168, -136 ), Vector2( 168, 136 ), Vector2( 168, 140 ), Vector2( 168, 144 ), Vector2( 168, 136 ), Vector2( 168, 144 ), Vector2( 168, 141 ), Vector2( 168, 144 ) ] }
 tracks/6/type = "value"
 tracks/6/path = NodePath("../character-cards:rect/rotation")
 tracks/6/interp = 1
 tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray(  ),
-"transitions": FloatArray(  ),
-"update": 0,
-"values": [  ]
-}
+tracks/6/keys = { "times":FloatArray(  ), "transitions":FloatArray(  ), "update":0, "values":[  ] }
 
 [sub_resource type="Animation" id=2]
 
@@ -116,22 +81,12 @@ tracks/0/type = "value"
 tracks/0/path = NodePath("keyvisual_lochzahn/candy_skull_button/candy_skull:transform/rot")
 tracks/0/interp = 1
 tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28 ),
-"transitions": FloatArray( -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25 ),
-"update": 0,
-"values": [ 0.0, 20.0, 0.0, -20.0, 0.0, 0.0, 20.0, 0.0, -20.0, 0.0, 0.0, 20.0, 0.0, -20.0, 0.0 ]
-}
+tracks/0/keys = { "times":FloatArray( 0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.22, 0.24, 0.26, 0.28 ), "transitions":FloatArray( -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25, -0.25 ), "update":0, "values":[ 0.0, 20.0, 0.0, -20.0, 0.0, 0.0, 20.0, 0.0, -20.0, 0.0, 0.0, 20.0, 0.0, -20.0, 0.0 ] }
 tracks/1/type = "value"
 tracks/1/path = NodePath("keyvisual_lochzahn/candy_skull_button/candy_skull:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.1, 0.28 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 0 ]
-}
+tracks/1/keys = { "times":FloatArray( 0, 0.1, 0.28 ), "transitions":FloatArray( 1, 1, 1 ), "update":1, "values":[ 0, 1, 0 ] }
 
 [sub_resource type="StyleBoxFlat" id=3]
 
@@ -180,15 +135,7 @@ TabContainer/styles/tab_fg = null
 
 [sub_resource type="GDScript" id=5]
 
-script/source = "extends Control
-
-func _ready():
-	pass
-	
-func _process(delta):
-	if get_children().size()>0 && !get_children()[0].has_focus():
-		get_children()[0].grab_focus()
-		set_process(false)"
+script/source = "extends Control\n\nfunc _ready():\n\tpass\n\t\nfunc _process(delta):\n\tif get_children().size()>0 && !get_children()[0].has_focus():\n\t\tget_children()[0].grab_focus()\n\t\tset_process(false)"
 
 [node name="main_menu" type="Control"]
 
@@ -229,10 +176,7 @@ region_rect = Rect2( 8, 1, 264, 152 )
 [node name="bg" type="Node2D" parent="art"]
 
 editor/display_folded = true
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="splashscreen_bg" type="Sprite" parent="art/bg"]
 
@@ -246,9 +190,7 @@ transform/pos = Vector2( 595.2, 280.4 )
 transform/scale = Vector2( 0.8, 0.8 )
 z/z = 3
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_group_": true
-}
+__meta__ = { "_edit_group_":true }
 
 [node name="splashscreen_schiff1" type="Sprite" parent="art/splashscreen_schiff"]
 
@@ -264,7 +206,6 @@ modulate = Color( 0, 0, 0, 0.326798 )
 transform/pos = Vector2( 85.0126, 23.0998 )
 transform/rot = -94.9
 transform/scale = Vector2( 1, -1.78624 )
-config/process_mode = 1
 config/flip_h = true
 
 [node name="anims" type="AnimationPlayer" parent="art"]
@@ -285,10 +226,7 @@ autoplay = "gametitle_animations"
 transform/pos = Vector2( 239, 146 )
 transform/scale = Vector2( 8, 8 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+__meta__ = { "_edit_group_":true, "_edit_lock_":true }
 
 [node name="skull_eye" type="Sprite" parent="art/keyvisual_lochzahn"]
 
@@ -322,8 +260,6 @@ margin/bottom = -89.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-params/resize_mode = 0
-params/stretch_mode = 0
 
 [node name="candy_skull" type="Sprite" parent="art/keyvisual_lochzahn/candy_skull_button"]
 
@@ -443,19 +379,7 @@ margin/bottom = 32.0
 custom_fonts/normal_font = ExtResource( 18 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Welcome to Captain Holetooth!
-
-CONTROLS
-
-	R = Reset game and scores
-
-	Arrow Keys left/right = Move left and right
-
-	Arrow Key up = Jump up
-
-	Space  = Shoot
-	
-Enjoy :)"
+bbcode/bbcode = "Welcome to Captain Holetooth!\n\nCONTROLS\n\n\tR = Reset game and scores\n\n\tArrow Keys left/right = Move left and right\n\n\tArrow Key up = Jump up\n\n\tSpace  = Shoot\n\t\nEnjoy :)"
 visible_characters = -1
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
@@ -603,9 +527,7 @@ margin/bottom = 32.0
 custom_fonts/normal_font = ExtResource( 18 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "Hello parents!
-You are able to limit the daily playtime here and set the parental code.
-If you have more questions go to [url=https://www.hirnbix.com/parentalcontrols]https://www.hirnbix.com/parentalcontrols[/url]"
+bbcode/bbcode = "Hello parents!\nYou are able to limit the daily playtime here and set the parental code.\nIf you have more questions go to [url=https://www.hirnbix.com/parentalcontrols]https://www.hirnbix.com/parentalcontrols[/url]"
 visible_characters = -1
 
 [node name="playtime_settings" type="HBoxContainer" parent="options_screen/settings/Parental Controls"]
@@ -647,6 +569,7 @@ margin/right = 268.0
 margin/bottom = 23.0
 placeholder/alpha = 0.6
 max_length = 2
+expand_to_len = false
 focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
@@ -832,19 +755,7 @@ margin/bottom = 5.0
 custom_fonts/normal_font = ExtResource( 18 )
 custom_colors/default_color = Color( 0.996078, 0.905882, 0.729412, 1 )
 bbcode/enabled = false
-bbcode/bbcode = "Programming
-	Oliver Ruehl
-	Yasha Bo
-	Ivan Skodje
-
-Game concept, Graphics
-	Oliver Ruehl
-
-Sound and music in minigame
-	freeman
-
-Music
-	Public Domain"
+bbcode/bbcode = "Programming\n\tOliver Ruehl\n\tYasha Bo\n\tIvan Skodje\n\nGame concept, Graphics\n\tOliver Ruehl\n\nSound and music in minigame\n\tfreeman\n\nMusic\n\tPublic Domain"
 visible_characters = -1
 
 [node name="donate_button" type="TextureButton" parent="options_screen/settings/Credits"]
@@ -861,9 +772,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 26 )
-params/resize_mode = 0
 params/scale = Vector2( 0.6, 0.6 )
-params/stretch_mode = 0
 
 [node name="Polygon2D" type="Polygon2D" parent="options_screen"]
 
@@ -879,9 +788,7 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
-__meta__ = {
-"_edit_group_": true
-}
+__meta__ = { "_edit_group_":true }
 
 [node name="exitbutton" type="TextureButton" parent="options_screen"]
 
@@ -901,8 +808,6 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 27 )
-params/resize_mode = 0
-params/stretch_mode = 0
 
 [node name="character-cards" type="Control" parent="."]
 
@@ -933,8 +838,6 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 textures/normal = ExtResource( 28 )
-params/resize_mode = 0
-params/stretch_mode = 0
 
 [connection signal="pressed" from="art/keyvisual_lochzahn/candy_skull_button" to="." method="_on_candy_skull_button_pressed"]
 

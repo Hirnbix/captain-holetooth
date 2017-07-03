@@ -248,7 +248,9 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Light2D" type="Light2D" parent="ball"]
 
@@ -284,10 +286,6 @@ mass = 204.082
 [node name="hud" parent="." instance=ExtResource( 9 )]
 
 [node name="sfx" parent="." instance=ExtResource( 10 )]
-
-[connection signal="pressed" from="hud/go_to_menu" to="hud" method="_on_go_to_menu_pressed"]
-
-[connection signal="pressed" from="hud/sound_off" to="hud" method="_on_sound_off_pressed"]
 
 
 [editable path="hud"]

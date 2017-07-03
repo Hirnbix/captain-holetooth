@@ -62,10 +62,15 @@ select_dialogbox = null
 
 frames = SubResource( 2 )
 animation = "default"
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="focal_point" type="Position2D" parent="Sprite"]
+
+transform/pos = Vector2( -1, -18 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 

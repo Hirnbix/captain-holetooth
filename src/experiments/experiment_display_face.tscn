@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://src/screens/hud/hud.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/yan/yan.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/experiments/default-thumb.jpg" type="Texture" id=3]
+[ext_resource path="res://src/experiments/portrait_sprite_script.gd" type="Script" id=4]
+
+[node name="experiment_display_face" type="Node2D"]
+
+[node name="hud" parent="." instance=ExtResource( 1 )]
+
+editor/display_folded = true
+
+[node name="Yan" parent="." instance=ExtResource( 2 )]
+
+editor/display_folded = true
+select_dialogbox = NodePath("../hud/dialogbox")
+
+[node name="Sprite" parent="Yan"]
+
+frame = 0
+
+[node name="portrait_sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 80, -24 )
+texture = ExtResource( 3 )
+script/script = ExtResource( 4 )
+
+
+[editable path="hud"]
+[editable path="Yan"]

@@ -7,7 +7,7 @@
 [ext_resource path="res://src/levels/minigames/yankandy/pin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/levels/minigames/yankandy/wooden-box-bg.png" type="Texture" id=6]
 [ext_resource path="res://src/levels/minigames/yankandy/wooden-box-cup-front.png" type="Texture" id=7]
-[ext_resource path="res://src/actors/yan/yan.scn" type="PackedScene" id=8]
+[ext_resource path="res://src/actors/yan/yan.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/levels/minigames/yankandy/pockets.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -1137,7 +1137,9 @@ margin/bottom = 911.0
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 0
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
@@ -1148,14 +1150,18 @@ build_mode = 0
 polygon = Vector2Array( -7, 80, -15, 0, -15, 548, 497, 548, 497, 8, 489, 80, 489, 544, 401, 544, 401, 500, 385, 492, 367.392, 488.226, 377, 500, 377, 544, 321, 544, 321, 504, 305, 496, 301.038, 497.62, 305, 504, 305, 544, 265, 544, 257, 532, 257, 504, 270.378, 496.216, 271.041, 483.943, 263.744, 474.655, 257, 480, 257, 488, 257, 496, 209, 496, 209, 488, 209, 480, 204.699, 473.992, 193.421, 483.279, 193, 496, 209, 504, 209, 532, 201, 544, 177, 544, 177, 508, 169, 500, 153, 508, 153, 544, 97, 544, 97, 492, 75, 501, 73, 544, -7, 544 )
 shape_range = Vector2( 0, 26 )
 trigger = false
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="cup_front" type="Sprite" parent="."]
 
 transform/pos = Vector2( 241, 399 )
 z/z = 2
 texture = ExtResource( 7 )
-__meta__ = { "_edit_lock_":true }
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Yan" parent="." instance=ExtResource( 8 )]
 
@@ -1165,7 +1171,7 @@ z/z = 0
 
 [node name="Sprite" parent="Yan"]
 
-frame = 5
+frame = 0
 
 [node name="ParticleAttractor2D1" parent="Yan"]
 
