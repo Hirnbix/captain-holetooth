@@ -1,7 +1,7 @@
 extends Node2D
 
 # Member variables
-const SPEED = 120
+const SPEED = 50
 var offset = 0
 
 # Start
