@@ -88,6 +88,10 @@ transform/pos = Vector2( 3883, 2270 )
 z/z = 0
 select_dialogbox = NodePath("../hud/dialogbox")
 
+[node name="Sprite" parent="Yan"]
+
+frame = 3
+
 [node name="player" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 104, 1056 )
