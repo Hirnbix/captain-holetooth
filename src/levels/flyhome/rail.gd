@@ -1,7 +1,7 @@
 extends Node2D
 
 # Member variables
-const SPEED = 50
+const SPEED = 50 #Scrolling speed
 var offset = 0
 
 # Start
