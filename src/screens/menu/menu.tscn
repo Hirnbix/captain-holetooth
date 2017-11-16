@@ -457,6 +457,7 @@ CONTROLS
 	
 Enjoy :)"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="Debug" type="Tabs" parent="options_screen/settings"]
 
@@ -607,6 +608,7 @@ bbcode/bbcode = "Hello parents!
 You are able to limit the daily playtime here and set the parental code.
 If you have more questions go to [url=https://www.hirnbix.com/parentalcontrols]https://www.hirnbix.com/parentalcontrols[/url]"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="playtime_settings" type="HBoxContainer" parent="options_screen/settings/Parental Controls"]
 
@@ -846,6 +848,7 @@ Sound and music in minigame
 Music
 	Public Domain"
 visible_characters = -1
+percent_visible = 1.0
 
 [node name="donate_button" type="TextureButton" parent="options_screen/settings/Credits"]
 
