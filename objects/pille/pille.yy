@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "pille",
   "spriteId": {
-    "name": "Sprite15",
-    "path": "sprites/Sprite15/Sprite15.yy",
+    "name": "candy_egg_image",
+    "path": "sprites/candy_egg_image/candy_egg_image.yy",
   },
   "solid": false,
   "visible": true,

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Nagel",
   "spriteId": {
-    "name": "Sprite16",
-    "path": "sprites/Sprite16/Sprite16.yy",
+    "name": "pin_image",
+    "path": "sprites/pin_image/pin_image.yy",
   },
   "solid": true,
   "visible": true,

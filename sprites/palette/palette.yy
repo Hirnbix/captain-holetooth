@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "Sprite16",
+  "name": "palette",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -10,16 +10,16 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 9,
-  "bbox_right": 28,
-  "bbox_top": 14,
-  "bbox_bottom": 56,
+  "bbox_left": 0,
+  "bbox_right": 527,
+  "bbox_top": 0,
+  "bbox_bottom": 213,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "DynamicTexturePage": false,
-  "width": 40,
-  "height": 80,
+  "width": 528,
+  "height": 214,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -28,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8fcb75bd-c076-4f0e-821d-e3d0c0c4b74d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c316e45d-324b-4fe3-9b8b-318603b24c77",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "Sprite16",
+    "name": "palette",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6221b338-a7ff-4878-b549-659555318dfc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8fcb75bd-c076-4f0e-821d-e3d0c0c4b74d","path":"sprites/Sprite16/Sprite16.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"90176f7e-ed23-405d-b9e4-b6611b5a265d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c316e45d-324b-4fe3-9b8b-318603b24c77","path":"sprites/palette/palette.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -64,11 +64,11 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f42814e0-131f-4008-b578-02d37cb13a87","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d969c6de-0370-4fac-95ae-1f573147e0ec","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "YanKandy",
-    "path": "folders/Sprites/YanKandy.yy",
+    "name": "Backgrounds",
+    "path": "folders/Sprites/Backgrounds.yy",
   },
 }
