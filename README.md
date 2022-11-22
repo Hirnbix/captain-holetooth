@@ -20,4 +20,4 @@ A cast of amazing characters helps Captain Holetooth to defend the "magic candy"
 
 Feel free to contact me here. I need programmers all of the time.
 
-[Talents needed (Reddit page with lots of detail)](https://redd.it/57lr3o)
+[Talents needed (Reddit page with lots of detail)](https://www.reddit.com/r/gamemaker/comments/z033y7/talents_needed_to_develop_an_opensource/)
