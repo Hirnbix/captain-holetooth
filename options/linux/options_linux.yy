@@ -8,7 +8,7 @@
   "option_linux_homepage": "http://www.yoyogames.com",
   "option_linux_short_desc": "",
   "option_linux_long_desc": "",
-  "option_linux_splash_screen": "${base_options_dir}/linux/splash/splash.png",
+  "option_linux_splash_screen": "splash/splash.png",
   "option_linux_display_splash": false,
   "option_linux_icon": "${base_options_dir}/linux/icons/64.png",
   "option_linux_start_fullscreen": false,
