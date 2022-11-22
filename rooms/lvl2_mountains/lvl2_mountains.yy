@@ -1,0 +1,65 @@
+{
+  "resourceType": "GMRoom",
+  "resourceVersion": "1.0",
+  "name": "lvl2_mountains",
+  "isDnd": false,
+  "volume": 1.0,
+  "parentRoom": null,
+  "views": [
+    {"inherit":false,"visible":true,"xview":0,"yview":512,"wview":512,"hview":256,"xport":0,"yport":0,"wport":512,"hport":256,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+    {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
+  ],
+  "layers": [
+    {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Wolken","assets":[
+        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_1FBB3D67_1","spriteId":{"name":"scroll_bg_cloud_3","path":"sprites/scroll_bg_cloud_3/scroll_bg_cloud_3.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":544.0,},
+        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_7093F066_1","spriteId":{"name":"scroll_bg_cloud_2","path":"sprites/scroll_bg_cloud_2/scroll_bg_cloud_2.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":0.5,"scaleY":0.5,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":544.0,},
+        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4A8D1711_1","spriteId":{"name":"scroll_bg_cloud_1","path":"sprites/scroll_bg_cloud_1/scroll_bg_cloud_1.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":544.0,},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"player","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E80E0E0_1","properties":[],"isDnd":true,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":640.0,},
+      ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","tilesetId":{"name":"TileSet_Mountain","path":"tilesets/TileSet_Mountain/TileSet_Mountain.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":500,"SerialiseHeight":48,"TileCompressedData":[
+-1011,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-479,-2147483648,-21,0,-468,-2147483648,-32,0,-468,-2147483648,-32,0,-468,-2147483648,-32,0,-468,-2147483648,-32,0,-7977,-2147483648,4,16,17,18,19,-20,-2147483648,4,16,17,18,19,-472,-2147483648,4,48,49,50,51,-20,-2147483648,4,48,49,50,51,-472,-2147483648,4,80,81,82,83,-20,-2147483648,4,80,81,82,83,-472,-2147483648,4,112,113,114,115,-20,-2147483648,4,112,113,114,115,-472,-2147483648,4,144,145,146,147,-20,-2147483648,4,144,145,146,147,-472,-2147483648,4,176,177,178,179,-20,-2147483648,4,176,177,178,179,-472,-2147483648,4,208,209,210,211,-20,-2147483648,4,208,209,210,211,-472,-2147483648,4,240,241,242,243,-6,-2147483648,4,16,17,18,19,-10,-2147483648,4,240,241,242,243,-472,-2147483648,4,272,273,274,275,-6,-2147483648,4,48,49,50,51,-10,-2147483648,4,272,273,274,275,-472,-2147483648,4,304,305,306,307,-6,-2147483648,4,80,81,82,83,-10,-2147483648,4,304,305,306,307,-472,-2147483648,4,336,337,338,339,-6,-2147483648,4,112,113,114,115,-10,-2147483648,4,336,337,338,339,-472,-2147483648,4,368,369,370,371,-6,-2147483648,4,144,369,370,147,-10,-2147483648,4,368,369,370,371,-463,-2147483648,86,397,398,399,400,396,397,398,399,400,400,401,402,403,400,396,397,398,399,400,396,401,402,399,400,396,397,398,399,400,396,397,398,399,400,401,402,403,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,398,399,400,396,397,-414,-2147483648,150,429,430,431,432,428,429,430,431,432,432,433,434,435,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,433,434,435,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,430,431,432,428,429,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,
+471,-350,-2147483648,150,461,462,463,464,460,461,462,463,464,464,465,466,467,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,465,466,467,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,462,463,464,460,461,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,-350,-2147483648,150,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,-350,-2147483648,150,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,-350,-2147483648,],},"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_1","spriteId":{"name":"scroll_bg_fg_2","path":"sprites/scroll_bg_fg_2/scroll_bg_fg_2.yy",},"colour":4294967295,"x":0,"y":577,"htiled":true,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":{"name":"bg_forest","path":"sprites/bg_forest/bg_forest.yy",},"colour":4294967295,"x":0,"y":430,"htiled":true,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_2","spriteId":{"name":"scroll_bg_sky","path":"sprites/scroll_bg_sky/scroll_bg_sky.yy",},"colour":4294967295,"x":0,"y":0,"htiled":true,"vtiled":true,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+  ],
+  "inheritLayers": false,
+  "creationCodeFile": "${project_dir}/rooms/lvl1_forest/RoomCreationCode.gml",
+  "inheritCode": false,
+  "instanceCreationOrder": [
+    {"name":"inst_4E80E0E0_1","path":"rooms/lvl2_mountains/lvl2_mountains.yy",},
+  ],
+  "inheritCreationOrder": false,
+  "sequenceId": null,
+  "roomSettings": {
+    "inheritRoomSettings": false,
+    "Width": 8000,
+    "Height": 768,
+    "persistent": false,
+  },
+  "viewSettings": {
+    "inheritViewSettings": false,
+    "enableViews": true,
+    "clearViewBackground": false,
+    "clearDisplayBuffer": false,
+  },
+  "physicsSettings": {
+    "inheritPhysicsSettings": false,
+    "PhysicsWorld": false,
+    "PhysicsWorldGravityX": 0.0,
+    "PhysicsWorldGravityY": 10.0,
+    "PhysicsWorldPixToMetres": 0.1,
+  },
+  "parent": {
+    "name": "Räume",
+    "path": "folders/Räume.yy",
+  },
+}
