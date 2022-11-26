@@ -1,0 +1,1 @@
+audio_play_sound(froglegs, 0, 1, 1.0, undefined, 1.0);

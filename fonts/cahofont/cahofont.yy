@@ -9,7 +9,7 @@
   "applyKerning": 0,
   "fontName": "Pixel Berry 08/84 Ltd.Edition",
   "styleName": "Regular",
-  "size": 12.0,
+  "size": 6.0,
   "bold": false,
   "italic": false,
   "charset": 0,

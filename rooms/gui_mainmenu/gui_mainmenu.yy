@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "gui_mainmenu",
-  "isDnd": false,
+  "isDnd": true,
   "volume": 1.0,
   "parentRoom": null,
   "views": [
@@ -19,8 +19,8 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"btn","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3BBD90AD","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"button_text","path":"objects/btnMenuStart/btnMenuStart.yy",},"objectId":{"name":"btnMenuStart","path":"objects/btnMenuStart/btnMenuStart.yy",},"value":"\"Start\"",},
-          ],"isDnd":false,"objectId":{"name":"btnMenuStart","path":"objects/btnMenuStart/btnMenuStart.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.625,"scaleY":0.72413796,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":182.0,"y":186.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3C6AAD45","properties":[],"isDnd":true,"objectId":{"name":"btnMenuOptions","path":"objects/btnMenuOptions/btnMenuOptions.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":2.6250002,"scaleY":0.73325425,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":182.0,"y":235.26437,},
+          ],"isDnd":false,"objectId":{"name":"btnMenuStart","path":"objects/btnMenuStart/btnMenuStart.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.625,"scaleY":0.72413796,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":182.0,"y":188.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3C6AAD45","properties":[],"isDnd":true,"objectId":{"name":"btnMenuOptions","path":"objects/btnMenuOptions/btnMenuOptions.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":2.6250002,"scaleY":0.73325425,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":182.0,"y":237.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"BgElements","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_6C096B1D","spriteId":{"name":"texture_button_character_card","path":"sprites/texture_button_character_card/texture_button_character_card.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":28.0,"y":171.0,},

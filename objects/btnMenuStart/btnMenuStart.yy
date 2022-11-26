@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "btnMenuStart",
   "spriteId": {
-    "name": "BtnMenu",
-    "path": "sprites/BtnMenu/BtnMenu.yy",
+    "name": "BtnGeneric",
+    "path": "sprites/BtnGeneric/BtnGeneric.yy",
   },
   "solid": false,
   "visible": true,
