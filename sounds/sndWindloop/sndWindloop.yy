@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "windloop",
+  "name": "sndWindloop",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,7 +14,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "windloop.ogg",
+  "soundFile": "sndWindloop.ogg",
   "duration": 1.468277,
   "parent": {
     "name": "Sounds",

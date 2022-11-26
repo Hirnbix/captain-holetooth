@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "options_text",
+  "name": "ObjCastleImage",
   "spriteId": {
-    "name": "txt_info",
-    "path": "sprites/txt_info/txt_info.yy",
+    "name": "CastleImage",
+    "path": "sprites/CastleImage/CastleImage.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menus",
-    "path": "folders/Objekte/Menus.yy",
+    "name": "objects",
+    "path": "folders/Objekte/objects.yy",
   },
 }

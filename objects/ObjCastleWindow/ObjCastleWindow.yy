@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "player_shot",
-  "spriteId": null,
+  "name": "ObjCastleWindow",
+  "spriteId": {
+    "name": "CastleWindow",
+    "path": "sprites/CastleWindow/CastleWindow.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -25,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Actors",
-    "path": "folders/Objekte/Actors.yy",
+    "name": "objects",
+    "path": "folders/Objekte/objects.yy",
   },
 }

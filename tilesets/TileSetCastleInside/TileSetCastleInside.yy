@@ -1,10 +1,10 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "TileSet_Mountain",
+  "name": "TileSetCastleInside",
   "spriteId": {
-    "name": "tiles_mountain",
-    "path": "sprites/tiles_mountain/tiles_mountain.yy",
+    "name": "TilSetCastleInside",
+    "path": "sprites/TilSetCastleInside/TilSetCastleInside.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
